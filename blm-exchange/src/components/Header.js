@@ -17,38 +17,31 @@ const HeaderContainer = styled.div`
     background-color: #fff;
     width: 100%;
     border-bottom: solid #f6f6f6 1px;
-    // border: orange dashed 2px;
 
-        a:hover {
+    a {
+        text-decoration: none;
+        color: #000000;
+        font-size: 1.4rem;
+
+        :hover {
             color: #037963;
             text-decoration: underline;
         }
 
-        a.cart {
+        .cart {
             text-decoration: none;
             margin: 0 20px;
             color: #000000;
             font-size: 1.3rem;
         }
-
-        a.cart:hover {
-            color: #037963;
-        }
+    }
 `
 
 const Nav = styled.div`
     display: flex; 
     justify-content: space-around;
     align-items: center;
-    // border: purple dashed 2px;
     width: 90%;
-
-        a {
-            // border: pink solid 2px;
-            text-decoration: none;
-            color: #000000;
-            font-size: 1.3rem;
-        }
 `
 
 const Logo = styled.img`

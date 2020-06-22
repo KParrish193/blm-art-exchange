@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/blm-art-exchange/static/css/main.8f93d9eb.chunk.css",
+    "main.js": "/blm-art-exchange/static/js/main.b9336c9a.chunk.js",
+    "main.js.map": "/blm-art-exchange/static/js/main.b9336c9a.chunk.js.map",
+    "runtime-main.js": "/blm-art-exchange/static/js/runtime-main.a8d64fcb.js",
+    "runtime-main.js.map": "/blm-art-exchange/static/js/runtime-main.a8d64fcb.js.map",
+    "static/js/2.68928c6a.chunk.js": "/blm-art-exchange/static/js/2.68928c6a.chunk.js",
+    "static/js/2.68928c6a.chunk.js.map": "/blm-art-exchange/static/js/2.68928c6a.chunk.js.map",
+    "index.html": "/blm-art-exchange/index.html",
+    "precache-manifest.c781ae40a0bc36522733e9a643376f45.js": "/blm-art-exchange/precache-manifest.c781ae40a0bc36522733e9a643376f45.js",
+    "service-worker.js": "/blm-art-exchange/service-worker.js",
+    "static/css/main.8f93d9eb.chunk.css.map": "/blm-art-exchange/static/css/main.8f93d9eb.chunk.css.map",
+    "static/js/2.68928c6a.chunk.js.LICENSE.txt": "/blm-art-exchange/static/js/2.68928c6a.chunk.js.LICENSE.txt",
+    "static/media/lightsimplelogo.png": "/blm-art-exchange/static/media/lightsimplelogo.a4a79c5b.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a8d64fcb.js",
+    "static/js/2.68928c6a.chunk.js",
+    "static/css/main.8f93d9eb.chunk.css",
+    "static/js/main.b9336c9a.chunk.js"
+  ]
+}

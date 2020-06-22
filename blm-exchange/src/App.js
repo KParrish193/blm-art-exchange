@@ -10,17 +10,20 @@ import './App.css';
 //components
 import Header from './components/Header';
 
-import About from './components/About.js'
-import Login from './components/Login';
+import About from './components/About.js';
+import FAQ from './components/FAQ.js';
+import Login from './components/ArtistOnboard/Login';
 
-import AdminDashboard from './components/AdminDashboard';
+import AdminDashboard from './components/ArtistOnboard/AdminDashboard';
 
-import ArtistForm from './components/ArtistForm';
-import CoC from './components/CodeOfConduct';
-import UploadForm from './components/UploadForm';
-import ArtistProduct from './components/ArtistProduct';
+import ArtistForm from './components/ArtistOnboard/ArtistForm';
+import CoC from './components/ArtistOnboard/CodeOfConduct';
+import UploadForm from './components/ArtistOnboard/UploadForm';
 
-import Products from './components/Products';
+import ArtistList from './components/ArtistList';
+import ArtistProfile from './components/ArtistProfile';
+
+import Shop from './components/Shop';
 import Inquiry from './components/Inquiry';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
@@ -34,14 +37,18 @@ function App() {
 
           {/* general */}
           <Route exact path="/" component={ About } />
-          <Route path="/login" component={ Login } />
-          <Route path="/shop" component={ Products } />
-          <Route path="/shop/:id" component={ ArtistProduct } />
+          <Route path="/FAQ" component={ FAQ } />
+
+          {/* shop */}
+          <Route path="/shop" component={ Shop } />
+          <Route path="/artists" component={ ArtistList } />
+          <Route path="/artists/:id" component={ ArtistProfile } />
           <Route path="/inquiry/:id" component={ Inquiry } />
           <Route path="/cart" component={ Cart } />
           <Route path="/checkout" component={ Checkout } />
 
           {/* artist */}
+          <Route path="/login" component={ Login } />
           <Route path="/sign-up" component={ ArtistForm } />
           <Route path ="/code-of-conduct" component={ CoC } />
           <PrivateRoute path="/upload" component={ UploadForm } />

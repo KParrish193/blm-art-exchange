@@ -1,9 +1,8 @@
 import React from 'react';
 
-function Mission(){
+function About(){
     return(
         <div>
-            {/* mission statement/FAQ? or separate FAQ? */}
             <header className="App-header">
                 <p> What is Art x BLM? </p>
             </header>
@@ -12,4 +11,4 @@ function Mission(){
     )
 }
 
-export default Mission
+export default About

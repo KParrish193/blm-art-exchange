@@ -4,6 +4,7 @@ function Cart(){
     return(
         <div>
             {/* cart */}
+            <h3>Cart</h3>
         </div>
     )
 

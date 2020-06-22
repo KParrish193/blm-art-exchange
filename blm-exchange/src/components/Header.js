@@ -16,13 +16,23 @@ const HeaderContainer = styled.div`
     margin: 0 auto;
     background-color: #fff;
     width: 100%;
+    border-bottom: solid #f6f6f6 1px;
     // border: orange dashed 2px;
 
+        a:hover {
+            color: #037963;
+            text-decoration: underline;
+        }
+
         a.cart {
-            // border: limegreen 2px solid;
             text-decoration: none;
             margin: 0 20px;
-            color: #000000; 
+            color: #000000;
+            font-size: 1.3rem;
+        }
+
+        a.cart:hover {
+            color: #037963;
         }
 `
 
@@ -36,7 +46,8 @@ const Nav = styled.div`
         a {
             // border: pink solid 2px;
             text-decoration: none;
-            color: #000000; 
+            color: #000000;
+            font-size: 1.3rem;
         }
 `
 
@@ -50,11 +61,11 @@ function Header() {
         <HeaderContainer>
             <Nav>
 
-            <Link>
+            <Link to="/">
                 <p>About Us</p>
             </Link>
 
-            <Link>
+            <Link to="/shop">
                 <p>Shop</p>
             </Link>
 
@@ -62,11 +73,11 @@ function Header() {
                 <Logo src={logo} />
             </Link>
 
-            <Link>
+            <Link to="/artists">
                 <p>Artists</p>
             </Link>
 
-            <Link>
+            <Link to="/FAQ">
                 <p>FAQ</p>
             </Link>
 

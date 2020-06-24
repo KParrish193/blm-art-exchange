@@ -10,10 +10,11 @@ import './App.css';
 //components
 import Header from './components/Header';
 
+import Landing from './components/Landing.js';
 import About from './components/About.js';
 import FAQ from './components/FAQ.js';
-import Login from './components/ArtistOnboard/Login';
 
+import Login from './components/ArtistOnboard/Login';
 import AdminDashboard from './components/ArtistOnboard/AdminDashboard';
 
 import ArtistForm from './components/ArtistOnboard/ArtistForm';
@@ -36,7 +37,8 @@ function App() {
         <Switch>
 
           {/* general */}
-          <Route exact path="/" component={ About } />
+          <Route exact path="/" component={ Landing } />
+          <Route path="/about" component={ About } />
           <Route path="/FAQ" component={ FAQ } />
 
           {/* shop */}

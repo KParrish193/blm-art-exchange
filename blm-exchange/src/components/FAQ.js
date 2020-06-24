@@ -81,7 +81,7 @@ function FAQ(){
             </div>
 
             <div>
-            <h3>I still gave more questions. How can I get in touch?</h3>
+            <h3>I still have more questions. How can I get in touch?</h3>
             <p>
                 Email us or something.
                 [Link email] artxblmcollective@gmail.com

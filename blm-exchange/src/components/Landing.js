@@ -1,11 +1,11 @@
 import React from 'react';
 
-function About(){
+function Landing(){
     return(
         <div>
-            <p> About</p>
+            <p> Welcome!</p>
         </div>
     )
 }
 
-export default About
+export default Landing

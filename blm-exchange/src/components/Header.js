@@ -54,7 +54,7 @@ function Header() {
         <HeaderContainer>
             <Nav>
 
-            <Link to="/">
+            <Link to="/about">
                 <p>About Us</p>
             </Link>
 

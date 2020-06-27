@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 import logo from '../assets/lightsimplelogo.png'
 
@@ -22,19 +22,36 @@ const HeaderContainer = styled.div`
         text-decoration: none;
         color: #000000;
         font-size: 1.4rem;
+        margin: 0;
+        padding: 10px;
+    }
 
-        :hover {
-            color: #037963;
-            text-decoration: underline;
+        a.home{
+            padding: 0px;
+            margin: 0px;
+            
+            :hover {
+                border-bottom: none;
+            }
         }
 
-        .cart {
+        a.cart {
             text-decoration: none;
             margin: 0 20px;
+            padding: 0px;
             color: #000000;
             font-size: 1.3rem;
+
+            :hover {
+                color: #000000;
+                border-bottom: none;
+            }
         }
-    }
+
+        a:hover {
+            border-bottom: 2px solid #800000;
+        }
+
 `
 
 const Nav = styled.div`
@@ -54,25 +71,49 @@ function Header() {
         <HeaderContainer>
             <Nav>
 
-            <Link to="/about">
-                <p>About Us</p>
-            </Link>
+            <NavLink 
+                to="/about"   
+                activeStyle={{
+                    fontWeight: "bold",
+                    color: "#000000",
+                    borderBottom: "solid #800000 2px"
+                }}>
+                About Us
+            </NavLink>
 
-            <Link to="/shop">
-                <p>Shop</p>
-            </Link>
+            <NavLink 
+                to="/shop"
+                activeStyle={{
+                    fontWeight: "bold",
+                    color: "#000000",
+                    borderBottom: "solid #800000 2px"
+                }}>
+                Shop
+            </NavLink>
 
-            <Link to="/">
+            <Link to="/" className="home">
                 <Logo src={logo} />
             </Link>
 
-            <Link to="/artists">
-                <p>Artists</p>
-            </Link>
+            <NavLink 
+                to="/artists"
+                activeStyle={{
+                    fontWeight: "bold",
+                    color: "#000000",
+                    borderBottom: "solid #800000 2px"
+                }}>
+                Artists
+            </NavLink>
 
-            <Link to="/FAQ">
-                <p>FAQ</p>
-            </Link>
+            <NavLink 
+                to="/FAQ"
+                activeStyle={{
+                    fontWeight: "bold",
+                    color: "#000000",
+                    borderBottom: "solid #800000 2px"
+                }}>
+                FAQ
+            </NavLink>
 
             </Nav>
 

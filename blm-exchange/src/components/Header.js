@@ -101,9 +101,13 @@ const MobileNav = styled.div`
     align-items: center;
     width: 100%;
     border-bottom: 1px solid #222222;
+    
+    a.cart {
+        margin-right: 50px;
+    }
 
     a.mobile-home {
-        margin-right: 126px;
+        margin-right: 94px;
     }
 }
 `
@@ -123,7 +127,7 @@ function Header() {
                     color: "#000000",
                     borderBottom: "solid #800000 2px"
                 }}>
-                About Us
+                About
             </NavLink>
 
             <NavLink 

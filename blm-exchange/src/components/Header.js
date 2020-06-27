@@ -6,7 +6,7 @@ import logo from '../assets/lightsimplelogo.png'
 
 import styled from 'styled-components';
 
-import { ShoppingCartOutlined } from '@ant-design/icons';
+import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 
 const HeaderContainer = styled.div`
     display: flex;
@@ -52,6 +52,27 @@ const HeaderContainer = styled.div`
             border-bottom: 2px solid #800000;
         }
 
+        .mobile-home{
+            display: none;
+        }
+
+        @media (max-width: 500px){
+            display: flex;
+            flex-direction: column-reverse;
+
+            .home {
+                display: none;
+            }
+
+            .mobile-home{
+                display: flex;
+
+                :hover{
+                    border-bottom: none;
+                }
+            }
+        }
+
 `
 
 const Nav = styled.div`
@@ -59,8 +80,33 @@ const Nav = styled.div`
     justify-content: space-around;
     align-items: center;
     width: 90%;
+
+    @media (max-width: 500px){
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        a {
+            width: 100%;
+            border-bottom: 1px solid #222222;
+        }
+    }
 `
 
+const MobileNav = styled.div`
+@media (max-width: 500px){
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #222222;
+
+    a.mobile-home {
+        margin-right: 126px;
+    }
+}
+`
 const Logo = styled.img`
     height: auto;
     width: 100px;
@@ -70,7 +116,6 @@ function Header() {
     return(
         <HeaderContainer>
             <Nav>
-
             <NavLink 
                 to="/about"   
                 activeStyle={{
@@ -114,12 +159,16 @@ function Header() {
                 }}>
                 FAQ
             </NavLink>
-
             </Nav>
 
-            <Link to="/cart" className="cart">
-                <ShoppingCartOutlined />
+            <MobileNav>
+            <Link to="/" className="mobile-home">
+                <Logo src={logo} />
             </Link>
+            <Link to="/cart" className="cart">
+                <ShoppingCartOutlinedIcon />
+            </Link>
+            </MobileNav>
 
         </HeaderContainer>
     )

@@ -1,15 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
-import { SearchOutlined } from '@ant-design/icons';
+import Axios from 'axios'
+
+import FilterListIcon from '@material-ui/icons/FilterList';
+
 
 
 function ArtistList(){
 
     return(
         <div>
-            <SearchOutlined />
+            <FilterListIcon />
             {/* display all artists */}
             <h3>Artists</h3>
+            <div>
+                {/* map backend data of artists into cards */}
+                {/* display grid of artist cards */}
+            </div>
         </div>
     )
 }

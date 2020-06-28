@@ -1,15 +1,38 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
-import { SearchOutlined } from '@ant-design/icons';
+import { ArtistContext } from '../contexts/ArtistContext';
+
+import { Link } from 'react-router-dom';
+
+import FilterListIcon from '@material-ui/icons/FilterList';
 
 
 function ArtistList(){
+    const { artists } = useContext(ArtistContext)
 
     return(
-        <div>
-            <SearchOutlined />
+        <div className="artist-full-page-container">
+            <div className="search">
+            <FilterListIcon />
+            {/* filter/search */}
+            </div>
+
+            <div className="artists-container">
             {/* display all artists */}
             <h3>Artists</h3>
+            <div className="artist-card-container">
+                {/* map backend data of artists into cards */}
+                {artists.map(artist => (
+				<div className="artist-card">
+                    <Link to="/artist/{artist.id}">
+                    {/* artist card detail */}
+                    <img src={artist} />
+                    </Link>
+                </div>
+			))}
+                {/* display grid of artist cards */}
+            </div>
+            </div>
         </div>
     )
 }

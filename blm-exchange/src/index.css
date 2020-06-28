@@ -47,3 +47,7 @@ p {
 .progress.turquoise .progress-bar {
   background-color: #037963;
 }
+
+caption-side {
+  caption-side: top;
+}

@@ -4,7 +4,7 @@ import { CartContext } from '../contexts/CartContext'
 
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 
-import { PrimaryButton } from '../global styles/index'
+import { PrimaryButton, CartContainer, ProductContainer, AlignRight, AlignLeft } from '../global styles/index'
 
 function Cart(){
     const {cart, removeItem} = useContext(CartContext);
@@ -16,11 +16,19 @@ function Cart(){
 	};
 
     return(
-        <div>
+        <CartContainer>
             {/* cart */}
-            <h3>Cart</h3>
+            <AlignLeft>
+                <h3> Shopping Cart</h3>
+            </AlignLeft>
 
-            <div className="cart-container">
+            <div className="labelrow">
+                <p>Item</p>
+                <p>Quantity</p>
+                <p>Price</p>
+            </div>
+
+            <ProductContainer className="cart-container">
             {cart.map(item => (
 				console.log(item),
                 <div>
@@ -30,13 +38,15 @@ function Cart(){
                     </button>
                 </div>
 			))}
-            </div>
-
-            <div className="shopping-cart__checkout">
-				<p>Total: ${getCartTotal()}</p>
-				<PrimaryButton>Checkout</PrimaryButton>
-			</div>
-        </div>
+            
+            </ProductContainer>
+            <AlignRight>
+                <div className="total">
+                    <p>Subtotal: ${getCartTotal()}</p>
+                    <PrimaryButton>Checkout</PrimaryButton>
+                </div>
+            </AlignRight>
+        </CartContainer>
     )
 
 }

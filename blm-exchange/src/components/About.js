@@ -21,7 +21,7 @@ function About(){
             <div class="container">
                 <p style={{textAlign: "center"}}><b>Donations to date</b></p>
                 {/* Progress bar */}
-                <ProgressBar className="turquoise" now={60}></ProgressBar>
+                <ProgressBar className="turquoise" animated now={60}></ProgressBar>
                 <Button variant="flat" className="float-left" size="lg">SHOP</Button>
                 <Button variant="flat" className="float-right" size="lg">ARTISTS</Button>
             </div>

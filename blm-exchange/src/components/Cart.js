@@ -2,10 +2,12 @@ import React, { useContext } from 'react';
 
 import { CartContext } from '../contexts/CartContext'
 
+import HighlightOffIcon from '@material-ui/icons/HighlightOff';
+
 import { PrimaryButton } from '../global styles/index'
 
 function Cart(){
-    const {cart} = useContext(CartContext);
+    const {cart, removeItem} = useContext(CartContext);
 
     const getCartTotal = () => {
 		return cart.reduce((acc, value) => {
@@ -23,6 +25,9 @@ function Cart(){
 				console.log(item),
                 <div>
                     {/* item info */}
+                    <button onClick={() => removeItem(item)}>
+                        <HighlightOffIcon />
+                    </button>
                 </div>
 			))}
             </div>

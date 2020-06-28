@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 //app routing
 import { Switch, Route } from 'react-router-dom';
@@ -29,10 +29,42 @@ import Inquiry from './components/Inquiry';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
 
+// contexts
+import { ArtistContext } from './contexts/ArtistContext';
+import { CartContext } from './contexts/CartContext';
+import { ProductContext } from './contexts/ProductContext';
+
+
 function App() {
+
+  // load products data from backend as productsData
+  const productData = 'products placeholder'
+
+  // load artist data from backend as productsData
+  const artistData = 'artists placeholder'
+
+  const [products] = useState(productData);
+  const [artists] = useState(artistData);
+  const [cart, setCart] = useState([]);
+
+  const addItem = item => {
+		console.log(item);
+		setCart([...cart, item])
+	};
+
+	const removeItem = id => {
+		setCart(...cart, cart.filter(item => item.id !== id));
+	};
+
   return (
+
+    <ArtistContext.Provider value={{ artists }}>
+    <ProductContext.Provider value={{ products, addItem }}>
+    <CartContext.Provider value={{ cart, removeItem }}>
+    
     <div className="App">
       <Header />
+      
       <div>
         <Switch>
 
@@ -43,6 +75,7 @@ function App() {
 
           {/* shop */}
           <Route path="/shop" component={ Shop } />
+          <Route path="/print/:id" component={ Shop } />
           <Route path="/artists" component={ ArtistList } />
           <Route path="/artists/:id" component={ ArtistProfile } />
           <Route path="/inquiry/:id" component={ Inquiry } />
@@ -61,6 +94,10 @@ function App() {
         </Switch>
       </div>
     </div>
+
+    </CartContext.Provider>
+    </ProductContext.Provider>
+    </ArtistContext.Provider>
   );
 }
 

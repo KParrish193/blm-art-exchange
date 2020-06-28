@@ -6,6 +6,9 @@ export const PrimaryButton = styled.button`
     border-radius: 5px;
     color: #fff;
     background-color: #800000;
+    font-size: 1.2rem;
+    padding: .2rem;
+    width: 30%;
 `
 
 export const TagButton = styled.button`
@@ -18,4 +21,47 @@ export const TagButton = styled.button`
 //grid display
 export const PhotoGrid = styled.div`
     display: flex;
+`
+
+// form styling
+export const Form = styled.form`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border: purple 2px dashed;
+
+    label {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-right: .2rem;
+    }
+
+    .form-container{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        padding: 20px;
+        border: orange dashed 2px;
+        
+        @media(max-width: 500px){
+            padding: 20px 50px 50px;
+        }
+    }
+
+    div {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: .2rem;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .instructions{
+        text-align: center;
+        margin-bottom: 40px;
+    }
 `

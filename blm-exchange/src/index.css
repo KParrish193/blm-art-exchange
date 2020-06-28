@@ -43,3 +43,7 @@ p {
   font-size: xx-large;
   font-weight: bolder;
 }
+
+.progress.turquoise .progress-bar {
+  background-color: #037963;
+}

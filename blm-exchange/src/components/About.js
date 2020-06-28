@@ -12,14 +12,18 @@ function About(){
                 <p>This is where the mission goes. This is where the mission goes. This is where the mission goes.
                 This is where the mission goes. This is where the mission goes. This is where the mission goes.
                 This is where the mission goes. This is where the mission goes. This is where the mission goes.
+                This is where the mission goes. This is where the mission goes. This is where the mission goes.
+                This is where the mission goes. This is where the mission goes. This is where the mission goes.
+                This is where the mission goes. This is where the mission goes. This is where the mission goes.
+                This is where the mission goes. This is where the mission goes. This is where the mission goes.
                 </p>
             </div>
             <div class="container">
                 <p style={{textAlign: "center"}}><b>Donations to date</b></p>
                 {/* Progress bar */}
-                <ProgressBar variant="success" now={60}></ProgressBar>
-                <Button variant="flat" size="xxl">Shop</Button>
-                <Button variant="flat" size="xxl">Artists</Button>
+                <ProgressBar className="turquoise" now={60}></ProgressBar>
+                <Button variant="flat" className="float-left" size="lg">SHOP</Button>
+                <Button variant="flat" className="float-right" size="lg">ARTISTS</Button>
             </div>
         </div>
     );

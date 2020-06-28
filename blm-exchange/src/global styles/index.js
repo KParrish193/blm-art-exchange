@@ -29,7 +29,6 @@ export const Form = styled.form`
     flex-direction: column;
     align-items: center;
     width: 100%;
-    border: purple 2px dashed;
 
     label {
         font-size: 1.2rem;
@@ -42,7 +41,6 @@ export const Form = styled.form`
         flex-direction: column;
         width: 90%;
         padding: 20px;
-        border: orange dashed 2px;
         
         @media(max-width: 500px){
             padding: 20px 50px 50px;

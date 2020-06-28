@@ -4,9 +4,9 @@ import Button from 'react-bootstrap/Button';
 
 function About(){
     return (
-        <div>
+        <div class="container">
             <h1>Art x BLM</h1>
-            <p>This is where the tagline goes.</p>
+            <p style={{textAlign: "center"}}>This is where the tagline goes.</p>
             <h2><b>Mission</b></h2>
             <div class="container">
                 <p>This is where the mission goes. This is where the mission goes. This is where the mission goes.
@@ -15,11 +15,11 @@ function About(){
                 </p>
             </div>
             <div class="container">
-                <p><b>Donations to date</b></p>
+                <p style={{textAlign: "center"}}><b>Donations to date</b></p>
                 {/* Progress bar */}
                 <ProgressBar variant="success" now={60}></ProgressBar>
-                <Button>Shop</Button>
-                <Button>Artists</Button>
+                <Button variant="flat" size="xxl">Shop</Button>
+                <Button variant="flat" size="xxl">Artists</Button>
             </div>
         </div>
     );

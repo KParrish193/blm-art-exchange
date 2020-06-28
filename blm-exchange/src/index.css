@@ -1,3 +1,4 @@
+/* Link to Adobe Fonts containting Acumin, Neuzeit Grotesk, Franklin Gothic URW, and Mr Eaves Sans */
 @import url("https://use.typekit.net/nqj6gya.css");
 
 body {
@@ -7,6 +8,12 @@ body {
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: neuzeit-grotesk, sans-serif;
+  font-style: normal;
+  font-weight: normal;
 }
 
 h1 {
@@ -25,10 +32,14 @@ p {
   font-family: franklin-gothic-urw, sans-serif;
   font-style: normal;
   font-weight: normal;
+  text-align: justify;
 }
 
-code {
-  font-family: neuzeit-grotesk, sans-serif;
-  font-style: normal;
-  font-weight: normal;
+.btn-flat {
+  background-color: white;
+}
+
+.btn-xxl {
+  font-size: xx-large;
+  font-weight: bolder;
 }

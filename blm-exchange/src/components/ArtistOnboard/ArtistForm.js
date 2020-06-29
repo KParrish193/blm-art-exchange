@@ -83,6 +83,7 @@ function ArtistForm(){
                 </div>
 
                 {/* modal to confirm code of conduct for new artists */}
+                <p>Code of Conduct instructions words</p>
                 <CoC />
                 </div>
                 <PrimaryButton onclick={onSubmit} > Submit </PrimaryButton>

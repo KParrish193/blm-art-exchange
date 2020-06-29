@@ -5,21 +5,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-import { ArtistContext } from './contexts/ArtistContext';
-import { CartContext } from './contexts/CartContext';
+
 import { BrowserRouter as Router } from 'react-router-dom';
 
 ReactDOM.render(
   
-  <ArtistContext.Provider>
-  <CartContext.Provider>
   <Router>
   <React.StrictMode>
     <App />
   </React.StrictMode>
-  </Router>
-  </CartContext.Provider>
-  </ArtistContext.Provider>,
+  </Router>,
   document.getElementById('root')
 );
 

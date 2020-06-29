@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 import logo from '../assets/lightsimplelogo.png'
 
 import styled from 'styled-components';
 
-import { ShoppingCartOutlined } from '@ant-design/icons';
+import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 
 const HeaderContainer = styled.div`
     display: flex;
@@ -22,19 +22,57 @@ const HeaderContainer = styled.div`
         text-decoration: none;
         color: #000000;
         font-size: 1.4rem;
+        margin: 0;
+        padding: 10px;
+    }
 
-        :hover {
-            color: #037963;
-            text-decoration: underline;
+        a.home{
+            padding: 0px;
+            margin: 0px;
+            
+            :hover {
+                border-bottom: none;
+            }
         }
 
-        .cart {
+        a.cart {
             text-decoration: none;
             margin: 0 20px;
+            padding: 0px;
             color: #000000;
             font-size: 1.3rem;
+
+            :hover {
+                color: #000000;
+                border-bottom: none;
+            }
         }
-    }
+
+        a:hover {
+            border-bottom: 2px solid #800000;
+        }
+
+        .mobile-home{
+            display: none;
+        }
+
+        @media (max-width: 500px){
+            display: flex;
+            flex-direction: column-reverse;
+
+            .home {
+                display: none;
+            }
+
+            .mobile-home{
+                display: flex;
+
+                :hover{
+                    border-bottom: none;
+                }
+            }
+        }
+
 `
 
 const Nav = styled.div`
@@ -42,8 +80,37 @@ const Nav = styled.div`
     justify-content: space-around;
     align-items: center;
     width: 90%;
+
+    @media (max-width: 500px){
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        a {
+            width: 100%;
+            border-bottom: 1px solid #222222;
+        }
+    }
 `
 
+const MobileNav = styled.div`
+@media (max-width: 500px){
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #222222;
+    
+    a.cart {
+        margin-right: 50px;
+    }
+
+    a.mobile-home {
+        margin-right: 94px;
+    }
+}
+`
 const Logo = styled.img`
     height: auto;
     width: 100px;
@@ -53,32 +120,59 @@ function Header() {
     return(
         <HeaderContainer>
             <Nav>
+            <NavLink 
+                to="/about"   
+                activeStyle={{
+                    fontWeight: "bold",
+                    color: "#000000",
+                    borderBottom: "solid #800000 2px"
+                }}>
+                About
+            </NavLink>
 
-            <Link to="/about">
-                <p>About Us</p>
-            </Link>
+            <NavLink 
+                to="/shop"
+                activeStyle={{
+                    fontWeight: "bold",
+                    color: "#000000",
+                    borderBottom: "solid #800000 2px"
+                }}>
+                Shop
+            </NavLink>
 
-            <Link to="/shop">
-                <p>Shop</p>
-            </Link>
-
-            <Link to="/">
+            <Link to="/" className="home">
                 <Logo src={logo} />
             </Link>
 
-            <Link to="/artists">
-                <p>Artists</p>
-            </Link>
+            <NavLink 
+                to="/artists"
+                activeStyle={{
+                    fontWeight: "bold",
+                    color: "#000000",
+                    borderBottom: "solid #800000 2px"
+                }}>
+                Artists
+            </NavLink>
 
-            <Link to="/FAQ">
-                <p>FAQ</p>
-            </Link>
-
+            <NavLink 
+                to="/FAQ"
+                activeStyle={{
+                    fontWeight: "bold",
+                    color: "#000000",
+                    borderBottom: "solid #800000 2px"
+                }}>
+                FAQ
+            </NavLink>
             </Nav>
 
-            <Link to="/cart" className="cart">
-                <ShoppingCartOutlined />
+            <MobileNav>
+            <Link to="/" className="mobile-home">
+                <Logo src={logo} />
             </Link>
+            <Link to="/cart" className="cart">
+                <ShoppingCartOutlinedIcon />
+            </Link>
+            </MobileNav>
 
         </HeaderContainer>
     )

@@ -16,20 +16,8 @@ import MenuList from '@material-ui/core/MenuList';
 import { makeStyles } from '@material-ui/core/styles';
 
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-        display: 'flex',
-    },
-    paper: {
-        marginRight: theme.spacing(2),
-    },
-}));
-
-
-
 function Header() {
 
-    const classes = useStyles();
     const [open, setOpen] = useState(false);
     const anchorRef = useRef(null);
 
@@ -60,8 +48,6 @@ function Header() {
     
         prevOpen.current = open;
     }, [open]);
-
-
 
 
 
@@ -118,13 +104,11 @@ function Header() {
                 <ClickAwayListener onClickAway={handleClose}>
                     <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
 
-                    {/* <MenuItem onClick={handleClose}>
-                        <Link 
-                            to="/artists"
-                        >
+                    <MenuItem onClick={handleClose}>
+                        <Link to="/artists">
                             List of Artists
                         </Link>
-                    </MenuItem> */}
+                    </MenuItem>
 
                     <MenuItem onClick={handleClose}>
                         <NavLink 
@@ -162,15 +146,7 @@ function Header() {
             <Link to="/cart" className="cart">
                 <ShoppingCartOutlinedIcon />
             </Link>
-
-
-            <div className={classes.root}>
-
-
-
-
-
-</div>
+        
 
         </HeaderContainer>
     )

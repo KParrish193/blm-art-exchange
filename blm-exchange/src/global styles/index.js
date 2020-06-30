@@ -1,5 +1,9 @@
 import styled from 'styled-components'
 
+// home container - adjusted for fixed header
+export const HomeContainer =styled.div`
+    padding-top: 105px;
+`
 
 // buttons
 export const PrimaryButton = styled.button`
@@ -17,6 +21,125 @@ export const TagButton = styled.button`
     border-radius: 10px;
     color: #800000;
     background: #fff;
+`
+
+// header styling
+export const HeaderContainer = styled.div`     
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    background-color: #fff;
+    width: 100%;
+    border-bottom: solid #f6f6f6 1px;
+
+    a {
+        text-decoration: none;
+        color: #000000;
+        font-size: 1.4rem;
+        margin: 0;
+        padding: 10px;
+    }
+
+        a.home{
+            padding: 0px;
+            margin: 0px;
+            
+            :hover {
+                border-bottom: none;
+            }
+        }
+
+        a.cart {
+            text-decoration: none;
+            margin: 0 20px;
+            padding: 0px;
+            color: #000000;
+            font-size: 1.3rem;
+
+            :hover {
+                color: #000000;
+                border-bottom: none;
+            }
+        }
+
+        a:hover {
+            border-bottom: 2px solid #800000;
+        }
+
+        .mobile-home{
+            display: none;
+        }
+
+        @media (max-width: 500px){
+            display: none;
+`
+
+export const Nav = styled.div`
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+
+    @media (max-width: 500px){
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        a {
+            width: 100%;
+            border-bottom: 1px solid #222222;
+        }
+    }
+`
+
+export const Logo = styled.img`
+    height: auto;
+    width: 100px;
+`
+
+export const ArtistMenuButton = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: limegreen solid 1px;
+`
+
+// mobile header styling
+export const MobileContainer = styled.div`
+    display: none;
+
+    @media(max-width: 500px){
+        position: fixed;
+        top: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 auto;
+        align-items: center;
+        background-color: #fff;
+        border-bottom: solid #f6f6f6 1px;
+    }
+
+    a.cart {
+        text-decoration: none;
+        color: #000000;
+        font-size: 1.3rem;
+        margin-right: 20px;
+    }
+`
+
+export const MenuButton = styled.div`
+    margin-left: 20px;
+
+    :hover {
+        cursor: pointer;
+    }
 `
 
 //grid display
@@ -62,6 +185,16 @@ export const Form = styled.form`
     .instructions{
         text-align: center;
         margin-bottom: 40px;
+    }
+`
+
+export const ToggleSignUp = styled.div`
+    margin-top: 20px;
+    font-size: .8rem;
+
+    a{ 
+        color: #037963;
+        padding-left: 5px;
     }
 `
 

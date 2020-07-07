@@ -86,7 +86,6 @@ function FAQ(){
                 Email us or something.
                 [Link email] artxblmcollective@gmail.com
             </p>
-
             </div>
 
         </TextContainer>

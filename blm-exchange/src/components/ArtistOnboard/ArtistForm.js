@@ -1,7 +1,9 @@
 import React from 'react'
+
 import CoC from './CodeOfConduct';
+
 import { Link } from 'react-router-dom';
-import { PrimaryButton, Form } from '../../global styles/index';
+import { PrimaryButton, Form, ToggleSignUp } from '../../global styles/index';
 import { useForm } from 'react-hook-form';
 
 function ArtistForm(){
@@ -10,6 +12,7 @@ function ArtistForm(){
     const onSubmit = data => console.log(data);
     console.log(errors);
     // edit onsubmit to post to artist endpoint
+    // direct to artist dashboard
     
     return(
         <div>
@@ -17,8 +20,9 @@ function ArtistForm(){
             <Form onSubmit={handleSubmit(onSubmit)}>
                 <h3>Artist Sign-Up</h3>
                 <p className="instructions">Instructions. Artist Sign up. Or whatever. Directions Directions directions.
-                <span>Already signed-up? <Link to="/login">Login</Link></span>
                 </p>
+                <ToggleSignUp> Already have an artist account?<Link to="/artist/login"> Login </Link></ToggleSignUp>
+                
                 
                 <div className="form-container">
 

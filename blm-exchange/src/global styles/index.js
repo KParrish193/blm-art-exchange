@@ -56,7 +56,7 @@ export const LandingContainer = styled.div`
     justify-content: space-around;
     padding: 35px 30px 100px 30px;
 
-    @media (max-width: 500px){
+    @media (max-width: 800px){
         display: flex;
         flex-direction: column;
         padding: 15px 30px 30px 30px;
@@ -68,7 +68,7 @@ export const LandingTextContent = styled.div`
     flex-direction: column;
     width: 45%;
     
-    @media (max-width: 500px){
+    @media (max-width: 800px){
         width: 100%;
     }
 `
@@ -76,7 +76,7 @@ export const LandingTextContent = styled.div`
 export const DonationContainer = styled.div`
     width: 45%;
 
-    @media (max-width: 500px){
+    @media (max-width: 800px){
         width: 100%;
     }
 `

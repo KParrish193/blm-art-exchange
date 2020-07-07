@@ -89,7 +89,7 @@ function App() {
         <Switch>
 
           {/* general */}
-          <Route exact path="/" component={ Landing } />
+          <Route path="/blm-art-exchange" component={ Landing } />
           <Route path="/about" component={ About } />
           <Route path="/FAQ" component={ FAQ } />
 

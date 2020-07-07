@@ -17,9 +17,6 @@ function Landing(){
                 This is where the mission goes. This is where the mission goes. This is where the mission goes. This is where the mission goes. This is where the mission goes. This is where the mission goes.This is where the mission goes. This is where the mission goes.This is where the mission goes. This is where the mission goes. This is where the mission goes. This is where the mission goes.
             </p>
 
-
-
-
             <MobileLandingButtonContainer className="mobile">
                 <LandingButton>
                     <Link to="/shop">Shop</Link>
@@ -31,12 +28,11 @@ function Landing(){
 
             <div>
                 {/* visual donation piece */}
-                <p>DONATIONS</p>
+                <h4>Donations</h4>
                 <DonationContainer>
 
                 </DonationContainer>
             </div>
-
         </LandingContainer>
     )
 }

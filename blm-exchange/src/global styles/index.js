@@ -54,7 +54,7 @@ export const MobileLandingButtonContainer = styled.div`
 export const LandingContainer = styled.div`
     display: flex;
     flex-direction: column;
-    padding: 30px;
+    padding: 15px 30px 30px 30px;
 `
 
 export const DonationContainer = styled.div`

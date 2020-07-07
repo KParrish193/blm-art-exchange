@@ -36,12 +36,12 @@ export const LandingButton = styled.button`
 
 export const MobileLandingButtonContainer = styled.div`
     display: none;
+    margin: 50px 0px;
+
     a {
         text-decoration: none;
         color: #000;
     }
-
-    border: purple dashed 1px;
 
     @media (max-width: 500px){
         display: flex;
@@ -54,7 +54,13 @@ export const MobileLandingButtonContainer = styled.div`
 export const LandingContainer = styled.div`
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 30px;
+`
+
+export const DonationContainer = styled.div`
+    border: solid black 2px;
+    background-color: #800000;
+    height: 500px;
 `
 
 

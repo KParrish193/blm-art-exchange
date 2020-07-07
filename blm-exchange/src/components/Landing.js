@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-import { LandingButton, LandingContainer, MobileLandingButtonContainer } from '../global styles/index'
+import { LandingButton, LandingContainer, MobileLandingButtonContainer, DonationContainer } from '../global styles/index'
 
 function Landing(){
     return(
@@ -32,6 +32,9 @@ function Landing(){
             <div>
                 {/* visual donation piece */}
                 <p>DONATIONS</p>
+                <DonationContainer>
+
+                </DonationContainer>
             </div>
 
         </LandingContainer>

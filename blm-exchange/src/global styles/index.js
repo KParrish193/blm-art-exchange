@@ -47,17 +47,41 @@ export const MobileLandingButtonContainer = styled.div`
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        
     }
 `
 
 export const LandingContainer = styled.div`
     display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 35px 30px 100px 30px;
+
+    @media (max-width: 500px){
+        display: flex;
+        flex-direction: column;
+        padding: 15px 30px 30px 30px;
+    }
+`
+
+export const LandingTextContent = styled.div`
+    display: flex;
     flex-direction: column;
-    padding: 15px 30px 30px 30px;
+    width: 45%;
+    
+    @media (max-width: 500px){
+        width: 100%;
+    }
 `
 
 export const DonationContainer = styled.div`
+    width: 45%;
+
+    @media (max-width: 500px){
+        width: 100%;
+    }
+`
+
+export const DonationPlaceholderContainer = styled.div`
     border: solid black 2px;
     background-color: #800000;
     height: 500px;

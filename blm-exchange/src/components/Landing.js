@@ -2,20 +2,26 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-import { LandingButton, LandingContainer, MobileLandingButtonContainer, DonationContainer } from '../global styles/index'
+import { LandingButton, LandingContainer, LandingTextContent, MobileLandingButtonContainer, DonationContainer, DonationPlaceholderContainer } from '../global styles/index'
 
 function Landing(){
     return(
         <LandingContainer>
+            <LandingTextContent>
+            <div>
             <h3> Art x BLM</h3>
             <p>
                 This is where the tagline goes
             </p>
+            </div>
 
-            <h4> Mission</h4>
+            <div>
+            <h3> Mission</h3>
             <p>
                 This is where the mission goes. This is where the mission goes. This is where the mission goes. This is where the mission goes. This is where the mission goes. This is where the mission goes.This is where the mission goes. This is where the mission goes.This is where the mission goes. This is where the mission goes. This is where the mission goes. This is where the mission goes.
             </p>
+            </div>
+            </LandingTextContent>
 
             <MobileLandingButtonContainer className="mobile">
                 <LandingButton>
@@ -26,13 +32,13 @@ function Landing(){
                 </LandingButton>
             </MobileLandingButtonContainer>
 
-            <div>
+            <DonationContainer>
                 {/* visual donation piece */}
-                <h4>Donations</h4>
-                <DonationContainer>
+                <h3>Donations to Date</h3>
+                <DonationPlaceholderContainer>
 
-                </DonationContainer>
-            </div>
+                </DonationPlaceholderContainer>
+            </DonationContainer>
         </LandingContainer>
     )
 }

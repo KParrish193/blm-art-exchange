@@ -74,7 +74,7 @@ function Header() {
                 Shop
             </NavLink>
 
-            <Link to="/" className="home">
+            <Link to="/blm-art-exchange" className="home">
                 <Logo src={logo} />
             </Link>
 

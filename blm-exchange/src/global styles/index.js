@@ -23,6 +23,71 @@ export const TagButton = styled.button`
     background: #fff;
 `
 
+// landing styling
+export const LandingButton = styled.button`
+    border-bottom: solid 2px black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: #fff;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+`
+
+export const MobileLandingButtonContainer = styled.div`
+    display: none;
+    margin: 50px 0px;
+
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    @media (max-width: 500px){
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+`
+
+export const LandingContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 35px 30px 100px 30px;
+
+    @media (max-width: 800px){
+        display: flex;
+        flex-direction: column;
+        padding: 15px 30px 30px 30px;
+    }
+`
+
+export const LandingTextContent = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    
+    @media (max-width: 800px){
+        width: 100%;
+    }
+`
+
+export const DonationContainer = styled.div`
+    width: 45%;
+
+    @media (max-width: 800px){
+        width: 100%;
+    }
+`
+
+export const DonationPlaceholderContainer = styled.div`
+    border: solid black 2px;
+    background-color: #800000;
+    height: 500px;
+`
+
+
 // header styling
 export const HeaderContainer = styled.div`     
     position: fixed;
@@ -199,7 +264,6 @@ export const ToggleSignUp = styled.div`
 `
 
 // cart styling
-
 export const CartContainer = styled.div`
     width: 90%;
     display: flex;

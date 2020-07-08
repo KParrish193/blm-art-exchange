@@ -77,8 +77,7 @@ function MobileHeader(){
                         style={{
                             textDecoration: 'none',
                             color: '#000000',
-                            width: '100%',
-                            borderBottom: "solid #b4b4b4 1px",
+                            width: '100%'
                         }}
                         activeStyle={{
                             color: "#000000",
@@ -95,7 +94,6 @@ function MobileHeader(){
                                 textDecoration: 'none',
                                 color: '#000000',
                                 width: '100%',
-                                borderBottom: "solid #b4b4b4 1px",
                             }} 
                             activeStyle={{
                                 color: "#000000",
@@ -112,7 +110,6 @@ function MobileHeader(){
                                 textDecoration: 'none',
                                 color: '#000000',
                                 width: '100%',
-                                borderBottom: "solid #b4b4b4 1px",
                             }}
                             activeStyle={{
                                 width: '100%',
@@ -130,7 +127,6 @@ function MobileHeader(){
                                 textDecoration: 'none',
                                 color: '#000000',
                                 width: '100%',
-                                borderBottom: "solid #b4b4b4 1px",
                             }} 
                             activeStyle={{
                                 color: "#000000",
@@ -147,7 +143,6 @@ function MobileHeader(){
                                 textDecoration: 'none',
                                 color: '#000000',
                                 width: '100%',
-                                borderBottom: "solid #b4b4b4 1px",
                             }} 
                             activeStyle={{
                                 color: "#000000",

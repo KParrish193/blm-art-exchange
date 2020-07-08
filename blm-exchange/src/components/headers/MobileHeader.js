@@ -138,7 +138,7 @@ function MobileHeader(){
 
                     <MenuItem onClick={handleClose}>
                         <NavLink 
-                            to="/login"
+                            to="/artist/login"
                             style={{
                                 textDecoration: 'none',
                                 color: '#000000',

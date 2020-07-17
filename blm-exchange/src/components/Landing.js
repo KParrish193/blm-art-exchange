@@ -12,25 +12,25 @@ function Landing(){
         <LandingContainer style={{ backgroundImage: "url("+bg+")" }}>
             <LandingTextContent>
             <div>
-            <h3>Art x BLM</h3>
-            <h2>
+            <h3 style={{color: 'white'}}>Art x BLM</h3>
+            <h2 style={{color: 'white'}}>
                 Artists. Activists. Allies
             </h2>
             </div>
 
             <div>
-            <h5>
+            <h5 style={{color: 'white'}}>
                 Welcome to ArtxBLM, a collective of artists and organizers who believe in the power 
                 of art to enact social change. With every purchase, 100% of profits go towards anti-racist causes 
                 that need financial support the most.
             </h5>
-            <h5>
+            <h5 style={{color: 'white'}}>
                 Uplift Black voices.
             </h5>
-            <h5>
+            <h5 style={{color: 'white'}}>
                 Share your work.
             </h5>
-            <h5>
+            <h5 style={{color: 'white'}}>
                 Support artists.
             </h5>
             </div>
@@ -47,7 +47,7 @@ function Landing(){
 
             <DonationContainer>
                 {/* visual donation piece */}
-                <h3>Donations to Date</h3>
+                <h3 style={{color: 'white'}}>Donations to Date</h3>
                 <DonationPlaceholderContainer>
 
                 </DonationPlaceholderContainer>

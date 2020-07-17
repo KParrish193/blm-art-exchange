@@ -94,19 +94,6 @@ export const AboutUsTextContent = styled.div`
     }
 `
 
-export const ArtistFormContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 35px 30px 100px 30px;
-
-    @media (max-width: 800px){
-        display: flex;
-        flex-direction: column;
-        padding: 15px 30px 30px 30px;
-    }
-`
-
 export const LandingContainer = styled.div`
     display: flex;
     flex-direction: row;
@@ -277,12 +264,37 @@ export const Form = styled.form`
     width: 100%;
 
     label {
-        font-size: 1.2rem;
-        font-weight: 600;
-        margin-right: .2rem;
+        line-height: 2;
+        text-align: left;
+        display: block;
+        margin-bottom: 13px;
+        margin-top: 20px;
+        font-size: 14px;
     }
 
-    .form-container{
+    input {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid white;
+        padding: 10px 15px;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    textarea {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid white;
+        padding: 10px 15px;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .form-container {
         display: flex;
         flex-direction: column;
         width: 90%;

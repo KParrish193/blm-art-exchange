@@ -65,8 +65,6 @@ export const CodeOfConductContainer = styled.div`
 
 export const CodeOfConductTextContent = styled.div`
     display: flex;
-    flex-direction: column;
-    width: 45%;
 
     @media (max-width: 800px){
         width: 100%;

@@ -61,7 +61,7 @@ function FAQ(){
 
                 <p>
                     We’re happy to have you! If you are interested in joining ArtxBLM as an artist, 
-                    please complete the <Link to="sign-up">Artist Registration </Link> form here.
+                    please complete the <Link to="/artist/sign-up">Artist Registration </Link> form here.
                 </p>
 
                 {/* Question 4 */}

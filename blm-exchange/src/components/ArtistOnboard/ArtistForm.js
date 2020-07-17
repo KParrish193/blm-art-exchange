@@ -19,8 +19,8 @@ function ArtistForm(){
             {/* artist sign-up form */}
             <Form onSubmit={handleSubmit(onSubmit)}>
                 <h3>Artist Sign-Up</h3>
-                <p className="instructions">Instructions. Artist Sign up. Or whatever. Directions Directions directions.
-                </p>
+                <p className="instructions">Instructions. Artist Sign up. Or whatever. Directions Directions directions.</p>
+                <p>Read the <Link to="/artist/coc">Code of Conduct</Link>.</p>
                 <ToggleSignUp> Already have an artist account?<Link to="/artist/login"> Login </Link></ToggleSignUp>
                 
                 
@@ -87,8 +87,6 @@ function ArtistForm(){
                 </div>
 
                 {/* modal to confirm code of conduct for new artists */}
-                <p>Code of Conduct instructions words</p>
-                <CoC />
                 </div>
                 <PrimaryButton onclick={onSubmit} > Submit </PrimaryButton>
                 

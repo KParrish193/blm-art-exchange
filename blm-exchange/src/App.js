@@ -18,6 +18,7 @@ import FAQ from './components/informational/FAQ.js';
 
 import ArtistForm from './components/ArtistOnboard/ArtistForm';
 import Login from './components/ArtistOnboard/Login';
+import CodeOfConduct from './components/ArtistOnboard/CodeOfConduct';
 import UploadForm from './components/ArtistOnboard/UploadForm';
 import ArtistDashboard from './components/ArtistOnboard/ArtistDashboard';
 
@@ -104,6 +105,7 @@ function App() {
           {/* artist */}
           <Route path="/artist/login" component={ Login } />
           <Route path="/artist/sign-up" component={ ArtistForm } />
+          <Route path="/artist/coc" component={ CodeOfConduct } />
           <PrivateRoute path ="/artist/:id/dashboard" component={ ArtistDashboard } />
           <PrivateRoute path="/artist/:id/upload" component={ UploadForm } />
 

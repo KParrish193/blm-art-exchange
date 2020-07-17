@@ -5,21 +5,34 @@ import { Link } from 'react-router-dom';
 import { LandingButton, LandingContainer, LandingTextContent, MobileLandingButtonContainer, DonationContainer, DonationPlaceholderContainer } from '../global styles/index'
 
 function Landing(){
+    
+    var bg = require('../assets/landing_background.png')
+
     return(
-        <LandingContainer>
+        <LandingContainer style={{ backgroundImage: "url("+bg+")" }}>
             <LandingTextContent>
             <div>
-            <h3> Art x BLM</h3>
-            <p>
-                This is where the tagline goes
-            </p>
+            <h3>Art x BLM</h3>
+            <h2>
+                Artists. Activists. Allies
+            </h2>
             </div>
 
             <div>
-            <h3> Mission</h3>
-            <p>
-                This is where the mission goes. This is where the mission goes. This is where the mission goes. This is where the mission goes. This is where the mission goes. This is where the mission goes.This is where the mission goes. This is where the mission goes.This is where the mission goes. This is where the mission goes. This is where the mission goes. This is where the mission goes.
-            </p>
+            <h5>
+                Welcome to ArtxBLM, a collective of artists and organizers who believe in the power 
+                of art to enact social change. With every purchase, 100% of profits go towards anti-racist causes 
+                that need financial support the most.
+            </h5>
+            <h5>
+                Uplift Black voices.
+            </h5>
+            <h5>
+                Share your work.
+            </h5>
+            <h5>
+                Support artists.
+            </h5>
             </div>
             </LandingTextContent>
 

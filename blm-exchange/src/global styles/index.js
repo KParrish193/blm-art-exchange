@@ -50,6 +50,50 @@ export const MobileLandingButtonContainer = styled.div`
     }
 `
 
+export const CodeOfConductContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 35px 30px 100px 30px;
+
+    @media (max-width: 800px){
+        display: flex;
+        flex-direction: column;
+        padding: 15px 30px 30px 30px;
+    }
+`
+
+export const CodeOfConductTextContent = styled.div`
+    display: flex;
+
+    @media (max-width: 800px){
+        width: 100%;
+    }
+`
+
+export const AboutUsContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 35px 30px 100px 30px;
+
+    @media (max-width: 800px){
+        display: flex;
+        flex-direction: column;
+        padding: 15px 30px 30px 30px;
+    }
+`
+
+export const AboutUsTextContent = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+
+    @media (max-width: 800px){
+        width: 100%;
+    }
+`
+
 export const LandingContainer = styled.div`
     display: flex;
     flex-direction: row;
@@ -214,18 +258,34 @@ export const PhotoGrid = styled.div`
 
 // form styling
 export const Form = styled.form`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
 
     label {
-        font-size: 1.2rem;
-        font-weight: 600;
-        margin-right: .2rem;
+        float: left;
+        text-align: left;
+        display: inline-block;
     }
 
-    .form-container{
+    input {
+        box-sizing: border-box;
+        width: 100%;
+        border-radius: 4px;
+        padding: 10px 15px;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    textarea {
+        box-sizing: border-box;
+        width: 100%;
+        border-radius: 4px;
+        padding: 10px 15px;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .form-container {
         display: flex;
         flex-direction: column;
         width: 90%;
@@ -237,7 +297,7 @@ export const Form = styled.form`
     }
 
     div {
-        display: flex;
+        display: inline-block, flex;
         flex-direction: row;
         justify-content: flex-start;
         padding: .2rem;
@@ -278,7 +338,7 @@ export const CartContainer = styled.div`
     }
 
     .total{
-        width: 40%;
+        width: 60%;
     }
 `
 

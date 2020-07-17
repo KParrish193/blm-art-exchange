@@ -21,14 +21,14 @@ function Shop(){
             <div className="shop-container">
             <h3>Shop</h3>
                 <div className="product-card-container">
-                {products.map(product => (
-                    <div className ="product-card">
-                        <Link to="/prints/${product.id}">
-                        <img src={product} />
-                        {/* code for dark overlay */}
-                        </Link>
-                    </div>
-                ))}
+                    {products.map(product => (
+                        <div className ="product-card">
+                            <Link to="/prints/${product.id}">
+                            <img src={product} />
+                            {/* code for dark overlay */}
+                            </Link>
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>

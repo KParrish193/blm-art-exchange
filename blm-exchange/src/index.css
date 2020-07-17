@@ -28,6 +28,13 @@ h2, h3 {
   font-weight: normal;
 }
 
+h5 {
+  font-family: neuzeit-grotesk, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+}
+
 p {
   font-family: franklin-gothic-urw, sans-serif;
   font-style: normal;

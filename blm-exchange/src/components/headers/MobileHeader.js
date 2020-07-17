@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 
-import logo from '../../assets/lightsimplelogo.png'
+import logo from '../../assets/ArtxBLMLogo-13.png'
 
 import { Link, NavLink } from 'react-router-dom';
 

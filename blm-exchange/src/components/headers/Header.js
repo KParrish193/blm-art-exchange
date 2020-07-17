@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 
 import { NavLink, Link } from 'react-router-dom';
 
-import logo from '../../assets/lightsimplelogo.png'
+import logo from '../../assets/ArtxBLMLogo-13.png'
 import { HeaderContainer, Nav, Logo, ArtistMenuButton } from '../../global styles/index'
 
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
@@ -61,7 +61,7 @@ function Header() {
                     color: "#000000",
                     borderBottom: "solid #800000 2px"
                 }}>
-                About
+                About Us
             </NavLink>
 
             <NavLink 

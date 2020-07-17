@@ -5,8 +5,11 @@ import { Link } from 'react-router-dom';
 import { LandingButton, LandingContainer, LandingTextContent, MobileLandingButtonContainer, DonationContainer, DonationPlaceholderContainer } from '../global styles/index'
 
 function Landing(){
+    
+    var bg = require('../assets/landing_background.png')
+
     return(
-        <LandingContainer>
+        <LandingContainer style={{ backgroundImage: "url("+bg+")" }}>
             <LandingTextContent>
             <div>
             <h3>Art x BLM</h3>

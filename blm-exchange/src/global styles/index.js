@@ -94,6 +94,19 @@ export const AboutUsTextContent = styled.div`
     }
 `
 
+export const ArtistFormContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 35px 30px 100px 30px;
+
+    @media (max-width: 800px){
+        display: flex;
+        flex-direction: column;
+        padding: 15px 30px 30px 30px;
+    }
+`
+
 export const LandingContainer = styled.div`
     display: flex;
     flex-direction: row;

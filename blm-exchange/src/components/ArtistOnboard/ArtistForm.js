@@ -3,7 +3,6 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { PrimaryButton, Form, ToggleSignUp } from '../../global styles/index';
 import { useForm } from 'react-hook-form';
-import { ArtistFormContainer } from '../../global styles';
 
 function ArtistForm(){
 
@@ -26,10 +25,9 @@ function ArtistForm(){
                 <div className="form-container">
 
                     <div>
-                        <label>First Name:  </label>
+                        <label>First Name:</label> 
                         <input type="text" placeholder="First Name" name="FirstName" ref={register({required: true, max: 30, min: 2})} />
-
-                        <label>Last Name:  </label>
+                        <label>Last Name:</label>
                         <input type="text" placeholder="Last Name" name="LastName" ref={register({max: 30, min: 2})} />
                     </div>
 
@@ -41,7 +39,6 @@ function ArtistForm(){
                     <div>
                         <label>Password:  </label>
                         <input type="text" placeholder="Password" name="Password" ref={register({required: true, min: 8})} />
-
                         <label>Confirm Password: </label>
                         <input type="text" placeholder="Confirm Password" name="Confirm Password" ref={register({required: true, min: 8})} />
                     </div>

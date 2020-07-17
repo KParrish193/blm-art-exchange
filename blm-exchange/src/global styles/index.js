@@ -258,37 +258,28 @@ export const PhotoGrid = styled.div`
 
 // form styling
 export const Form = styled.form`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
 
     label {
-        line-height: 2;
+        float: left;
         text-align: left;
-        display: block;
-        margin-bottom: 13px;
-        margin-top: 20px;
-        font-size: 14px;
+        display: inline-block;
     }
 
     input {
-        display: block;
         box-sizing: border-box;
         width: 100%;
         border-radius: 4px;
-        border: 1px solid white;
         padding: 10px 15px;
         margin-bottom: 10px;
         font-size: 14px;
     }
 
     textarea {
-        display: block;
         box-sizing: border-box;
         width: 100%;
         border-radius: 4px;
-        border: 1px solid white;
         padding: 10px 15px;
         margin-bottom: 10px;
         font-size: 14px;
@@ -306,7 +297,7 @@ export const Form = styled.form`
     }
 
     div {
-        display: flex;
+        display: inline-block, flex;
         flex-direction: row;
         justify-content: flex-start;
         padding: .2rem;
@@ -347,7 +338,7 @@ export const CartContainer = styled.div`
     }
 
     .total{
-        width: 40%;
+        width: 60%;
     }
 `
 

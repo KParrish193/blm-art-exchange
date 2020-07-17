@@ -50,6 +50,29 @@ export const MobileLandingButtonContainer = styled.div`
     }
 `
 
+export const CodeOfConductContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 35px 30px 100px 30px;
+
+    @media (max-width: 800px){
+        display: flex;
+        flex-direction: column;
+        padding: 15px 30px 30px 30px;
+    }
+`
+
+export const CodeOfConductTextContent = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+
+    @media (max-width: 800px){
+        width: 100%;
+    }
+`
+
 export const AboutUsContainer = styled.div`
     display: flex;
     flex-direction: row;

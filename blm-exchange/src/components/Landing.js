@@ -49,7 +49,8 @@ function Landing(){
                 {/* visual donation piece */}
                 <h3 style={{color: 'white'}}>Donations to Date</h3>
                 <DonationPlaceholderContainer>
-
+                    <div>
+                    </div>
                 </DonationPlaceholderContainer>
             </DonationContainer>
         </LandingContainer>

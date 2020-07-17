@@ -99,6 +99,7 @@ export const LandingContainer = styled.div`
     flex-direction: row;
     justify-content: space-around;
     padding: 35px 30px 100px 30px;
+    color: #fff;
 
     @media (max-width: 800px){
         display: flex;
@@ -215,7 +216,6 @@ export const ArtistMenuButton = styled.div`
     justify-content: center;
     align-items: center;
     padding: 20px;
-    border: limegreen solid 1px;
 `
 
 // mobile header styling

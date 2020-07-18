@@ -13,9 +13,11 @@ export const PrimaryButton = styled.button`
     color: #fff;
     background-color: #800000;
     font-size: 1.2rem;
+    letter-spacing: .1rem;
     padding: .2rem;
     width: 30%;
     min-width: 150px;
+    border: #450008 1px solid;
 `
 
 export const TagButton = styled.button`
@@ -198,6 +200,7 @@ export const FAQTextContainer = styled.div`
     
     h2 {
         text-align: center;
+        margin-bottom: 1rem;
     }
 
     p {
@@ -224,13 +227,14 @@ export const HeaderContainer = styled.div`
     justify-content: space-around;
     align-items: center;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: #000;
+    color: #fff;
     width: 100%;
     border-bottom: solid #f6f6f6 1px;
 
     a {
         text-decoration: none;
-        color: #000000;
+        color: #fff;
         font-size: 1.4rem;
         margin: 0;
         padding: 10px;
@@ -249,7 +253,7 @@ export const HeaderContainer = styled.div`
             text-decoration: none;
             margin: 0 20px;
             padding: 0px;
-            color: #000000;
+            color: #fff;
             font-size: 1.3rem;
 
             :hover {

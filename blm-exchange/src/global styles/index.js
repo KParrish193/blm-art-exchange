@@ -2,18 +2,23 @@ import styled from 'styled-components'
 
 // home container - adjusted for fixed header
 export const HomeContainer =styled.div`
-    padding-top: 105px;
+    padding-top: 100px;
+    background-color: #000;
+    color: white;
+    height: 100vh
 `
 
 // buttons
 export const PrimaryButton = styled.button`
-    border-radius: 5px;
+    border-radius: 10px;
     color: #fff;
     background-color: #800000;
     font-size: 1.2rem;
+    letter-spacing: .1rem;
     padding: .2rem;
     width: 30%;
     min-width: 150px;
+    border: #450008 1px solid;
 `
 
 export const TagButton = styled.button`
@@ -25,12 +30,14 @@ export const TagButton = styled.button`
 
 // landing styling
 export const LandingButton = styled.button`
-    border-bottom: solid 2px black;
+    text-color: white;
+    border-bottom: solid 3px #037963;
     border-top: none;
     border-left: none;
     border-right: none;
-    background-color: #fff;
+    background-color: rgba(78, 78, 78, 0.05);
     font-size: 1.4rem;
+    font-weight: 600;
     text-transform: uppercase;
 `
 
@@ -40,7 +47,7 @@ export const MobileLandingButtonContainer = styled.div`
 
     a {
         text-decoration: none;
-        color: #000;
+        color: #fff;
     }
 
     @media (max-width: 500px){
@@ -50,6 +57,73 @@ export const MobileLandingButtonContainer = styled.div`
     }
 `
 
+export const LandingContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 35px 30px 100px 30px;
+    color: #fff;
+    height: 100vh;
+
+    @media (max-width: 800px){
+        display: flex;
+        flex-direction: column;
+        padding: 15px 30px 30px 30px;
+    }
+`
+
+export const LandingTextContent = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    
+    @media (max-width: 800px){
+        width: 100%;
+    }
+`
+
+export const ArtistCallToAction = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+
+    @media (max-width: 800px){
+        margin-top: 3rem;
+        width: 100%;
+    }
+
+    @media (max-width: 500px)
+    {
+        margin-top: 1.5rem;
+    }
+
+    h5 {
+        margin-top: 1rem;
+    }
+
+    p {
+        margin-top: 1rem;
+    }
+`
+
+export const DonationContainer = styled.div`
+    width: 45%;
+
+    @media (max-width: 800px){
+        width: 100%;
+    }
+`
+
+export const DonationPlaceholderContainer = styled.div`
+    border: solid black 2px;
+    background-color: #800000;
+    height: 500px;
+`
+
+
+
+// code of conduct styling
 export const CodeOfConductContainer = styled.div`
     display: flex;
     flex-direction: row;
@@ -71,6 +145,25 @@ export const CodeOfConductTextContent = styled.div`
     }
 `
 
+export const AboutNavContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0 2rem;
+    width: 100%;
+    text-align: center;
+
+    a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.2rem;
+        width: 25%;
+    }
+`
+
+
+// about us styling
 export const AboutUsContainer = styled.div`
     display: flex;
     flex-direction: row;
@@ -87,51 +180,47 @@ export const AboutUsContainer = styled.div`
 export const AboutUsTextContent = styled.div`
     display: flex;
     flex-direction: column;
-    width: 45%;
+    width: 75%;
 
     @media (max-width: 800px){
         width: 100%;
     }
 `
 
-export const LandingContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 35px 30px 100px 30px;
-    color: #fff;
-
-    @media (max-width: 800px){
-        display: flex;
-        flex-direction: column;
-        padding: 15px 30px 30px 30px;
-    }
-`
-
-export const LandingTextContent = styled.div`
+// FAQ Styling
+export const FAQContainer = styled.div`
+    width: 100%;
     display: flex;
     flex-direction: column;
-    width: 45%;
+    align-items: center;
+    padding: 35px 30px 100px 30px;
+`
+
+export const FAQTextContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 75%;
     
+    h2 {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        padding-bottom: 30px;
+    }
+
+    .FAQ-link {
+        text-decoration: none;
+        color: #037963;
+        font-weight: 700;
+    }
+
     @media (max-width: 800px){
         width: 100%;
     }
 `
-
-export const DonationContainer = styled.div`
-    width: 45%;
-
-    @media (max-width: 800px){
-        width: 100%;
-    }
-`
-
-export const DonationPlaceholderContainer = styled.div`
-    border: solid black 2px;
-    background-color: #800000;
-    height: 500px;
-`
-
 
 // header styling
 export const HeaderContainer = styled.div`     
@@ -142,13 +231,14 @@ export const HeaderContainer = styled.div`
     justify-content: space-around;
     align-items: center;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: #000;
+    color: #fff;
     width: 100%;
     border-bottom: solid #f6f6f6 1px;
 
     a {
         text-decoration: none;
-        color: #000000;
+        color: #fff;
         font-size: 1.4rem;
         margin: 0;
         padding: 10px;
@@ -167,7 +257,7 @@ export const HeaderContainer = styled.div`
             text-decoration: none;
             margin: 0 20px;
             padding: 0px;
-            color: #000000;
+            color: #fff;
             font-size: 1.3rem;
 
             :hover {
@@ -231,15 +321,20 @@ export const MobileContainer = styled.div`
         justify-content: space-between;
         margin: 0 auto;
         align-items: center;
-        background-color: #fff;
-        border-bottom: solid #f6f6f6 1px;
+        background-color: #000;
+        color: #fff;
+        border-bottom: solid #4E4E4E 1px;
     }
 
     a.cart {
         text-decoration: none;
-        color: #000000;
+        color: #fff;
         font-size: 1.3rem;
         margin-right: 20px;
+    }
+
+    .mobile-hover:hover {
+        font-weight: 800;
     }
 `
 

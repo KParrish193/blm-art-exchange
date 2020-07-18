@@ -28,6 +28,8 @@ import Shop from './components/Shop';
 import PrintDetail from './components/PrintDetail';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
+import CustLogin from './components/CustLogin';
+import Orders from './components/Orders';
 
 // contexts
 import { ArtistContext } from './contexts/ArtistContext';
@@ -101,6 +103,8 @@ function App() {
           <Route path="/artists/:id" component={ ArtistProfile } />
           <Route path="/cart" component={ Cart } />
           <Route path="/checkout" component={ Checkout } />
+          <Route path="/customer/login" component={CustLogin} />
+          <Route path="/customer/:id" component={Orders} />
 
           {/* artist */}
           <Route path="/artist/login" component={ Login } />

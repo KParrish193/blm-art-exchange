@@ -1,13 +1,14 @@
 import React from 'react';
 import Divider from '@material-ui/core/Divider';
+
+import AboutNav from './AboutNav';
 import { AboutUsContainer, AboutUsTextContent } from '../../global styles';
-
-
 
 function About(){
     return (
         <AboutUsContainer>
             <AboutUsTextContent>
+            <AboutNav />
                 <div>
                     <h3><b>What is ArtxBLM?</b></h3>
 

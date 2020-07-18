@@ -2,7 +2,9 @@ import styled from 'styled-components'
 
 // home container - adjusted for fixed header
 export const HomeContainer =styled.div`
-    padding-top: 105px;
+    padding-top: 100px;
+    background-color: black;
+    color: white;
 `
 
 // buttons
@@ -25,11 +27,12 @@ export const TagButton = styled.button`
 
 // landing styling
 export const LandingButton = styled.button`
-    border-bottom: solid 2px black;
+    text-color: white;
+    border-bottom: solid 2px white;
     border-top: none;
     border-left: none;
     border-right: none;
-    background-color: #fff;
+    background-color: #4e4e4e;
     font-size: 1.4rem;
     text-transform: uppercase;
 `
@@ -40,7 +43,7 @@ export const MobileLandingButtonContainer = styled.div`
 
     a {
         text-decoration: none;
-        color: #000;
+        color: #fff;
     }
 
     @media (max-width: 500px){
@@ -50,47 +53,28 @@ export const MobileLandingButtonContainer = styled.div`
     }
 `
 
-export const CodeOfConductContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 35px 30px 100px 30px;
-
-    @media (max-width: 800px){
-        display: flex;
-        flex-direction: column;
-        padding: 15px 30px 30px 30px;
-    }
-`
-
-export const CodeOfConductTextContent = styled.div`
-    display: flex;
-
-    @media (max-width: 800px){
-        width: 100%;
-    }
-`
-
-export const AboutUsContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 35px 30px 100px 30px;
-
-    @media (max-width: 800px){
-        display: flex;
-        flex-direction: column;
-        padding: 15px 30px 30px 30px;
-    }
-`
-
-export const AboutUsTextContent = styled.div`
+export const ArtistCallToAction = styled.div`
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 45%;
 
     @media (max-width: 800px){
+        margin-top: 3rem;
         width: 100%;
+    }
+
+    @media (max-width: 500px)
+    {
+        margin-top: 1.5rem;
+    }
+
+    h5 {
+        margin-top: 1rem;
+    }
+
+    p {
+        margin-top: 1rem;
     }
 `
 
@@ -132,6 +116,104 @@ export const DonationPlaceholderContainer = styled.div`
     height: 500px;
 `
 
+
+
+// code of conduct styling
+export const CodeOfConductContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 35px 30px 100px 30px;
+
+    @media (max-width: 800px){
+        display: flex;
+        flex-direction: column;
+        padding: 15px 30px 30px 30px;
+    }
+`
+
+export const CodeOfConductTextContent = styled.div`
+    display: flex;
+
+    @media (max-width: 800px){
+        width: 100%;
+    }
+`
+
+export const AboutNavContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0 2rem;
+    width: 100%;
+    text-align: center;
+
+    a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.2rem;
+        width: 25%;
+    }
+`
+
+// about us styling
+export const AboutUsContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 35px 30px 100px 30px;
+
+    @media (max-width: 800px){
+        display: flex;
+        flex-direction: column;
+        padding: 15px 30px 30px 30px;
+    }
+`
+
+export const AboutUsTextContent = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+
+    @media (max-width: 800px){
+        width: 100%;
+    }
+`
+
+// FAQ Styling
+export const FAQContainer = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 30px 100px 30px;
+`
+
+export const FAQTextContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 75%;
+    
+    h2 {
+        text-align: center;
+    }
+
+    p {
+        padding-bottom: 30px;
+    }
+
+    .FAQ-link {
+        text-decoration: none;
+        color: #037963;
+        font-weight: 700;
+    }
+
+    @media (max-width: 800px){
+        width: 100%;
+    }
+`
 
 // header styling
 export const HeaderContainer = styled.div`     

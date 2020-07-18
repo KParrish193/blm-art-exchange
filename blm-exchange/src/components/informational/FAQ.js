@@ -1,33 +1,14 @@
 import React from 'react';
-
-import styled from 'styled-components';
-
+import AboutNav from './AboutNav';
 import { Link } from 'react-router-dom';
-
-const Container = styled.div`
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-`
-
-const TextContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    width: 80%;
-
-    p {
-        padding-bottom: 30px;
-    }
-`
+import { AboutUsContainer, FAQTextContainer } from '../../global styles';
 
 function FAQ(){
     return(
-            <Container>
+            <AboutUsContainer>
+            <FAQTextContainer>
+            <AboutNav/>
             <h2>Frequently Asked Questions</h2>
-            
-            <TextContainer>
             <div>
                 {/* Question 1 */}
                 <h3><b>Where is my money going?</b></h3>
@@ -47,7 +28,7 @@ function FAQ(){
                 </p>
 
                 {/* Question 2 */}
-                <h3><b>How would I go about requesting a custom artwork?</b></h3>
+                <h3><b>How would I go about requesting custom artwork?</b></h3>
 
                 <p>
                     Some artists in the collective will make custom artworks in exchange for demonstrations of support, 
@@ -61,7 +42,7 @@ function FAQ(){
 
                 <p>
                     We’re happy to have you! If you are interested in joining ArtxBLM as an artist, 
-                    please complete the <Link to="/artist/sign-up">Artist Registration </Link> form here.
+                    please complete the <Link to="/artist/sign-up" className="FAQ-link">Artist Registration </Link> form here.
                 </p>
 
                 {/* Question 4 */}
@@ -135,20 +116,19 @@ function FAQ(){
                 <h3><b>Can I return or get a refund?</b></h3>
                 <p>
                     Unfortunately we cannot accept returns or refunds, as profits will be donated directly to the recipients we choose. If there is an 
-                    issue with your print or order, please contact us at <a href="mailto:artxblmcollective@gmail.com">artxblmcollective@gmail.com</a>.
+                    issue with your print or order, please contact us at <a href="mailto:artxblmcollective@gmail.com" className="FAQ-link">artxblmcollective@gmail.com</a>.
                 </p>
 
                 {/* Question 13 */}
                 <h3><b>Any other questions?</b></h3>
 
                 <p>
-                    Get in touch at <a href="mailto:artxblmcollective@gmail.com">artxblmcollective@gmail.com</a>.
+                    Get in touch at <a href="mailto:artxblmcollective@gmail.com" className="FAQ-link">artxblmcollective@gmail.com</a>.
                 </p>
 
             </div>
-
-        </TextContainer>
-        </Container>
+        </FAQTextContainer>    
+        </AboutUsContainer>
     )
 }
 

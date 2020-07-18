@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-import { LandingButton, LandingContainer, LandingTextContent, MobileLandingButtonContainer, DonationContainer, DonationPlaceholderContainer } from '../global styles/index'
+import { LandingButton, LandingContainer, LandingTextContent, MobileLandingButtonContainer, DonationContainer, DonationPlaceholderContainer, ArtistCallToAction, PrimaryButton } from '../global styles/index'
 
 function Landing(){
     
@@ -45,14 +45,25 @@ function Landing(){
                 </LandingButton>
             </MobileLandingButtonContainer>
 
-            <DonationContainer>
+            <DonationContainer 
+                style={{
+                    display: 'none',
+                }}>
                 {/* visual donation piece */}
                 <h3>Donations to Date</h3>
                 <DonationPlaceholderContainer>
-                    <div>
-                    </div>
                 </DonationPlaceholderContainer>
             </DonationContainer>
+
+            <ArtistCallToAction>
+                <h4>Want your work to be featured? </h4>
+                    <h5>We're looking for talented artists to contribute to the cause. </h5>
+                    <p>
+                        <Link to="/artist/sign-up">
+                        <PrimaryButton>Sign Up</PrimaryButton>
+                        </Link>
+                    </p>
+            </ArtistCallToAction>
         </LandingContainer>
     )
 }

@@ -3,13 +3,14 @@ import styled from 'styled-components'
 // home container - adjusted for fixed header
 export const HomeContainer =styled.div`
     padding-top: 100px;
-    background-color: black;
+    background-color: #000;
     color: white;
+    height: 100vh
 `
 
 // buttons
 export const PrimaryButton = styled.button`
-    border-radius: 5px;
+    border-radius: 10px;
     color: #fff;
     background-color: #800000;
     font-size: 1.2rem;
@@ -30,12 +31,13 @@ export const TagButton = styled.button`
 // landing styling
 export const LandingButton = styled.button`
     text-color: white;
-    border-bottom: solid 2px white;
+    border-bottom: solid 3px #037963;
     border-top: none;
     border-left: none;
     border-right: none;
-    background-color: #4e4e4e;
+    background-color: rgba(78, 78, 78, 0.05);
     font-size: 1.4rem;
+    font-weight: 600;
     text-transform: uppercase;
 `
 
@@ -52,6 +54,31 @@ export const MobileLandingButtonContainer = styled.div`
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+    }
+`
+
+export const LandingContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 35px 30px 100px 30px;
+    color: #fff;
+    height: 100vh;
+
+    @media (max-width: 800px){
+        display: flex;
+        flex-direction: column;
+        padding: 15px 30px 30px 30px;
+    }
+`
+
+export const LandingTextContent = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    
+    @media (max-width: 800px){
+        width: 100%;
     }
 `
 
@@ -77,30 +104,6 @@ export const ArtistCallToAction = styled.div`
 
     p {
         margin-top: 1rem;
-    }
-`
-
-export const LandingContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 35px 30px 100px 30px;
-    color: #fff;
-
-    @media (max-width: 800px){
-        display: flex;
-        flex-direction: column;
-        padding: 15px 30px 30px 30px;
-    }
-`
-
-export const LandingTextContent = styled.div`
-    display: flex;
-    flex-direction: column;
-    width: 45%;
-    
-    @media (max-width: 800px){
-        width: 100%;
     }
 `
 
@@ -158,6 +161,7 @@ export const AboutNavContainer = styled.div`
         width: 25%;
     }
 `
+
 
 // about us styling
 export const AboutUsContainer = styled.div`
@@ -317,15 +321,20 @@ export const MobileContainer = styled.div`
         justify-content: space-between;
         margin: 0 auto;
         align-items: center;
-        background-color: #fff;
-        border-bottom: solid #f6f6f6 1px;
+        background-color: #000;
+        color: #fff;
+        border-bottom: solid #4E4E4E 1px;
     }
 
     a.cart {
         text-decoration: none;
-        color: #000000;
+        color: #fff;
         font-size: 1.3rem;
         margin-right: 20px;
+    }
+
+    .mobile-hover:hover {
+        font-weight: 800;
     }
 `
 

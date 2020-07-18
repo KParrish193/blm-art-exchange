@@ -1,12 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
 
-import logo from '../../assets/ArtxBLMLogo-13.png'
+import logo from '../../assets/darkartxblm.gif'
 
 import { Link, NavLink } from 'react-router-dom';
 
 import { MenuButton, Logo, MobileContainer } from '../../global styles/index'
 
-import { makeStyles } from '@material-ui/core/styles';
 import Grow from '@material-ui/core/Grow';
 import Paper from '@material-ui/core/Paper';
 import Popper from '@material-ui/core/Popper';
@@ -54,7 +53,6 @@ function MobileHeader(){
     return(
         <MobileContainer className="mobile" >
             <div className="menu">
-
             <MenuButton
                 ref={anchorRef}
                 aria-controls={open ? 'menu-list-grow' : undefined}
@@ -70,90 +68,123 @@ function MobileHeader(){
                 >
                 <Paper>
                 <ClickAwayListener onClickAway={handleClose}>
-                <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
-                <MenuItem button>
+                <MenuList 
+                    autoFocusItem={open} 
+                    id="menu-list-grow" 
+                    onKeyDown={handleListKeyDown}
+                    style={{
+                        backgroundColor: '#000',
+                    }}>
+
+                <MenuItem 
+                    button
+                    style={{
+                        backgroundColor: '#000',
+                    }}>
+                    <NavLink 
+                        to="/blm-art-exchange"
+                        style={{
+                            textDecoration: 'none',
+                            color: '#fff',
+                            width: '100%',
+                        }}
+                        activeStyle={{
+                            width: '100%',
+                            color: "#fff",
+                            borderBottom: "solid #800000 2px"
+                        }}
+                        className="mobile-hover">
+                    Home
+                    </NavLink>
+                </MenuItem>
+
+                <MenuItem 
+                    button
+                    style={{
+                        backgroundColor: '#000',
+                    }}>
                     <NavLink 
                         to="/shop"
                         style={{
                             textDecoration: 'none',
-                            color: '#000000',
-                            width: '100%'
+                            color: '#fff',
+                            width: '100%',
                         }}
                         activeStyle={{
                             color: "#000000",
                             borderBottom: "solid #800000 2px"
-                        }}>
+                        }}
+                        className="mobile-hover">
                     Shop
                     </NavLink>
-                    </MenuItem>
+                </MenuItem>
 
-                    <MenuItem button>
-                        <NavLink 
-                            to="/artists"
-                            style={{
-                                textDecoration: 'none',
-                                color: '#000000',
-                                width: '100%',
-                            }} 
-                            activeStyle={{
-                                color: "#000000",
-                                borderBottom: "solid #800000 2px"
-                            }}>
-                        Artists
-                        </NavLink>
-                    </MenuItem>
+                <MenuItem 
+                    button
+                    style={{
+                        backgroundColor: '#000',
+                    }}>
+                    <NavLink 
+                        to="/artists"
+                        style={{
+                            textDecoration: 'none',
+                            color: '#fff',
+                            width: '100%',
+                        }} 
+                        activeStyle={{
+                            color: "#fff",
+                            borderBottom: "solid #800000 2px"
+                        }}
+                        className="mobile-hover">
+                    Artists
+                    </NavLink>
+                </MenuItem>
 
-                    <MenuItem button>
-                        <NavLink 
-                            to="/about"
-                            style={{
-                                textDecoration: 'none',
-                                color: '#000000',
-                                width: '100%',
-                            }}
-                            activeStyle={{
-                                width: '100%',
-                                color: "#000000",
-                                borderBottom: "solid #800000 2px"
-                            }}>
-                        About Us
-                        </NavLink>
-                    </MenuItem>
+                <MenuItem 
+                    button
+                    style={{
+                        backgroundColor: '#000',
+                    }}>
+                    <NavLink 
+                        to="/about"
+                        style={{
+                            textDecoration: 'none',
+                            color: '#fff',
+                            width: '100%',
+                        }}
+                        activeStyle={{
+                            width: '100%',
+                            color: "#fff",
+                            borderBottom: "solid #800000 2px"
+                        }}
+                        className="mobile-hover">
+                    About Us
+                    </NavLink>
+                </MenuItem>
 
-                    <MenuItem button>
-                        <NavLink 
-                            to="/FAQ"
-                            style={{
-                                textDecoration: 'none',
-                                color: '#000000',
-                                width: '100%',
-                            }} 
-                            activeStyle={{
-                                color: "#000000",
-                                borderBottom: "solid #800000 2px"
-                            }}>
-                        FAQ
-                        </NavLink>
-                    </MenuItem>
-
-                    <MenuItem onClick={handleClose}>
-                        <NavLink 
-                            to="/artist/login"
-                            style={{
-                                textDecoration: 'none',
-                                color: '#000000',
-                                width: '100%',
-                            }} 
-                            activeStyle={{
-                                color: "#000000",
-                                borderBottom: "solid #800000 2px"
-                            }}>
-                        Artist Portal
-                        </NavLink>
-                    </MenuItem>
-                    </MenuList>
-                    </ClickAwayListener>
-                    </Paper>
+                <MenuItem button
+                    style={{
+                        backgroundColor: '#000',
+                    }}
+                    onClick={handleClose}>
+                    <NavLink 
+                        to="/artist/login"
+                        style={{
+                            textDecoration: 'none',
+                            color: '#fff',
+                            width: '100%',
+                        }} 
+                        activeStyle={{
+                            color: "#fff",
+                            borderBottom: "solid #800000 2px"
+                        }}
+                        className="mobile-hover">
+                    Artist Portal
+                    </NavLink>
+                </MenuItem>
+                </MenuList>
+                </ClickAwayListener>
+                </Paper>
                 </Grow>
                 )}
             </Popper>   

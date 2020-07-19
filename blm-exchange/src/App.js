@@ -12,6 +12,8 @@ import { HomeContainer } from './global styles/index'
 import Header from './components/headers/Header';
 import MobileHeader from './components/headers/MobileHeader';
 
+import Footer from './components/footers/Footer';
+
 import Landing from './components/Landing.js';
 import About from './components/informational/About.js';
 import FAQ from './components/informational/FAQ.js';
@@ -115,6 +117,10 @@ function App() {
 
         </Switch>
       </div>
+    </div>
+
+    <div>
+      <Footer/>
     </div>
     </HomeContainer>
 

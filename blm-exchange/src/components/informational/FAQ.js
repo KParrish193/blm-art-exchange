@@ -15,10 +15,10 @@ function FAQ(){
             <h2>Frequently Asked Questions</h2>
             <div>
                 {/* Question 1 */}
-                <ExpansionPanel>
+                <ExpansionPanel style={{position: 'static'}}>
                     <ExpansionPanelSummary 
-                    expandIcon={<ExpandMoreIcon style={{color: 'white'}} />}
-                    style={{backgroundColor: 'black', color: 'white'}}>   
+                    expandIcon={<ExpandMoreIcon style={{color: 'white', position: 'static'}} />}
+                    style={{backgroundColor: 'black', color: 'white', position: 'static'}}>   
                         <h3><b>Where is my money going?</b></h3>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails style={{backgroundColor: 'black', color: 'white'}}>
@@ -35,10 +35,10 @@ function FAQ(){
                 </ExpansionPanel>
 
                 {/* Question 2 */}
-                <ExpansionPanel>
+                <ExpansionPanel style={{position: 'static'}}>
                     <ExpansionPanelSummary 
-                    expandIcon={<ExpandMoreIcon style={{color: 'white'}} />}
-                    style={{backgroundColor: 'black', color: 'white'}}>  
+                    expandIcon={<ExpandMoreIcon style={{color: 'white', position: 'static'}} />}
+                    style={{backgroundColor: 'black', color: 'white', position: 'static'}}>  
                         <h3><b>How would I go about requesting custom artwork?</b></h3>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails style={{backgroundColor: 'black', color: 'white'}}>
@@ -52,10 +52,10 @@ function FAQ(){
                 </ExpansionPanel>
 
                 {/* Question 3 */}
-                <ExpansionPanel>
+                <ExpansionPanel style={{position: 'static'}}>
                     <ExpansionPanelSummary 
-                    expandIcon={<ExpandMoreIcon style={{color: 'white'}} />}
-                    style={{backgroundColor: 'black', color: 'white'}}>  
+                    expandIcon={<ExpandMoreIcon style={{color: 'white', position: 'static'}} />}
+                    style={{backgroundColor: 'black', color: 'white', position: 'static'}}>  
                         <h3><b>How can I join ArtxBLM as an artist?</b></h3>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails style={{backgroundColor: 'black', color: 'white'}}>
@@ -67,10 +67,10 @@ function FAQ(){
                 </ExpansionPanel>
 
                 {/* Question 4 */}
-                <ExpansionPanel>
+                <ExpansionPanel style={{position: 'static'}}>
                     <ExpansionPanelSummary 
-                    expandIcon={<ExpandMoreIcon style={{color: 'white'}} />}
-                    style={{backgroundColor: 'black', color: 'white'}}>  
+                    expandIcon={<ExpandMoreIcon style={{color: 'white', position: 'static'}} />}
+                    style={{backgroundColor: 'black', color: 'white', position: 'static'}}>  
                         <h3><b>Can I support ArtxBLM without money?</b></h3>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails style={{backgroundColor: 'black', color: 'white'}}>
@@ -90,10 +90,10 @@ function FAQ(){
                 </ExpansionPanel>
 
                 {/* Question 5 */}
-                <ExpansionPanel>
+                <ExpansionPanel style={{position: 'static'}}>
                     <ExpansionPanelSummary 
-                    expandIcon={<ExpandMoreIcon style={{color: 'white'}} />}
-                    style={{backgroundColor: 'black', color: 'white'}}>  
+                    expandIcon={<ExpandMoreIcon style={{color: 'white', position: 'static'}} />}
+                    style={{backgroundColor: 'black', color: 'white', position: 'static'}}>  
                         <h3><b>How are the prints priced?</b></h3>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails style={{backgroundColor: 'black', color: 'white'}}>
@@ -109,10 +109,10 @@ function FAQ(){
                 </ExpansionPanel>
 
                 {/* Question 6 */}
-                <ExpansionPanel>
+                <ExpansionPanel style={{position: 'static'}}>
                     <ExpansionPanelSummary 
-                    expandIcon={<ExpandMoreIcon style={{color: 'white'}} />}
-                    style={{backgroundColor: 'black', color: 'white'}}>  
+                    expandIcon={<ExpandMoreIcon style={{color: 'white', position: 'static'}} />}
+                    style={{backgroundColor: 'black', color: 'white', position: 'static'}}>  
                         <h3><b>What forms of payment do you accept?</b></h3>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails style={{backgroundColor: 'black', color: 'white'}}>
@@ -121,10 +121,10 @@ function FAQ(){
                 </ExpansionPanel>
 
                 {/* Question 7 */}
-                <ExpansionPanel>
+                <ExpansionPanel style={{position: 'static'}}>
                     <ExpansionPanelSummary 
-                    expandIcon={<ExpandMoreIcon style={{color: 'white'}} />}
-                    style={{backgroundColor: 'black', color: 'white'}}>  
+                    expandIcon={<ExpandMoreIcon style={{color: 'white', position: 'static'}} />}
+                    style={{backgroundColor: 'black', color: 'white', position: 'static'}}>  
                         <h3><b>How much does shipping cost?</b></h3>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails style={{backgroundColor: 'black', color: 'white'}}>
@@ -137,10 +137,10 @@ function FAQ(){
 
 
                 {/* Question 8 */}
-                <ExpansionPanel>
+                <ExpansionPanel style={{position: 'static'}}>
                     <ExpansionPanelSummary 
-                    expandIcon={<ExpandMoreIcon style={{color: 'white'}} />}
-                    style={{backgroundColor: 'black', color: 'white'}}>  
+                    expandIcon={<ExpandMoreIcon style={{color: 'white', position: 'static'}} />}
+                    style={{backgroundColor: 'black', color: 'white', position: 'static'}}>  
                         <h3><b>What is the quality of the prints?</b></h3>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails style={{backgroundColor: 'black', color: 'white'}}>
@@ -152,10 +152,10 @@ function FAQ(){
                 </ExpansionPanel>
 
                 {/* Question 9 */}
-                <ExpansionPanel>
+                <ExpansionPanel style={{position: 'static'}}>
                     <ExpansionPanelSummary 
-                    expandIcon={<ExpandMoreIcon style={{color: 'white'}} />}
-                    style={{backgroundColor: 'black', color: 'white'}}>  
+                    expandIcon={<ExpandMoreIcon style={{color: 'white', position: 'static'}} />}
+                    style={{backgroundColor: 'black', color: 'white', position: 'static'}}>  
                         <h3><b>Will the images be cropped?</b></h3>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails style={{backgroundColor: 'black', color: 'white'}}>
@@ -167,10 +167,10 @@ function FAQ(){
                 </ExpansionPanel>
 
                 {/* Question 10 */}
-                <ExpansionPanel>
+                <ExpansionPanel style={{position: 'static'}}>
                     <ExpansionPanelSummary 
-                    expandIcon={<ExpandMoreIcon style={{color: 'white'}} />}
-                    style={{backgroundColor: 'black', color: 'white'}}>  
+                    expandIcon={<ExpandMoreIcon style={{color: 'white', position: 'static'}} />}
+                    style={{backgroundColor: 'black', color: 'white', position: 'static'}}>  
                         <h3><b>How much will it cost to produce the prints?</b></h3>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails style={{backgroundColor: 'black', color: 'white'}}>
@@ -183,10 +183,10 @@ function FAQ(){
                 </ExpansionPanel>
 
                 {/* Question 11 */}
-                <ExpansionPanel>
+                <ExpansionPanel style={{position: 'static'}}>
                     <ExpansionPanelSummary 
-                    expandIcon={<ExpandMoreIcon style={{color: 'white'}} />}
-                    style={{backgroundColor: 'black', color: 'white'}}>  
+                    expandIcon={<ExpandMoreIcon style={{color: 'white', position: 'static'}} />}
+                    style={{backgroundColor: 'black', color: 'white', position: 'static'}}>  
                         <h3><b>How long will it take to get my prints?</b></h3>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails style={{backgroundColor: 'black', color: 'white'}}>
@@ -198,10 +198,10 @@ function FAQ(){
                 </ExpansionPanel>
 
                 {/* Question 12 */}
-                <ExpansionPanel>
+                <ExpansionPanel style={{position: 'static'}}>
                     <ExpansionPanelSummary 
-                    expandIcon={<ExpandMoreIcon style={{color: 'white'}} />}
-                    style={{backgroundColor: 'black', color: 'white'}}>  
+                    expandIcon={<ExpandMoreIcon style={{color: 'white', position: 'static'}} />}
+                    style={{backgroundColor: 'black', color: 'white', position: 'static'}}>  
                         <h3><b>Can I return or get a refund?</b></h3>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails style={{backgroundColor: 'black', color: 'white'}}>
@@ -213,10 +213,10 @@ function FAQ(){
                 </ExpansionPanel>
 
                 {/* Question 13 */}
-                <ExpansionPanel>
+                <ExpansionPanel style={{position: 'static'}}>
                     <ExpansionPanelSummary 
-                    expandIcon={<ExpandMoreIcon style={{color: 'white'}} />}
-                    style={{backgroundColor: 'black', color: 'white'}}>  
+                    expandIcon={<ExpandMoreIcon style={{color: 'white', position: 'static'}} />}
+                    style={{backgroundColor: 'black', color: 'white', position: 'static'}}>  
                         <h3><b>Any other questions?</b></h3>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails style={{backgroundColor: 'black', color: 'white'}}>

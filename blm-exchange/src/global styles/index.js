@@ -200,6 +200,7 @@ export const FAQTextContainer = styled.div`
     flex-direction: column;
     text-align: left;
     width: 75%;
+    position: static;
     
     h2 {
         text-align: center;
@@ -222,6 +223,23 @@ export const FAQTextContainer = styled.div`
     }
 `
 
+//footer styling
+export const FooterContainer = styled.div`
+    position: fixed;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #fff;
+    left:0;
+    bottom:0;
+    right:0;
+    width: 100%;
+    margin-left: 20px;
+    padding-top:20px;
+    padding-bottom:40px;
+`
+
 // header styling
 export const HeaderContainer = styled.div`     
     position: fixed;
@@ -234,7 +252,6 @@ export const HeaderContainer = styled.div`
     background-color: #000;
     color: #fff;
     width: 100%;
-    border-bottom: solid #f6f6f6 1px;
 
     a {
         text-decoration: none;

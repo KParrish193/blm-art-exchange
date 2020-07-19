@@ -7,7 +7,6 @@ export const HomeContainer =styled.div`
     color: white;
     height: 100vh
 `
-
 // buttons
 export const PrimaryButton = styled.button`
     border-radius: 10px;
@@ -208,6 +207,7 @@ export const FAQTextContainer = styled.div`
     }
 
     p {
+        display: inline, block;
         padding-bottom: 30px;
     }
 

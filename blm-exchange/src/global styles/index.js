@@ -423,6 +423,29 @@ export const Form = styled.form`
         text-align: center;
         margin-bottom: 40px;
     }
+
+    .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+    }
+
+
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    input[type=checkbox] + label {
+        color: #ccc;
+        font-style: italic;
+      }
+
+    input[type=checkbox]:checked + label {
+        color: #f00;
+        font-style: normal;
+    } 
 `
 
 export const ToggleSignUp = styled.div`

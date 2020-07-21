@@ -17,8 +17,8 @@ function ArtistForm(){
             {/* artist sign-up form */}
             <Form onSubmit={handleSubmit(onSubmit)}>
                 <h3>Artist Registration</h3>
-                <p className="instructions">You can register to become an artist and work with ArtxBLM here. Pleas make sure you read through the Code of Conduct below before submitting your application. We're so excited for you to join us!</p>
-                <p className="instructions">Read the <Link to="/artist/coc">Code of Conduct</Link>.</p>
+                <p className="instructions">Explain our process here. Something about reading and agreeing to the Code of Conduct. Evaluating and stuff idk lots of words here. Def explain non-donation exchange.</p>
+                <p className="instructions">Read the <Link to="/artist/coc" style={{color: "#037963"}}>Code of Conduct</Link>.</p>
                 <ToggleSignUp> Already have an artist account?<Link to="/artist/login"> Login </Link></ToggleSignUp>
                 
                 
@@ -89,14 +89,19 @@ function ArtistForm(){
                     <input type="text" placeholder="Profile" name="Profile" ref={register} />
                     </div>
 
-                    <div>
-                        <label>Agree to Code of Conduct: </label>
-                        <input type="checkbox" placeholder="CodeofConduct" name="CodeofConduct" ref={register} />
+                    <div className="row">
+                        <div className="column">
+                            <label>Agree to Code of Conduct: </label>
+                            <input type="checkbox" placeholder="CodeofConduct" name="CodeofConduct" ref={register} />
+                        </div>
+                        <div className="column">
+                            <PrimaryButton onclick={onSubmit} > Submit </PrimaryButton>
+                        </div>
                     </div>
 
                     {/* modal to confirm code of conduct for new artists */}
                     </div>
-                    <PrimaryButton onclick={onSubmit} > Submit </PrimaryButton>
+                    
                     
             </Form>
         </div>

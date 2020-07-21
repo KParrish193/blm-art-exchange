@@ -235,9 +235,8 @@ export const FooterContainer = styled.div`
     bottom:0;
     right:0;
     width: 100%;
-    margin-left: 20px;
-    padding-top:20px;
-    padding-bottom:40px;
+    padding-top:10px;
+    padding-bottom:10px;
 `
 
 // header styling

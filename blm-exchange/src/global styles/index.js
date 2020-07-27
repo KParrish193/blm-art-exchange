@@ -145,6 +145,7 @@ export const CodeOfConductTextContent = styled.div`
     }
 `
 
+// about us styling
 export const AboutNavContainer = styled.div`
     display: flex;
     flex-direction: row;
@@ -162,8 +163,6 @@ export const AboutNavContainer = styled.div`
     }
 `
 
-
-// about us styling
 export const AboutUsContainer = styled.div`
     display: flex;
     flex-direction: row;
@@ -185,6 +184,14 @@ export const AboutUsTextContent = styled.div`
     @media (max-width: 800px){
         width: 100%;
     }
+`
+
+export const AboutUsImg = styled.img`
+    
+`
+
+export const AboutUsTeamContainer = styled.div`
+    display: flex;
 `
 
 // FAQ Styling

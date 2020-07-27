@@ -57,6 +57,20 @@ function About(){
                 <div>
                     <p> </p>
                     <h3><b>Meet the Team</b></h3>
+
+                    <AboutUsTeamContainer>
+
+                    </AboutUsTeamContainer>
+
+
+                    <AboutUsTeamContainer>
+
+                    </AboutUsTeamContainer>
+
+
+                    <AboutUsTeamContainer>
+
+                    </AboutUsTeamContainer>
                 </div>
 
 

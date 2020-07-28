@@ -17,16 +17,6 @@ function AboutNav(){
     </NavLink>
     
     <NavLink 
-        to="/faq"               
-        activeStyle={{
-        fontWeight: "bold",
-        color: "#fff",
-        borderBottom: "solid #800000 2px"
-    }}>
-        FAQ
-    </NavLink>
-
-    <NavLink 
         to="/insta"               
         activeStyle={{
         fontWeight: "bold",
@@ -34,6 +24,16 @@ function AboutNav(){
         borderBottom: "solid #800000 2px"
     }}>
         Instagram
+    </NavLink>
+
+    <NavLink 
+        to="/faq"               
+        activeStyle={{
+        fontWeight: "bold",
+        color: "#fff",
+        borderBottom: "solid #800000 2px"
+    }}>
+        FAQ
     </NavLink>
 </AboutNavContainer>
 

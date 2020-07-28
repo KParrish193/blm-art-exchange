@@ -1,18 +1,30 @@
 import React from 'react';
 
-import { InstaContainer } from '../../global styles/index'
+import { InstaContainer, AboutUsContainer, AboutUsTextContent } from '../../global styles/index'
 import AboutNav from './AboutNav'
+
+
+// get instagram feed
 
 function Insta() {
     return(
-        <div>
+        <AboutUsContainer>
+        <AboutUsTextContent>
             <AboutNav />
-        
-        <InstaContainer>
+    
+            <InstaContainer>
+                <a href="https://instagram.com/artxblm?igshid=1b2f2j0u0ntyw" target="blank">
+                    <h3>@artxblm</h3>
+                </a>
+
+                
+                {/* perhaps any additional contact info? */}
             
-            <a href="https://instagram.com/artxblm?igshid=1b2f2j0u0ntyw"><h3>@artxblm</h3></a>
-        </InstaContainer>
-        </div>
+                {/* display insta feed */}
+            </InstaContainer>
+
+        </AboutUsTextContent>
+        </AboutUsContainer>
     )
 }
 

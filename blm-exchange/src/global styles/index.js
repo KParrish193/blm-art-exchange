@@ -266,7 +266,6 @@ export const AboutUsTeamContainer = styled.div`
 
     p { 
         width: 70%;
-        font-size: 1.1rem;
         text-align: left;
         
         @media (max-width: 600px){

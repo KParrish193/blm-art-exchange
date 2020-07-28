@@ -146,7 +146,7 @@ function MobileHeader(){
                         backgroundColor: '#000',
                     }}>
                     <NavLink 
-                        to="/about"
+                        to="/insta"
                         style={{
                             textDecoration: 'none',
                             color: '#fff',

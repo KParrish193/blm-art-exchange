@@ -72,12 +72,12 @@ function About(){
                         <h4>
                         Safiyyah Nawaz
                         </h4>
-                        <a href="" >
+                        <a href="https://www.instagram.com/safiyahn/" >
                             @safiyahn
                         </a>
                         </div>
                         <div>
-                        <AboutUsImg src={safiyyah} alt="photo of safiyyah" />
+                        <AboutUsImg src={safiyyah} alt="photo of safiyyah" target="blank"/>
                         <p>
                         Safiyyah Nawaz (she/her) is a self-taught graphic designer and student currently completing her masters degree in the Psychology of Art, Neuroaesthetics, and Creativity in London. Through academic research about the impact of art on cognition and emotion, and through experience as chapter graphic designer at Sofar Sounds RDU, Safiyyah has developed an interest in all of the different ways that art builds community and individual well-being. She has oversight of ArtxBLM, works in the Social Media and Operational teams, and assists with graphic design.
                         </p>
@@ -89,7 +89,7 @@ function About(){
                         <h4>
                             Shirleen Bredée
                         </h4>
-                        <a href="" >
+                        <a href="https://www.instagram.com/shir_lynx/" target="blank" >
                             @shir_lynx
                         </a>
                         </div>
@@ -105,7 +105,7 @@ function About(){
                         <h4>
                             Ayesha Faisal
                         </h4>
-                        <a href="" >
+                        <a href="https://www.instagram.com/ayeshafaxsal/" target="blank" >
                             @ayeshafaxsal
                         </a>
                         </div>
@@ -122,7 +122,7 @@ function About(){
                         <h4>
                             Emily Yoo
                         </h4>
-                        <a href="" >
+                        <a href="https://www.instagram.com/emilyyoo/" target="blank" >
                             @emilyyoo
                         </a>
                         </div>
@@ -139,7 +139,7 @@ function About(){
                         <h4>
                         Shilpa Kancharla
                         </h4>
-                        <a href="" >
+                        <a href="https://www.instagram.com/shilpakancharlastudio/" target="blank" >
                         @shilpakancharlastudio    
                         </a>
                         </div>
@@ -156,7 +156,7 @@ function About(){
                         <h4>
                         Swathi Krothapalli
                         </h4>
-                        <a href="" >
+                        <a href="https://www.instagram.com/skrothapalli" target="blank" >
                         @skrothapalli
                         </a>
                         </div>
@@ -173,7 +173,7 @@ function About(){
                         <h4>
                         Sydney Hall
                         </h4>
-                        <a href="" >
+                        <a href="https://www.instagram.com/" target="blank">
                         @
                         </a>
                         </div>
@@ -190,7 +190,7 @@ function About(){
                         <h4>
                         Kristin "KP" Parrish
                         </h4>
-                        <a href="" >
+                        <a href="https://www.instagram.com/rito_thetattooed_burrito/" target="blank" >
                         @rito_thetattooed_burrito
                         </a>
                         </div>

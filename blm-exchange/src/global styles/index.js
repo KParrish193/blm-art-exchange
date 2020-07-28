@@ -187,11 +187,58 @@ export const AboutUsTextContent = styled.div`
 `
 
 export const AboutUsImg = styled.img`
-    
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    border-radius: 20px;
+`
+
+export const MeetUs = styled.div`
+    display: flex;
+    flex-direction: column;
 `
 
 export const AboutUsTeamContainer = styled.div`
+    width: 100%;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .title {
+        flex-direction: row;
+        width: 70%;
+        justify-content: flex-start;
+        text-align: left;
+        margin: 1rem 0 0.5rem;
+
+        @media( max-width: 650px) {
+            justify-content: center;
+            width: 100%;
+        }
+    }
+
+    div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    h4 {
+        color: #800000;
+        font-weight: 800;
+        padding-right: 1rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: #037963;
+    }
+
+    p { 
+        width: 75%;
+    }
 `
 
 // FAQ Styling

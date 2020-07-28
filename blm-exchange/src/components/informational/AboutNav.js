@@ -5,6 +5,7 @@ import { AboutNavContainer } from '../../global styles'
 function AboutNav(){
     return(
     <AboutNavContainer>
+    
     <NavLink 
         to="/about"            
         activeStyle={{
@@ -23,6 +24,16 @@ function AboutNav(){
         borderBottom: "solid #800000 2px"
     }}>
         FAQ
+    </NavLink>
+
+    <NavLink 
+        to="/insta"               
+        activeStyle={{
+        fontWeight: "bold",
+        color: "#fff",
+        borderBottom: "solid #800000 2px"
+    }}>
+        Instagram
     </NavLink>
 </AboutNavContainer>
 

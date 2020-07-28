@@ -15,6 +15,7 @@ import MobileHeader from './components/headers/MobileHeader';
 import Landing from './components/Landing.js';
 import About from './components/informational/About.js';
 import FAQ from './components/informational/FAQ.js';
+import Insta from './components/informational/InstaFeed.js';
 
 import ArtistForm from './components/ArtistOnboard/ArtistForm';
 import Login from './components/ArtistOnboard/Login';
@@ -95,6 +96,7 @@ function App() {
           <Route path="/blm-art-exchange" component={ Landing } />
           <Route path="/about" component={ About } />
           <Route path="/FAQ" component={ FAQ } />
+          <Route path="/insta" component={ Insta } />
 
           {/* shop */}
           <Route path="/shop" component={ Shop } />

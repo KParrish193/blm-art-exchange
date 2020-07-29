@@ -5,6 +5,12 @@ import AboutNav from './AboutNav';
 import { AboutUsContainer, AboutUsTextContent, MeetUs, AboutUsTeamContainer, AboutUsImg } from '../../global styles';
 
 import kp from '../../assets/team/kp.jpg';
+import af from '../../assets/team/af.jpg';
+import ey from '../../assets/team/ey.jpg';
+import sb from '../../assets/team/sb.png';
+import sk from '../../assets/team/sk.jpg';
+import sk2 from '../../assets/team/sk2.jpg';
+import sn from '../../assets/team/sn.jpg';
 
 function About(){
     return (
@@ -86,7 +92,7 @@ function About(){
                         </a>
                         </div>
                         <div>
-                        {/* <AboutUsImg /> */}
+                        <AboutUsImg src={sn}  />
                         <p>
                         Safiyyah Nawaz (she/her) is a self-taught graphic designer and student currently completing her masters degree in the Psychology of Art, Neuroaesthetics, and Creativity in London. Through academic research about the impact of art on cognition and emotion, and through experience as chapter graphic designer at Sofar Sounds RDU, Safiyyah has developed an interest in all of the different ways that art builds community and individual well-being. She has oversight of ArtxBLM, works in the Social Media and Operational teams, and assists with graphic design.
                         </p>
@@ -103,7 +109,7 @@ function About(){
                         </a>
                         </div>
                         <div>
-                        {/* <AboutUsImg /> */}
+                        <AboutUsImg src={sb}  />
                         <p>
                         Shirleen Bredée (she/her) is a German-Turkish mixed media artist and neuroaesthetics master student in London. She has a background in psychology and neuroscience and is particularly interested in the intersection of art, neuroscience and philosophy. She works primarily in the Social Media team and in the Process team. 
                         </p>
@@ -119,7 +125,7 @@ function About(){
                         </a>
                         </div>
                         <div>
-                        {/* <AboutUsImg /> */}
+                        <AboutUsImg src={af}  />
                         <p>
                         Ayesha Faisal (she/her) is a software product manager living and working in NYC. After her 9-5 in tech, she works as a freelance portrait and cityscape photographer. Her series entitled “Melanin” exclusively features “dark skinned” POC models as a commentary on racial prejudice and colorism in mainstream creative media. Ayesha combined her passion for social justice, art and technology and acts as the development, testing and launch lead for the ArtxBLM website.
                         </p>
@@ -136,7 +142,7 @@ function About(){
                         </a>
                         </div>
                         <div>
-                        {/* <AboutUsImg /> */}
+                        <AboutUsImg src={ey}  />
                         <p>
                         Emily Yoo (she/her) is finishing her UX design program at Lambda School before beginning the dreaded job search. Currently residing in Charlotte, NC, she hopes to relocate to NYC or San Francisco post-pandemic. Emily is passionate about inclusivity and accessibility in design and works on the website team. When she’s not at her desk, you can find her playing with wigs and roller skating around town.
                         </p>
@@ -148,12 +154,12 @@ function About(){
                         <h4>
                         Shilpa Kancharla
                         </h4>
-                        <a href="" >
+                        <a href="https://www.instagram.com/shilpakancharlastudio/" >
                         @shilpakancharlastudio    
                         </a>
                         </div>
                         <div>
-                        {/* <AboutUsImg /> */}
+                        <AboutUsImg src={sk}  />
                         <p>
                         Shilpa Kancharla (she/her) is a South Asian visual artist and software engineer based in Raleigh, North Carolina. She is currently working towards her MS in Computer Science. Her passions include art, fashion, and understanding how technology and design can positively impact social justice movements. She worked on developing the website for ArtxBLM.
                         </p>
@@ -170,7 +176,7 @@ function About(){
                         </a>
                         </div>
                         <div>
-                        {/* <AboutUsImg /> */}
+                        <AboutUsImg src={sk2}  />
                         <p>
                         Swathi Krothapalli (she/her) is a U.S. government consultant based out of Washington D.C. 
                         </p>

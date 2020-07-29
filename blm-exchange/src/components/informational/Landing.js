@@ -2,11 +2,11 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-import { LandingButton, LandingContainer, LandingTextContent, MobileLandingButtonContainer, DonationContainer, DonationPlaceholderContainer, ArtistCallToAction, PrimaryButton } from '../global styles/index'
+import { LandingButton, LandingContainer, LandingTextContent, MobileLandingButtonContainer, DonationContainer, DonationPlaceholderContainer, ArtistCallToAction, PrimaryButton } from '../../global styles/index'
 
 function Landing(){
     
-    var bg = require('../assets/landing_background.png')
+    var bg = require('../../assets/landing_background.png')
 
     return(
         <LandingContainer style={{ backgroundImage: "url("+bg+")" }}>

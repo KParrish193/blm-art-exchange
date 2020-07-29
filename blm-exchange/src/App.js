@@ -12,16 +12,16 @@ import { HomeContainer } from './global styles/index'
 import Header from './components/headers/Header';
 import MobileHeader from './components/headers/MobileHeader';
 
-import Landing from './components/Landing.js';
+import Landing from './components/informational/Landing.js';
 import About from './components/informational/About.js';
 import FAQ from './components/informational/FAQ.js';
 import Insta from './components/informational/InstaFeed.js';
 
-import ArtistForm from './components/ArtistOnboard/ArtistForm';
-import Login from './components/ArtistOnboard/Login';
-import CodeOfConduct from './components/ArtistOnboard/CodeOfConduct';
-import UploadForm from './components/ArtistOnboard/UploadForm';
-import ArtistDashboard from './components/ArtistOnboard/ArtistDashboard';
+import ArtistForm from './components/artistsPortal/ArtistForm';
+import Login from './components/artistsPortal/Login';
+import CodeOfConduct from './components/artistsPortal/CodeOfConduct';
+import UploadForm from './components/artistsPortal/UploadForm';
+import ArtistDashboard from './components/artistsPortal/ArtistDashboard';
 
 import ArtistList from './components/ArtistList';
 import ArtistProfile from './components/ArtistProfile';
@@ -29,8 +29,8 @@ import Shop from './components/Shop';
 import PrintDetail from './components/PrintDetail';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
-import CustLogin from './components/CustLogin';
-import Orders from './components/Orders';
+import CustLogin from './components/customers/CustLogin';
+import Orders from './components/customers/Orders';
 
 // contexts
 import { ArtistContext } from './contexts/ArtistContext';

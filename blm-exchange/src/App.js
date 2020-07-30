@@ -40,7 +40,6 @@ import { ProductContext } from './contexts/ProductContext';
 function App() {
 
   const [products, setProductsData] = useState();
-  const [artists, setArtistsData] = useState();
   const [cart, setCart] = useState([]);
 
   // useEffect for get request from backend on app load 
@@ -78,7 +77,7 @@ function App() {
   // edit item?
 
   return (
-    <ArtistContext.Provider value={{ artists }}>
+
     <ProductContext.Provider value={{ products, addItem }}>
     <CartContext.Provider value={{ cart, removeItem }}>
     <HomeContainer>
@@ -122,7 +121,6 @@ function App() {
 
     </CartContext.Provider>
     </ProductContext.Provider>
-    </ArtistContext.Provider>
   );
 }
 

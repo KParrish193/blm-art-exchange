@@ -448,6 +448,26 @@ export const MenuButton = styled.div`
 //grid display
 export const PhotoGrid = styled.div`
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    div {
+        width: 50%;
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 900;
+    }
+`
+
+export const ProductCard = styled.div`
+
+`
+
+export const ProductImg = styled.img`
+    height: 200px;
 `
 
 // form styling

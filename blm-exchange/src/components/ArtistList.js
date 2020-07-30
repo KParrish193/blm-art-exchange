@@ -1,7 +1,5 @@
-import React, { useContext, useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios';
-
-import { ArtistContext } from '../contexts/ArtistContext';
 
 import { Link } from 'react-router-dom';
 
@@ -10,7 +8,6 @@ import { PhotoGrid } from '../global styles/index'
 import FilterListIcon from '@material-ui/icons/FilterList';
 
 function ArtistList(){
-    // const { artists } = useContext(ArtistContext)
 
     const [artists, setArtists] = useState([]);
     useEffect(() => {  

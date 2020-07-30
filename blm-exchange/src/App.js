@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 //app routing
 import { Switch, Route } from 'react-router-dom';
@@ -39,28 +40,20 @@ import { ProductContext } from './contexts/ProductContext';
 
 function App() {
 
-  const [products, setProductsData] = useState();
+  const [products, setProductsData] = useState([]);
   const [cart, setCart] = useState([]);
 
-  // useEffect for get request from backend on app load 
-  // load products data from backend as productsData
-  // load artist data from backend as artistData
-  
-  // TODO useEffect(() => {
+  useEffect(() => {  
+      axios
+      .get('http://localhost:1337/prints')
+      .then(res => {
+          console.log('success', res);
+          setProductsData(res.data)
+      })
+      .catch(err => console.log(err)); 
+  }, []);
 
-  //   try {   
-  //       const productData = await axios.get('{prints/shop end point}');
-  //       const artistData = await axios.get('{artist endpoint}}');
-  //       console.log("Try Block products", productData, productData.data)
-  //       console.log("Try Blocl artists", artistData, artistData.data)
-        //set results to context to use as provider value={strains, stats} dispatch
-  //       setArtistData(artistData.data)
-  //       setProductData(productData.data)
-  //       props.history.push(`dashboard/${id}`)
-  //   } catch (e) {
-  //       console.log(e.message)
-  //   };
-  // TODO }, []) 
+  console.log('App.js, line 55', products)
 
   // cart functions
   // add item to cart

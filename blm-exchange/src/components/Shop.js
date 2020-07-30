@@ -5,6 +5,7 @@ import { ProductContext } from '../contexts/ProductContext';
 import { Link } from 'react-router-dom';
 
 import FilterListIcon from '@material-ui/icons/FilterList';
+import { PhotoGrid, ProductCard, ProductImg } from '../global styles/index'
 
 
 function Shop(){
@@ -20,16 +21,17 @@ function Shop(){
 
             <div className="shop-container">
             <h3>Shop</h3>
-                <div className="product-card-container">
-                    {products.map(product => (
-                        <div className ="product-card">
+                <PhotoGrid className="product-card-container">
+                    {products.map((product, id) => (
+                        <ProductCard className ="product-card" key={product.id}>
                             <Link to="/prints/${product.id}">
-                            <img src={product} />
+                            <h4>{product.title}</h4>
+                            <ProductImg src={`http://localhost:1337${product.image.url}`} />
                             {/* code for dark overlay */}
                             </Link>
-                        </div>
+                        </ProductCard>
                     ))}
-                </div>
+                </PhotoGrid>
             </div>
         </div>
     )

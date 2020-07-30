@@ -144,6 +144,7 @@ export const CodeOfConductTextContent = styled.div`
     }
 `
 
+
 // about us styling
 export const AboutNavContainer = styled.div`
     display: flex;
@@ -186,17 +187,41 @@ export const AboutUsTextContent = styled.div`
 `
 
 export const AboutUsImg = styled.img`
-    height: 200px;
+    height: 250px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
     border-radius: 20px;
+
+    @media (max-width: 600px){
+        height: 200px;
+    }
 `
 
 export const MeetUs = styled.div`
     display: flex;
     flex-direction: column;
+
+    .reverse {
+        flex-direction: column;
+
+        .title {
+            flex-direction: row;
+            width: 100%;
+            justify-content: flex-end;
+            text-align: left;
+            margin: 1rem 0 0.5rem;
+    
+            @media( max-width: 650px) {
+                justify-content: center;
+                width: 100%;
+            }
+        }
+
+        div {
+            flex-direction: row-reverse;
+        }
+    }
 `
 
 export const AboutUsTeamContainer = styled.div`
@@ -207,7 +232,7 @@ export const AboutUsTeamContainer = styled.div`
 
     .title {
         flex-direction: row;
-        width: 70%;
+        width: 100%;
         justify-content: flex-start;
         text-align: left;
         margin: 1rem 0 0.5rem;
@@ -228,15 +253,23 @@ export const AboutUsTeamContainer = styled.div`
         color: #800000;
         font-weight: 800;
         padding-right: 1rem;
+        letter-spacing: .07rem;
     }
 
     a {
         text-decoration: none;
         color: #037963;
+        font-size: 1.3rem;
+        letter-spacing: .1rem;
     }
 
     p { 
-        width: 75%;
+        width: 70%;
+        text-align: left;
+        
+        @media (max-width: 600px){
+            width: 57%;
+        }
     }
 `
 
@@ -277,6 +310,17 @@ export const FAQTextContainer = styled.div`
     }
 `
 
+// instafeed styling
+
+export const InstaContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h3 {
+        color: #037963;
+    }`
+    
 //footer styling
 export const FooterContainer = styled.div`
     position: fixed;
@@ -419,6 +463,26 @@ export const MenuButton = styled.div`
 //grid display
 export const PhotoGrid = styled.div`
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    div {
+        width: 50%;
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 900;
+    }
+`
+
+export const ProductCard = styled.div`
+
+`
+
+export const ProductImg = styled.img`
+    height: 200px;
 `
 
 // form styling

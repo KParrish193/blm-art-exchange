@@ -12,10 +12,15 @@ import Popper from '@material-ui/core/Popper';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
+import Accordion from '@material-ui/core/Accordion';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
+
 
 // icons
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 import MenuIcon from '@material-ui/icons/Menu';
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
 function MobileHeader(){
 
@@ -87,11 +92,13 @@ function MobileHeader(){
                             textDecoration: 'none',
                             color: '#fff',
                             width: '100%',
+                            fontSize: '1.3rem',
                         }}
                         activeStyle={{
                             width: '100%',
                             color: "#fff",
-                            borderBottom: "solid #800000 2px"
+                            borderBottom: "solid #800000 2px",
+                            fontWeight: '900'
                         }}
                         className="mobile-hover">
                     Home
@@ -109,16 +116,37 @@ function MobileHeader(){
                             textDecoration: 'none',
                             color: '#fff',
                             width: '100%',
+                            fontSize: '1.3rem',
+
                         }}
                         activeStyle={{
+                            width: '100%',
                             color: "#000000",
-                            borderBottom: "solid #800000 2px"
+                            borderBottom: "solid #800000 2px",
+                            fontWeight: '900'
                         }}
                         className="mobile-hover">
                     Shop
                     </NavLink>
                 </MenuItem>
 
+
+                {/*  */}
+                <Accordion>
+                <AccordionSummary
+                    style={{
+                        textDecoration: 'none',
+                        backgroundColor: '#000',
+                        color: '#fff',
+                        width: '100%',
+                        fontSize: '1.3rem',
+                        display: 'flex',
+                        flexDirection: 'row',
+                        justifyContent: 'space-between'
+                    }} >
+                    Artists <ArrowForwardIosIcon />
+                </AccordionSummary>
+                <AccordionDetails>
                 <MenuItem 
                     button
                     style={{
@@ -130,39 +158,22 @@ function MobileHeader(){
                             textDecoration: 'none',
                             color: '#fff',
                             width: '100%',
+                            fontSize: '1.3rem',
+                            display: 'flex',
+                            flexDirection: 'row',
+                            justifyContent: 'space-between'
                         }} 
                         activeStyle={{
                             color: "#fff",
-                            borderBottom: "solid #800000 2px"
+                            borderBottom: "solid #800000 2px",
+                            fontWeight: '900',
                         }}
                         className="mobile-hover">
-                    Artists
+                    List of Artists
                     </NavLink>
-                </MenuItem>
+                    </MenuItem>
 
-                <MenuItem 
-                    button
-                    style={{
-                        backgroundColor: '#000',
-                    }}>
-                    <NavLink 
-                        to="/about"
-                        style={{
-                            textDecoration: 'none',
-                            color: '#fff',
-                            width: '100%',
-                        }}
-                        activeStyle={{
-                            width: '100%',
-                            color: "#fff",
-                            borderBottom: "solid #800000 2px"
-                        }}
-                        className="mobile-hover">
-                    About Us
-                    </NavLink>
-                </MenuItem>
-
-                <MenuItem button
+                    <MenuItem button
                     style={{
                         backgroundColor: '#000',
                     }}
@@ -173,15 +184,46 @@ function MobileHeader(){
                             textDecoration: 'none',
                             color: '#fff',
                             width: '100%',
+                            fontSize: '1.3rem',
                         }} 
                         activeStyle={{
+                            width: '100%',
                             color: "#fff",
-                            borderBottom: "solid #800000 2px"
+                            borderBottom: "solid #800000 2px",
+                            fontWeight: '900'
                         }}
                         className="mobile-hover">
                     Artist Portal
                     </NavLink>
                 </MenuItem>
+                </AccordionDetails>
+                </Accordion>
+
+
+                <MenuItem 
+                    button
+                    style={{
+                        backgroundColor: '#000',
+                    }}>
+                    <NavLink 
+                        to="/insta"
+                        style={{
+                            textDecoration: 'none',
+                            color: '#fff',
+                            width: '100%',
+                            fontSize: '1.3rem',
+                        }}
+                        activeStyle={{
+                            width: '100%',
+                            color: "#fff",
+                            borderBottom: "solid #800000 2px",
+                            fontWeight: '900'
+                        }}
+                        className="mobile-hover">
+                    About Us
+                    </NavLink>
+                </MenuItem>
+
                 </MenuList>
                 </ClickAwayListener>
                 </Paper>

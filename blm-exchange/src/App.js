@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 //app routing
 import { Switch, Route } from 'react-router-dom';
@@ -11,18 +12,17 @@ import { HomeContainer } from './global styles/index'
 //components
 import Header from './components/headers/Header';
 import MobileHeader from './components/headers/MobileHeader';
-
 import Footer from './components/footers/Footer';
-
 import Landing from './components/Landing.js';
 import About from './components/informational/About.js';
 import FAQ from './components/informational/FAQ.js';
+import Insta from './components/informational/InstaFeed.js';
 
-import ArtistForm from './components/ArtistOnboard/ArtistForm';
-import Login from './components/ArtistOnboard/Login';
-import CodeOfConduct from './components/ArtistOnboard/CodeOfConduct';
-import UploadForm from './components/ArtistOnboard/UploadForm';
-import ArtistDashboard from './components/ArtistOnboard/ArtistDashboard';
+import ArtistForm from './components/artistsPortal/ArtistForm';
+import Login from './components/artistsPortal/Login';
+import CodeOfConduct from './components/artistsPortal/CodeOfConduct';
+import UploadForm from './components/artistsPortal/UploadForm';
+import ArtistDashboard from './components/artistsPortal/ArtistDashboard';
 
 import ArtistList from './components/ArtistList';
 import ArtistProfile from './components/ArtistProfile';
@@ -30,8 +30,8 @@ import Shop from './components/Shop';
 import PrintDetail from './components/PrintDetail';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
-import CustLogin from './components/CustLogin';
-import Orders from './components/Orders';
+import CustLogin from './components/customers/CustLogin';
+import Orders from './components/customers/Orders';
 
 // contexts
 import { ArtistContext } from './contexts/ArtistContext';
@@ -40,29 +40,20 @@ import { ProductContext } from './contexts/ProductContext';
 
 function App() {
 
-  const [products, setProductsData] = useState();
-  const [artists, setArtistsData] = useState();
+  const [products, setProductsData] = useState([]);
   const [cart, setCart] = useState([]);
 
-  // useEffect for get request from backend on app load 
-  // load products data from backend as productsData
-  // load artist data from backend as artistData
-  
-  // TODO useEffect(() => {
+  useEffect(() => {  
+      axios
+      .get('http://localhost:1337/prints')
+      .then(res => {
+          console.log('success', res);
+          setProductsData(res.data)
+      })
+      .catch(err => console.log(err)); 
+  }, []);
 
-  //   try {   
-  //       const productData = await axios.get('{prints/shop end point}');
-  //       const artistData = await axios.get('{artist endpoint}}');
-  //       console.log("Try Block products", productData, productData.data)
-  //       console.log("Try Blocl artists", artistData, artistData.data)
-        //set results to context to use as provider value={strains, stats} dispatch
-  //       setArtistData(artistData.data)
-  //       setProductData(productData.data)
-  //       props.history.push(`dashboard/${id}`)
-  //   } catch (e) {
-  //       console.log(e.message)
-  //   };
-  // TODO }, []) 
+  console.log('App.js, line 55', products)
 
   // cart functions
   // add item to cart
@@ -79,7 +70,7 @@ function App() {
   // edit item?
 
   return (
-    <ArtistContext.Provider value={{ artists }}>
+
     <ProductContext.Provider value={{ products, addItem }}>
     <CartContext.Provider value={{ cart, removeItem }}>
     <HomeContainer>
@@ -97,6 +88,7 @@ function App() {
           <Route path="/blm-art-exchange" component={ Landing } />
           <Route path="/about" component={ About } />
           <Route path="/FAQ" component={ FAQ } />
+          <Route path="/insta" component={ Insta } />
 
           {/* shop */}
           <Route path="/shop" component={ Shop } />
@@ -126,7 +118,6 @@ function App() {
 
     </CartContext.Provider>
     </ProductContext.Provider>
-    </ArtistContext.Provider>
   );
 }
 

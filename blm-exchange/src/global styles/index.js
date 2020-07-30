@@ -7,7 +7,6 @@ export const HomeContainer =styled.div`
     color: white;
     height: 100vh
 `
-
 // buttons
 export const PrimaryButton = styled.button`
     border-radius: 10px;
@@ -288,6 +287,7 @@ export const FAQTextContainer = styled.div`
     flex-direction: column;
     text-align: left;
     width: 75%;
+    position: static;
     
     h2 {
         text-align: center;
@@ -295,6 +295,7 @@ export const FAQTextContainer = styled.div`
     }
 
     p {
+        display: inline, block;
         padding-bottom: 30px;
     }
 
@@ -318,7 +319,22 @@ export const InstaContainer = styled.div`
 
     h3 {
         color: #037963;
-    }
+    }`
+    
+//footer styling
+export const FooterContainer = styled.div`
+    position: fixed;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #fff;
+    left:0;
+    bottom:0;
+    right:0;
+    width: 100%;
+    padding-top:10px;
+    padding-bottom:10px;
 `
 
 // header styling
@@ -333,7 +349,6 @@ export const HeaderContainer = styled.div`
     background-color: #000;
     color: #fff;
     width: 100%;
-    border-bottom: solid #f6f6f6 1px;
 
     a {
         text-decoration: none;
@@ -525,6 +540,29 @@ export const Form = styled.form`
         text-align: center;
         margin-bottom: 40px;
     }
+
+    .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+    }
+
+
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    input[type=checkbox] + label {
+        color: #ccc;
+        font-style: italic;
+      }
+
+    input[type=checkbox]:checked + label {
+        color: #f00;
+        font-style: normal;
+    } 
 `
 
 export const ToggleSignUp = styled.div`

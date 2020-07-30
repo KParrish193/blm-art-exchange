@@ -13,7 +13,7 @@ import { HomeContainer } from './global styles/index'
 import Header from './components/headers/Header';
 import MobileHeader from './components/headers/MobileHeader';
 import Footer from './components/footers/Footer';
-import Landing from './components/Landing.js';
+import Landing from './components/informational/Landing.js';
 import About from './components/informational/About.js';
 import FAQ from './components/informational/FAQ.js';
 import Insta from './components/informational/InstaFeed.js';

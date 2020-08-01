@@ -364,6 +364,7 @@ export const HeaderContainer = styled.div`
             
             :hover {
                 border-bottom: none;
+                transition: .16s all 0.025s;
             }
         }
 
@@ -377,11 +378,13 @@ export const HeaderContainer = styled.div`
             :hover {
                 color: #000000;
                 border-bottom: none;
+                transition: .16s all 0.025s;
             }
         }
 
         a:hover {
             border-bottom: 2px solid #800000;
+            transition: .16s all 0.025s;
         }
 
         .mobile-home{
@@ -449,6 +452,7 @@ export const MobileContainer = styled.div`
 
     .mobile-hover:hover {
         font-weight: 800;
+        transition: .16s all 0.025s;
     }
 `
 

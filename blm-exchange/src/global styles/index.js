@@ -18,6 +18,8 @@ export const PrimaryButton = styled.button`
     width: 30%;
     min-width: 150px;
     border: #450008 1px solid;
+    
+    .stripe-button-el { display: none }
 `
 
 export const TagButton = styled.button`

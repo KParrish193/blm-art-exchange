@@ -12,7 +12,7 @@ function ArtistList(){
     const [artists, setArtists] = useState([]);
     useEffect(() => {  
         axios
-        .get('http://localhost:1337/artists')
+        .get('https://artxblm-backend.herokuapp.com/artists')
         .then(res => {
             console.log('success', res);
             setArtists(res.data)

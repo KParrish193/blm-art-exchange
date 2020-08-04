@@ -18,7 +18,7 @@ export const PrimaryButton = styled.button`
     width: 30%;
     min-width: 150px;
     border: #450008 1px solid;
-    
+
     .stripe-button-el { display: none }
 `
 
@@ -325,7 +325,7 @@ export const InstaContainer = styled.div`
     
 //footer styling
 export const FooterContainer = styled.div`
-    position: fixed;
+    position: relative;
     background-color: black;
     display: flex;
     flex-direction: row;

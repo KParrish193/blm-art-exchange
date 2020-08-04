@@ -7,6 +7,12 @@ import StripeCheckout from 'react-stripe-checkout';
 function Cart(){
     const {cart, removeItem} = useContext(CartContext);
 
+    const [product] = React.useState({
+        name: 'Example',
+        size: 'A4',
+        price: 1000,
+    })
+
     const getCartTotal = () => {
 		return cart.reduce((acc, value) => {
 			return acc + value.price;
@@ -47,7 +53,12 @@ function Cart(){
                     <p>Subtotal: ${getCartTotal()}</p>                   
                     <StripeCheckout 
                     stripeKey="pk_test_51HBjg8JUF4DG9VOula9dBwMNcMHCTJTDJhou4WwxtJTOaBb1F3nvjNBHV6h3o1v9NVY6sDaswXeCimAzlRRV8DxP00GGsNcZ79"
-                    token={handleToken}/>
+                    token={handleToken}
+                    billingAddress
+                    shippingAddress
+                    amount={product.price}
+                    size={product.size}
+                    name={product.name}/>
                 </div>
             </AlignRight>
         </CartContainer>

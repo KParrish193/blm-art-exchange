@@ -1,23 +1,31 @@
 import styled from 'styled-components'
 
+import background from '../assets/landing_background.png'
+
 // home container - adjusted for fixed header
 export const HomeContainer =styled.div`
-    padding-top: 100px;
+    padding: 100px 0 2.5rem 0;
+    position: relative;
     background-color: #000;
     color: white;
-    height: 100vh
+    min-height: 100vh;
 `
 // buttons
 export const PrimaryButton = styled.button`
     border-radius: 10px;
     color: #fff;
-    background-color: #800000;
+    background-color: #990000;
     font-size: 1.2rem;
     letter-spacing: .1rem;
     padding: .2rem;
     width: 30%;
     min-width: 150px;
     border: #450008 1px solid;
+
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
 
     .stripe-button-el { display: none }
 `
@@ -60,11 +68,13 @@ export const MobileLandingButtonContainer = styled.div`
 
 export const LandingContainer = styled.div`
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
-    padding: 35px 30px 100px 30px;
+    align-items: center;
+    padding: 3rem 30px 2.5rem;
     color: #fff;
-    height: 100vh;
+    min-height: 90vh;
+    background-image: url(${background});
 
     @media (max-width: 800px){
         display: flex;
@@ -76,18 +86,19 @@ export const LandingContainer = styled.div`
 export const LandingTextContent = styled.div`
     display: flex;
     flex-direction: column;
-    width: 45%;
+    width: 50%;
     
     @media (max-width: 800px){
         width: 100%;
     }
 `
 
-export const ArtistCallToAction = styled.div`
+export const CallToAction = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 45%;
+    width: 50%;
+    margin-top: 5rem;
 
     @media (max-width: 800px){
         margin-top: 3rem;
@@ -153,7 +164,7 @@ export const CodeOfConductTextContent = styled.div`
 export const AboutNavContainer = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin: 1rem 0 2rem;
     width: 100%;
@@ -164,6 +175,7 @@ export const AboutNavContainer = styled.div`
         color: white;
         font-size: 1.2rem;
         width: 25%;
+        padding-bottom: 0.5rem;
     }
 `
 
@@ -255,9 +267,8 @@ export const AboutUsTeamContainer = styled.div`
 
     h4 {
         color: #800000;
-        font-weight: 800;
-        padding-right: 1rem;
-        letter-spacing: .07rem;
+        padding-right: .5rem;
+        font-weight: 500;
     }
 
     a {
@@ -313,33 +324,36 @@ export const FAQTextContainer = styled.div`
         width: 100%;
     }
 `
-
-// instafeed styling
-
-export const InstaContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    h3 {
-        color: #037963;
-    }`
     
 //footer styling
 export const FooterContainer = styled.div`
-    position: relative;
     background-color: black;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     color: #fff;
-    left:0;
-    bottom:0;
-    right:0;
+    position: absolute;
+    bottom: 0;
     width: 100%;
-    padding-top:10px;
-    padding-bottom:10px;
-`
+    padding: 0 1.5rem;
+    height: 2.5rem;  
+
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .footer-contact{
+        display: flex;
+        flex-direction: row;
+        width: 45%;
+    }
+
+    .footer-codeofconduct{
+        width: 45%;
+        text-align: right;
+    }
+    `
 
 // header styling
 export const HeaderContainer = styled.div`     
@@ -606,15 +620,24 @@ export const CartContainer = styled.div`
     flex-direction: column;
     margin: 0 auto;
 
-    .labelrow {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-
-    .total{
+    .total {
         width: 60%;
+    }
+`
+
+export const CartLabels = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    color: #000;
+    
+    p {
+        padding: 0;
+        margin: 0.3rem 0;
+        font-size: 1.1rem;
     }
 `
 

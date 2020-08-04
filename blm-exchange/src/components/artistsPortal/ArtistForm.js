@@ -54,7 +54,7 @@ function ArtistForm(){
                     <div className="row">
                         <div className="column">
                             <label>Artist Bio:  </label>
-                            <textarea placeholder="Bio" name="Bio" ref={register({required: true, maxLength: 500})} />
+                            <textarea placeholder="Bio" name="Bio" ref={register({required: true, maxLength: 1000})} />
                         </div>
                         <div className="column checkboxes" style={{ display: "inline" }}>
                             <label><input type="checkbox" placeholder="BlackArtist" name="BlackArtist" ref={register} />I am a Black Artist</label>

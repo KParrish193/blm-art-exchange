@@ -26,7 +26,7 @@ function Shop(){
                         <ProductCard className ="product-card" key={product.id}>
                             <Link to="/prints/${product.id}">
                             <h4>{product.title}</h4>
-                            <ProductImg src={`http://localhost:1337${product.image.url}`} />
+                            <ProductImg src={`https://heroku.com/artxblm-backend/${product.image.url}`} />
                             {/* code for dark overlay */}
                             </Link>
                         </ProductCard>

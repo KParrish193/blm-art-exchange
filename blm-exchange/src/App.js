@@ -16,7 +16,7 @@ import Footer from './components/footers/Footer';
 import Landing from './components/informational/Landing.js';
 import About from './components/informational/About.js';
 import FAQ from './components/informational/FAQ.js';
-import Insta from './components/informational/InstaFeed.js';
+import MeetUs from './components/informational/MeetUs.js';
 
 import ArtistForm from './components/artistsPortal/ArtistForm';
 import Login from './components/artistsPortal/Login';
@@ -101,7 +101,7 @@ function App() {
           <Route path="/blm-art-exchange" component={ Landing } />
           <Route path="/about" component={ About } />
           <Route path="/FAQ" component={ FAQ } />
-          <Route path="/insta" component={ Insta } />
+          <Route path="/meet-the-team" component={ MeetUs } />
 
           {/* shop */}
           <Route path="/shop" component={ Shop } />
@@ -116,7 +116,7 @@ function App() {
           {/* artist */}
           <Route path="/artist/login" component={ Login } />
           <Route path="/artist/sign-up" component={ ArtistForm } />
-          <Route path="/artist/coc" component={ CodeOfConduct } />
+          <Route path="/coc" component={ CodeOfConduct } />
           <PrivateRoute path ="/artist/:id/dashboard" component={ ArtistDashboard } />
           <PrivateRoute path="/artist/:id/upload" component={ UploadForm } />
 
@@ -124,9 +124,9 @@ function App() {
       </div>
     </div>
 
-    <div>
-      <Footer/>
-    </div>
+    
+    <Footer/>
+
     </HomeContainer>
 
     </CartContext.Provider>

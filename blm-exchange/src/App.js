@@ -43,30 +43,30 @@ function App() {
   const [products, setProductsData] = useState([]);
   const [cart, setCart] = useState([]);
 
-  // useEffect(() => {  
-  //     axios
-  //     .get('https://art-x-blm-backend.herokuapp.com/prints')
-  //     .then(res => {
-  //         console.log('success', res);
-  //         setProductsData(res.data)
-  //     })
-  //     .catch(err => console.log(err)); 
-  // }, []);
-
-  // console.log('App.js, line 55', products)
-
-
   useEffect(() => {  
-    axios
-    .get('http://localhost:1337/prints')
-    .then(res => {
-        console.log('success', res);
-        setProductsData(res.data)
-    })
-    .catch(err => console.log(err)); 
-}, []);
+      axios
+      .get('https://artxblm-backend.herokuapp.com/prints')
+      .then(res => {
+          console.log('success', res);
+          setProductsData(res.data)
+      })
+      .catch(err => console.log(err)); 
+  }, []);
 
-console.log('App.js, line 69, local', products)
+  console.log('App.js, line 55', products)
+
+
+//   useEffect(() => {  
+//     axios
+//     .get('http://localhost:1337/prints')
+//     .then(res => {
+//         console.log('success', res);
+//         setProductsData(res.data)
+//     })
+//     .catch(err => console.log(err)); 
+// }, []);
+
+// console.log('App.js, line 69, local', products)
 
   // cart functions
   // add item to cart

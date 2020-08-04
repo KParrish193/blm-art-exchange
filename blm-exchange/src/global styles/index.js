@@ -473,6 +473,7 @@ export const PhotoGrid = styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin: 30px 0px 0px 30px;
 
     div {
         width: 50%;

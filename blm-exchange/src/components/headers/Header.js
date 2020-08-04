@@ -13,7 +13,7 @@ function Header() {
         <HeaderContainer>
             <Nav>
             <NavLink 
-                to="/insta"   
+                to="/about"   
                 activeStyle={{
                     fontWeight: "bold",
                     color: "#fff",

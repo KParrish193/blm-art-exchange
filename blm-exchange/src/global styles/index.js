@@ -502,6 +502,8 @@ export const Form = styled.form`
         float: left;
         text-align: left;
         display: inline-block;
+        padding-left: 15px;
+        text-indent: -15px;
     }
 
     input {
@@ -511,6 +513,8 @@ export const Form = styled.form`
         padding: 10px 15px;
         margin-bottom: 10px;
         font-size: 14px;
+        margin-top: 10px; 
+        display: block;
     }
 
     textarea {
@@ -562,15 +566,19 @@ export const Form = styled.form`
         clear: both;
     }
 
-    input[type=checkbox] + label {
-        color: #ccc;
-        font-style: italic;
-      }
+    .checkboxes label {
+        display: block;
+        padding-right: 10px;
+        padding-left: 22px;
+        text-indent: -22px;
+    }
 
-    input[type=checkbox]:checked + label {
-        color: #f00;
-        font-style: normal;
-    } 
+    .checkboxes input {
+        vertical-align: middle;
+    }
+    .checkboxes label span {
+        vertical-align: middle;
+    }
 `
 
 export const EmailLink = styled.div`

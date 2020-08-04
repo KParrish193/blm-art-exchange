@@ -56,22 +56,19 @@ function ArtistForm(){
                             <label>Artist Bio:  </label>
                             <textarea placeholder="Bio" name="Bio" ref={register({required: true, maxLength: 500})} />
                         </div>
-                        <div className="column">
-                            <label>I am a Black Artist</label>
-                            <input type="checkbox" placeholder="BlackArtist" name="BlackArtist" ref={register} />
+                        <div className="column checkboxes" style={{ display: "inline" }}>
+                            <label><input type="checkbox" placeholder="BlackArtist" name="BlackArtist" ref={register} />I am a Black Artist</label>
                         </div>
                     </div>
 
+                    <div className="row">
+                        <div className="column checkboxes" style={{ display: "inline" }}>
+                            <label><input type="checkbox" placeholder="Exchange" name="Exchange" ref={register} />Are you willing to be contacted for non-monetary exchanges for your art?</label>
+                        </div>
 
-
-                    <div>
-                        <p>Are you willing to be contacted for non-monetary exchanges for your art?</p>
-                        <input type="checkbox" placeholder="Exchange" name="Exchange" ref={register} />
-                    </div>
-
-                    <div>
-                        <p>Are you willing to allow people to digitally download your art?</p>
-                        <input type="checkbox" placeholder="Digital" name="Digital" ref={register} />
+                        <div className="column checkboxes" style={{ display: "inline" }}>
+                            <label><input type="checkbox" placeholder="Exchange" name="Exchange" ref={register} />Are you willing to allow people to digitally download your art?</label>
+                        </div>
                     </div>
 
                     <div>
@@ -94,11 +91,9 @@ function ArtistForm(){
                             <label>Agree to Code of Conduct: </label>
                             <input type="checkbox" placeholder="CodeofConduct" name="CodeofConduct" ref={register} />
                         </div>
-                        <div className="column">
-                            <PrimaryButton onclick={onSubmit} > Submit </PrimaryButton>
-                        </div>
                     </div>
 
+                    <PrimaryButton onclick={onSubmit} > Submit </PrimaryButton>
                     {/* modal to confirm code of conduct for new artists */}
                     </div>
                     

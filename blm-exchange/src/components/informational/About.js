@@ -162,7 +162,7 @@ function About(){
                         <div>
                         <AboutUsImg src={swathi} alt="photo of swathi"/>
                         <p>
-                        Swathi Krothapalli (she/her) is a U.S. government consultant based out of Washington D.C. 
+                        Swathi Krothapalli (she/her) is a technology/strategy consultant based out of Washington D.C. Since she was a child, Swathi had a passion for art whether it was through painting, printmaking, or visual journaling, she loves to explore different styles and methods of expressing her creativity. Swathi acts on the Social Media Team and the Process Operations team.
                         </p>
                         </div>
                     </AboutUsTeamContainer>
@@ -179,7 +179,7 @@ function About(){
                         <div>
                         {/* <AboutUsImg /> */}
                         <p>
-                        Sydney “Bijou” Hale (she/her) is a Black Brooklyn-based digital artist on the ARTxBLM social media team. She was drawn    
+                        Sydney “Bijou” Hale (she/her) is a Black Brooklyn-based artist/nanny on the ARTxBLM social media team. She has been drawing all her life,    
                         </p>
                         </div>
                     </AboutUsTeamContainer>

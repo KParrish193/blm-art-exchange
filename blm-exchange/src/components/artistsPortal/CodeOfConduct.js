@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { } from 'react-hook-form';
-import { CodeOfConductContainer, CodeOfConductTextContent } from '../../global styles';
+import { CodeOfConductContainer, CodeOfConductTextContent, EmailLink } from '../../global styles/index';
 
 function CoC(){
     return(
@@ -51,8 +51,8 @@ function CoC(){
                             We must carefully consider how our decisions include or exclude groups and work to combat any inequities proactively. 
                             For example, we will include image descriptions on artworks, work to provide translations to our ability, and seek to 
                             highlight artists from underrepresented groups. Any concerns about ArtxBLM being inaccessible or exclusive can 
-                            be directed to <a href="mailto:artxblmcollective@gmail.com">artxblmcollective@gmail.com</a>, where we will discuss issues 
-                            and work to resolve them.
+                            be directed to <EmailLink><a href="mailto:artxblmcollective@gmail.com">artxblmcollective@gmail.com</a></EmailLink>, 
+                            where we will discuss issues and work to resolve them.
                         </li>
                         <li>
                             <b>Community: </b>Here at ArtxBLM, we are a unified collective which operates through collaboration and mutual respect. 

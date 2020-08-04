@@ -140,6 +140,8 @@ export const CodeOfConductContainer = styled.div`
 
 export const CodeOfConductTextContent = styled.div`
     display: flex;
+    text-align: justify;
+    text-justify: inter-word;
 
     @media (max-width: 800px){
         width: 100%;
@@ -569,6 +571,13 @@ export const Form = styled.form`
         color: #f00;
         font-style: normal;
     } 
+`
+
+export const EmailLink = styled.div`
+    display: inline-block;
+    a {
+        color: #037963;
+    }
 `
 
 export const ToggleSignUp = styled.div`

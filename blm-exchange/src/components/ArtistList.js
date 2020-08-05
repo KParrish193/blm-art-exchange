@@ -33,7 +33,7 @@ function ArtistList(){
                         <Link to="/artist/{artist.id}">
                         {/* artist card detail */}
                         <div className="name-img">
-                        <h3>{artist.firstName} {artist.lastName}</h3>
+                        <h4>{artist.firstName} {artist.lastName}</h4>
                         {/* <img src={artist.artistProfilePic} /> */}
                         </div>
                         <p>{artist.bio}</p>

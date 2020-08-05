@@ -3,9 +3,9 @@ import axios from 'axios';
 
 import { Link } from 'react-router-dom';
 
-import { PhotoGrid } from '../global styles/index'
+import { ListPageContainer, PhotoGrid, ArtistCard } from '../global styles/index'
 
-import FilterListIcon from '@material-ui/icons/FilterList';
+import Filter from './Filter';
 
 function ArtistList(){
 
@@ -22,31 +22,27 @@ function ArtistList(){
 
     console.log('line 24', artists)
     return(
-        <div className="artist-full-page-container">
-            <div className="search">
-            <FilterListIcon />
-            {/* filter/search */}
-            </div>
+        <ListPageContainer className="artist-full-page-container">
+            <h3>Artists</h3>
+            <Filter />
 
-            <div className="artists-container">
-            {/* display all artists */}
-                <h3>Artists</h3>
                 <PhotoGrid className="artist-card-container">
                     {/* map backend data of artists into cards */}
                     {artists.map(artist => (
-                    <div className="artist-card">
+                    <ArtistCard className="artist-card">
                         <Link to="/artist/{artist.id}">
                         {/* artist card detail */}
-                        <img src={artist.artistProfilePic} />
+                        <div className="name-img">
                         <h3>{artist.firstName} {artist.lastName}</h3>
+                        {/* <img src={artist.artistProfilePic} /> */}
+                        </div>
                         <p>{artist.bio}</p>
                         </Link>
-                    </div>
+                    </ArtistCard>
                     ))}
 
                 </PhotoGrid>
-            </div>
-        </div>
+        </ListPageContainer>
     )
 }
 

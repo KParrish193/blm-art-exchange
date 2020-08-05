@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useParams} from 'react-router';
 
 //app routing
 import { Switch, Route } from 'react-router-dom';
@@ -42,6 +43,8 @@ function App() {
 
   const [products, setProductsData] = useState([]);
   const [cart, setCart] = useState([]);
+  
+  const { id } = useParams();
 
   useEffect(() => {  
       axios
@@ -51,22 +54,9 @@ function App() {
           setProductsData(res.data)
       })
       .catch(err => console.log(err)); 
-  }, []);
+  }, [id]);
 
   console.log('App.js, line 55', products)
-
-
-//   useEffect(() => {  
-//     axios
-//     .get('http://localhost:1337/prints')
-//     .then(res => {
-//         console.log('success', res);
-//         setProductsData(res.data)
-//     })
-//     .catch(err => console.log(err)); 
-// }, []);
-
-// console.log('App.js, line 69, local', products)
 
   // cart functions
   // add item to cart
@@ -104,7 +94,7 @@ function App() {
           <Route path="/meet-the-team" component={ MeetUs } />
 
           {/* shop */}
-          <Route path="/shop" component={ Shop } />
+          <Route exact path="/shop" component={ Shop } />
           <Route path="shop/print/:id" component={ PrintDetail } />
           <Route path="/artists" component={ ArtistList } />
           <Route path="/artists/:id" component={ ArtistProfile } />

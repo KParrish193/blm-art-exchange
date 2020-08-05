@@ -559,10 +559,6 @@ export const PhotoGrid = styled.div`
     }
 `
 
-export const ProductCard = styled.div`
-
-`
-
 export const ArtistCard = styled.div`
     display: flex;
     flex-direction: row;
@@ -576,9 +572,87 @@ export const ArtistCard = styled.div`
     }
 `
 
+export const ProductCard = styled.div`
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0;
+    position: relative;
+
+    @media (max-width: 1600px){
+        width: 25%;
+    }
+
+    @media (max-width: 1500px){
+        width: 30%;
+    }
+
+    @media (max-width: 850px){
+        width: 35%;
+    }
+    
+    @media (max-width: 500px){
+        width: 50%;
+        height: 18rem;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .mobile-card {
+        display: none;
+
+        @media (max-width: 500px){
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 0;
+
+            h4 {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+`
+
+export const ThumbnailContainer = styled.div`
+    position: relative;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+
+    @media (max-width: 800px){
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+    }
+`
 
 export const ProductImg = styled.img`
-    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    width: auto;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+
+    // @media (max-width: 1050px){
+    //     height: 200px;
+    //     width: 200px;
+    // }
+
+    // @media (max-width: 800px){
+    //     height: 175px;
+    //     width: 175px;
+    // }
+
+    // @media (max-width: 600px){
+    //     height: 150px;
+    //     width: 150px;
+    // }
 `
 
 // form styling

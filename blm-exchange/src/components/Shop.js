@@ -5,7 +5,7 @@ import { ProductContext } from '../contexts/ProductContext';
 import { Link } from 'react-router-dom';
 import Filter from './Filter';
 
-import { PhotoGrid, ProductCard, ProductImg, ListPageContainer } from '../global styles/index'
+import { PhotoGrid, ProductCard, ProductImg, ListPageContainer, ThumbnailContainer } from '../global styles/index'
 
 
 function Shop(){
@@ -23,8 +23,12 @@ function Shop(){
                     {products.map((product, id) => (
                         <ProductCard className ="product-card" key={product.id}>
                             <Link to={`/shop/print/${product.id}`}>
+                            <div className="mobile-card">
                             <h4>{product.title}</h4>
-                            <ProductImg src={`https://heroku.com/artxblm-backend/${product.image.url}`} />
+                            </div>
+                            <ThumbnailContainer>
+                            <ProductImg src={`${product.image.formats.small.url}`} />
+                            </ThumbnailContainer>
                             {/* code for dark overlay */}
                             </Link>
                         </ProductCard>

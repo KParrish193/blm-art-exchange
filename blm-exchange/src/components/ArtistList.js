@@ -3,13 +3,14 @@ import axios from 'axios';
 
 import { Link } from 'react-router-dom';
 
-import { PhotoGrid } from '../global styles/index'
+import { ListPageContainer, PhotoGrid, ArtistCard } from '../global styles/index'
 
-import FilterListIcon from '@material-ui/icons/FilterList';
+import Filter from './Filter';
 
 function ArtistList(){
 
     const [artists, setArtists] = useState([]);
+    
     useEffect(() => {  
         axios
         .get('https://artxblm-backend.herokuapp.com/artists')
@@ -21,32 +22,29 @@ function ArtistList(){
     }, []);
 
     console.log('line 24', artists)
-    return(
-        <div className="artist-full-page-container">
-            <div className="search">
-            <FilterListIcon />
-            {/* filter/search */}
-            </div>
 
-            <div className="artists-container">
-            {/* display all artists */}
-                <h3>Artists</h3>
+    return(
+        <ListPageContainer className="artist-full-page-container">
+            <h3>Artists</h3>
+            <Filter />
+
                 <PhotoGrid className="artist-card-container">
                     {/* map backend data of artists into cards */}
                     {artists.map(artist => (
-                    <div className="artist-card">
-                        <Link to="/artist/{artist.id}">
+                    <ArtistCard className="artist-card">
+                        <Link to={`/artists/${artist.id}`}>
                         {/* artist card detail */}
-                        <img src={artist.artistProfilePic} />
-                        <h3>{artist.firstName} {artist.lastName}</h3>
+                        <div className="name-img">
+                        <h4>{artist.firstName} {artist.lastName}</h4>
+                        {/* <img src={artist.artistProfilePic} /> */}
+                        </div>
                         <p>{artist.bio}</p>
                         </Link>
-                    </div>
+                    </ArtistCard>
                     ))}
 
                 </PhotoGrid>
-            </div>
-        </div>
+        </ListPageContainer>
     )
 }
 

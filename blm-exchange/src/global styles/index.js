@@ -1,17 +1,20 @@
 import styled from 'styled-components'
 
+import background from '../assets/landing_background.png'
+
 // home container - adjusted for fixed header
 export const HomeContainer =styled.div`
-    padding-top: 100px;
+    padding: 105px 0 2.5rem 0;
+    position: relative;
     background-color: #000;
     color: white;
-    height: 100vh
+    min-height: 100vh;
 `
 // buttons
 export const PrimaryButton = styled.button`
     border-radius: 10px;
     color: #fff;
-    background-color: #800000;
+    background-color: #990000;
     font-size: 1.2rem;
     letter-spacing: .1rem;
     padding: .2rem;
@@ -19,20 +22,186 @@ export const PrimaryButton = styled.button`
     min-width: 150px;
     border: #450008 1px solid;
 
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+
     .stripe-button-el { display: none }
 `
 
 export const TagButton = styled.button`
-    border: solid #800000 2px;
-    border-radius: 10px;
-    color: #800000;
-    background: #fff;
+    border: solid #990000 2px;
+    border-radius: 20px;
+    color: #fff;
+    background: #000;
+    font-size: 1.1rem;
+    letter-spacing: .05rem;
+    padding: 0.3rem 1rem;
+    margin: 0.3rem;
 `
 
+// header styling
+export const HeaderContainer = styled.div`     
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    border-bottom: solid #0D0D0D 0.5px;
+
+    a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.4rem;
+        margin: 0;
+        padding: 10px;
+    }
+
+        a.home{
+            padding: 0px;
+            margin: 0px;
+            
+            :hover {
+                border-bottom: none;
+                transition: .16s all 0.025s;
+            }
+        }
+
+        a.cart {
+            text-decoration: none;
+            margin: 0 20px;
+            padding: 0px;
+            color: #fff;
+            font-size: 1.3rem;
+
+            :hover {
+                border-bottom: none;
+                transition: .16s all 0.025s;
+            }
+        }
+
+        a:hover {
+            border-bottom: 2px solid #990000;
+            transition: .16s all 0.025s;
+        }
+
+        .mobile-home{
+            display: none;
+        }
+
+        @media (max-width: 500px){
+            display: none;
+`
+
+export const Nav = styled.div`
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+
+    @media (max-width: 500px){
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        a {
+            width: 100%;
+        }
+    }
+`
+
+export const Logo = styled.img`
+    height: auto;
+    width: 100px;
+`
+
+export const ArtistMenuButton = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+`
+
+// mobile header styling
+export const MobileContainer = styled.div`
+    display: none;
+
+    @media(max-width: 500px){
+        position: fixed;
+        top: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 auto;
+        align-items: center;
+        background-color: #000;
+        color: #fff;
+        border-bottom: solid #0d0d0d 0.5px;
+    }
+
+    a.cart {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.3rem;
+        margin-right: 20px;
+    }
+
+    .mobile-hover:hover {
+        font-weight: 800;
+        transition: .16s all 0.025s;
+    }
+`
+
+export const MenuButton = styled.div`
+    margin-left: 20px;
+
+    :hover {
+        cursor: pointer;
+    }
+`
+
+//footer styling
+export const FooterContainer = styled.div`
+    background-color: #0D0D0D;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0 1.5rem;
+    height: 2.5rem;  
+
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .footer-contact{
+        display: flex;
+        flex-direction: row;
+        width: 30%;
+    }
+
+    .footer-codeofconduct{
+        width: 45%;
+        text-align: right;
+        justify-content: center;
+    }
+    `
+    
 // landing styling
 export const LandingButton = styled.button`
     text-color: white;
-    border-bottom: solid 3px #037963;
+    border-bottom: solid 3px #08846D;
     border-top: none;
     border-left: none;
     border-right: none;
@@ -55,16 +224,19 @@ export const MobileLandingButtonContainer = styled.div`
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        width: 100%;
     }
 `
 
 export const LandingContainer = styled.div`
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
-    padding: 35px 30px 100px 30px;
+    align-items: center;
+    padding: 2rem 30px 2.5rem;
     color: #fff;
-    height: 100vh;
+    min-height: 100vh;
+    background-image: url(${background});
 
     @media (max-width: 800px){
         display: flex;
@@ -76,18 +248,20 @@ export const LandingContainer = styled.div`
 export const LandingTextContent = styled.div`
     display: flex;
     flex-direction: column;
-    width: 45%;
+    width: 50%;
     
     @media (max-width: 800px){
         width: 100%;
     }
 `
 
-export const ArtistCallToAction = styled.div`
+
+export const CallToAction = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 45%;
+    width: 50%;
+    margin-top: 4.5rem;
 
     @media (max-width: 800px){
         margin-top: 3rem;
@@ -118,10 +292,9 @@ export const DonationContainer = styled.div`
 
 export const DonationPlaceholderContainer = styled.div`
     border: solid black 2px;
-    background-color: #800000;
+    background-color: #990000;
     height: 500px;
 `
-
 
 
 // code of conduct styling
@@ -148,12 +321,11 @@ export const CodeOfConductTextContent = styled.div`
     }
 `
 
-
 // about us styling
 export const AboutNavContainer = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin: 1rem 0 2rem;
     width: 100%;
@@ -164,6 +336,7 @@ export const AboutNavContainer = styled.div`
         color: white;
         font-size: 1.2rem;
         width: 25%;
+        padding-bottom: 0.5rem;
     }
 `
 
@@ -254,15 +427,14 @@ export const AboutUsTeamContainer = styled.div`
     }
 
     h4 {
-        color: #800000;
-        font-weight: 800;
-        padding-right: 1rem;
-        letter-spacing: .07rem;
+        color: #990000;
+        padding-right: .5rem;
+        font-weight: 500;
     }
 
     a {
         text-decoration: none;
-        color: #037963;
+        color: #08846D;
         font-size: 1.3rem;
         letter-spacing: .1rem;
     }
@@ -305,7 +477,7 @@ export const FAQTextContainer = styled.div`
 
     .FAQ-link {
         text-decoration: none;
-        color: #037963;
+        color: #08846D;
         font-weight: 700;
     }
 
@@ -314,169 +486,71 @@ export const FAQTextContainer = styled.div`
     }
 `
 
-// instafeed styling
-
-export const InstaContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    h3 {
-        color: #037963;
-    }`
-    
-//footer styling
-export const FooterContainer = styled.div`
-    position: relative;
-    background-color: black;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    color: #fff;
-    left:0;
-    bottom:0;
-    right:0;
-    width: 100%;
-    padding-top:10px;
-    padding-bottom:10px;
-`
-
-// header styling
-export const HeaderContainer = styled.div`     
-    position: fixed;
-    top: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin: 0 auto;
-    background-color: #000;
-    color: #fff;
-    width: 100%;
-
-    a {
-        text-decoration: none;
-        color: #fff;
-        font-size: 1.4rem;
-        margin: 0;
-        padding: 10px;
-    }
-
-        a.home{
-            padding: 0px;
-            margin: 0px;
-            
-            :hover {
-                border-bottom: none;
-                transition: .16s all 0.025s;
-            }
-        }
-
-        a.cart {
-            text-decoration: none;
-            margin: 0 20px;
-            padding: 0px;
-            color: #fff;
-            font-size: 1.3rem;
-
-            :hover {
-                color: #000000;
-                border-bottom: none;
-                transition: .16s all 0.025s;
-            }
-        }
-
-        a:hover {
-            border-bottom: 2px solid #800000;
-            transition: .16s all 0.025s;
-        }
-
-        .mobile-home{
-            display: none;
-        }
-
-        @media (max-width: 500px){
-            display: none;
-`
-
-export const Nav = styled.div`
-    display: flex; 
-    justify-content: space-around;
-    align-items: center;
-    width: 90%;
-
-    @media (max-width: 500px){
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-
-        a {
-            width: 100%;
-            border-bottom: 1px solid #222222;
-        }
+// filter styling
+export const DesktopFilterContainer = styled.div`
+    @media(max-width: 500px){
+        display: none;
     }
 `
 
-export const Logo = styled.img`
-    height: auto;
-    width: 100px;
+export const DesktopFilter = styled.div`
+
 `
 
-export const ArtistMenuButton = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-`
-
-// mobile header styling
-export const MobileContainer = styled.div`
+export const MobileFilter = styled.div`
     display: none;
 
     @media(max-width: 500px){
-        position: fixed;
-        top: 0;
-        width: 100%;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        margin: 0 auto;
+        justify-content: center;
         align-items: center;
-        background-color: #000;
-        color: #fff;
-        border-bottom: solid #4E4E4E 1px;
-    }
-
-    a.cart {
-        text-decoration: none;
-        color: #fff;
-        font-size: 1.3rem;
-        margin-right: 20px;
-    }
-
-    .mobile-hover:hover {
-        font-weight: 800;
-        transition: .16s all 0.025s;
+        flex-wrap: wrap;
+        max-width: 470px;
     }
 `
 
-export const MenuButton = styled.div`
-    margin-left: 20px;
+// shop & list styling
+export const ListPageContainer = styled.div`
+    margin: 1rem 0.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
 
-    :hover {
-        cursor: pointer;
+    h3 {
+        display: none;
+    }
+
+    @media (max-width: 500px) {
+        h3 {
+            display: flex;
+            margin: 0.25rem 0 1.5rem;
+        }
     }
 `
 
-//grid display
 export const PhotoGrid = styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 30px 0px 0px 30px;
+    justify-content: center;
+    width: 100%;
+    margin: 2rem 0;
 
-    div {
-        width: 50%;
+    .name-img {
+        padding: 0;
+        margin: 0;
+
+        h3 {
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    img {
+        padding: 0;
+        margin: 0;
     }
 
     a {
@@ -486,13 +560,207 @@ export const PhotoGrid = styled.div`
     }
 `
 
-export const ProductCard = styled.div`
+export const ArtistCard = styled.div`
+    display: flex;
+    flex-direction: row;
+    width: 45%;
+    padding: .5rem;
 
+    @media(max-width: 500px){
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+    }
+`
+
+export const ProductCard = styled.div`
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0;
+    position: relative;
+
+    @media (max-width: 1600px){
+        width: 25%;
+    }
+
+    @media (max-width: 1500px){
+        width: 30%;
+    }
+
+    @media (max-width: 850px){
+        width: 35%;
+    }
+    
+    @media (max-width: 500px){
+        width: 50%;
+        height: 18rem;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .mobile-card {
+        display: none;
+
+        @media (max-width: 500px){
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 0;
+
+            h4 {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+`
+
+export const ThumbnailContainer = styled.div`
+    position: relative;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+
+    @media (max-width: 800px){
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+    }
 `
 
 export const ProductImg = styled.img`
-    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    width: auto;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+
+    // @media (max-width: 1050px){
+    //     height: 200px;
+    //     width: 200px;
+    // }
+
+    // @media (max-width: 800px){
+    //     height: 175px;
+    //     width: 175px;
+    // }
+
+    // @media (max-width: 600px){
+    //     height: 150px;
+    //     width: 150px;
+    // }
 `
+
+
+//artist profile styling
+export const ArtistProfileContainer = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 80vh;
+    padding: 2rem 3rem 2.5rem;
+
+    @media(max-width: 850px){
+        display:flex;
+        flex-direction: column;
+        padding: 2.5rem 2rem 2.5rem;
+    }
+`
+
+export const CarouselContainer = styled.div`
+    width: 50%;
+    min-width: 500px;
+    height: 100%;
+
+    @media(max-width: 850px){
+        min-width: 300px;
+        width: 100%;
+        height: 40vh;
+    }
+`
+
+export const ArtistContentContainer = styled.div`
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 3rem;
+
+    h3 {
+        width: 100%;
+        text-align: left;
+        margin-left: 0.3rem;
+    }
+
+    h4 {
+        width: 100%;
+        text-align: left;
+        letter-spacing: 0.01rem;
+        margin-left: 0.3rem;
+    }
+
+    h5 {
+        width: 100%;
+        text-align: left;
+        margin-left: 0.3rem;
+        padding-bottom: 0.15rem; 
+    }
+
+    h6 {
+        width: 100%;
+        text-align: left;
+        padding-left: 0.4rem;
+        font-size: 1.1rem;
+    }
+
+    .icon {
+        color: #990000;
+    }
+
+    div.location {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+    }
+
+    div.artist-tags {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+    }
+
+    a {
+        color: #08846D;
+
+        :hover{ 
+            color: #fff;
+            text-decoration: none;
+        }
+
+    }
+
+    p {
+        margin-top: 1rem;
+        text-align: left;
+        margin-left: 0.3rem;
+    }
+
+    @media(max-width: 850px){
+        width: 100%;
+        padding: 2rem 0;
+    }
+`
+
 
 // form styling
 export const Form = styled.form`
@@ -585,7 +853,7 @@ export const Form = styled.form`
 export const EmailLink = styled.div`
     display: inline-block;
     a {
-        color: #037963;
+        color: #08846D;
     }
 `
 
@@ -594,7 +862,7 @@ export const ToggleSignUp = styled.div`
     font-size: .8rem;
 
     a{ 
-        color: #037963;
+        color: #08846D;
         padding-left: 5px;
     }
 `
@@ -606,15 +874,24 @@ export const CartContainer = styled.div`
     flex-direction: column;
     margin: 0 auto;
 
-    .labelrow {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-
-    .total{
+    .total {
         width: 60%;
+    }
+`
+
+export const CartLabels = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    color: #000;
+    
+    p {
+        padding: 0;
+        margin: 0.3rem 0;
+        font-size: 1.1rem;
     }
 `
 

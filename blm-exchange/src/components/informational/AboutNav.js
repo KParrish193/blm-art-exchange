@@ -17,13 +17,13 @@ function AboutNav(){
     </NavLink>
     
     <NavLink 
-        to="/insta"               
+        to="/meet-the-team"               
         activeStyle={{
         fontWeight: "bold",
         color: "#fff",
         borderBottom: "solid #800000 2px"
     }}>
-        Instagram
+        Meet The Team
     </NavLink>
 
     <NavLink 

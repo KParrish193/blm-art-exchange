@@ -1,17 +1,22 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 
 import { NavLink, Link } from 'react-router-dom';
 
-import logo from '../../assets/darkartxblm.gif'
+import logo from '../../assets/blmlogo.png'
 import { HeaderContainer, Nav, Logo } from '../../global styles/index'
 
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
 function Header() {
 
     return(
         <HeaderContainer>
             <Nav>
+            {/* <Link to="/customer/login" className="cart">
+                <AccountCircleIcon />
+            </Link> */}
+            
             <NavLink 
                 to="/about"   
                 activeStyle={{
@@ -46,7 +51,7 @@ function Header() {
                 Artists
             </NavLink>
 
-            <NavLink 
+            {/* <NavLink 
                 to="/artist/login"
                 activeStyle={{
                     fontWeight: "bold",
@@ -54,21 +59,12 @@ function Header() {
                     borderBottom: "solid #800000 2px"
                 }}>
                 Artist Login
-            </NavLink>
-            {/* <NavLink 
-                to="/customer/login"
-                activeStyle={{
-                    fontWeight: "bold",
-                    color: "#fff",
-                    borderBottom: "solid #800000 2px"
-                }}>
-                Customer Login
             </NavLink> */}
-            </Nav>
 
             <Link to="/cart" className="cart">
                 <ShoppingCartOutlinedIcon />
             </Link>
+            </Nav>
         
 
         </HeaderContainer>

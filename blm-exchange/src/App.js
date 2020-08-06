@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useParams} from 'react-router';
 
 //app routing
 import { Switch, Route } from 'react-router-dom';
@@ -16,7 +17,7 @@ import Footer from './components/footers/Footer';
 import Landing from './components/informational/Landing.js';
 import About from './components/informational/About.js';
 import FAQ from './components/informational/FAQ.js';
-import Insta from './components/informational/InstaFeed.js';
+import MeetUs from './components/informational/MeetUs.js';
 
 import ArtistForm from './components/artistsPortal/ArtistForm';
 import Login from './components/artistsPortal/Login';
@@ -42,6 +43,8 @@ function App() {
 
   const [products, setProductsData] = useState([]);
   const [cart, setCart] = useState([]);
+  
+  const { id } = useParams();
 
   useEffect(() => {  
       axios
@@ -51,22 +54,9 @@ function App() {
           setProductsData(res.data)
       })
       .catch(err => console.log(err)); 
-  }, []);
+  }, [id]);
 
   console.log('App.js, line 55', products)
-
-
-//   useEffect(() => {  
-//     axios
-//     .get('http://localhost:1337/prints')
-//     .then(res => {
-//         console.log('success', res);
-//         setProductsData(res.data)
-//     })
-//     .catch(err => console.log(err)); 
-// }, []);
-
-// console.log('App.js, line 69, local', products)
 
   // cart functions
   // add item to cart
@@ -101,12 +91,12 @@ function App() {
           <Route path="/blm-art-exchange" component={ Landing } />
           <Route path="/about" component={ About } />
           <Route path="/FAQ" component={ FAQ } />
-          <Route path="/insta" component={ Insta } />
+          <Route path="/meet-the-team" component={ MeetUs } />
 
           {/* shop */}
-          <Route path="/shop" component={ Shop } />
+          <Route exact path="/shop" component={ Shop } />
           <Route path="shop/print/:id" component={ PrintDetail } />
-          <Route path="/artists" component={ ArtistList } />
+          <Route exact path="/artists" component={ ArtistList } />
           <Route path="/artists/:id" component={ ArtistProfile } />
           <Route path="/cart" component={ Cart } />
           <Route path="/checkout" component={ Checkout } />
@@ -116,7 +106,7 @@ function App() {
           {/* artist */}
           <Route path="/artist/login" component={ Login } />
           <Route path="/artist/sign-up" component={ ArtistForm } />
-          <Route path="/artist/coc" component={ CodeOfConduct } />
+          <Route path="/coc" component={ CodeOfConduct } />
           <PrivateRoute path ="/artist/:id/dashboard" component={ ArtistDashboard } />
           <PrivateRoute path="/artist/:id/upload" component={ UploadForm } />
 
@@ -124,9 +114,9 @@ function App() {
       </div>
     </div>
 
-    <div>
-      <Footer/>
-    </div>
+    
+    <Footer/>
+
     </HomeContainer>
 
     </CartContext.Provider>

@@ -498,6 +498,7 @@ export const ProductImg = styled.img`
 export const Form = styled.form`
     max-width: 1000px;
     margin: 0 auto;
+    align-items: left;
 
     label {
         float: left;
@@ -509,7 +510,6 @@ export const Form = styled.form`
 
     input {
         box-sizing: border-box;
-        width: 100%;
         border-radius: 4px;
         padding: 10px 15px;
         margin-bottom: 10px;
@@ -518,9 +518,20 @@ export const Form = styled.form`
         display: block;
     }
 
+    .text {
+        width: 100%;
+    }
+    
+    .checkbox {
+        display: inline;
+    }
+
+    span {
+        margin: 8px;
+    }
+
     textarea {
         box-sizing: border-box;
-        width: 100%;
         border-radius: 4px;
         padding: 10px 15px;
         margin-bottom: 10px;
@@ -545,12 +556,13 @@ export const Form = styled.form`
         padding: .2rem;
     }
 
-    p {
+    p, h3 {
         margin: 0;
+        text-align: left;
     }
 
     .instructions{
-        text-align: center;
+        text-align: left;
         margin-bottom: 40px;
     }
 

@@ -37,7 +37,7 @@ export const TagButton = styled.button`
     background: #000;
     font-size: 1.1rem;
     letter-spacing: .05rem;
-    padding: 0.2rem 1rem;
+    padding: 0.3rem 1rem;
     margin: 0.3rem;
 `
 
@@ -188,12 +188,13 @@ export const FooterContainer = styled.div`
     .footer-contact{
         display: flex;
         flex-direction: row;
-        width: 45%;
+        width: 30%;
     }
 
     .footer-codeofconduct{
         width: 45%;
         text-align: right;
+        justify-content: center;
     }
     `
     
@@ -695,29 +696,63 @@ export const ArtistContentContainer = styled.div`
     h3 {
         width: 100%;
         text-align: left;
+        margin-left: 0.3rem;
     }
-    
+
     h4 {
         width: 100%;
         text-align: left;
+        letter-spacing: 0.01rem;
+        margin-left: 0.3rem;
+    }
+
+    h5 {
+        width: 100%;
+        text-align: left;
+        margin-left: 0.3rem;
+        padding-bottom: 0.15rem; 
+    }
+
+    h6 {
+        width: 100%;
+        text-align: left;
+        padding-left: 0.4rem;
+        font-size: 1.1rem;
+    }
+
+    .icon {
+        color: #990000;
+    }
+
+    div.location {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+    }
+
+    div.artist-tags {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin-top: 1rem;
     }
 
     a {
         color: #08846D;
 
         :hover{ 
-            color: #990000;
+            color: #fff;
             text-decoration: none;
         }
 
-        .icon {
-            color: #fff;
-        }
     }
 
     p {
         margin-top: 1rem;
         text-align: left;
+        margin-left: 0.3rem;
     }
 
     @media(max-width: 850px){

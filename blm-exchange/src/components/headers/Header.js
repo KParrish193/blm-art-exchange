@@ -2,7 +2,7 @@ import React from 'react';
 
 import { NavLink, Link } from 'react-router-dom';
 
-import logo from '../../assets/darkartxblm.gif'
+import logo from '../../assets/blmlogo.png'
 import { HeaderContainer, Nav, Logo } from '../../global styles/index'
 
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';

@@ -4,7 +4,7 @@ import background from '../assets/landing_background.png'
 
 // home container - adjusted for fixed header
 export const HomeContainer =styled.div`
-    padding: 100px 0 2.5rem 0;
+    padding: 105px 0 2.5rem 0;
     position: relative;
     background-color: #000;
     color: white;
@@ -654,6 +654,78 @@ export const ProductImg = styled.img`
     //     width: 150px;
     // }
 `
+
+
+//artist profile styling
+export const ArtistProfileContainer = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 80vh;
+    padding: 2rem 3rem 2.5rem;
+
+    @media(max-width: 850px){
+        display:flex;
+        flex-direction: column;
+        padding: 2.5rem 2rem 2.5rem;
+    }
+`
+
+export const CarouselContainer = styled.div`
+    width: 50%;
+    min-width: 500px;
+    height: 100%;
+
+    @media(max-width: 850px){
+        min-width: 300px;
+        width: 100%;
+        height: 40vh;
+    }
+`
+
+export const ArtistContentContainer = styled.div`
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 3rem;
+
+    h3 {
+        width: 100%;
+        text-align: left;
+    }
+    
+    h4 {
+        width: 100%;
+        text-align: left;
+    }
+
+    a {
+        color: #08846D;
+
+        :hover{ 
+            color: #990000;
+            text-decoration: none;
+        }
+
+        .icon {
+            color: #fff;
+        }
+    }
+
+    p {
+        margin-top: 1rem;
+        text-align: left;
+    }
+
+    @media(max-width: 850px){
+        width: 100%;
+        padding: 2rem 0;
+    }
+`
+
 
 // form styling
 export const Form = styled.form`

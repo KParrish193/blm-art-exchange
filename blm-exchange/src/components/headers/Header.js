@@ -13,10 +13,9 @@ function Header() {
     return(
         <HeaderContainer>
             <Nav>
-
-            <Link to="/customer/login" className="cart">
+            {/* <Link to="/customer/login" className="cart">
                 <AccountCircleIcon />
-            </Link>
+            </Link> */}
             
             <NavLink 
                 to="/about"   
@@ -52,7 +51,7 @@ function Header() {
                 Artists
             </NavLink>
 
-            <NavLink 
+            {/* <NavLink 
                 to="/artist/login"
                 activeStyle={{
                     fontWeight: "bold",
@@ -60,18 +59,7 @@ function Header() {
                     borderBottom: "solid #800000 2px"
                 }}>
                 Artist Login
-            </NavLink>
-            
-            {/* <NavLink 
-                to="/customer/login"
-                activeStyle={{
-                    fontWeight: "bold",
-                    color: "#fff",
-                    borderBottom: "solid #800000 2px"
-                }}>
-                Customer Login
             </NavLink> */}
-            
 
             <Link to="/cart" className="cart">
                 <ShoppingCartOutlinedIcon />

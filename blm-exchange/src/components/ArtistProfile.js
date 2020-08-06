@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
-
-import { useParams } from 'react-router' 
-import Inquiry from './Inquiry';
 import { Carousel } from 'antd'
+import { useParams } from 'react-router' 
+import InstagramIcon from '@material-ui/icons/Instagram';
+import Inquiry from './Inquiry';
+import { TagButton, CarouselContainer, ArtistContentContainer, ArtistProfileContainer } from '../global styles'
+
 
 // carousel styling
 const contentStyle = {
@@ -38,16 +40,10 @@ function ArtistProfile(){
     const printArr = artists.printID
     console.log('print array', printArr)
 
-
-
     return(
-        <div>
+        <ArtistProfileContainer>
             {/* display all artist products to buy, specific to single artist, perhaps artist details like social media. Link to inquiry */}
-        
-        <h3>{artists.firstName} {artists.lastName}</h3>
-        <h3></h3>
-        <p>{artists.bio}</p>
-
+        <CarouselContainer>
             <Carousel afterChange={onChange} >
             {/* {printArr.map((print) => (
                 <div>
@@ -57,12 +53,25 @@ function ArtistProfile(){
 
 
             </Carousel>
+        </CarouselContainer>
+
+        <ArtistContentContainer>
+        <h3>{artists.firstName} {artists.lastName}</h3>
+        <h4><a href={'https://instagram.com/' + artists.instagram +'/'} target="blank">
+            <InstagramIcon className="icon"/> @{artists.instagram}
+            </a>
+        </h4>
+            <div>
+                {/* artists tags */}
+            </div>
+        <p>{artists.bio}</p>
     
+        </ArtistContentContainer>
 
         {/* inquiry as modal */}
         {/* <Inquiry /> */}
         
-        </div>
+        </ArtistProfileContainer>
     )
 }
 

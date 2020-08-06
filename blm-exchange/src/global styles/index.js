@@ -293,7 +293,7 @@ export const FAQTextContainer = styled.div`
     width: 75%;
     position: static;
     
-    h2 {
+    h2, h3 {
         text-align: center;
         margin-bottom: 1rem;
     }

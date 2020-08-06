@@ -35,7 +35,7 @@ h5 {
   text-align: center;
 }
 
-p {
+p, h6 {
   font-family: franklin-gothic-urw, sans-serif;
   font-style: normal;
   font-weight: normal;

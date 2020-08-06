@@ -96,7 +96,7 @@ function App() {
           {/* shop */}
           <Route exact path="/shop" component={ Shop } />
           <Route path="shop/print/:id" component={ PrintDetail } />
-          <Route path="/artists" component={ ArtistList } />
+          <Route exact path="/artists" component={ ArtistList } />
           <Route path="/artists/:id" component={ ArtistProfile } />
           <Route path="/cart" component={ Cart } />
           <Route path="/checkout" component={ Checkout } />

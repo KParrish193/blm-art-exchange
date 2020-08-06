@@ -10,6 +10,7 @@ import Filter from './Filter';
 function ArtistList(){
 
     const [artists, setArtists] = useState([]);
+    
     useEffect(() => {  
         axios
         .get('https://artxblm-backend.herokuapp.com/artists')
@@ -21,6 +22,7 @@ function ArtistList(){
     }, []);
 
     console.log('line 24', artists)
+
     return(
         <ListPageContainer className="artist-full-page-container">
             <h3>Artists</h3>
@@ -30,7 +32,7 @@ function ArtistList(){
                     {/* map backend data of artists into cards */}
                     {artists.map(artist => (
                     <ArtistCard className="artist-card">
-                        <Link to="/artist/{artist.id}">
+                        <Link to={`/artists/${artist.id}`}>
                         {/* artist card detail */}
                         <div className="name-img">
                         <h4>{artist.firstName} {artist.lastName}</h4>

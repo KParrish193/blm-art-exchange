@@ -1,8 +1,11 @@
 import React from 'react'
 
 import { Link } from 'react-router-dom';
-import { PrimaryButton, Form, ToggleSignUp } from '../../global styles/index';
+import { PrimaryButton, Form, ToggleSignUp, CustomSwitch } from '../../global styles/index';
 import { useForm } from 'react-hook-form';
+
+import Switch from '@material-ui/core/Switch';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
 
 function ArtistForm(){
 
@@ -35,7 +38,7 @@ function ArtistForm(){
                         </div>
                     </div>
 
-                    <div className="row">
+                    <div>
                         <label>E-mail:  </label>
                         <input type="text" placeholder="E-mail" name="E-mail" ref={register({required: true, pattern: /^\S+@\S+$/i})} />
                     </div>
@@ -51,25 +54,50 @@ function ArtistForm(){
                         </div>
                     </div>
 
-                    <div className="row">
-                        <div className="column">
-                            <label>Artist Bio:  </label>
-                            <textarea placeholder="Bio" name="Bio" ref={register({required: true, maxLength: 500})} />
-                        </div>
-                        <div className="column checkboxes" style={{ display: "inline" }}>
-                            <label><input type="checkbox" placeholder="BlackArtist" name="BlackArtist" ref={register} />I am a Black Artist</label>
-                        </div>
+                    <div>
+                        <label>Artist Bio:  </label>
+                        <textarea placeholder="Bio" name="Bio" ref={register({required: true, maxLength: 500})} />
                     </div>
 
-                    <div className="row">
-                        <div className="column checkboxes" style={{ display: "inline" }}>
-                            <label><input type="checkbox" placeholder="Exchange" name="Exchange" ref={register} />Are you willing to be contacted for non-monetary exchanges for your art?</label>
-                        </div>
+                    <label htmlFor="material-switch">
+                        <span>I am a Black Artist</span>
+                        <Switch
+                            onColor="#86d3ff"
+                            onHandleColor="#2693e6"
+                            handleDiameter={30}
+                            uncheckedIcon={false}
+                            checkedIcon={false}
+                            boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
+                            activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
+                            height={20}
+                            width={48}
+                            className="react-switch"
+                            id="material-switch"
+                        />
+                    </label>
 
-                        <div className="column checkboxes" style={{ display: "inline" }}>
-                            <label><input type="checkbox" placeholder="Exchange" name="Exchange" ref={register} />Are you willing to allow people to digitally download your art?</label>
-                        </div>
-                    </div>
+                    <label htmlFor="material-switch">
+                        <span>Are you willing to be contacted for non-monetary exchanges for your art?</span>
+                        <Switch
+                            onColor="#86d3ff"
+                            onHandleColor="#2693e6"
+                            handleDiameter={30}
+                            uncheckedIcon={false}
+                            checkedIcon={false}
+                            boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
+                            activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
+                            height={20}
+                            width={48}
+                            className="react-switch"
+                            id="material-switch"
+                        />
+                    </label>
+                    
+                    <FormControlLabel label="I am a Black Artist" control={<Switch color="primary" />}/>
+
+                    <FormControlLabel label="Are you willing to be contacted for non-monetary exchanges for your art?" control={<Switch color="primary" />}/>
+
+                    <FormControlLabel label="Are you willing to allow people to digitally download your art?" control={<Switch color="primary" />}/>
 
                     <div>
                     <label>Medium:  </label>
@@ -83,7 +111,8 @@ function ArtistForm(){
                     </div>
 
                     <div>
-                    <input type="text" placeholder="Profile" name="Profile" ref={register} />
+                        <label>Social Media</label>
+                        <input type="text" placeholder="Profile" name="Profile" ref={register} />
                     </div>
 
                     <div className="row">

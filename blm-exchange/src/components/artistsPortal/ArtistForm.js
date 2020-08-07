@@ -24,7 +24,6 @@ function ArtistForm(){
                 <p className="instructions">Read the <Link to="/artist/coc" style={{color: "#037963"}}>Code of Conduct</Link>.</p>
                 
                 <div className="form-container">
-
                     <div className="row">
                         <div className="column">
                             <label className="text">First Name:</label> 
@@ -99,7 +98,7 @@ function ArtistForm(){
                     </div>
 
                     <div className="row">
-                        <div clasName="column">
+                    <div clasName="column">
                             <label className="text">Where are you located?</label> 
                             <input className="text" type="text" placeholder="City, Country" name="location" ref={register({required: true, max: 30, min: 2})} />
                         </div>
@@ -109,16 +108,61 @@ function ArtistForm(){
                         </div>
                     </div>
 
-                    <div>
-                        <label>
-                            <span>Are you willing to be contacted for non-monetary exchanges for your art?</span><input className="checkbox" type="checkbox" />
-                        </label>
+                    { /* File upload */}
+
+                    <div className="row">
+                        <div className="column">
+                            <label className="text">Title of Work 1:</label>
+                            <input className="text" type="text" placeholder="Title of Work 1"/>
+                        </div>
+                        <div className="column">
+                            <label className="text">Upload Work 1 here:</label>
+                            <input type="file" />
+                        </div>
                     </div>
 
-                    <div>
-                        <label>
-                            <span>Are you willing to allow people to digitally download your art?</span><input className="checkbox" type="checkbox" />
-                        </label>
+                    <div className="row">
+                        <div className="column">
+                            <label className="text">Title of Work 2:</label>
+                            <input className="text" type="text" placeholder="Title of Work 2"/>
+                        </div>
+                        <div className="column">
+                            <label className="text">Upload Work 2 here:</label>
+                            <input type="file" />
+                        </div>
+                    </div>
+
+                    <div className="row">
+                        <div className="column">
+                            <label className="text">Title of Work 3:</label>
+                            <input className="text" type="text" placeholder="Title of Work 3"/>
+                        </div>
+                        <div className="column">
+                            <label className="text">Upload Work 3 here:</label>
+                            <input type="file" />
+                        </div>
+                    </div>
+
+                    <div className="row">
+                        <div className="column">
+                            <label className="text">Title of Work 4:</label>
+                            <input className="text" type="text" placeholder="Title of Work 4"/>
+                        </div>
+                        <div className="column">
+                            <label className="text">Upload Work 4 here:</label>
+                            <input type="file" />
+                        </div>
+                    </div>
+
+                    <div className="row">
+                        <div className="column">
+                            <label className="text">Title of Work 5:</label>
+                            <input className="text" type="text" placeholder="Title of Work 5"/>
+                        </div>
+                        <div className="column">
+                            <label className="text">Upload Work 5 here:</label>
+                            <input type="file" />
+                        </div>
                     </div>
 
                     <div>
@@ -129,9 +173,7 @@ function ArtistForm(){
 
                     <PrimaryButton onclick={onSubmit} > Submit </PrimaryButton>
                     {/* modal to confirm code of conduct for new artists */}
-                    </div>
-                    
-                    
+                    </div> 
             </Form>
         </div>
     )

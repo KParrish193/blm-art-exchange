@@ -5,8 +5,7 @@ import { ProductContext } from '../contexts/ProductContext';
 import { Link } from 'react-router-dom';
 import Filter from './Filter';
 
-import { PhotoGrid, ProductCard, ProductImg, ListPageContainer, ThumbnailContainer } from '../global styles/index'
-
+import { PhotoGrid, ProductCard, ProductImg, ListPageContainer, ThumbnailContainer } from '../global styles/index';
 
 function Shop(){
     const { products } = useContext(ProductContext)
@@ -16,7 +15,7 @@ function Shop(){
         <ListPageContainer>
             {/* display all available products to buy */}
             <h3>Shop</h3>
-            <Filter />
+            <Filter/>
 
             <div className="shop-container">
                 <PhotoGrid className="product-card-container">

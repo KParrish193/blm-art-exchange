@@ -2,7 +2,19 @@ import React from 'react';
 
 import FilterListIcon from '@material-ui/icons/FilterList';
 
-import { DesktopFilterContainer, MobileFilter, MobileFilterContainer, TagButton } from '../global styles/index'
+import { DesktopFilterContainer, MobileFilter, MobileFilterContainer, TagButton } from '../global styles/index';
+
+const medium = [
+    'Design & Illustration',
+    'Digital Art',
+    'Drawing',
+    'Painting & Mixed Media', 
+    'Photography'
+];
+
+var blackArtist = false;
+
+var exchange = false;
 
 function Filter() {
     return(

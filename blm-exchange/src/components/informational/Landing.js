@@ -9,10 +9,10 @@ function Landing(){
         <LandingContainer>
             <LandingTextContent>
             <div>
-            <h3>Art x BLM</h3>
-            <h2>
+            <h2>Art x BLM</h2>
+            <h5>
                 Artists. Activists. Allies
-            </h2>
+            </h5>
             </div>
 
             <div>
@@ -44,7 +44,7 @@ function Landing(){
 
             <CallToAction className="causes">
                 <h4>Causes</h4>
-                <h5>Information about causes to donate to.</h5>
+                <h6>Information about causes to donate to.</h6>
             </CallToAction>
 
             <DonationContainer 
@@ -59,7 +59,7 @@ function Landing(){
 
             <CallToAction>
                 <h4>Want your work to be featured? </h4>
-                    <h5>We're looking for talented artists to contribute to the cause. </h5>
+                    <h6>We're looking for talented artists to contribute to the cause. </h6>
                     <p>
                         <Link to="/artist/sign-up">
                         <PrimaryButton>Sign Up</PrimaryButton>

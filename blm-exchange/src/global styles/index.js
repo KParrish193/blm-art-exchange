@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import background from '../assets/landing_background.png'
+import background from '../assets/pexels-colin-lloyd-4635036.jpg'
 
 // home container - adjusted for fixed header
 export const HomeContainer =styled.div`
@@ -237,6 +237,13 @@ export const LandingContainer = styled.div`
     color: #fff;
     min-height: 100vh;
     background-image: url(${background});
+    background-size: cover;
+    text-align: center;
+
+    h5, h6 {
+        margin-top: 1rem;
+        positive: relative;
+    }
 
     @media (max-width: 800px){
         display: flex;
@@ -249,6 +256,11 @@ export const LandingTextContent = styled.div`
     display: flex;
     flex-direction: column;
     width: 50%;
+    text-align: center;
+
+    h5, h6 {
+        margin-top: 1rem;
+    }
     
     @media (max-width: 800px){
         width: 100%;
@@ -273,7 +285,7 @@ export const CallToAction = styled.div`
         margin-top: 1.5rem;
     }
 
-    h5 {
+    h5, h6 {
         margin-top: 1rem;
     }
 
@@ -579,19 +591,20 @@ export const ProductCard = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0.5rem 0;
+    margin: 1rem 0;
     position: relative;
+    object-fit: cover;
 
     @media (max-width: 1600px){
-        width: 25%;
+        width: 22%;
     }
 
     @media (max-width: 1500px){
-        width: 30%;
+        width: 22%;
     }
 
     @media (max-width: 850px){
-        width: 35%;
+        width: 25%;
     }
     
     @media (max-width: 500px){
@@ -622,6 +635,7 @@ export const ThumbnailContainer = styled.div`
     width: 250px;
     height: 250px;
     overflow: hidden;
+    object-fit: cover;
 
     @media (max-width: 800px){
         width: 200px;
@@ -635,7 +649,8 @@ export const ProductImg = styled.img`
     left: 50%;
     top: 50%;
     height: 100%;
-    width: auto;
+    width: 100%;
+    object-fit: cover;
     -webkit-transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
         transform: translate(-50%,-50%);

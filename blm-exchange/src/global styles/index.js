@@ -465,7 +465,7 @@ export const FAQTextContainer = styled.div`
     width: 75%;
     position: static;
     
-    h2 {
+    h2, h3 {
         text-align: center;
         margin-bottom: 1rem;
     }
@@ -765,19 +765,18 @@ export const ArtistContentContainer = styled.div`
 // form styling
 export const Form = styled.form`
     max-width: 1000px;
-    margin: 0 auto;
+    margin: auto;
+    align-items: center;
 
     label {
         float: left;
         text-align: left;
         display: inline-block;
         padding-left: 15px;
-        text-indent: -15px;
     }
 
     input {
         box-sizing: border-box;
-        width: 100%;
         border-radius: 4px;
         padding: 10px 15px;
         margin-bottom: 10px;
@@ -786,9 +785,20 @@ export const Form = styled.form`
         display: block;
     }
 
+    .text {
+        width: 100%;
+    }
+    
+    .checkbox, .radio {
+        display: inline;
+    }
+
+    span {
+        margin: 8px;
+    }
+
     textarea {
         box-sizing: border-box;
-        width: 100%;
         border-radius: 4px;
         padding: 10px 15px;
         margin-bottom: 10px;
@@ -798,7 +808,7 @@ export const Form = styled.form`
     .form-container {
         display: flex;
         flex-direction: column;
-        width: 90%;
+        width: 100%;
         padding: 20px;
         
         @media(max-width: 500px){
@@ -813,12 +823,13 @@ export const Form = styled.form`
         padding: .2rem;
     }
 
-    p {
+    p, h3 {
         margin: 0;
+        text-align: left;
     }
 
     .instructions{
-        text-align: center;
+        text-align: left;
         margin-bottom: 40px;
     }
 
@@ -828,25 +839,53 @@ export const Form = styled.form`
         padding: 10px;
     }
 
-
     .row:after {
         content: "";
         display: table;
         clear: both;
     }
+`
 
-    .checkboxes label {
-        display: block;
-        padding-right: 10px;
-        padding-left: 22px;
-        text-indent: -22px;
+export const CustomSwitch = styled.div`
+    .react-switch-checkbox {
+        height: 0;
+        width: 0;
+        visibility: hidden;
     }
-
-    .checkboxes input {
-        vertical-align: middle;
+    
+    .react-switch-label {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        width: 100px;
+        height: 50px;
+        background: grey;
+        border-radius: 100px;
+        position: relative;
+        transition: background-color .2s;
     }
-    .checkboxes label span {
-        vertical-align: middle;
+  
+    .react-switch-label .react-switch-button {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 45px;
+        height: 45px;
+        border-radius: 45px;
+        transition: 0.2s;
+        background: #fff;
+        box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
+    }
+    
+    .react-switch-checkbox:checked + .react-switch-label .react-switch-button {
+        left: calc(100% - 2px);
+        transform: translateX(-100%);
+    }
+    
+    .react-switch-label:active .react-switch-button {
+        width: 60px;
     }
 `
 

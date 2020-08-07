@@ -45,23 +45,23 @@ function ArtistProfile(){
     const splits = mediums.split(",")
 
     // logic for demographic tags
-    if(artists.blackArtist == true){
+    if(artists.blackArtist === true){
         splits.push("Black Artist");
     }
     
-    if(artists.latinx == true){
+    if(artists.latinx === true){
         splits.push("LatinX Artist")
     }
     
-    if(artists.lgbtq == true){
+    if(artists.lgbtq === true){
         splits.push("LGBTQIA+ Artist")
     }
     
-    if(artists.poc == true){
+    if(artists.poc === true){
         splits.push("POC Artist")
     }
     
-    if(artists.indigenous == true){
+    if(artists.indigenous === true){
         splits.push("Indigenous Artist")
     }
     
@@ -73,47 +73,47 @@ function ArtistProfile(){
 
 // NULL Logic 
 // logic to set display of twitter to none if no twitter is given
-    if(artists.twitter == null){
-        var y = document.getElementsByClassName("twitter");
+    if(artists.twitter === null){
+        var twitter = document.getElementsByClassName("twitter");
         var i
-        for (i = 0; i < y.length; i++) {
-            y[i].style.display = "none";
+        for (i = 0; i < twitter.length; i++) {
+            twitter[i].style.display = "none";
         }
     }
 
 // logic to set display of insta to none if no insta is given
-    if(artists.instagram == null){
-        var y = document.getElementsByClassName("insta");
-        var i
-        for (i = 0; i < y.length; i++) {
-            y[i].style.display = "none";
+    if(artists.instagram === null){
+        var insta = document.getElementsByClassName("insta");
+        var j
+        for (j = 0; j < insta.length; j++) {
+            insta[j].style.display = "none";
         }
     }
 
 // logic to set display of location to none if no location is given
-    if(artists.location == null){
-        var y = document.getElementsByClassName("location");
-        var i
-        for (i = 0; i < y.length; i++) {
-            y[i].style.display = "none";
+    if(artists.location === null){
+        var loc = document.getElementsByClassName("location");
+        var k
+        for (k = 0; k < loc.length; k++) {
+            loc[k].style.display = "none";
         }
     }
 
 // logic to set display of pronouns to none if none given
-    if(artists.pronouns == null){
-        var y = document.getElementsByClassName("pronouns");
-        var i
-        for (i = 0; i < y.length; i++) {
-            y[i].style.display = "none";
+    if(artists.pronouns === null){
+        var pro = document.getElementsByClassName("pronouns");
+        var l
+        for (l = 0; l < pro.length; l++) {
+            pro[l].style.display = "none";
         }
     }
 
     // logic to set display of tags to none if no info is given
-    if(splits == null || artists.medium == null ){
-        var y = document.getElementsByClassName("artist-tags");
-        var i
-        for (i = 0; i < y.length; i++) {
-            y[i].style.display = "none";
+    if(splits === null || artists.medium === null ){
+        var t = document.getElementsByClassName("artist-tags");
+        var m
+        for (m = 0; m < t.length; m++) {
+            t[m].style.display = "none";
         }
     }
 

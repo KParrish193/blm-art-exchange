@@ -40,8 +40,11 @@ function Filter() {
     const { products } = useContext(ProductContext)
     console.log('filter', products)
     
+    
     let blackArtist = products.filter(artist => artist.blackArtist === true);
-    console.log('black filter', blackArtist)
+    console.log('black artist filter', blackArtist)
+
+
     
     
     return(

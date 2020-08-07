@@ -497,15 +497,13 @@ export const ProductImg = styled.img`
 // form styling
 export const Form = styled.form`
     max-width: 1000px;
-    margin: 0 auto;
-    align-items: left;
+    margin: auto;
 
     label {
         float: left;
         text-align: left;
         display: inline-block;
         padding-left: 15px;
-        text-indent: -15px;
     }
 
     input {
@@ -522,7 +520,7 @@ export const Form = styled.form`
         width: 100%;
     }
     
-    .checkbox {
+    .checkbox, .radio {
         display: inline;
     }
 

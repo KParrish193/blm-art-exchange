@@ -591,19 +591,20 @@ export const ProductCard = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0.5rem 0;
+    margin: 1rem 0;
     position: relative;
+    object-fit: cover;
 
     @media (max-width: 1600px){
-        width: 25%;
+        width: 22%;
     }
 
     @media (max-width: 1500px){
-        width: 30%;
+        width: 22%;
     }
 
     @media (max-width: 850px){
-        width: 35%;
+        width: 25%;
     }
     
     @media (max-width: 500px){
@@ -634,6 +635,7 @@ export const ThumbnailContainer = styled.div`
     width: 250px;
     height: 250px;
     overflow: hidden;
+    object-fit: cover;
 
     @media (max-width: 800px){
         width: 200px;
@@ -647,7 +649,8 @@ export const ProductImg = styled.img`
     left: 50%;
     top: 50%;
     height: 100%;
-    width: auto;
+    width: 100%;
+    object-fit: cover;
     -webkit-transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
         transform: translate(-50%,-50%);

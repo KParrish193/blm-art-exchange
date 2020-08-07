@@ -6,7 +6,7 @@ import { ArtistContext } from '../contexts/ArtistContext';
 
 
 function Inquiry(){
-    const { artists } = useContext(ArtistContext)
+    // const { artists } = useContext(ArtistContext)
     // const artistId = useParams(`${id}`)
 
     const { register, handleSubmit, errors } = useForm();

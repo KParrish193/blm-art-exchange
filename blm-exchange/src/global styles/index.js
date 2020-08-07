@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import background from '../assets/landing_background.png'
+import background from '../assets/pexels-colin-lloyd-4635036.jpg'
 
 // home container - adjusted for fixed header
 export const HomeContainer =styled.div`
@@ -237,6 +237,13 @@ export const LandingContainer = styled.div`
     color: #fff;
     min-height: 100vh;
     background-image: url(${background});
+    background-size: cover;
+    text-align: center;
+
+    h5, h6 {
+        margin-top: 1rem;
+        positive: relative;
+    }
 
     @media (max-width: 800px){
         display: flex;
@@ -249,6 +256,11 @@ export const LandingTextContent = styled.div`
     display: flex;
     flex-direction: column;
     width: 50%;
+    text-align: center;
+
+    h5, h6 {
+        margin-top: 1rem;
+    }
     
     @media (max-width: 800px){
         width: 100%;
@@ -273,7 +285,7 @@ export const CallToAction = styled.div`
         margin-top: 1.5rem;
     }
 
-    h5 {
+    h5, h6 {
         margin-top: 1rem;
     }
 

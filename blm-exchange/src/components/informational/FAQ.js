@@ -12,14 +12,14 @@ function FAQ(){
             <AboutUsContainer>
             <FAQTextContainer>
             <AboutNav/>
-            <h2>Frequently Asked Questions</h2>
+            <h3><b>Frequently Asked Questions</b></h3>
             <div>
                 {/* Question 1 */}
                 <Accordion style={{position: 'static'}}>
                     <AccordionSummary 
                     expandIcon={<ExpandMoreIcon style={{color: 'white', position: 'static'}} />}
                     style={{backgroundColor: 'black', color: 'white', position: 'static'}}>   
-                        <h3><b>Where is my money going?</b></h3>
+                        <h5>Where is my money going?</h5>
                     </AccordionSummary>
                     <AccordionDetails style={{backgroundColor: 'black', color: 'white'}}>
                             <p>
@@ -39,7 +39,7 @@ function FAQ(){
                     <AccordionSummary 
                     expandIcon={<ExpandMoreIcon style={{color: 'white', position: 'static'}} />}
                     style={{backgroundColor: 'black', color: 'white', position: 'static'}}>  
-                        <h3><b>How would I go about requesting custom artwork?</b></h3>
+                        <h5>How would I go about requesting custom artwork?</h5>
                     </AccordionSummary>
                     <AccordionDetails style={{backgroundColor: 'black', color: 'white'}}>
                         <p>
@@ -56,7 +56,7 @@ function FAQ(){
                     <AccordionSummary 
                     expandIcon={<ExpandMoreIcon style={{color: 'white', position: 'static'}} />}
                     style={{backgroundColor: 'black', color: 'white', position: 'static'}}>  
-                        <h3><b>How can I join ArtxBLM as an artist?</b></h3>
+                        <h5>How can I join ArtxBLM as an artist?</h5>
                     </AccordionSummary>
                     <AccordionDetails style={{backgroundColor: 'black', color: 'white'}}>
                         <p>
@@ -71,7 +71,7 @@ function FAQ(){
                     <AccordionSummary 
                     expandIcon={<ExpandMoreIcon style={{color: 'white', position: 'static'}} />}
                     style={{backgroundColor: 'black', color: 'white', position: 'static'}}>  
-                        <h3><b>Can I support ArtxBLM without money?</b></h3>
+                        <h5>Can I support ArtxBLM without money?</h5>
                     </AccordionSummary>
                     <AccordionDetails style={{backgroundColor: 'black', color: 'white'}}>
                         <p>
@@ -94,7 +94,7 @@ function FAQ(){
                     <AccordionSummary 
                     expandIcon={<ExpandMoreIcon style={{color: 'white', position: 'static'}} />}
                     style={{backgroundColor: 'black', color: 'white', position: 'static'}}>  
-                        <h3><b>How are the prints priced?</b></h3>
+                        <h5>How are the prints priced?</h5>
                     </AccordionSummary>
                     <AccordionDetails style={{backgroundColor: 'black', color: 'white'}}>
                         <p>
@@ -113,7 +113,7 @@ function FAQ(){
                     <AccordionSummary 
                     expandIcon={<ExpandMoreIcon style={{color: 'white', position: 'static'}} />}
                     style={{backgroundColor: 'black', color: 'white', position: 'static'}}>  
-                        <h3><b>What forms of payment do you accept?</b></h3>
+                        <h5>What forms of payment do you accept?</h5>
                     </AccordionSummary>
                     <AccordionDetails style={{backgroundColor: 'black', color: 'white'}}>
                         <p>We accept payments only through PayPal.</p>
@@ -125,7 +125,7 @@ function FAQ(){
                     <AccordionSummary 
                     expandIcon={<ExpandMoreIcon style={{color: 'white', position: 'static'}} />}
                     style={{backgroundColor: 'black', color: 'white', position: 'static'}}>  
-                        <h3><b>How much does shipping cost?</b></h3>
+                        <h5>How much does shipping cost?</h5>
                     </AccordionSummary>
                     <AccordionDetails style={{backgroundColor: 'black', color: 'white'}}>
                         <p>
@@ -141,7 +141,7 @@ function FAQ(){
                     <AccordionSummary 
                     expandIcon={<ExpandMoreIcon style={{color: 'white', position: 'static'}} />}
                     style={{backgroundColor: 'black', color: 'white', position: 'static'}}>  
-                        <h3><b>What is the quality of the prints?</b></h3>
+                        <h5>What is the quality of the prints?</h5>
                     </AccordionSummary>
                     <AccordionDetails style={{backgroundColor: 'black', color: 'white'}}>
                         <p>
@@ -156,7 +156,7 @@ function FAQ(){
                     <AccordionSummary 
                     expandIcon={<ExpandMoreIcon style={{color: 'white', position: 'static'}} />}
                     style={{backgroundColor: 'black', color: 'white', position: 'static'}}>  
-                        <h3><b>Will the images be cropped?</b></h3>
+                        <h5>Will the images be cropped?</h5>
                     </AccordionSummary>
                     <AccordionDetails style={{backgroundColor: 'black', color: 'white'}}>
                         <p>
@@ -171,7 +171,7 @@ function FAQ(){
                     <AccordionSummary 
                     expandIcon={<ExpandMoreIcon style={{color: 'white', position: 'static'}} />}
                     style={{backgroundColor: 'black', color: 'white', position: 'static'}}>  
-                        <h3><b>How much will it cost to produce the prints?</b></h3>
+                        <h5>How much will it cost to produce the prints?</h5>
                     </AccordionSummary>
                     <AccordionDetails style={{backgroundColor: 'black', color: 'white'}}>
                         <p>
@@ -187,7 +187,7 @@ function FAQ(){
                     <AccordionSummary 
                     expandIcon={<ExpandMoreIcon style={{color: 'white', position: 'static'}} />}
                     style={{backgroundColor: 'black', color: 'white', position: 'static'}}>  
-                        <h3><b>How long will it take to get my prints?</b></h3>
+                        <h5>How long will it take to get my prints?</h5>
                     </AccordionSummary>
                     <AccordionDetails style={{backgroundColor: 'black', color: 'white'}}>
                         <p>
@@ -202,7 +202,7 @@ function FAQ(){
                     <AccordionSummary 
                     expandIcon={<ExpandMoreIcon style={{color: 'white', position: 'static'}} />}
                     style={{backgroundColor: 'black', color: 'white', position: 'static'}}>  
-                        <h3><b>Can I return or get a refund?</b></h3>
+                        <h5>Can I return or get a refund?</h5>
                     </AccordionSummary>
                     <AccordionDetails style={{backgroundColor: 'black', color: 'white'}}>
                         <p>
@@ -217,7 +217,7 @@ function FAQ(){
                     <AccordionSummary 
                     expandIcon={<ExpandMoreIcon style={{color: 'white', position: 'static'}} />}
                     style={{backgroundColor: 'black', color: 'white', position: 'static'}}>  
-                        <h3><b>Any other questions?</b></h3>
+                        <h5>Any other questions?</h5>
                     </AccordionSummary>
                     <AccordionDetails style={{backgroundColor: 'black', color: 'white'}}>
 

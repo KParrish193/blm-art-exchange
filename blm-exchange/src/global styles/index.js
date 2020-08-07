@@ -231,7 +231,7 @@ export const MobileLandingButtonContainer = styled.div`
 export const LandingContainer = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     padding: 2rem 30px 2.5rem;
     color: #fff;
@@ -252,10 +252,22 @@ export const LandingContainer = styled.div`
     }
 `
 
+export const LandingContent = styled.div`
+    width: 55%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    @media (max-width: 700px){
+        width: 100%;
+    }
+`
+
 export const LandingTextContent = styled.div`
     display: flex;
     flex-direction: column;
-    width: 50%;
     text-align: center;
 
     h5, h6 {
@@ -272,8 +284,6 @@ export const CallToAction = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
-    margin-top: 4.5rem;
 
     @media (max-width: 800px){
         margin-top: 3rem;

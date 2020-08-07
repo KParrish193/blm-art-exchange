@@ -9,7 +9,6 @@ import { PhotoGrid, ProductCard, ProductImg, ListPageContainer, ThumbnailContain
 
 function Shop(){
     const { products } = useContext(ProductContext)
-    console.log('shop line 13', ProductContext) 
 
     return(
         <ListPageContainer>

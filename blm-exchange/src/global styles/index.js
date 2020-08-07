@@ -21,6 +21,7 @@ export const PrimaryButton = styled.button`
     width: 30%;
     min-width: 150px;
     border: #450008 1px solid;
+    transition: all 300ms;
 
     a {
         text-decoration: none;
@@ -39,6 +40,7 @@ export const TagButton = styled.button`
     letter-spacing: .05rem;
     padding: 0.3rem 1rem;
     margin: 0.3rem;
+    transition: all 300ms;
 `
 
 // header styling
@@ -529,6 +531,11 @@ export const MobileFilter = styled.div`
         align-items: center;
         flex-wrap: wrap;
         max-width: 470px;
+
+        .toggled {
+            background: #990000;
+            color: #fff;
+        }
     }
 `
 
@@ -890,7 +897,7 @@ export const CustomSwitch = styled.div`
         position: relative;
         transition: background-color .2s;
     }
-  
+
     .react-switch-label .react-switch-button {
         content: '';
         position: absolute;

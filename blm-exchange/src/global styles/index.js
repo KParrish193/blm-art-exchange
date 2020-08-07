@@ -498,6 +498,7 @@ export const ProductImg = styled.img`
 export const Form = styled.form`
     max-width: 1000px;
     margin: auto;
+    align-items: center;
 
     label {
         float: left;
@@ -539,7 +540,7 @@ export const Form = styled.form`
     .form-container {
         display: flex;
         flex-direction: column;
-        width: 90%;
+        width: 100%;
         padding: 20px;
         
         @media(max-width: 500px){
@@ -570,25 +571,10 @@ export const Form = styled.form`
         padding: 10px;
     }
 
-
     .row:after {
         content: "";
         display: table;
         clear: both;
-    }
-
-    .checkboxes label {
-        display: block;
-        padding-right: 10px;
-        padding-left: 22px;
-        text-indent: -22px;
-    }
-
-    .checkboxes input {
-        vertical-align: middle;
-    }
-    .checkboxes label span {
-        vertical-align: middle;
     }
 `
 

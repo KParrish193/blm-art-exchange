@@ -1,11 +1,8 @@
 import React from 'react'
 
 import { Link } from 'react-router-dom';
-import { PrimaryButton, Form, ToggleSignUp, CustomSwitch } from '../../global styles/index';
+import { PrimaryButton, Form} from '../../global styles/index';
 import { useForm } from 'react-hook-form';
-
-import Switch from '@material-ui/core/Switch';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
 
 function ArtistForm(){
 
@@ -50,27 +47,27 @@ function ArtistForm(){
                     <label className="text">Medium (check all that apply):</label>
                     <div>
                         <label>
-                            <span>Design & Illustration</span><input className="checkbox" type="checkbox" />
+                            <input className="checkbox" type="checkbox" /><span>Design & Illustration</span>
                         </label>
                     </div>
                     <div>
                         <label>
-                            <span>Digital Art</span><input className="checkbox" type="checkbox" />
+                            <input className="checkbox" type="checkbox" /><span>Digital Art</span>
                         </label>
                     </div>
                     <div>
                         <label>
-                            <span>Drawing</span><input className="checkbox" type="checkbox" />
+                            <input className="checkbox" type="checkbox" /><span>Drawing</span>
                         </label>
                     </div>
                     <div>
                         <label>
-                            <span>Painting & Mixed Media</span><input className="checkbox" type="checkbox" />
+                            <input className="checkbox" type="checkbox" /><span>Painting & Mixed Media</span>
                         </label>
                     </div>
                     <div>
                         <label>
-                            <span>Photography</span><input className="checkbox" type="checkbox" />
+                            <input className="checkbox" type="checkbox" /><span>Photography</span>
                         </label>
                     </div>
 
@@ -97,15 +94,13 @@ function ArtistForm(){
                         </label>
                     </div>
 
-                    <div className="row">
-                    <div clasName="column">
-                            <label className="text">Where are you located?</label> 
-                            <input className="text" type="text" placeholder="City, Country" name="location" ref={register({required: true, max: 30, min: 2})} />
-                        </div>
-                        <div className="column">
-                            <label className="text">Is there anything else you'd like us to know?</label> 
-                            <input className="text" type="text" placeholder="Other info" name="other" ref={register({required: false, max: 30, min: 2})} />
-                        </div>
+                    <div>
+                        <label className="text">Where are you located?</label> 
+                        <input className="text" type="text" placeholder="City, Country" name="location" ref={register({required: true, max: 30, min: 2})} />
+                    </div>
+                    <div>
+                        <label className="text">Is there anything else you'd like us to know?</label> 
+                        <input className="text" type="text" placeholder="Other info" name="other" ref={register({required: false, max: 30, min: 2})} />
                     </div>
 
                     { /* File upload */}
@@ -167,13 +162,13 @@ function ArtistForm(){
 
                     <div>
                         <label>
-                            <span>Agree to Code of Conduct </span><input className="checkbox" type="checkbox" placeholder="CodeofConduct" name="CodeofConduct" ref={register} />
+                            <input className="checkbox" type="checkbox" placeholder="CodeofConduct" name="CodeofConduct" ref={register} /><span>Agree to Code of Conduct </span>
                         </label>
                     </div>
+                </div> 
 
-                    <PrimaryButton onclick={onSubmit} > Submit </PrimaryButton>
-                    {/* modal to confirm code of conduct for new artists */}
-                    </div> 
+                <PrimaryButton onclick={onSubmit}>Submit</PrimaryButton>
+                {/* modal to confirm code of conduct for new artists */}
             </Form>
         </div>
     )

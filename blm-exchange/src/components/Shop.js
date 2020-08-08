@@ -22,12 +22,12 @@ function Shop(){
                     {products.map((product, id) => (
                         <ProductCard className ="product-card" key={product.id}>
                             <Link to={`/shop/print/${product.id}`}>
-                            <div className="mobile-card">
-                            <h4>{product.title}</h4>
-                            </div>
-                            <ThumbnailContainer>
-                            <ProductImg src={`${product.image.formats.small.url}`} />
-                            </ThumbnailContainer>
+                                <div className="mobile-card">
+                                    <h4>{product.title}</h4>
+                                </div>
+                                <ThumbnailContainer>
+                                    <ProductImg src={`${product.image.formats.small.url}`} />
+                                </ThumbnailContainer>
                             {/* code for dark overlay */}
                             </Link>
                         </ProductCard>

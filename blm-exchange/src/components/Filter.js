@@ -2,7 +2,18 @@ import React from 'react';
 
 import FilterListIcon from '@material-ui/icons/FilterList';
 
+import Input from '@material-ui/core/Input';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormControl from '@material-ui/core/FormControl';
+import ListItemText from '@material-ui/core/ListItemText';
+import Select from '@material-ui/core/Select';
+import Checkbox from '@material-ui/core/Checkbox';
+import Chip from '@material-ui/core/Chip';
+
 import { DesktopFilterContainer, MobileFilter, MobileFilterContainer, TagButton } from '../global styles/index';
+
+
 
 const medium = [
     'Design & Illustration',
@@ -26,19 +37,10 @@ function Filter() {
             
             <MobileFilter>
                 <TagButton>
-                    Black   
+                    Black Artist   
                 </TagButton>
                 <TagButton>
                     LGBTQIA+   
-                </TagButton>
-                <TagButton>
-                    POC   
-                </TagButton>
-                <TagButton>
-                    Indigenous   
-                </TagButton>
-                <TagButton>
-                    LatinX   
                 </TagButton>
                 <TagButton>
                     Exchange   
@@ -47,13 +49,16 @@ function Filter() {
                     Photography   
                 </TagButton>
                 <TagButton>
-                    Digital Illustration 
+                    Digital Art 
                 </TagButton>
                 <TagButton>
-                    Paint   
+                    Painting & Mixed Media   
                 </TagButton>
                 <TagButton>
-                    Mixed Media
+                    Design & Illustration
+                </TagButton>
+                <TagButton>
+                    Drawing
                 </TagButton>
             </MobileFilter>
 

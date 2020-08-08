@@ -15,8 +15,11 @@ function validateForm() {
             break;
         }
     }
-    if (!validMedium) console.error('Please check at least one medium.');
-
+    if (!validMedium) {
+        console.error('Please check at least one medium.');
+        document.getElementById('error-message-checkbox').innerHTML = "Please check at least one medium.";
+    }
+    
     {/* Custom validation for Black artist radio button group. */}
     var blackArtistRadio = document.getElementsByName("blackArtist");
     var validArtistResponse = false;
@@ -26,7 +29,10 @@ function validateForm() {
         if (blackArtistRadio[j].checked) validArtistResponse = true;
         j++;
     }
-    if (!validArtistResponse) console.error("Please check one option.");
+    if (!validArtistResponse) {
+        console.error("Please check one option.");
+        document.getElementById('error-message-radio').innerHTML = "Please check one option.";
+    }
 
     {/* Custom validation for LGBTQIA+ artist radio button group. */}
     var lgbtqiaArtistRadio = document.getElementsByName("lgbtqiaArtist");
@@ -37,7 +43,10 @@ function validateForm() {
         if (lgbtqiaArtistRadio[k].checked) validLgbtqiaRadio = true;
         k++;
     }
-    if (!validLgbtqiaRadio) console.error("Please check one option.");
+    if (!validLgbtqiaRadio) {
+        console.error("Please check one option.");
+        document.getElementById('error-message-radio').innerHTML = "Please check one option.";
+    }
 }
 
 function ArtistForm(){
@@ -94,35 +103,30 @@ function ArtistForm(){
                     </div>
 
                     {/* Checkbox group. User must select at least one medium. */}
-                    <label className="text main"><b>Medium (check all that apply): *</b></label>
+                    <label className="text main"><b>Medium (check all that apply): *</b></label><span id="error-message-checkbox" className="error"></span>
                     <div>
                         <label>
                             <input className="checkbox" type="checkbox" name="medium" ref={register({required: false, validate: validateForm })}/><span>Design & Illustration</span>
-                            {errors.medium && errors.medium.type === "validate" && <span className="error">Please check at least one medium.</span>}
                         </label>
                     </div>
                     <div>
                         <label>
                             <input className="checkbox" type="checkbox" name="medium" ref={register({required: false, validate: validateForm })}/><span>Digital Art</span>
-                            {errors.medium && errors.medium.type === "validate" && <span className="error">Please check at least one medium.</span>}
                         </label>
                     </div>
                     <div>
                         <label>
                             <input className="checkbox" type="checkbox" name="medium" ref={register({required: false, validate: validateForm })}/><span>Drawing</span>
-                            {errors.medium && errors.medium.type === "validate" && <span className="error">Please check at least one medium.</span>}
                         </label>
                     </div>
                     <div>
                         <label>
                             <input className="checkbox" type="checkbox" name="medium" ref={register({required: false, validate: validateForm })}/><span>Painting & Mixed Media</span>
-                            {errors.medium && errors.medium.type === "validate" && <span className="error">Please check at least one medium.</span>}
                         </label>
                     </div>
                     <div>
                         <label>
                             <input className="checkbox" type="checkbox" name="medium" ref={register({required: false, validate: validateForm })}/><span>Photography</span>
-                            {errors.medium && errors.medium.type === "validate" && <span className="error">Please check at least one medium.</span>}
                         </label>
                     </div>
 
@@ -143,18 +147,18 @@ function ArtistForm(){
 
                     <div className="row">
                         <div className="column">
-                            <label className="text main"><b>We welcome all artists who support our cause. We especially want to highlight and celebrate Black artists. How do you identify? *</b></label>
+                            <label className="text main"><b>We welcome all artists who support our cause. We especially want to highlight and celebrate Black artists. How do you identify? *</b></label><span id="error-message-radio" className="error"></span>
                         </div>
 
                         <div className="column">
                             <div>
                                 <label>
-                                    <input className="radio" type="radio" name="blackArtist" ref={register({required: true, validate: validateForm })}/><span>I identify as a Black Artist.</span>
+                                    <input className="radio" type="radio" name="blackArtist" ref={register({ validate: validateForm })}/><span>I identify as a Black Artist.</span>
                                 </label>
                             </div>
                             <div>
                                 <label>
-                                    <input className="radio" type="radio" name="blackArtist" ref={register({required: true, validate: validateForm })}/><span>I identify as a non Black Ally.</span>
+                                    <input className="radio" type="radio" name="blackArtist" ref={register({ validate: validateForm })}/><span>I identify as a non Black Ally.</span>
                                 </label>
                             </div>
                         </div>
@@ -162,7 +166,7 @@ function ArtistForm(){
 
                     <div className="row">
                         <div className="column">
-                            <label className="text main"><b>We want to highlight art by the LGBTQIA+ community as well. How do you identify?</b></label>
+                            <label className="text main"><b>We want to highlight art by the LGBTQIA+ community as well. How do you identify?</b></label><span id="error-message-radio" className="error"></span>
                         </div>
                         
                         <div className="column">

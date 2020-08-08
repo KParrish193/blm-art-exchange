@@ -4,10 +4,6 @@ import FilterListIcon from '@material-ui/icons/FilterList';
 import { ProductContext } from '../contexts/ProductContext';
 import { DesktopFilterContainer, MobileFilter, MobileFilterContainer, TagButton } from '../global styles/index';
 
-
-
-
-
 const medium = [
     'Design & Illustration',
     'Digital Art',
@@ -61,29 +57,23 @@ function Filter() {
                 <TagButton onClick={toggleTag} value="lgbtq artists">
                     LGBTQIA+ Artists  
                 </TagButton>
-                <TagButton onClick={toggleTag} value="poc artists">
-                    POC   
-                </TagButton>
-                <TagButton onClick={toggleTag} value="indigenous artists">
-                    Indigenous   
-                </TagButton>
-                <TagButton onClick={toggleTag} value="latinx artists">
-                    LatinX   
-                </TagButton>
-                <TagButton onClick={toggleTag} value="exchange">
+                <TagButton>
                     Exchange   
                 </TagButton>
                 <TagButton onClick={toggleTag} value="photography">
                     Photography   
                 </TagButton>
-                <TagButton onClick={toggleTag} value="digital illustration">
-                    Digital Illustration 
+                <TagButton>
+                    Digital Art 
                 </TagButton>
-                <TagButton onClick={toggleTag} value="paint">
-                    Paint   
+                <TagButton>
+                    Painting & Mixed Media   
                 </TagButton>
-                <TagButton onClick={toggleTag} value="mixed media">
-                    Mixed Media
+                <TagButton>
+                    Design & Illustration
+                </TagButton>
+                <TagButton>
+                    Drawing
                 </TagButton>
             </MobileFilter>
 

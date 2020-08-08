@@ -47,6 +47,7 @@ export const TagButton = styled.button`
 // header styling
 export const HeaderContainer = styled.div`     
     position: fixed;
+    z-index: 99;
     top: 0;
     display: flex;
     flex-direction: row;
@@ -635,7 +636,7 @@ export const ProductCard = styled.div`
     }
     
     @media (max-width: 500px){
-        width: 50%;
+        width: 18rem;
         height: 18rem;
         flex-direction: column;
         justify-content: center;
@@ -667,17 +668,18 @@ export const ThumbnailContainer = styled.div`
     @media (max-width: 800px){
         width: 200px;
         height: 200px;
-        margin: 0 auto;
+        margin: 1rem auto;
     }
 `
 
 export const ProductImg = styled.img`
-    position: absolute;
+    position: relative;
     left: 50%;
     top: 50%;
     height: 100%;
     width: 100%;
     object-fit: cover;
+    
     -webkit-transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
         transform: translate(-50%,-50%);

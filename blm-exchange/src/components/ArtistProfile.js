@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
-import { Carousel } from 'antd'
-import { useParams } from 'react-router' 
+import { useParams } from 'react-router'; 
+import { Link } from 'react-router-dom';
+
+import { Carousel } from 'react-bootstrap'
+
+
 import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import Inquiry from './Inquiry';
+
 import { TagButton, CarouselContainer, ArtistContentContainer, ArtistProfileContainer } from '../global styles'
 
 
@@ -36,9 +41,6 @@ function ArtistProfile(){
         })
         .catch(err => console.log(err)); 
     }, [id]);
-
-    console.log("Artist Profile", artists)
-
 
     // splitting mediums tags
     const mediums = `${artists.medium}`
@@ -117,22 +119,36 @@ function ArtistProfile(){
         }
     }
 
-    var printsArr = `${artists.printID}` 
-    console.log(printsArr)
+    
 
     return(
         <ArtistProfileContainer>
             {/* display all artist products to buy, specific to single artist, perhaps artist details like social media. Link to inquiry */}
-        <CarouselContainer>
-            <Carousel afterChange={onChange} >
-            {/* {printArr.map((print) => (
-                <div>
-                    <img src={`${print.image.formats.small.url}`}/>
-                </div>))} */}
-
-
-
-            </Carousel>
+        <CarouselContainer
+            style={{
+                position: 'relative'
+            }}>
+            
+            {Object.keys(artists).length > 0 ? (
+            <Carousel>
+                {artists.printID.map((print) => {
+                    return (
+                        <Carousel.Item>
+                            <Link to={`/shop/print/${print.id}`}>
+                            <img 
+                                src={`${print.image.formats.small.url}`}
+                                style={{
+                                    margin: '0 auto'
+                                }}/>
+                            </Link>
+                        </Carousel.Item>
+                    );
+                    })}
+                </Carousel>
+                ) : (
+                    ""
+                )}
+                
         </CarouselContainer>
 
         <ArtistContentContainer>

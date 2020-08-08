@@ -10,6 +10,7 @@ export const HomeContainer =styled.div`
     color: white;
     min-height: 100vh;
 `
+
 // buttons
 export const PrimaryButton = styled.button`
     border-radius: 10px;
@@ -257,7 +258,7 @@ export const LandingContainer = styled.div`
 export const LandingContent = styled.div`
     width: 55%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.4);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -548,6 +549,7 @@ export const ListPageContainer = styled.div`
     align-items: center;    
 
     h3 {
+        color: #fff;
         display: none;
     }
 
@@ -594,6 +596,10 @@ export const ArtistCard = styled.div`
     flex-direction: row;
     width: 45%;
     padding: .5rem;
+    
+    h4 {
+        color: #fff;
+    }
 
     @media(max-width: 500px){
         width: 75%;
@@ -611,6 +617,10 @@ export const ProductCard = styled.div`
     margin: 1rem 0;
     position: relative;
     object-fit: cover;
+
+    h4 {
+        color: #fff;
+    }
 
     @media (max-width: 1600px){
         width: 22%;
@@ -706,9 +716,13 @@ export const ArtistProfileContainer = styled.div`
 `
 
 export const CarouselContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 50%;
     min-width: 500px;
     height: 100%;
+    color: #fff;
 
     @media(max-width: 850px){
         min-width: 300px;
@@ -729,6 +743,7 @@ export const ArtistContentContainer = styled.div`
         width: 100%;
         text-align: left;
         margin-left: 0.3rem;
+        color: #fff;
     }
 
     h4 {
@@ -736,6 +751,7 @@ export const ArtistContentContainer = styled.div`
         text-align: left;
         letter-spacing: 0.01rem;
         margin-left: 0.3rem;
+        color: #08846D;
     }
 
     h5 {
@@ -743,6 +759,7 @@ export const ArtistContentContainer = styled.div`
         text-align: left;
         margin-left: 0.3rem;
         padding-bottom: 0.15rem; 
+        color: #fff;
     }
 
     h6 {
@@ -750,6 +767,7 @@ export const ArtistContentContainer = styled.div`
         text-align: left;
         padding-left: 0.4rem;
         font-size: 1.1rem;
+        color: #fff;
     }
 
     .icon {

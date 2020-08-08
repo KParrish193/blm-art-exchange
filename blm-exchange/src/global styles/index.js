@@ -44,6 +44,7 @@ export const TagButton = styled.button`
 // header styling
 export const HeaderContainer = styled.div`     
     position: fixed;
+    z-index: 99;
     top: 0;
     display: flex;
     flex-direction: row;
@@ -645,7 +646,7 @@ export const ThumbnailContainer = styled.div`
 `
 
 export const ProductImg = styled.img`
-    position: absolute;
+    position: relative;
     left: 50%;
     top: 50%;
     height: 100%;

@@ -341,9 +341,22 @@ export const CodeOfConductTextContent = styled.div`
     display: flex;
     text-align: justify;
     text-justify: inter-word;
+    width: 80%;
 
     @media (max-width: 800px){
         width: 100%;
+    }
+    
+    h3 {
+        text-align: center;
+    }
+
+    ul {
+        list-style-type: disc;
+    }
+
+    li {
+        padding-left: 1em;
     }
 `
 

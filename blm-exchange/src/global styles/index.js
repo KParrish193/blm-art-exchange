@@ -67,40 +67,40 @@ export const HeaderContainer = styled.div`
         padding: 10px;
     }
 
-        a.home{
-            padding: 0px;
-            margin: 0px;
-            
-            :hover {
-                border-bottom: none;
-                transition: .16s all 0.025s;
-            }
-        }
-
-        a.cart {
-            text-decoration: none;
-            margin: 0 20px;
-            padding: 0px;
-            color: #fff;
-            font-size: 1.3rem;
-
-            :hover {
-                border-bottom: none;
-                transition: .16s all 0.025s;
-            }
-        }
-
-        a:hover {
-            border-bottom: 2px solid #990000;
+    a.home{
+        padding: 0px;
+        margin: 0px;
+        
+        :hover {
+            border-bottom: none;
             transition: .16s all 0.025s;
         }
+    }
 
-        .mobile-home{
-            display: none;
+    a.cart {
+        text-decoration: none;
+        margin: 0 20px;
+        padding: 0px;
+        color: #fff;
+        font-size: 1.3rem;
+
+        :hover {
+            border-bottom: none;
+            transition: .16s all 0.025s;
         }
+    }
 
-        @media (max-width: 500px){
-            display: none;
+    a:hover {
+        border-bottom: 2px solid #990000;
+        transition: .16s all 0.025s;
+    }
+
+    .mobile-home{
+        display: none;
+    }
+
+    @media (max-width: 500px){
+        display: none;
 `
 
 export const Nav = styled.div`
@@ -244,11 +244,6 @@ export const LandingContainer = styled.div`
     background-size: cover;
     text-align: center;
 
-    h5, h6 {
-        margin-top: 1rem;
-        positive: relative;
-    }
-
     @media (max-width: 800px){
         display: flex;
         flex-direction: column;
@@ -274,8 +269,21 @@ export const LandingTextContent = styled.div`
     flex-direction: column;
     text-align: center;
 
-    h5, h6 {
+    h3 {
+        font-size: 44px;
+        text-align: center;
+    }
+
+    h5 {
         margin-top: 1rem;
+        positive: relative;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    h6 {
+        font-size: 20px;
+        text-align: center;
     }
     
     @media (max-width: 800px){
@@ -341,9 +349,22 @@ export const CodeOfConductTextContent = styled.div`
     display: flex;
     text-align: justify;
     text-justify: inter-word;
+    width: 80%;
 
     @media (max-width: 800px){
         width: 100%;
+    }
+    
+    h3 {
+        text-align: center;
+    }
+
+    ul {
+        list-style-type: disc;
+    }
+
+    li {
+        padding-left: 1em;
     }
 `
 
@@ -363,6 +384,11 @@ export const AboutNavContainer = styled.div`
         font-size: 1.2rem;
         width: 25%;
         padding-bottom: 0.5rem;
+    }
+
+    a:hover {
+        border-bottom: 2px solid #990000;
+        transition: .16s all 0.025s;
     }
 `
 
@@ -386,6 +412,11 @@ export const AboutUsTextContent = styled.div`
 
     @media (max-width: 800px){
         width: 100%;
+    }
+
+    h3 {
+        font-size: 44px;
+        font-weight: bold;
     }
 `
 
@@ -825,6 +856,7 @@ export const Form = styled.form`
         text-align: left;
         display: inline-block;
         padding-left: 15px;
+        font-size: 16px;
     }
 
     input {
@@ -846,7 +878,7 @@ export const Form = styled.form`
     }
 
     .main {
-        color: #08846D;
+        font-size: 20px;
     }
 
     .error {
@@ -883,7 +915,14 @@ export const Form = styled.form`
         padding: .2rem;
     }
 
-    p, h3 {
+    h3 {
+        margin: 0;
+        text-align: center;
+        padding: 1em;
+        font-size: 44px;
+    }
+
+    p {
         margin: 0;
         text-align: left;
     }
@@ -891,6 +930,7 @@ export const Form = styled.form`
     .instructions{
         text-align: left;
         margin-bottom: 40px;
+        font-weight: 30px;
     }
 
     .column {

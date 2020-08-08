@@ -9,11 +9,11 @@ function CoC(){
             <CodeOfConductTextContent>
                 <div>
                     <h3><b>Code of Conduct: Our Values</b></h3>
-                    <h4>
+                    <h5>
                         We expect all parties participating in ArtxBLM - including but not limited to leadership, 
                         artists, and supporters - to uphold our core values as laid out below. We take these values 
                         very seriously, as they guide the operations of ArtxBLM as a community.
-                    </h4>
+                    </h5>
                     <ul>
                         <li>
                             <b>Reflexivity: </b>We believe that knowledge is dynamic, that one can never be done learning, and 

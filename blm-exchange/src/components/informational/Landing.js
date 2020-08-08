@@ -8,31 +8,29 @@ function Landing(){
     return(
         <LandingContainer>
             <LandingContent>
-            <LandingTextContent>
-            <div>
-            <h2>Art x BLM</h2>
-            <h5>
-                Artists. Activists. Allies
-            </h5>
-            </div>
+                <LandingTextContent>
+                    <div>
+                        <h3>Art x BLM</h3>
+                        <h5>Artists. Activists. Allies.</h5>
+                    </div>
 
-            <div>
-            <h5>
-                Welcome to ArtxBLM, a collective of artists and organizers who believe in the power 
-                of art to enact social change. With every purchase, 100% of profits go towards anti-racist causes 
-                that need financial support the most.
-            </h5>
-            <h5>
-                Uplift Black voices.
-            </h5>
-            <h5>
-                Share your work.
-            </h5>
-            <h5>
-                Support artists.
-            </h5>
-            </div>
-            </LandingTextContent>
+                    <div>
+                        <h6>
+                            Welcome to ArtxBLM, a collective of artists and organizers who believe in the power 
+                            of art to enact social change. With every purchase, 100% of profits go towards anti-racist causes 
+                            that need financial support the most.
+                        </h6>
+                        <h6>
+                            Uplift Black voices.
+                        </h6>
+                        <h6>
+                            Share your work.
+                        </h6>
+                        <h6>
+                            Support artists.
+                        </h6>
+                    </div>
+                </LandingTextContent>
 
             <MobileLandingButtonContainer className="mobile">
                 <LandingButton>

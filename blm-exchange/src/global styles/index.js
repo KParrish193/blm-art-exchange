@@ -843,6 +843,7 @@ export const Form = styled.form`
         text-align: left;
         display: inline-block;
         padding-left: 15px;
+        font-size: 16px;
     }
 
     input {
@@ -864,7 +865,7 @@ export const Form = styled.form`
     }
 
     .main {
-        color: #08846D;
+        font-size: 20px;
     }
 
     .error {
@@ -901,7 +902,14 @@ export const Form = styled.form`
         padding: .2rem;
     }
 
-    p, h3 {
+    h3 {
+        margin: 0;
+        text-align: center;
+        padding: 1em;
+        font-size: 44px;
+    }
+
+    p {
         margin: 0;
         text-align: left;
     }
@@ -909,6 +917,7 @@ export const Form = styled.form`
     .instructions{
         text-align: left;
         margin-bottom: 40px;
+        font-weight: 30px;
     }
 
     .column {

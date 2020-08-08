@@ -244,11 +244,6 @@ export const LandingContainer = styled.div`
     background-size: cover;
     text-align: center;
 
-    h5, h6 {
-        margin-top: 1rem;
-        positive: relative;
-    }
-
     @media (max-width: 800px){
         display: flex;
         flex-direction: column;
@@ -274,8 +269,21 @@ export const LandingTextContent = styled.div`
     flex-direction: column;
     text-align: center;
 
-    h5, h6 {
+    h3 {
+        font-size: 44px;
+        text-align: center;
+    }
+
+    h5 {
         margin-top: 1rem;
+        positive: relative;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    h6 {
+        font-size: 20px;
+        text-align: center;
     }
     
     @media (max-width: 800px){
@@ -404,6 +412,11 @@ export const AboutUsTextContent = styled.div`
 
     @media (max-width: 800px){
         width: 100%;
+    }
+
+    h3 {
+        font-size: 44px;
+        font-weight: bold;
     }
 `
 

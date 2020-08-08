@@ -845,6 +845,10 @@ export const Form = styled.form`
         display: inline;
     }
 
+    .main {
+        color: #08846D;
+    }
+
     span {
         margin: 8px;
     }

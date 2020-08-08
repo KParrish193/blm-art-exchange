@@ -1,30 +1,39 @@
 import React, { useState, useRef, useEffect } from 'react';
 
-import logo from '../../assets/darkartxblm.gif'
+import logo from '../../assets/blmlogo.png'
 
 import { Link, NavLink } from 'react-router-dom';
 
 import { MenuButton, Logo, MobileContainer } from '../../global styles/index'
 
+import { makeStyles } from '@material-ui/core/styles';
+
 import Grow from '@material-ui/core/Grow';
-import Paper from '@material-ui/core/Paper';
+import Button from '@material-ui/core/Button';
 import Popper from '@material-ui/core/Popper';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
-import Accordion from '@material-ui/core/Accordion';
-import AccordionSummary from '@material-ui/core/AccordionSummary';
-import AccordionDetails from '@material-ui/core/AccordionDetails';
 
 // icons
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 import MenuIcon from '@material-ui/icons/Menu';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
+const useStyles = makeStyles({
+    list: {
+        width: 500,
+    },
+    fullList: {
+        width: 'auto',
+    },
+    });
+
 function MobileHeader(){
 
     const [open, setOpen] = useState(false);
     const anchorRef = useRef(null);
+    const classes = useStyles();
 
     const handleToggle = () => {
         setOpen((prevOpen) => !prevOpen);
@@ -63,15 +72,15 @@ function MobileHeader(){
                 aria-haspopup="true"
                 onClick={handleToggle}>
                 <MenuIcon />
-
+            </MenuButton>
                 <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
                 {({ TransitionProps, placement }) => (
                 <Grow
                     {...TransitionProps}
                     style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
                 >
-                <Paper>
                 <ClickAwayListener onClickAway={handleClose}>
+                
                 <MenuList 
                     autoFocusItem={open} 
                     id="menu-list-grow" 
@@ -131,8 +140,11 @@ function MobileHeader(){
 
 
                 {/*  */}
-                <Accordion>
-                <AccordionSummary
+                <Button
+                    ref={anchorRef}
+                    aria-controls={open ? 'menu-list-grow' : undefined}
+                    aria-haspopup="true"
+                    onClick={handleToggle}
                     style={{
                         textDecoration: 'none',
                         backgroundColor: '#000',
@@ -144,59 +156,69 @@ function MobileHeader(){
                         justifyContent: 'space-between'
                     }} >
                     Artists <ArrowForwardIosIcon />
-                </AccordionSummary>
-                <AccordionDetails>
-                <MenuItem 
-                    button
-                    style={{
-                        backgroundColor: '#000',
-                    }}>
-                    <NavLink 
-                        to="/artists"
-                        style={{
-                            textDecoration: 'none',
-                            color: '#fff',
-                            width: '100%',
-                            fontSize: '1.3rem',
-                            display: 'flex',
-                            flexDirection: 'row',
-                            justifyContent: 'space-between'
-                        }} 
-                        activeStyle={{
-                            color: "#fff",
-                            borderBottom: "solid #800000 2px",
-                            fontWeight: '900',
-                        }}
-                        className="mobile-hover">
-                    List of Artists
-                    </NavLink>
-                    </MenuItem>
+                </Button>
+                <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
+                    {({ TransitionProps, placement }) => (
+                        <Grow
+                        {...TransitionProps}
+                        style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
+                        >
+                        <ClickAwayListener onClickAway={handleClose}>
+                        <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
+                            <MenuItem 
+                                button
+                                style={{
+                                    backgroundColor: '#000',
+                                }}>
+                                <NavLink 
+                                    to="/artists"
+                                    style={{
+                                        textDecoration: 'none',
+                                        color: '#fff',
+                                        width: '100%',
+                                        fontSize: '1.3rem',
+                                        display: 'flex',
+                                        flexDirection: 'row',
+                                        justifyContent: 'space-between'
+                                    }} 
+                                    activeStyle={{
+                                        color: "#fff",
+                                        borderBottom: "solid #800000 2px",
+                                        fontWeight: '900',
+                                    }}
+                                    className="mobile-hover">
+                                List of Artists
+                                </NavLink>
+                                </MenuItem>
 
-                    <MenuItem button
-                    style={{
-                        backgroundColor: '#000',
-                    }}
-                    onClick={handleClose}>
-                    <NavLink 
-                        to="/artist/login"
-                        style={{
-                            textDecoration: 'none',
-                            color: '#fff',
-                            width: '100%',
-                            fontSize: '1.3rem',
-                        }} 
-                        activeStyle={{
-                            width: '100%',
-                            color: "#fff",
-                            borderBottom: "solid #800000 2px",
-                            fontWeight: '900'
-                        }}
-                        className="mobile-hover">
-                    Artist Portal
-                    </NavLink>
-                </MenuItem>
-                </AccordionDetails>
-                </Accordion>
+                                <MenuItem button
+                                style={{
+                                    backgroundColor: '#000',
+                                }}
+                                onClick={handleClose}>
+                                <NavLink 
+                                    to="/artist/login"
+                                    style={{
+                                        textDecoration: 'none',
+                                        color: '#fff',
+                                        width: '100%',
+                                        fontSize: '1.3rem',
+                                    }} 
+                                    activeStyle={{
+                                        width: '100%',
+                                        color: "#fff",
+                                        borderBottom: "solid #800000 2px",
+                                        fontWeight: '900'
+                                    }}
+                                    className="mobile-hover">
+                                Artist Portal
+                                </NavLink>
+                            </MenuItem>
+                            </MenuList>
+                        </ClickAwayListener>
+                </Grow>
+                )}
+                </Popper>
 
 
                 <MenuItem 
@@ -225,11 +247,11 @@ function MobileHeader(){
 
                 </MenuList>
                 </ClickAwayListener>
-                </Paper>
+
                 </Grow>
                 )}
-            </Popper>   
-            </MenuButton>             
+            </Popper>
+            
             </div>    
 
             <Link to="/blm-art-exchange" className="home">

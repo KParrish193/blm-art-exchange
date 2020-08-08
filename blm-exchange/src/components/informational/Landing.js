@@ -2,11 +2,12 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-import { LandingButton, LandingContainer, LandingTextContent, MobileLandingButtonContainer, DonationContainer, DonationPlaceholderContainer, CallToAction, PrimaryButton } from '../../global styles/index'
+import { LandingButton, LandingContainer, LandingContent, LandingTextContent, MobileLandingButtonContainer, DonationContainer, DonationPlaceholderContainer, CallToAction, PrimaryButton } from '../../global styles/index'
 
 function Landing(){
     return(
         <LandingContainer>
+            <LandingContent>
             <LandingTextContent>
             <div>
             <h2>Art x BLM</h2>
@@ -47,16 +48,6 @@ function Landing(){
                 <h6>Information about causes to donate to.</h6>
             </CallToAction>
 
-            <DonationContainer 
-                style={{
-                    display: 'none',
-                }}>
-                {/* visual donation piece */}
-                <h3>Donations to Date</h3>
-                <DonationPlaceholderContainer>
-                </DonationPlaceholderContainer>
-            </DonationContainer>
-
             <CallToAction>
                 <h4>Want your work to be featured? </h4>
                     <h6>We're looking for talented artists to contribute to the cause. </h6>
@@ -66,6 +57,7 @@ function Landing(){
                         </Link>
                     </p>
             </CallToAction>
+            </LandingContent>
         </LandingContainer>
     )
 }

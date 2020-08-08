@@ -1,19 +1,8 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 
 import FilterListIcon from '@material-ui/icons/FilterList';
-
-import Input from '@material-ui/core/Input';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormControl from '@material-ui/core/FormControl';
-import ListItemText from '@material-ui/core/ListItemText';
-import Select from '@material-ui/core/Select';
-import Checkbox from '@material-ui/core/Checkbox';
-import Chip from '@material-ui/core/Chip';
-
+import { ProductContext } from '../contexts/ProductContext';
 import { DesktopFilterContainer, MobileFilter, MobileFilterContainer, TagButton } from '../global styles/index';
-
-
 
 const medium = [
     'Design & Illustration',
@@ -23,11 +12,37 @@ const medium = [
     'Photography'
 ];
 
-var blackArtist = false;
-
 var exchange = false;
 
 function Filter() {
+    const [toggledTags, setToggledTags] = useState([]);
+    
+    const toggleTag = (e) => {
+        e.preventDefault(); // prevent default refresh from button clicks
+        e.target.classList.toggle("toggled"); // toggle the 'toggled' class for styling when clicked
+
+        /* if our toggled tags array does NOT include the selected tag,
+                then we should add it to our toggled tags array */
+        if (!toggledTags.includes(e.target.value)) {
+            setToggledTags([...toggledTags, e.target.value]);
+        } else {
+            /* otherwise we should filter it out, and update our toggled tags state 
+                    with the remaining toggled tags */
+            const filter = toggledTags.filter((tag) => tag !== e.target.value);
+            setToggledTags(filter);
+        };
+    }
+
+    const { products } = useContext(ProductContext)
+    console.log('filter', products)
+    
+    
+    let blackArtist = products.filter(artist => artist.blackArtist === true);
+    console.log('black artist filter', blackArtist)
+
+
+    
+    
     return(
     <div className="search">
             <DesktopFilterContainer>
@@ -36,16 +51,16 @@ function Filter() {
             </DesktopFilterContainer>
             
             <MobileFilter>
-                <TagButton>
-                    Black Artist   
+                <TagButton onClick={toggleTag} value="black artists">
+                    Black Artists
                 </TagButton>
-                <TagButton>
-                    LGBTQIA+   
+                <TagButton onClick={toggleTag} value="lgbtq artists">
+                    LGBTQIA+ Artists  
                 </TagButton>
                 <TagButton>
                     Exchange   
                 </TagButton>
-                <TagButton>
+                <TagButton onClick={toggleTag} value="photography">
                     Photography   
                 </TagButton>
                 <TagButton>

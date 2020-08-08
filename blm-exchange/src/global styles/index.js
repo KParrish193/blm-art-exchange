@@ -10,6 +10,7 @@ export const HomeContainer =styled.div`
     color: white;
     min-height: 100vh;
 `
+
 // buttons
 export const PrimaryButton = styled.button`
     border-radius: 10px;
@@ -21,6 +22,7 @@ export const PrimaryButton = styled.button`
     width: 30%;
     min-width: 150px;
     border: #450008 1px solid;
+    transition: all 300ms;
 
     a {
         text-decoration: none;
@@ -39,6 +41,7 @@ export const TagButton = styled.button`
     letter-spacing: .05rem;
     padding: 0.3rem 1rem;
     margin: 0.3rem;
+    transition: all 300ms;
 `
 
 // header styling
@@ -232,7 +235,7 @@ export const MobileLandingButtonContainer = styled.div`
 export const LandingContainer = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     padding: 2rem 30px 2.5rem;
     color: #fff;
@@ -253,10 +256,22 @@ export const LandingContainer = styled.div`
     }
 `
 
+export const LandingContent = styled.div`
+    width: 55%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    @media (max-width: 700px){
+        width: 100%;
+    }
+`
+
 export const LandingTextContent = styled.div`
     display: flex;
     flex-direction: column;
-    width: 50%;
     text-align: center;
 
     h5, h6 {
@@ -273,8 +288,6 @@ export const CallToAction = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
-    margin-top: 4.5rem;
 
     @media (max-width: 800px){
         margin-top: 3rem;
@@ -520,6 +533,11 @@ export const MobileFilter = styled.div`
         align-items: center;
         flex-wrap: wrap;
         max-width: 470px;
+
+        .toggled {
+            background: #990000;
+            color: #fff;
+        }
     }
 `
 
@@ -532,6 +550,7 @@ export const ListPageContainer = styled.div`
     align-items: center;    
 
     h3 {
+        color: #fff;
         display: none;
     }
 
@@ -578,6 +597,10 @@ export const ArtistCard = styled.div`
     flex-direction: row;
     width: 45%;
     padding: .5rem;
+    
+    h4 {
+        color: #fff;
+    }
 
     @media(max-width: 500px){
         width: 75%;
@@ -595,6 +618,10 @@ export const ProductCard = styled.div`
     margin: 1rem 0;
     position: relative;
     object-fit: cover;
+
+    h4 {
+        color: #fff;
+    }
 
     @media (max-width: 1600px){
         width: 22%;
@@ -691,9 +718,13 @@ export const ArtistProfileContainer = styled.div`
 `
 
 export const CarouselContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 50%;
     min-width: 500px;
     height: 100%;
+    color: #fff;
 
     @media(max-width: 850px){
         min-width: 300px;
@@ -714,6 +745,7 @@ export const ArtistContentContainer = styled.div`
         width: 100%;
         text-align: left;
         margin-left: 0.3rem;
+        color: #fff;
     }
 
     h4 {
@@ -721,6 +753,7 @@ export const ArtistContentContainer = styled.div`
         text-align: left;
         letter-spacing: 0.01rem;
         margin-left: 0.3rem;
+        color: #08846D;
     }
 
     h5 {
@@ -728,6 +761,7 @@ export const ArtistContentContainer = styled.div`
         text-align: left;
         margin-left: 0.3rem;
         padding-bottom: 0.15rem; 
+        color: #fff;
     }
 
     h6 {
@@ -735,6 +769,7 @@ export const ArtistContentContainer = styled.div`
         text-align: left;
         padding-left: 0.4rem;
         font-size: 1.1rem;
+        color: #fff;
     }
 
     .icon {
@@ -882,7 +917,7 @@ export const CustomSwitch = styled.div`
         position: relative;
         transition: background-color .2s;
     }
-  
+
     .react-switch-label .react-switch-button {
         content: '';
         position: absolute;

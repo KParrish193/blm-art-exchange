@@ -67,40 +67,40 @@ export const HeaderContainer = styled.div`
         padding: 10px;
     }
 
-        a.home{
-            padding: 0px;
-            margin: 0px;
-            
-            :hover {
-                border-bottom: none;
-                transition: .16s all 0.025s;
-            }
-        }
-
-        a.cart {
-            text-decoration: none;
-            margin: 0 20px;
-            padding: 0px;
-            color: #fff;
-            font-size: 1.3rem;
-
-            :hover {
-                border-bottom: none;
-                transition: .16s all 0.025s;
-            }
-        }
-
-        a:hover {
-            border-bottom: 2px solid #990000;
+    a.home{
+        padding: 0px;
+        margin: 0px;
+        
+        :hover {
+            border-bottom: none;
             transition: .16s all 0.025s;
         }
+    }
 
-        .mobile-home{
-            display: none;
+    a.cart {
+        text-decoration: none;
+        margin: 0 20px;
+        padding: 0px;
+        color: #fff;
+        font-size: 1.3rem;
+
+        :hover {
+            border-bottom: none;
+            transition: .16s all 0.025s;
         }
+    }
 
-        @media (max-width: 500px){
-            display: none;
+    a:hover {
+        border-bottom: 2px solid #990000;
+        transition: .16s all 0.025s;
+    }
+
+    .mobile-home{
+        display: none;
+    }
+
+    @media (max-width: 500px){
+        display: none;
 `
 
 export const Nav = styled.div`
@@ -376,6 +376,11 @@ export const AboutNavContainer = styled.div`
         font-size: 1.2rem;
         width: 25%;
         padding-bottom: 0.5rem;
+    }
+
+    a:hover {
+        border-bottom: 2px solid #990000;
+        transition: .16s all 0.025s;
     }
 `
 

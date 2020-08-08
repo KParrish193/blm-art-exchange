@@ -34,11 +34,10 @@ function validateForm() {
 
     var k = 0;
     while (!validLgbtqiaRadio && k < lgbtqiaArtistRadio.length) {
-        if (validLgbtqiaRadio[k].checked) validLgbtqiaRadio = true;
+        if (lgbtqiaArtistRadio[k].checked) validLgbtqiaRadio = true;
         k++;
     }
     if (!validLgbtqiaRadio) console.error("Please check one option.");
-
 }
 
 function ArtistForm(){
@@ -150,12 +149,12 @@ function ArtistForm(){
                         <div className="column">
                             <div>
                                 <label>
-                                    <input className="radio" type="radio" name="blackArtist"/><span>I identify as a Black Artist.</span>
+                                    <input className="radio" type="radio" name="blackArtist" ref={register({required: true, validate: validateForm })}/><span>I identify as a Black Artist.</span>
                                 </label>
                             </div>
                             <div>
                                 <label>
-                                    <input className="radio" type="radio" name="blackArtist"/><span>I identify as a non Black Ally.</span>
+                                    <input className="radio" type="radio" name="blackArtist" ref={register({required: true, validate: validateForm })}/><span>I identify as a non Black Ally.</span>
                                 </label>
                             </div>
                         </div>
@@ -169,12 +168,12 @@ function ArtistForm(){
                         <div className="column">
                             <div>
                                 <label>
-                                    <input className="radio" type="radio" name="lgbtqiaArtist"/><span>I identify as an LGBTQIA+ artist.</span>
+                                    <input className="radio" type="radio" name="lgbtqiaArtist" ref={register({required: false, validate: validateForm })}/><span>I identify as an LGBTQIA+ artist.</span>
                                 </label>
                             </div>
                             <div>
                                 <label>
-                                    <input className="radio" type="radio" name="lgbtqiaArtist"/><span>I do not identify as an LGBTQIA+ artist.</span>
+                                    <input className="radio" type="radio" name="lgbtqiaArtist" ref={register({required: false, validate: validateForm })}/><span>I do not identify as an LGBTQIA+ artist.</span>
                                 </label>
                             </div>
                         </div>

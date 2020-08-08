@@ -5,16 +5,15 @@ import { ProductContext } from '../contexts/ProductContext';
 
 function PrintDetail(){
     const { id } = useParams()
-
     const { products } = useContext(ProductContext)
+    
     console.log('print detail', products)
     
     return(
-        <div key={products.id}>
+
+        <div>
             {/* display print details */}
-        <h4>{products.title}</h4>
-
-
+        <h4>{products.title}</h4>        
         
         </div>
     )

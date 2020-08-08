@@ -610,12 +610,11 @@ export const ArtistCard = styled.div`
 `
 
 export const ProductCard = styled.div`
-    width: 20%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 1rem 0;
+    margin: 3rem;
     position: relative;
     object-fit: cover;
 
@@ -623,23 +622,25 @@ export const ProductCard = styled.div`
         color: #fff;
     }
 
-    @media (max-width: 1600px){
-        width: 22%;
-    }
-
     @media (max-width: 1500px){
-        width: 22%;
+        margin: 1.5rem;
     }
 
-    @media (max-width: 850px){
-        width: 25%;
+    @media (max-width: 1200px){
+        margin: 1rem;
+    }
+
+    @media (max-width: 800px){
+        margin: 0.25rem;
     }
     
     @media (max-width: 500px){
-        width: 18rem;
-        height: 18rem;
+        margin: .5rem 0;
+        width: 45%;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-end;
+        align-items: center;
+        height: 20rem;
     }
 
     .mobile-card {
@@ -647,12 +648,18 @@ export const ProductCard = styled.div`
 
         @media (max-width: 500px){
             display: flex;
+            flex-direction: column;
+            justify-content; center;
             align-items: center;
-            padding: 0.5rem 0;
 
             h4 {
                 width: 100%;
                 text-align: center;
+                font-size: 1.3rem;
+            }
+
+            h5 {
+                font-size: 1.1rem;
             }
         }
     }
@@ -660,15 +667,25 @@ export const ProductCard = styled.div`
 
 export const ThumbnailContainer = styled.div`
     position: relative;
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     overflow: hidden;
     object-fit: cover;
+
+    @media (max-width: 1585px){
+        width: 250px;
+        height: 250px;
+    }
+
+    @media (max-width: 1150px){
+        width: 225px;
+        height: 225px;
+    }
 
     @media (max-width: 800px){
         width: 200px;
         height: 200px;
-        margin: 1rem auto;
+        margin: 0 auto;
     }
 `
 
@@ -683,21 +700,6 @@ export const ProductImg = styled.img`
     -webkit-transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
         transform: translate(-50%,-50%);
-
-    // @media (max-width: 1050px){
-    //     height: 200px;
-    //     width: 200px;
-    // }
-
-    // @media (max-width: 800px){
-    //     height: 175px;
-    //     width: 175px;
-    // }
-
-    // @media (max-width: 600px){
-    //     height: 150px;
-    //     width: 150px;
-    // }
 `
 
 

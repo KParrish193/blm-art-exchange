@@ -23,6 +23,9 @@ function Shop(){
                             <Link to={`/shop/print/${product.id}`}>
                                 <div className="mobile-card">
                                     <h4>{product.title}</h4>
+                                    <h5 key={product.artistID}>
+                                        {product.artistID.firstName} {product.artistID.lastName}
+                                    </h5>
                                 </div>
                                 <ThumbnailContainer>
                                     <ProductImg src={`${product.image.formats.small.url}`} />

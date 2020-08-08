@@ -51,20 +51,8 @@ function ArtistProfile(){
         splits.push("Black Artist");
     }
     
-    if(artists.latinx === true){
-        splits.push("LatinX Artist")
-    }
-    
     if(artists.lgbtq === true){
         splits.push("LGBTQIA+ Artist")
-    }
-    
-    if(artists.poc === true){
-        splits.push("POC Artist")
-    }
-    
-    if(artists.indigenous === true){
-        splits.push("Indigenous Artist")
     }
     
 // logic for mediums

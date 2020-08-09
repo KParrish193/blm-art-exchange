@@ -248,7 +248,7 @@ function ArtistForm(){
 
                     <div>
                         <label className="main">
-                            <input className="checkbox" type="checkbox" placeholder="CodeofConduct" name="coc" ref={register({ required: true })} /><span>Agree to <Link to="/coc" style={{color: "#037963", fontWeight: "bold" }}>Code of Conduct</Link></span>
+                            <input className="checkbox" type="checkbox" placeholder="CodeofConduct" name="coc" ref={register({ required: true })} /><span>Agree to <Link to="/cocmodal" style={{color: "#037963", fontWeight: "bold" }}>Code of Conduct</Link></span>
                             {errors.coc && errors.coc.type === "required" && <span className="error">You must agree to the Code of Conduct.</span>}
                         </label>
                     </div>

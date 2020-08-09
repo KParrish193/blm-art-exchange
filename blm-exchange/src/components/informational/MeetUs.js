@@ -3,13 +3,13 @@ import React from 'react';
 import { AboutUsContainer, AboutUsTextContent, MeetUs, AboutUsTeamContainer, AboutUsImg  } from '../../global styles/index'
 import AboutNav from './AboutNav'
 
-import kp from '../../assets/team/kp.jpg';
-import ayesha from '../../assets/team/ayesha.jpg';
-import safiyyah from '../../assets/team/safiyyah.jpg';
-import emily from '../../assets/team/emily.jpg';
-import shilpa from '../../assets/team/shilpa.jpg';
-import shirleen from '../../assets/team/shirleen.jpg';
-import swathi from '../../assets/team/swathi.jpg';
+import kp from '../../assets/team/TEAM_CIR-KP.png';
+import ayesha from '../../assets/team/TEAM_CIR-AF.png';
+import safiyyah from '../../assets/team/TEAM_CIR-SN.png';
+import emily from '../../assets/team/TEAM_CIR-EY.png';
+import shilpa from '../../assets/team/TEAM_CIR-SKA.png';
+import shirleen from '../../assets/team/TEAM_CIR-SB.png';
+import swathi from '../../assets/team/TEAM_CIR-SKR.png';
 // import sydney from '../../assets/team/sydney.jpg';
 
 

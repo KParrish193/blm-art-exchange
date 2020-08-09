@@ -33,6 +33,7 @@ import Cart from './components/Cart';
 import Checkout from './components/Checkout';
 import CustLogin from './components/customers/CustLogin';
 import Orders from './components/customers/Orders';
+import TransitionModal from './components/TransitionModal';
 
 // contexts
 import { ArtistContext } from './contexts/ArtistContext';
@@ -107,6 +108,7 @@ function App() {
           <Route path="/artist/login" component={ Login } />
           <Route path="/artist/sign-up" component={ ArtistForm } />
           <Route path="/coc" component={ CodeOfConduct } />
+          <Route path="/cocmodal" component={ TransitionModal } />
           <PrivateRoute path ="/artist/:id/dashboard" component={ ArtistDashboard } />
           <PrivateRoute path="/artist/:id/upload" component={ UploadForm } />
 

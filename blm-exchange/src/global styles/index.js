@@ -604,6 +604,8 @@ export const PhotoGrid = styled.div`
     .name-img {
         padding: 0;
         margin: 0;
+        text-align: left;
+        padding-bottom: 1em;
 
         h3 {
             padding: 0;

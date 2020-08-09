@@ -32,10 +32,10 @@ function validateForm() {
         j++;
     }
     if (!validArtistResponse) {
-        document.getElementById('error-message-radio-black').innerHTML = "Please select one option.";
+        document.getElementById('error-message-radio').innerHTML = "Please select one option.";
     } else {
         //Clear the error once at least one selection has been made
-        document.getElementById('error-message-radio-black').innerHTML = null;
+        document.getElementById('error-message-radio').innerHTML = null;
     }
 }
 
@@ -137,7 +137,7 @@ function ArtistForm(){
 
                     <div className="row">
                         <div className="column">
-                            <label className="text main">We welcome all artists who support our cause. We especially want to highlight and celebrate Black artists. How do you identify? *</label><span id="error-message-radio-black" className="error"></span>
+                            <label className="text main">We welcome all artists who support our cause. We especially want to highlight and celebrate Black artists. How do you identify? *</label><span id="error-message-radio" className="error"></span>
                         </div>
 
                         <div className="column">

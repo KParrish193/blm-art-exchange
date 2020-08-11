@@ -569,6 +569,7 @@ export const PhotoGrid = styled.div`
     justify-content: center;
     width: 100%;
     margin: 2rem 0;
+    border: yellow solid 1px;
 
     .name-img {
         padding: 0;
@@ -617,6 +618,7 @@ export const ProductCard = styled.div`
     margin: 3rem;
     position: relative;
     object-fit: cover;
+    border: orange solid 3px;
 
     h4 {
         color: #fff;
@@ -651,6 +653,7 @@ export const ProductCard = styled.div`
             flex-direction: column;
             justify-content; center;
             align-items: center;
+            border: solid limegreen 1px;
 
             h4 {
                 width: 100%;
@@ -663,6 +666,12 @@ export const ProductCard = styled.div`
             }
         }
     }
+`
+
+export const DarkOverlay = styled.div`
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: pink solid 3px;
 `
 
 export const ThumbnailContainer = styled.div`
@@ -702,6 +711,27 @@ export const ProductImg = styled.img`
         transform: translate(-50%,-50%);
 `
 
+//print detail styling
+export const PrintDetailContainer = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: row; 
+`
+
+export const PrintForm = styled.div`
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+`
+
+export const PrintDisplay = styled.div`
+    width: 50%;
+`
 
 //artist profile styling
 export const ArtistProfileContainer = styled.div`

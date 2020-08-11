@@ -713,15 +713,82 @@ export const ProductImg = styled.img`
 
 //print detail styling
 export const PrintDetailContainer = styled.div`
+    width: 95%;
+    margin: 0 auto;
+`
+
+export const PrintContainer = styled.div`
     width: 100%;
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    @media(max-width: 1000px) {
+        flex-direction: column;
+    }
+`
+
+export const PrintDisplay = styled.div`
+    width: 50%;
+    height: 84vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: limegreen solid 1px;
+    padding: 2rem 0;
+    
+    img {
+        height: 60vh;
+
+        @media(max-width: 1200px) {
+            height: 50vh;
+        }
+    }
+
+    div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.tags-container{ 
+        display: flex;
+        flex-direction: row;
+    }
+
+    p {
+        margin-top: .75rem;
+        width: 70%;
+    }
+
+    @media(max-width: 1000px) {
+        width: 100%;
+    }
+`
+
+export const PrintContent = styled.div`
+    width: 50%;
+    height: 84vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    border: orange solid 1px;
+
+    @media(max-width: 1000px) {
+        width: 100%;
+    }
 `
 
 export const PrintForm = styled.div`
     width: 50%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    border: pink solid 1px;
 
     form{
         display: flex;
@@ -729,9 +796,6 @@ export const PrintForm = styled.div`
     }
 `
 
-export const PrintDisplay = styled.div`
-    width: 50%;
-`
 
 //artist profile styling
 export const ArtistProfileContainer = styled.div`

@@ -843,7 +843,8 @@ export const PrintContent = styled.div`
         }
 
         @media(max-width: 700px) {
-            width: 70%
+            width: 75%;
+            padding: 0;
         }
     }
 
@@ -851,7 +852,7 @@ export const PrintContent = styled.div`
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        margin-bottom: 4rem; 
+        margin-bottom: 4rem;
 
         @media(max-width: 1200px) {
             margin-bottom: 2.5rem;
@@ -879,9 +880,6 @@ export const PrintContent = styled.div`
                 transition: .16s all 0.025s;
             }
     }
-
-
-    
 `
 
 export const PrintForm = styled.div`

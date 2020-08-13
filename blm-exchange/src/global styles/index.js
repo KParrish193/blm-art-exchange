@@ -758,24 +758,179 @@ export const ProductImg = styled.img`
 //print detail styling
 export const PrintDetailContainer = styled.div`
     width: 100%;
+    margin: 0 auto;
     display: flex;
-    flex-direction: row; 
+    justify-content: center;
+    align-items: center;
 `
 
-export const PrintForm = styled.div`
-    width: 50%;
+export const PrintContainer = styled.div`
+    width: 80%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
 
-    form{
-        display: flex;
+    @media(max-width: 1000px){
+        width: 100%;
+    }
+
+    @media(max-width: 700px) {
         flex-direction: column;
     }
 `
 
 export const PrintDisplay = styled.div`
     width: 50%;
+    height: 84vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 0;
+
+    @media(max-width: 700px) {
+        width: 100%;
+        height: 100%;
+        padding: 1rem 0;
+    }
+    
+    img {
+        max-height: 80vh;
+
+        @media(max-width: 1200px) {
+            max-height: 40vh;
+        }
+    }
+
+    div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem 0;
+    }
+
+    div.tags-container{ 
+        display: none;
+        flex-direction: row;
+    }
+
+    p {
+        margin-top: .75rem;
+        width: 70%;
+    }
 `
+
+export const PrintContent = styled.div`
+    width: 40%;
+    height: 84vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding: 5rem 0;
+
+    @media (max-width: 700px) {
+        width: 100%;
+        margin-left: 0;
+        height: 100%;
+        padding: 2rem 0;
+    }
+
+    div.container {
+        height: 57vh;
+
+        @media(max-width: 1200px) {
+            height: 40vh;
+        }
+
+        @media(max-width: 700px) {
+            width: 70%
+        }
+    }
+
+    div.print-heading{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 4rem; 
+
+        @media(max-width: 1200px) {
+            margin-bottom: 2.5rem;
+        }
+
+        @media(max-width: 700px) {
+            margin-bottom: 1.5rem;
+        }
+
+        h3, h4 {
+            font-weight: 400;
+            margin-bottom: 1rem; 
+
+            @media(max-width: 1200px) {
+                margin-bottom: .5rem; 
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+    
+            :hover  {
+                color: #990000;
+                transition: .16s all 0.025s;
+            }
+    }
+
+
+    
+`
+
+export const PrintForm = styled.div`
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .price { 
+        margin-bottom: 3rem;
+
+        @media(max-width: 1200px) {
+            margin-bottom: 1.5rem; 
+        }
+    }
+
+    div {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 1rem; 
+
+        @media(max-width: 1200px) {
+            margin-bottom: .5rem; 
+        }
+        
+        label {
+            padding: .2rem 1rem 0 0; 
+        }
+
+        select {
+            height: 1.5rem;
+            margin: 0 0 .1rem 0;
+        }
+
+        input {
+            height: 1.5rem;
+            margin: 0 0 .1rem 0;
+        }
+    }
+`
+
 
 //artist profile styling
 export const ArtistProfileContainer = styled.div`

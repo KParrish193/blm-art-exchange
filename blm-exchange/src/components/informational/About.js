@@ -10,7 +10,7 @@ function About(){
             <AboutUsTextContent>
             <AboutNav />
                 <div>
-                    <h3><b>What is ArtxBLM?</b></h3>
+                    <h3>What is ArtxBLM?</h3>
 
                     <p>
                         With ArtxBLM, we aim to encourage and facilitate a collaborative exchange of art to raise money for anti-racist 

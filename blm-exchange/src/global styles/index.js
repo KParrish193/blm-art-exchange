@@ -714,15 +714,22 @@ export const ProductImg = styled.img`
 
 //print detail styling
 export const PrintDetailContainer = styled.div`
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `
 
 export const PrintContainer = styled.div`
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media(max-width: 1000px){
+        width: 100%;
+    }
 
     @media(max-width: 700px) {
         flex-direction: column;
@@ -772,13 +779,12 @@ export const PrintDisplay = styled.div`
 `
 
 export const PrintContent = styled.div`
-    width: 45%;
+    width: 40%;
     height: 84vh;
     display: flex;
     flex-direction: column;
     align-items: center; 
     padding: 5rem 0;
-    margin-left: 1rem;
 
     @media (max-width: 700px) {
         width: 100%;

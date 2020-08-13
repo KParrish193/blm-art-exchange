@@ -237,7 +237,7 @@ export const LandingContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem 30px 2.5rem;
+    padding: 2rem 30px 0;
     color: #fff;
     min-height: 100vh;
     background-image: url(${background});
@@ -254,7 +254,7 @@ export const LandingContainer = styled.div`
 export const LandingContent = styled.div`
     width: 55%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.25);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -611,7 +611,6 @@ export const PhotoGrid = styled.div`
     justify-content: center;
     width: 100%;
     margin: 2rem 0;
-    border: yellow solid 1px;
 
     .name-img {
         padding: 0;
@@ -662,7 +661,7 @@ export const ProductCard = styled.div`
     margin: 3rem;
     position: relative;
     object-fit: cover;
-    border: orange solid 3px;
+    // border: orange solid 3px;
 
     h4 {
         color: #fff;
@@ -697,7 +696,7 @@ export const ProductCard = styled.div`
             flex-direction: column;
             justify-content; center;
             align-items: center;
-            border: solid limegreen 1px;
+            // border: solid limegreen 1px;
 
             h4 {
                 width: 100%;
@@ -715,7 +714,7 @@ export const ProductCard = styled.div`
 export const DarkOverlay = styled.div`
     width: 100%;
     background-color: rgba(255, 255, 255, 0.9);
-    border: pink solid 3px;
+    // border: pink solid 3px;
 `
 
 export const ThumbnailContainer = styled.div`
@@ -897,10 +896,14 @@ export const PrintForm = styled.div`
     }
 
     .price { 
-        margin-bottom: 3rem;
+        margin-bottom: 4rem;
 
         @media(max-width: 1200px) {
-            margin-bottom: 1.5rem; 
+            margin-bottom: 2.5rem; 
+        }
+
+        @media(max-width: 700px) {
+            margin-bottom: 1.5rem;
         }
     }
 

@@ -67,29 +67,41 @@ function PrintDetail(){
             <PrintForm>
                 <form onSubmit={handleSubmit(onSubmit)}>
                 <div>
-                <label>Size</label>
+                <label>Size:</label>
                 <select 
                     name="Size"
                     ref={register({ required: true })}
+                    placeholder="select"
                     style={{
-                        width: '30%'
+                        width: '35%',
+                        backgroundColor: '#151515',
+                        color: '#fff',
+                        border: 'solid 1px #808080',
+                        borderRadius: '5px',
+                        paddingLeft: '.2rem',
+                        letterSpacing: '.09rem'
                     }}>
-                    <option value="size 1">size 1</option>
-                    <option value="size 2">size 2</option>
-                    <option value="size 3">size 3</option>
+                    <option value='5x7'>5x7"</option>
+                    <option value='8x10'>8x10"</option>
+                    <option value='11x14'>11x14"</option>
                 </select>
                 </div>
 
                 <div>
                     {/* TODO logic to have no negative numbers */}
-                <label>Quantity</label>
+                <label>Quantity:</label>
                 <input 
                     type="number" 
                     placeholder="0" 
                     name="Quantity" 
                     ref={register({required: true})}
                     style={{
-                        width: '20%'
+                        width: '20%',
+                        backgroundColor: '#151515',
+                        color: '#fff',
+                        border: 'solid 1px #808080',
+                        borderRadius: '5px',
+                        paddingLeft: '.3rem'
                     }} />
                 </div>
                 

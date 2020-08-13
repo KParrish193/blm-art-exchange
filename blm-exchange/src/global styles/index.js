@@ -418,6 +418,10 @@ export const AboutUsTextContent = styled.div`
         font-size: 44px;
         font-weight: bold;
     }
+
+    p {
+        font-size: 20px;
+    }
 `
 
 export const AboutUsImg = styled.img`
@@ -487,12 +491,13 @@ export const AboutUsTeamContainer = styled.div`
         color: #990000;
         padding-right: .5rem;
         font-weight: 500;
+        font-size: 30px;
     }
 
     a {
         text-decoration: none;
         color: #08846D;
-        font-size: 1.3rem;
+        font-size: 30px;
         letter-spacing: .1rem;
     }
 
@@ -522,14 +527,20 @@ export const FAQTextContainer = styled.div`
     width: 75%;
     position: static;
     
-    h2, h3 {
+    h3 {
         text-align: center;
         margin-bottom: 1rem;
+        font-size: 44px;
+    }
+
+    h5 {
+        font-size: 30px;
     }
 
     p {
         display: inline, block;
         padding-bottom: 30px;
+        font-size: 20px;
     }
 
     .FAQ-link {

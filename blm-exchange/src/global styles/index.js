@@ -92,6 +92,7 @@ export const HeaderContainer = styled.div`
 
         a:hover {
             border-bottom: 2px solid #990000;
+            color: #08846D;
             transition: .16s all 0.025s;
         }
 
@@ -723,7 +724,7 @@ export const PrintContainer = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
 
-    @media(max-width: 1000px) {
+    @media(max-width: 700px) {
         flex-direction: column;
     }
 `
@@ -733,16 +734,20 @@ export const PrintDisplay = styled.div`
     height: 84vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
-    border: limegreen solid 1px;
-    padding: 2rem 0;
+    padding: 5rem 0;
+
+    @media(max-width: 700px) {
+        width: 100%;
+        height: 100%;
+        padding: 1rem 0;
+    }
     
     img {
-        height: 60vh;
+        max-height: 80vh;
 
         @media(max-width: 1200px) {
-            height: 50vh;
+            max-height: 40vh;
         }
     }
 
@@ -752,10 +757,11 @@ export const PrintDisplay = styled.div`
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin: 1rem 0;
     }
 
     div.tags-container{ 
-        display: flex;
+        display: none;
         flex-direction: row;
     }
 
@@ -763,36 +769,116 @@ export const PrintDisplay = styled.div`
         margin-top: .75rem;
         width: 70%;
     }
-
-    @media(max-width: 1000px) {
-        width: 100%;
-    }
 `
 
 export const PrintContent = styled.div`
-    width: 50%;
+    width: 45%;
     height: 84vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center; 
-    border: orange solid 1px;
+    padding: 5rem 0;
+    margin-left: 1rem;
 
-    @media(max-width: 1000px) {
+    @media (max-width: 700px) {
         width: 100%;
+        margin-left: 0;
+        height: 100%;
+        padding: 2rem 0;
     }
+
+    div.container {
+        height: 57vh;
+
+        @media(max-width: 1200px) {
+            height: 40vh;
+        }
+
+        @media(max-width: 700px) {
+            width: 70%
+        }
+    }
+
+    div.print-heading{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 4rem; 
+
+        @media(max-width: 1200px) {
+            margin-bottom: 2.5rem;
+        }
+
+        @media(max-width: 700px) {
+            margin-bottom: 1.5rem;
+        }
+
+        h3, h4 {
+            font-weight: 400;
+            margin-bottom: 1rem; 
+
+            @media(max-width: 1200px) {
+                margin-bottom: .5rem; 
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+    
+            :hover  {
+                color: #990000;
+                transition: .16s all 0.025s;
+            }
+    }
+
+
+    
 `
 
 export const PrintForm = styled.div`
-    width: 50%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: pink solid 1px;
 
-    form{
+    form {
         display: flex;
         flex-direction: column;
+    }
+
+    .price { 
+        margin-bottom: 3rem;
+
+        @media(max-width: 1200px) {
+            margin-bottom: 1.5rem; 
+        }
+    }
+
+    div {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 1rem; 
+
+        @media(max-width: 1200px) {
+            margin-bottom: .5rem; 
+        }
+        
+        label {
+            padding: .2rem 1rem 0 0; 
+        }
+
+        select {
+            height: 1.5rem;
+            margin: 0 0 .1rem 0;
+        }
+
+        input {
+            height: 1.5rem;
+            margin: 0 0 .1rem 0;
+        }
     }
 `
 

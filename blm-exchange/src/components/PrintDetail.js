@@ -37,10 +37,9 @@ function PrintDetail(){
         {printByID.map((detail) => (
         <PrintContainer>
         <PrintDisplay key={detail.id}>
-            <img src={detail.image.formats.large.url}/>
+            <img src={detail.image.formats.small.url}/>
             <div>
                 <p>{detail.description}</p>
-                <p>{detail.image.alternativeText}</p>
             </div>
             <div className="tags-container">
             
@@ -57,29 +56,53 @@ function PrintDetail(){
         </PrintDisplay>
 
         <PrintContent>
-            <div>
+            <div className="container">
+            <div className="print-heading">
                 <h3>{detail.title}</h3>
                 <Link to="">
                 <h4>{Object.values(detail.artistID.firstName)} {Object.values(detail.artistID.lastName)}</h4>
                 </Link>
             </div>
                 {/* form for submitting print details to cart */}
-                <PrintForm>
+            <PrintForm>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                <select name="Size" ref={register({ required: true })}>
+                <div>
+                <label>Size</label>
+                <select 
+                    name="Size"
+                    ref={register({ required: true })}
+                    style={{
+                        width: '30%'
+                    }}>
                     <option value="size 1">size 1</option>
                     <option value="size 2">size 2</option>
                     <option value="size 3">size 3</option>
                 </select>
-                <input type="number" placeholder="Quantity" name="Quantity" ref={register({required: true})} />
+                </div>
 
-                <p>{price}</p>
+                <div>
+                    {/* TODO logic to have no negative numbers */}
+                <label>Quantity</label>
+                <input 
+                    type="number" 
+                    placeholder="0" 
+                    name="Quantity" 
+                    ref={register({required: true})}
+                    style={{
+                        width: '20%'
+                    }} />
+                </div>
+                
+                <div className="price">
+                <label>Price: {price}</label>
+                </div>
 
                 <PrimaryButton onClick={addItem}>
                     Add to Cart
                 </PrimaryButton>
                 </form>
-                </PrintForm>
+            </PrintForm>
+            </div>
         </PrintContent>
 
         </PrintContainer>

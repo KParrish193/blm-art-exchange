@@ -30,7 +30,6 @@ function PrintDetail(){
     console.log(errors);
     // TODO edit handlesubmit to send size, price, title, printID to cart
 
-
     return(
         <PrintDetailContainer >
         
@@ -41,16 +40,18 @@ function PrintDetail(){
             <div>
                 <p>{detail.description}</p>
             </div>
-            <div className="tags-container">
-            
-            {function TagLogic() {
-                if (`${Object.values(detail.artistID.blackArtist)}` === true) {
-                    return(
-                        <TagButton>Black Artist</TagButton>
-                    )}
-            }}
 
-            <TagButton>{detail.medium}</TagButton>
+            <div 
+                className="tags-container">
+                    <TagButton
+                        style={{
+                            display: `${detail.artistID.blackArtist}` === true ? 'block' : 'none'
+                        }}>Black Artist</TagButton>
+            
+                    <TagButton 
+                        style={{
+                            display: `${detail.medium}` === 'null' ? 'none' : 'block'
+                    }}>{detail.medium}</TagButton>
 
             </div>
         </PrintDisplay>
@@ -59,7 +60,7 @@ function PrintDetail(){
             <div className="container">
             <div className="print-heading">
                 <h3>{detail.title}</h3>
-                <Link to="">
+                <Link to={`/artists/${detail.artistID.id}`}>
                 <h4>{Object.values(detail.artistID.firstName)} {Object.values(detail.artistID.lastName)}</h4>
                 </Link>
             </div>
@@ -67,29 +68,41 @@ function PrintDetail(){
             <PrintForm>
                 <form onSubmit={handleSubmit(onSubmit)}>
                 <div>
-                <label>Size</label>
+                <label>Size:</label>
                 <select 
                     name="Size"
                     ref={register({ required: true })}
+                    placeholder="select"
                     style={{
-                        width: '30%'
+                        width: '35%',
+                        backgroundColor: '#151515',
+                        color: '#fff',
+                        border: 'solid 1px #808080',
+                        borderRadius: '5px',
+                        paddingLeft: '.2rem',
+                        letterSpacing: '.09rem'
                     }}>
-                    <option value="size 1">size 1</option>
-                    <option value="size 2">size 2</option>
-                    <option value="size 3">size 3</option>
+                    <option value='5x7'>5x7"</option>
+                    <option value='8x10'>8x10"</option>
+                    <option value='11x14'>11x14"</option>
                 </select>
                 </div>
 
                 <div>
                     {/* TODO logic to have no negative numbers */}
-                <label>Quantity</label>
+                <label>Quantity:</label>
                 <input 
                     type="number" 
                     placeholder="0" 
                     name="Quantity" 
                     ref={register({required: true})}
                     style={{
-                        width: '20%'
+                        width: '20%',
+                        backgroundColor: '#151515',
+                        color: '#fff',
+                        border: 'solid 1px #808080',
+                        borderRadius: '5px',
+                        paddingLeft: '.3rem'
                     }} />
                 </div>
                 

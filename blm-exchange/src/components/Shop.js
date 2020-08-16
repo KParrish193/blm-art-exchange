@@ -21,21 +21,23 @@ function Shop(){
                     {products.map((product) => (
                         <ProductCard className ="product-card" key={product.id}>
                             <Link to={`/shop/print/${product.id}`}>
-                                
                                 <div className="mobile-card">
                                     <h4>{product.title}</h4>
                                     <h5 key={product.artistID}>
                                         {product.artistID.firstName} {product.artistID.lastName}
                                     </h5>
                                 </div>
-                                <DarkOverlay className="overlay">
+                                
                                 <ThumbnailContainer>
-
+                                    <div>
+                                    <h4>{product.title}</h4>
+                                    <h5 key={product.artistID}>
+                                        {product.artistID.firstName} {product.artistID.lastName}
+                                    </h5>
+                                    </div>
+                                    
                                     <ProductImg src={`${product.image.formats.small.url}`} />
-                                
                                 </ThumbnailContainer>
-                                </DarkOverlay>
-                                
                             </Link>
                         </ProductCard>
                     ))}

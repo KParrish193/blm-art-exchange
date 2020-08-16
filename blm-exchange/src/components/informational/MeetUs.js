@@ -10,7 +10,8 @@ import emily from '../../assets/team/TEAM_CIR-EY.png';
 import shilpa from '../../assets/team/TEAM_CIR-SKA.png';
 import shirleen from '../../assets/team/TEAM_CIR-SB.png';
 import swathi from '../../assets/team/TEAM_CIR-SKR.png';
-// import sydney from '../../assets/team/sydney.jpg';
+import sydney from '../../assets/team/sydney.jpg';
+import zuriya from '../../assets/team/zuriya.jpg';
 
 
 // get instagram feed
@@ -130,14 +131,14 @@ function Insta() {
                         <h4>
                         Sydney Hale
                         </h4>
-                        <a href="https://www.instagram.com/" target="blank">
-                        @
+                        <a href="https://www.instagram.com/bijou_opalfolio" target="blank">
+                        @bijou_opalfolio
                         </a>
                         </div>
                         <div>
-                        {/* <AboutUsImg /> */}
+                        <AboutUsImg src={sydney} alt="photo of sydney"  />
                         <p>
-                        Sydney “Bijou” Hale (she/her) is a Black Brooklyn-based artist/nanny on the ARTxBLM social media team. She has been drawing all her life,    
+                        Sydney “Bijou” Hale (she/her) is a Black artist and baby nanny living her best life in Flatbush, Brooklyn. She draws and sells portraits of all the happy families she works for in Prospect Park and reads about Stacey Abrams, Michelle Obama, and Ava Duvernay when she puts her nanny children down for naps. She is working on a children's book and an Angela Davis-sized afro. You can find her at work on the ARTXBLM social media and marketing team.
                         </p>
                         </div>
                     </AboutUsTeamContainer>
@@ -155,6 +156,26 @@ function Insta() {
                         <AboutUsImg src={kp} alt="photo of KP"  />
                         <p>
                         Kristin “KP” Parrish (she/they) is currently finishing their coursework in the Full Stack Web Development program at Lambda School remotely from Salt Lake City, Utah after having completed a Bachelor’s degree in Marketing at Boise State University. They serve as a Full Stack Web Developer for ArtxBLM and when not building websites they can be found skating with Wasatch Roller Derby, paddleboarding on a calm lake with their pitbull, Tallahassee, or cuddling their three cats, Arbi, Hemingway, and Kip.
+                        </p>
+                        </div>
+                    </AboutUsTeamContainer>
+
+                    <AboutUsTeamContainer>
+                        <div className="title">
+                        <h4>
+                        Zuriya Haider
+                        </h4>
+                        <a href="https://www.instagram.com/zurixart/" target="blank" >
+                        @zurixart
+                        </a>
+                        <a href="https://www.instagram.com/zuripics/" target="blank" >
+                        @zuripics
+                        </a>
+                        </div>
+                        <div>
+                        <AboutUsImg src={zuriya} alt="photo of zuriya"/>
+                        <p>
+                        Zuriya Haider (she/her) is a data analyst working in the retail tech space currently based out of Raleigh, North Carolina. She has a background in statistics and analytics and is interested in the intersection of social justice, art and design, and behavioral analytics. Outside of working her 9-5, she spends her free time as a photographer and digital artist and is always looking for ways to expand her creativity.  Zuriya works on the Social Media team.
                         </p>
                         </div>
                     </AboutUsTeamContainer>

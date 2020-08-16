@@ -30,7 +30,6 @@ function PrintDetail(){
     console.log(errors);
     // TODO edit handlesubmit to send size, price, title, printID to cart
 
-
     return(
         <PrintDetailContainer >
         
@@ -41,16 +40,18 @@ function PrintDetail(){
             <div>
                 <p>{detail.description}</p>
             </div>
-            <div className="tags-container">
-            
-            {function TagLogic() {
-                if (`${Object.values(detail.artistID.blackArtist)}` === true) {
-                    return(
-                        <TagButton>Black Artist</TagButton>
-                    )}
-            }}
 
-            <TagButton>{detail.medium}</TagButton>
+            <div 
+                className="tags-container">
+                    <TagButton
+                        style={{
+                            display: `${detail.artistID.blackArtist}` === true ? 'block' : 'none'
+                        }}>Black Artist</TagButton>
+            
+                    <TagButton 
+                        style={{
+                            display: `${detail.medium}` === 'null' ? 'none' : 'block'
+                    }}>{detail.medium}</TagButton>
 
             </div>
         </PrintDisplay>
@@ -59,7 +60,7 @@ function PrintDetail(){
             <div className="container">
             <div className="print-heading">
                 <h3>{detail.title}</h3>
-                <Link to="">
+                <Link to={`/artists/${detail.artistID.id}`}>
                 <h4>{Object.values(detail.artistID.firstName)} {Object.values(detail.artistID.lastName)}</h4>
                 </Link>
             </div>

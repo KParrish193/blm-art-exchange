@@ -659,9 +659,14 @@ export const ProductCard = styled.div`
     justify-content: center;
     align-items: center;
     margin: 3rem;
-    position: relative;
-    object-fit: cover;
-    // border: orange solid 3px;
+    // position: relative;
+    // object-fit: cover;
+    background-color: #000;
+    z-index: 0;
+
+    a {
+        z-index: 0;
+    }
 
     h4 {
         color: #fff;
@@ -676,7 +681,11 @@ export const ProductCard = styled.div`
     }
 
     @media (max-width: 800px){
-        margin: 0.25rem;
+        margin: 0.75rem;
+    }
+
+    @media (max-width: 700px){
+        margin: 0.5rem;
     }
     
     @media (max-width: 500px){
@@ -696,7 +705,6 @@ export const ProductCard = styled.div`
             flex-direction: column;
             justify-content; center;
             align-items: center;
-            // border: solid limegreen 1px;
 
             h4 {
                 width: 100%;
@@ -711,18 +719,56 @@ export const ProductCard = styled.div`
     }
 `
 
-export const DarkOverlay = styled.div`
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.9);
-    // border: pink solid 3px;
-`
-
 export const ThumbnailContainer = styled.div`
     position: relative;
     width: 300px;
     height: 300px;
     overflow: hidden;
     object-fit: cover;
+    background-color: #000;
+    color: #fff;
+    z-index: 1;
+    display: inline-block;
+
+    div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #000;
+        opacity: 0;
+
+        h4, h5 {
+            padding: 0 .9rem;
+        }
+        
+        :hover {
+            opacity: 0.75;
+            transition: .16s all 0.025s;
+
+            h4, h5 {
+                opacity: 1.0;
+            }
+        }
+
+        @media (max-width: 500px){
+            display: none;
+        }
+    }
+
+    h4, h5 {
+        color: #fff;
+
+    }
+
+    h5 {
+        margin-top: 1rem;
+    }
 
     @media (max-width: 1585px){
         width: 250px;
@@ -730,8 +776,8 @@ export const ThumbnailContainer = styled.div`
     }
 
     @media (max-width: 1150px){
-        width: 225px;
-        height: 225px;
+        width: 215px;
+        height: 215px;
     }
 
     @media (max-width: 800px){
@@ -748,11 +794,14 @@ export const ProductImg = styled.img`
     height: 100%;
     width: 100%;
     object-fit: cover;
+    z-index: -2;
     
     -webkit-transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
         transform: translate(-50%,-50%);
 `
+
+
 
 //print detail styling
 export const PrintDetailContainer = styled.div`
@@ -789,7 +838,7 @@ export const PrintDisplay = styled.div`
     @media(max-width: 700px) {
         width: 100%;
         height: 100%;
-        padding: 1rem 0;
+        padding: 1rem 0 0;
     }
     
     img {
@@ -807,10 +856,14 @@ export const PrintDisplay = styled.div`
         justify-content: center;
         align-items: center;
         margin: 1rem 0;
+
+        @media (max-width: 700px) {
+            margin: 0.75rem 0 0;
+        }
     }
 
     div.tags-container{ 
-        display: none;
+        display: flex;
         flex-direction: row;
     }
 
@@ -832,7 +885,8 @@ export const PrintContent = styled.div`
         width: 100%;
         margin-left: 0;
         height: 100%;
-        padding: 2rem 0;
+        padding: 1.5rem 0;
+        margin: 0;
     }
 
     div.container {
@@ -845,6 +899,7 @@ export const PrintContent = styled.div`
         @media(max-width: 700px) {
             width: 75%;
             padding: 0;
+            height: 100%;
         }
     }
 
@@ -868,6 +923,10 @@ export const PrintContent = styled.div`
 
             @media(max-width: 1200px) {
                 margin-bottom: .5rem; 
+            }
+
+            @media(max-width: 700px) {
+                margin-bottom: .3rem; 
             }
         }
 

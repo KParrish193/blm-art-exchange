@@ -9,6 +9,9 @@ import { PhotoGrid, ProductCard, ProductImg, ListPageContainer, ThumbnailContain
 
 function Shop(){
     const { products } = useContext(ProductContext)
+    var _ = require("underscore");
+    const shuffledProducts = _.shuffle(products)
+    console.log('shuffled', shuffledProducts)
 
     return(
         <ListPageContainer>
@@ -18,7 +21,8 @@ function Shop(){
 
             <div className="shop-container">
                 <PhotoGrid className="product-card-container">
-                    {products.map((product) => (
+                    
+                    {shuffledProducts.map((product) => (
                         <ProductCard className ="product-card" key={product.id}>
                             <Link to={`/shop/print/${product.id}`}>
                                 <div className="mobile-card">

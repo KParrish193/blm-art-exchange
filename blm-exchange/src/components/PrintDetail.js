@@ -33,9 +33,9 @@ function PrintDetail(){
     return(
         <PrintDetailContainer >
         
-        {printByID.map((detail) => (
-        <PrintContainer>
-        <PrintDisplay key={detail.id}>
+        {printByID.map((detail, id) => (
+        <PrintContainer key={id}>
+        <PrintDisplay >
             <img src={detail.image.formats.small.url}/>
             <div>
                 <p>{detail.description}</p>

@@ -148,6 +148,7 @@ export const MobileContainer = styled.div`
         background-color: #000;
         color: #fff;
         border-bottom: solid #0d0d0d 0.5px;
+        z-index: 99;
     }
 
     a.cart {
@@ -710,6 +711,7 @@ export const ProductCard = styled.div`
                 width: 100%;
                 text-align: center;
                 font-size: 1.3rem;
+                font-style: italic;
             }
 
             h5 {
@@ -745,6 +747,10 @@ export const ThumbnailContainer = styled.div`
 
         h4, h5 {
             padding: 0 .9rem;
+        }
+
+        h4 {
+            font-style: italic;
         }
         
         :hover {
@@ -930,6 +936,10 @@ export const PrintContent = styled.div`
             }
         }
 
+        h3 {
+            font-style: italic;
+        }
+
         a {
             text-decoration: none;
             color: #fff;
@@ -1005,7 +1015,10 @@ export const ArtistProfileContainer = styled.div`
         display:flex;
         flex-direction: column;
         padding: 2.5rem 2rem 2.5rem;
+        height: 60vh;
     }
+
+    // need to fix style in mobile
 `
 
 export const CarouselContainer = styled.div`

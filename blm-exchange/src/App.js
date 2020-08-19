@@ -14,14 +14,16 @@ import { HomeContainer } from './global styles/index'
 import Header from './components/headers/Header';
 import MobileHeader from './components/headers/MobileHeader';
 import Footer from './components/footers/Footer';
+
 import Landing from './components/informational/Landing.js';
 import About from './components/informational/About.js';
 import FAQ from './components/informational/FAQ.js';
 import MeetUs from './components/informational/MeetUs.js';
+import CodeOfConduct from './components/informational/CodeOfConduct';
 
+import ArtistTerms from './components/artistsPortal/ArtistTerms';
 import ArtistForm from './components/artistsPortal/ArtistForm';
 import Login from './components/artistsPortal/Login';
-import CodeOfConduct from './components/artistsPortal/CodeOfConduct';
 import UploadForm from './components/artistsPortal/UploadForm';
 import ArtistDashboard from './components/artistsPortal/ArtistDashboard';
 
@@ -31,6 +33,8 @@ import Shop from './components/Shop';
 import PrintDetail from './components/PrintDetail';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
+
+import CustTerms from './components/customers/CustomerTerms';
 import CustLogin from './components/customers/CustLogin';
 import Orders from './components/customers/Orders';
 import TransitionModal from './components/TransitionModal';
@@ -93,6 +97,8 @@ function App() {
           <Route path="/about" component={ About } />
           <Route path="/FAQ" component={ FAQ } />
           <Route path="/meet-the-team" component={ MeetUs } />
+          <Route path="/cocmodal" component={ TransitionModal } />
+          <Route path="/coc" component={ CodeOfConduct } />
 
           {/* shop */}
           <Route exact path="/shop" component={ Shop } />
@@ -101,14 +107,17 @@ function App() {
           <Route path="/artists/:id" component={ ArtistProfile } />
           <Route path="/cart" component={ Cart } />
           <Route path="/checkout" component={ Checkout } />
+          
+          {/* customer */}
+          <Route path="/customer/terms" component={CustTerms} />
           <Route path="/customer/login" component={CustLogin} />
           <Route path="/customer/:id" component={Orders} />
+
 
           {/* artist */}
           <Route path="/artist/login" component={ Login } />
           <Route path="/artist/sign-up" component={ ArtistForm } />
-          <Route path="/coc" component={ CodeOfConduct } />
-          <Route path="/cocmodal" component={ TransitionModal } />
+          <Route path="/artist/terms" component={ArtistTerms} />
           <PrivateRoute path ="/artist/:id/dashboard" component={ ArtistDashboard } />
           <PrivateRoute path="/artist/:id/upload" component={ UploadForm } />
 

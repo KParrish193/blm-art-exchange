@@ -748,6 +748,10 @@ export const ThumbnailContainer = styled.div`
         h4, h5 {
             padding: 0 .9rem;
         }
+
+        h4 {
+            font-style: italic;
+        }
         
         :hover {
             opacity: 0.75;

@@ -1005,7 +1005,10 @@ export const ArtistProfileContainer = styled.div`
         display:flex;
         flex-direction: column;
         padding: 2.5rem 2rem 2.5rem;
+        height: 60vh;
     }
+
+    // need to fix style in mobile form
 `
 
 export const CarouselContainer = styled.div`

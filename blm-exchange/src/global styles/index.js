@@ -332,7 +332,7 @@ export const CallToAction = styled.div`
         @media (max-width: 800px){
             padding: 2rem 3.4rem;
             width: 100%;
-            border: #9C9C9C solid 1px;
+            // border: #9C9C9C solid 1px;
         }
     }
 

@@ -16,16 +16,27 @@ function PrintDetail(){
     const { addItem } = useContext(CartContext)
     const { id } = useParams()
 
-    const [price, setPrice] = useState("$0.00");
-    // TODO write function to dynamically render price on size selection
+    // state for price
+    const [price, setPrice] = useState();
 
-    console.log('print detail', products)
+    const sizeToPrice = {
+        '5x7': '$15.00', 
+        '8x8': '$25.00', 
+        '8x10': '$25.00', 
+        '11x14': '$40.00'
+    }
+    // update price on change
+    const selectChange = e => {
+        e.preventDefault();
+        setPrice(sizeToPrice[e.target.value])
+    }
 
     // filter of products to narrow down product by id
     const printByID = products.filter(print => print.id == id);
         console.log('artist by id', printByID)
 
     const { register, handleSubmit, errors } = useForm();
+    
     const onSubmit = data => console.log(data);
     console.log(errors);
     // TODO edit handlesubmit to send size, price, title, printID to cart
@@ -70,9 +81,10 @@ function PrintDetail(){
                 <div>
                 <label>Size:</label>
                 <select 
+                    onChange={selectChange}
                     name="Size"
                     ref={register({ required: true })}
-                    placeholder="select"
+                    defaultValue="select size"
                     style={{
                         width: '35%',
                         backgroundColor: '#151515',
@@ -82,9 +94,12 @@ function PrintDetail(){
                         paddingLeft: '.2rem',
                         letterSpacing: '.09rem'
                     }}>
+                    <option value='select size'>- Select Size -</option>
                     <option value='5x7'>5x7"</option>
+                    <option value='8x8'>8x8"</option>
                     <option value='8x10'>8x10"</option>
                     <option value='11x14'>11x14"</option>
+
                 </select>
                 </div>
 

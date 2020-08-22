@@ -15,12 +15,17 @@ function Landing(){
         <LandingContainer>
             <LandingContent>
                 <LandingTextContent>
-                    <div>
+                    <div style={{
+                        backgroundColor: 'rgba(0, 0, 0, 0.25)'
+                    }}>
                         <h3>Art x BLM</h3>
                         <h5>Artists. Activists. Allies.</h5>
                     </div>
 
-                    <div>
+                    <div
+                    style={{
+                        backgroundColor: 'rgba(0, 0, 0, 0.25)'
+                    }}>
                         <h6>
                             Welcome to ArtxBLM, a collective of artists and organizers who believe in the power 
                             of art to enact social change. With every purchase, 100% of profits go towards anti-racist causes 
@@ -45,21 +50,8 @@ function Landing(){
                     <Link to="/artists">Artists</Link>
                 </LandingButton>
             </MobileLandingButtonContainer>
-            </LandingTextContent>
 
-            <CallToActionCarousel>
-            <Carousel
-                style={{
-                    width: '100%',
-                    height: '45vh',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'center',
-                    alignItems: 'center'
-                }}>
-            
-                <Carousel.Item>
-                    <CallToAction>
+            <CallToAction className="reg">
                     <div>
                     <h4>Want your work to be featured? </h4>
                     <h6>We're looking for talented artists to contribute to the cause. </h6>
@@ -69,15 +61,34 @@ function Landing(){
                         </Link>
                     </p>
                     </div>
-                    </CallToAction>
-                </Carousel.Item>
+            </CallToAction>
+
+            </LandingTextContent>
+
+
+
+            <CallToActionCarousel>
+            <Carousel
+                style={{
+                    width: '100%',
+                    height: '45vh',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                }}>
                 
-                <Carousel.Item>
+                <Carousel.Item
+                    style={{
+                        borderRadius: '15px'
+                    }}>
                     <CallToAction>
                     <CharityImg src={Charity1} />
                     <div>
                     <h5>Meet the first round of organizations we'll be donating to:</h5>
+                    <a href="">
                     <h4>Activist Medical Fund</h4>
+                    </a>
                     <h6>
                     The Activist Medical Fund is currently in the Dallas-Fort Worth area and is looking to expand to other cities in Texas. They help activists who have been injured in protests against police brutality by contributing to their medical bills. The fund was created in response to excessive force against protestors.
                     </h6>
@@ -85,12 +96,17 @@ function Landing(){
                     </CallToAction>
                 </Carousel.Item>
             
-                <Carousel.Item>
+                <Carousel.Item
+                    style={{
+                        borderRadius: '15px'
+                    }}>
                     <CallToAction>
                     <CharityImg src={Charity2} />
                     <div>
                     <h5>Meet the first round of organizations we'll be donating to:</h5>
+                    <a href="">
                     <h4>The Audre Lorde Project</h4>
+                    </a>
                     <h6>
                     The Audre Lorde Project is an LGBTQI+  organization specific to people of color in the NYC area. They have a multitude of projects that need funding right now including an anti-violence program challenging hate and police violence by using community-based strategies, rather than police or political outreach programmes to promote trans justice. 
                     </h6>
@@ -98,12 +114,17 @@ function Landing(){
                     </CallToAction>
                 </Carousel.Item>
 
-                <Carousel.Item>
+                <Carousel.Item
+                style={{
+                    borderRadius: '15px'
+                }}>
                     <CallToAction>
                     <CharityImg className="nbo" src={Charity3} />
                     <div>
                     <h5>Meet the first round of organizations we'll be donating to:</h5>
+                    <a href="">
                     <h4>National Bail Out Fund</h4>
+                    </a>
                     <h6>The National Bail Out fund is a Black-led and Black-centered collective of abolitionist organizers, lawyers and activists. They provide bail for people of color, who have been arrested and work to create fellowship and employment opportunities for the people they have bailed out. </h6>
                     </div>
                     </CallToAction>
@@ -112,7 +133,6 @@ function Landing(){
             </CallToActionCarousel>
 
 
-      
             </LandingContent>
         </LandingContainer>
     )

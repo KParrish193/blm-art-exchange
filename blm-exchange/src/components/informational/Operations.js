@@ -36,3 +36,5 @@ function Operations() {
         </AboutUsContainer>
     )
 }
+
+export default Operations

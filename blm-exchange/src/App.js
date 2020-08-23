@@ -18,7 +18,6 @@ import Footer from './components/footers/Footer';
 import Landing from './components/informational/Landing.js';
 import About from './components/informational/About.js';
 import FAQ from './components/informational/FAQ.js';
-import MeetUs from './components/informational/MeetUs.js';
 import Operations from './components/informational/Operations.js';
 import DigitalMarketing from './components/informational/DigitalMarketing.js';
 import Legal from './components/informational/Legal.js';
@@ -100,7 +99,6 @@ function App() {
           <Route path="/blm-art-exchange" component={ Landing } />
           <Route path="/about" component={ About } />
           <Route path="/FAQ" component={ FAQ } />
-          <Route path="/meet-the-team" component={ MeetUs } />
           <Route path="/operations" component={ Operations } />
           <Route path="/digitalmarketing" component={ DigitalMarketing } />
           <Route path="/legal" component={ Legal } />

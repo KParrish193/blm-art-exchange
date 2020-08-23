@@ -56,6 +56,16 @@ function DigitalMarketing() {
                             <p>Zuriya Haider (she/her) is a data analyst working in the retail tech space currently based out of Raleigh, North Carolina. She has a background in statistics and analytics and is interested in the intersection of social justice, art and design, and behavioral analytics. Outside of working her 9-5, she spends her free time as a photographer and digital artist and is always looking for ways to expand her creativity.  Zuriya works on the Social Media team.</p>
                         </div>
                     </AboutUsTeamContainer>
+                    <AboutUsTeamContainer className="reverse">
+                        <div className="title">
+                            <h4>Siena Scarbrough</h4>
+                            <a href="https://www.instagram.com/sienascar/" target="blank" >@sienascar</a>
+                        </div>
+                        <div>
+                            {/* <AboutUsImg src={siena} alt="photo of siena"/> */}
+                            <p>Siena Scarbrough (she/her) is a public relations professional with a special passion for UX and UI design. While finishing her UX design program through DesignLab, she is helping to design an accessible, enjoyable, informative website as well as supporting digital marketing efforts. Siena is currently located in Inglewood, CA where she can be found hiking, beach walking, and trying to fill her home with plants without killing them.</p>
+                        </div>
+                    </AboutUsTeamContainer>
                 </MeetUs>
         </AboutUsTextContent>
         </AboutUsContainer>

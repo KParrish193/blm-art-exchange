@@ -449,6 +449,28 @@ export const AboutNavContainer = styled.div`
         transition: .16s all 0.025s;
     }
 `
+export const TeamNavContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0 2rem;
+    width: 100%;
+    text-align: center;
+
+    a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.2rem;
+        width: 25%;
+        padding-bottom: 0.5rem;
+    }
+
+    a:hover {
+        border-bottom: 2px solid #990000;
+        transition: .16s all 0.025s;
+    }
+`
 
 export const AboutUsContainer = styled.div`
     display: flex;

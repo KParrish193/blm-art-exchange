@@ -129,7 +129,7 @@ function ArtistForm(){
                     <div>
                         <label className="text main">Social Media Handles</label>
                         <input className="text" type="text" placeholder="@" name="profile" ref={register({required: false, pattern: /^[^@]+$/ })} />
-                        {errors.profile && errors.profile.type == "pattern" && <span className="error">Do not include the @ symbol in your entry.</span>}
+                        {errors.profile && errors.profile.type === "pattern" && <span className="error">Do not include the @ symbol in your entry.</span>}
                     </div>
 
                     <div>

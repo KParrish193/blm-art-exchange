@@ -17,7 +17,7 @@ function AboutNav(){
     </NavLink>
     
     <NavLink 
-        to="/meet-the-team"               
+        to="/operations"               
         activeStyle={{
         fontWeight: "bold",
         color: "#fff",

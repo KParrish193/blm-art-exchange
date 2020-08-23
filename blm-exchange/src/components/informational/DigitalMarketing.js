@@ -1,11 +1,12 @@
 import React from 'react';
 import { AboutUsContainer, AboutUsTextContent, MeetUs, AboutUsTeamContainer, AboutUsImg  } from '../../global styles/index'
 import TeamNav from './TeamNav'
+import AboutNav from './AboutNav'
 
 import shirleen from '../../assets/team/TEAM_CIR-SB.png';
 import emily from '../../assets/team/TEAM_CIR-EY.png';
-import sydney from '../../assets/team/sydney.jpg';
-import zuriya from '../../assets/team/zuriya.jpg';
+import sydney from '../../assets/team/TEAM_CIR-SH.png';
+import zuriya from '../../assets/team/TEAM_SQ-ZH-18.png';
 
 function DigitalMarketing() {
     return(
@@ -14,8 +15,7 @@ function DigitalMarketing() {
             <AboutNav />
             <TeamNav />
             <MeetUs>
-                    <h3><b>Meet the Team</b></h3>
-                    <AboutUsTeamContainer className="reverse">
+                    <AboutUsTeamContainer>
                         <div className="title">
                             <h4>Shirleen Bredée</h4>
                             <a href="https://www.instagram.com/shir_lynx/" target="blank" >@shir_lynx</a>
@@ -45,7 +45,7 @@ function DigitalMarketing() {
                             <p>Sydney “Bijou” Hale (she/her) is a Black artist and baby nanny living her best life in Flatbush, Brooklyn. She draws and sells portraits of all the happy families she works for in Prospect Park and reads about Stacey Abrams, Michelle Obama, and Ava Duvernay when she puts her nanny children down for naps. She is working on a children's book and an Angela Davis-sized afro. You can find her at work on the ARTXBLM social media and marketing team.</p>
                         </div>
                     </AboutUsTeamContainer>
-                    <AboutUsTeamContainer>
+                    <AboutUsTeamContainer className="reverse">
                         <div className="title">
                             <h4>Zuriya Haider</h4>
                             <a href="https://www.instagram.com/zurixart/" target="blank" >@zurixart</a>

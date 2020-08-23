@@ -1,6 +1,7 @@
 import React from 'react';
 import { AboutUsContainer, AboutUsTextContent, MeetUs, AboutUsTeamContainer, AboutUsImg  } from '../../global styles/index'
 import TeamNav from './TeamNav'
+import AboutNav from './AboutNav'
 
 import safiyyah from '../../assets/team/TEAM_CIR-SN.png';
 import swathi from '../../assets/team/TEAM_CIR-SKR.png';
@@ -11,7 +12,7 @@ function Operations() {
             <AboutUsTextContent>
                 <AboutNav />
                 <TeamNav />
-                    <h3><b>Meet the Team</b></h3>
+                <MeetUs>
                     <AboutUsTeamContainer>
                         <div className="title">
                             <h4>Safiyyah Nawaz</h4>
@@ -32,6 +33,7 @@ function Operations() {
                             <p>Swathi Krothapalli (she/her) is a technology/strategy consultant based out of Washington D.C. Since she was a child, Swathi had a passion for art whether it was through painting, printmaking, or visual journaling, she loves to explore different styles and methods of expressing her creativity. Swathi acts on the Social Media Team and the Process Operations team.</p>
                         </div>
                     </AboutUsTeamContainer>
+                </MeetUs>
             </AboutUsTextContent>
         </AboutUsContainer>
     )

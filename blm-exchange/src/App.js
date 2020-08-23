@@ -19,6 +19,10 @@ import Landing from './components/informational/Landing.js';
 import About from './components/informational/About.js';
 import FAQ from './components/informational/FAQ.js';
 import MeetUs from './components/informational/MeetUs.js';
+import Operations from './components/informational/Operations.js';
+import DigitalMarketing from './components/informational/DigitalMarketing.js';
+import Legal from './components/informational/Legal.js';
+import Development from './components/informational/Development.js';
 import CodeOfConduct from './components/informational/CodeOfConduct';
 
 import ArtistTerms from './components/artistsPortal/ArtistTerms';
@@ -97,6 +101,10 @@ function App() {
           <Route path="/about" component={ About } />
           <Route path="/FAQ" component={ FAQ } />
           <Route path="/meet-the-team" component={ MeetUs } />
+          <Route path="/operations" component={ Operations } />
+          <Route path="/digitalmarketing" component={ DigitalMarketing } />
+          <Route path="/legal" components={ Legal } />
+          <Route path="/development" components={ Development } />
           <Route path="/cocmodal" component={ TransitionModal } />
           <Route path="/coc" component={ CodeOfConduct } />
 

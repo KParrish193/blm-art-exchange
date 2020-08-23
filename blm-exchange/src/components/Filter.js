@@ -51,32 +51,32 @@ function Filter() {
             </DesktopFilterContainer>
             
             <MobileFilter>
+                <div>
                 <TagButton onClick={toggleTag} value="black artists">
                     Black Artists
                 </TagButton>
-                <TagButton onClick={toggleTag} value="lgbtq artists">
-                    LGBTQIA+ Artists  
-                </TagButton>
-                <TagButton>
+                </div>
+                <div>
+                <TagButton onClick={toggleTag} value="Exchange" className="medium">
                     Exchange   
                 </TagButton>
-                <TagButton onClick={toggleTag} value="photography">
+                <TagButton onClick={toggleTag} value="photography" className="medium">
                     Photography   
                 </TagButton>
-                <TagButton>
+                <TagButton onClick={toggleTag} value="digital art" className="medium">
                     Digital Art 
                 </TagButton>
-                <TagButton>
+                <TagButton onClick={toggleTag} value="painting & mixed" className="medium">
                     Painting & Mixed Media   
                 </TagButton>
-                <TagButton>
+                <TagButton onClick={toggleTag} value="design and illustration" className="medium">
                     Design & Illustration
                 </TagButton>
-                <TagButton>
+                <TagButton onClick={toggleTag} value="drawing" className="medium">
                     Drawing
                 </TagButton>
+                </div>
             </MobileFilter>
-
         </div>
     )
 }

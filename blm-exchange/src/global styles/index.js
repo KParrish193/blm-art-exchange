@@ -148,6 +148,7 @@ export const MobileContainer = styled.div`
         background-color: #000;
         color: #fff;
         border-bottom: solid #0d0d0d 0.5px;
+        z-index: 99;
     }
 
     a.cart {
@@ -233,34 +234,31 @@ export const MobileLandingButtonContainer = styled.div`
 `
 
 export const LandingContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem 30px 0;
     color: #fff;
-    min-height: 100vh;
-    background-image: url(${background});
+    min-height: 80vh;
+    background: url(${background}) no-repeat top center;
     background-size: cover;
-    text-align: center;
+    background-attachment: fixed;
+    z-index: 0;
 
     @media (max-width: 800px){
         display: flex;
-        flex-direction: column;
-        padding: 15px 30px 30px 30px;
     }
 `
 
 export const LandingContent = styled.div`
-    width: 55%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.25);
+    width: 100%;
+    min-height: 80vh;
+    background-color: rgba(0, 0, 0, 0.15);
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between; 
+    align-items: center;
+    position: relative;
 
     @media (max-width: 700px){
         width: 100%;
+        padding: .2rem 3rem;
     }
 `
 
@@ -268,6 +266,8 @@ export const LandingTextContent = styled.div`
     display: flex;
     flex-direction: column;
     text-align: center;
+    width: 45%;
+    position: relative;
 
     h3 {
         font-size: 44px;
@@ -276,7 +276,6 @@ export const LandingTextContent = styled.div`
 
     h5 {
         margin-top: 1rem;
-        positive: relative;
         font-size: 30px;
         text-align: center;
     }
@@ -291,28 +290,87 @@ export const LandingTextContent = styled.div`
     }
 `
 
+export const CallToActionCarousel = styled.div`
+    width: 100%;
+    height: 45vh;
+`
 
 export const CallToAction = styled.div`
+    height: 40vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
+    width: 100%;
+
+    button {
+        margin-top: 1rem;
+
+        @media (max-width: 800px){
+            margin-top: .5rem;
+        }
+    }
+
+    div {
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 40%;
+        padding: 1rem;
+        background-color: rgba(0, 0, 0, 0.75);
+
+        @media (max-width: 800px){
+            padding: 2rem 3.4rem;
+            width: 100%;
+            border-radius: 15px;
+        }
+    }
 
     @media (max-width: 800px){
-        margin-top: 3rem;
         width: 100%;
     }
 
-    @media (max-width: 500px)
-    {
-        margin-top: 1.5rem;
+    h3 {
+        font-size: 44px;
+        text-align: center;
     }
 
-    h5, h6 {
-        margin-top: 1rem;
+    h5 {
+        margin: 1rem 0 1.5rem;
+        font-size: 15px;
+        font-style: italic;
+        text-align: center;
+
+        @media (max-width: 800px){
+            margin: .75rem 0 1rem;
+        }
     }
 
-    p {
-        margin-top: 1rem;
+    h6 {
+        font-size: 20px;
+        text-align: center;
+        margin: 1rem 0;
+
+        @media (max-width: 800px){
+            font-size: 18px;
+        }
+    }
+
+    .nbo {
+        background-color: #fff;
+        padding: .3rem .35rem 0rem .2rem;
+        height: 6rem;
+        width: auto;
+    }
+`
+
+export const CharityImg = styled.img`
+    width: 10rem;
+
+    @media (max-width: 800px){
+        display: none;
     }
 `
 
@@ -659,8 +717,6 @@ export const ProductCard = styled.div`
     justify-content: center;
     align-items: center;
     margin: 3rem;
-    // position: relative;
-    // object-fit: cover;
     background-color: #000;
     z-index: 0;
 
@@ -710,6 +766,7 @@ export const ProductCard = styled.div`
                 width: 100%;
                 text-align: center;
                 font-size: 1.3rem;
+                font-style: italic;
             }
 
             h5 {
@@ -745,6 +802,10 @@ export const ThumbnailContainer = styled.div`
 
         h4, h5 {
             padding: 0 .9rem;
+        }
+
+        h4 {
+            font-style: italic;
         }
         
         :hover {
@@ -930,6 +991,10 @@ export const PrintContent = styled.div`
             }
         }
 
+        h3 {
+            font-style: italic;
+        }
+
         a {
             text-decoration: none;
             color: #fff;
@@ -1005,7 +1070,10 @@ export const ArtistProfileContainer = styled.div`
         display:flex;
         flex-direction: column;
         padding: 2.5rem 2rem 2.5rem;
+        height: 60vh;
     }
+
+    // need to fix style in mobile
 `
 
 export const CarouselContainer = styled.div`

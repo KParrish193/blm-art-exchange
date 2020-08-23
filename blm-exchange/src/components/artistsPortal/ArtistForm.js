@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import axios from 'axios';
 
 import { Link } from 'react-router-dom';
 import { PrimaryButton, Form} from '../../global styles/index';
@@ -41,8 +42,13 @@ function validateForm() {
 
 function ArtistForm(){
     const { register, handleSubmit, errors } = useForm();
+    
     const onSubmit = data => console.log(data);
     console.log(errors);
+
+
+    // axios
+    //     .post("https://artxblm-backend.herokuapp.com/")
 
     // edit onsubmit to post to artist endpoint
     // direct to artist dashboard    

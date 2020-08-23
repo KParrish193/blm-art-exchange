@@ -8,8 +8,10 @@ function Legal() {
         <AboutUsContainer>
             <AboutUsTextContent>
                 <AboutNav />
-                <p>placeholder test</p>
                 <TeamNav />
+                <MeetUs>
+                    <p>placeholder test</p>
+                </MeetUs>
             </AboutUsTextContent>
         </AboutUsContainer>
     )

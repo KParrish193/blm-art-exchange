@@ -1,15 +1,8 @@
 import React from 'react';
-import { TeamNavContainer, AboutUsContainer, AboutUsTextContent, MeetUs, AboutUsTeamContainer, AboutUsImg  } from '../../global styles/index'
-import AboutNav from './AboutNav'
-import TeamNav from './TeamNav'
-
 import Operations from './Operations'
-import DigitalMarketing from './DigitalMarketing'
-import Legal from './Legal'
-import Development from './Development'
 
-
-// get instagram feed
+//Displaying Operations page will allow you to navigate to other sites. 
+//This file acts as a placeholder for team structures to show.
 
 function MeetTheTeam() {
     return(

@@ -13,6 +13,7 @@ function Development() {
         <AboutUsTextContent>
             <AboutNav />
             <TeamNav />
+            <MeetUs>
                 <AboutUsTeamContainer>
                     <div className="title">
                         <h4>Ayesha Faisal</h4>
@@ -24,7 +25,7 @@ function Development() {
                     </div>
                 </AboutUsTeamContainer>
 
-                <AboutUsTeamContainer>
+                <AboutUsTeamContainer className="reverse">
                     <div className="title">
                         <h4>Shilpa Kancharla</h4>
                         <a href="https://www.instagram.com/shilpakancharlastudio/" target="blank" >@shilpakancharlastudio</a>
@@ -35,7 +36,7 @@ function Development() {
                     </div>
                 </AboutUsTeamContainer>
 
-                <AboutUsTeamContainer className="reverse">
+                <AboutUsTeamContainer>
                     <div className="title">
                         <h4>Kristin "KP" Parrish</h4>
                         <a href="https://www.instagram.com/rito_thetattooed_burrito/" target="blank" >@rito_thetattooed_burrito</a>
@@ -45,6 +46,8 @@ function Development() {
                         <p>Kristin “KP” Parrish (she/they) is currently finishing their coursework in the Full Stack Web Development program at Lambda School remotely from Salt Lake City, Utah after having completed a Bachelor’s degree in Marketing at Boise State University. They serve as a Full Stack Web Developer for ArtxBLM and when not building websites they can be found skating with Wasatch Roller Derby, paddleboarding on a calm lake with their pitbull, Tallahassee, or cuddling their three cats, Arbi, Hemingway, and Kip.</p>
                     </div>
                 </AboutUsTeamContainer>
+
+            </MeetUs>
         </AboutUsTextContent>
         </AboutUsContainer>
     )

@@ -103,8 +103,8 @@ function App() {
           <Route path="/meet-the-team" component={ MeetUs } />
           <Route path="/operations" component={ Operations } />
           <Route path="/digitalmarketing" component={ DigitalMarketing } />
-          <Route path="/legal" components={ Legal } />
-          <Route path="/development" components={ Development } />
+          <Route path="/legal" component={ Legal } />
+          <Route path="/development" component={ Development } />
           <Route path="/cocmodal" component={ TransitionModal } />
           <Route path="/coc" component={ CodeOfConduct } />
 

@@ -236,7 +236,7 @@ export const MobileLandingButtonContainer = styled.div`
 export const LandingContainer = styled.div`
     color: #fff;
     min-height: 80vh;
-    background: url(${background}) no-repeat top center;
+    background: url(${background}) no-repeat bottom center;
     background-size: cover;
     background-attachment: fixed;
     z-index: 0;
@@ -266,7 +266,7 @@ export const LandingTextContent = styled.div`
     display: flex;
     flex-direction: column;
     text-align: center;
-    width: 45%;
+    width: 50%;
     position: relative;
 
     h3 {
@@ -283,6 +283,20 @@ export const LandingTextContent = styled.div`
     h6 {
         font-size: 20px;
         text-align: center;
+        
+    }
+
+    .reg {
+        margin: 2.5rem 0;
+        width: 100%;
+        height: auto; 
+        background-color: rgba(0, 0, 0, 0.25);
+        border-radius: 15px;
+
+        div {
+            width: 100%;
+            background: none;
+        }
     }
     
     @media (max-width: 800px){
@@ -292,7 +306,7 @@ export const LandingTextContent = styled.div`
 
 export const CallToActionCarousel = styled.div`
     width: 100%;
-    height: 45vh;
+    height: 47vh;
 `
 
 export const CallToAction = styled.div`
@@ -303,28 +317,22 @@ export const CallToAction = styled.div`
     align-items: center;
     width: 100%;
 
-    button {
-        margin-top: 1rem;
-
-        @media (max-width: 800px){
-            margin-top: .5rem;
-        }
-    }
-
     div {
-        border-radius: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-around;
+        justify-content: center;
         width: 40%;
+        height: 100%;
         padding: 1rem;
         background-color: rgba(0, 0, 0, 0.75);
+        border-radius: 15px;
+        
 
         @media (max-width: 800px){
             padding: 2rem 3.4rem;
             width: 100%;
-            border-radius: 15px;
+            // border: #9C9C9C solid 1px;
         }
     }
 
@@ -332,13 +340,8 @@ export const CallToAction = styled.div`
         width: 100%;
     }
 
-    h3 {
-        font-size: 44px;
-        text-align: center;
-    }
-
     h5 {
-        margin: 1rem 0 1.5rem;
+        margin: .5rem 0 .75rem;
         font-size: 15px;
         font-style: italic;
         text-align: center;
@@ -354,8 +357,13 @@ export const CallToAction = styled.div`
         margin: 1rem 0;
 
         @media (max-width: 800px){
-            font-size: 18px;
+            font-size: 17px;
         }
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
     }
 
     .nbo {

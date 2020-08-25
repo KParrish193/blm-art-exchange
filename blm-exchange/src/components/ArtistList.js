@@ -22,6 +22,8 @@ function ArtistList(){
     }, []);
     console.log('line 24', artists)
 
+    const filteredArtists = artists.filter(artist => artist.printID.length > 0);
+
     function compare(a, b) {
         // Use toUpperCase() to ignore character casing
         const artistA = a.firstName.toUpperCase();
@@ -36,22 +38,13 @@ function ArtistList(){
             return comparison;
     }
 
-    const sortedArtists = artists.sort(compare)
+
+    const sortedArtists = filteredArtists.sort(compare)
     
-    var _ = require('underscore')
-    // const shuffledArtists = _.shuffle(artists)
 
-    const artistPrints = artists.map(artist => {
-        return (
-            (_.shuffle(artist.printID))
-        )
-    })
 
-    const shuffledArtistPrints = artistPrints.map(print => {
-        console.log("2nd map", print)
 
-    })
-        // console.log("shuffledPrints", shuffledArtistPrints)
+ 
 
 
     return(
@@ -62,13 +55,16 @@ function ArtistList(){
                 <PhotoGrid className="artist-card-container">
                     {/* map backend data of artists into cards */}
                     {sortedArtists.map(artist => {
+                            var _ = require('underscore')
+                            var shuffledPrints = _.shuffle(artist.printID)
 
                     return (
                     <ArtistCard className="artist-card" key={artist.id}>
                         <Link to={`/artists/${artist.id}`}>
+                        
                         {/* artist card detail */}
                         <div>
-                            {/* <img src={artist.printID[0].image.formats.small.url} /> */}
+                            <img src={shuffledPrints[0].image.formats.small.url} />
                         </div>
                         <div className="name-img">
                         <h4>{artist.firstName} {artist.lastName}</h4>

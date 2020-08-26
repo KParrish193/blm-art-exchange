@@ -3,7 +3,7 @@ import axios from 'axios';
 
 import { Link } from 'react-router-dom';
 
-import { ListPageContainer, PhotoGrid, ArtistCard } from '../global styles/index'
+import { ListPageContainer, PhotoGrid, ArtistCard, ThumbnailContainer, ProductImg } from '../global styles/index'
 
 import Filter from './Filter';
 
@@ -64,12 +64,16 @@ function ArtistList(){
                         
                         {/* artist card detail */}
                         <div>
-                            <img src={shuffledPrints[0].image.formats.small.url} />
-                        </div>
+                            <ThumbnailContainer>
+                                <ProductImg src={`${shuffledPrints[0].image.formats.small.url}`} />
+                            </ThumbnailContainer>
                         <div className="name-img">
+                        <div className="name">
                         <h4>{artist.firstName} {artist.lastName}</h4>
-                        
                         <p>{artist.bio}</p>
+                        </div>
+                        <p className="readMore">More About This Artist</p>
+                        </div>
                         </div>
                         </Link>
                     </ArtistCard>

@@ -727,17 +727,107 @@ export const PhotoGrid = styled.div`
 export const ArtistCard = styled.div`
     display: flex;
     flex-direction: row;
-    width: 45%;
-    padding: .5rem;
-    
-    h4 {
-        color: #fff;
+    width: 40rem;
+    height: 20rem;
+    margin: 3rem;
+    min-width: 500px;
+
+    img {
+        margin-top: .3rem;
     }
 
-    @media(max-width: 500px){
-        width: 75%;
+    @media(max-width: 1500px){
+        width: 29rem;
+        height: 16rem;
+        min-width: 375px;
+        margin: 2rem;
+    }
+
+    @media(max-width: 1150px){
+        width: 24rem;
+        height: 16rem;
+        min-width: 375px;
+    }
+
+    @media(max-width: 900px){
+        width: 30rem;
+        min-width: 400px;
+        margin: 1rem 0;
+        height: 15rem;
+
+        img {
+            margin-top: 0.4rem;
+        }
+    }
+
+    @media(max-width: 600px){
+        width: 27rem;
+        min-width: 375px;
+    }
+
+    div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-height: 100%;
+
+        @media(max-width: 600px){
+            align-items: flex-start;
+        }
+    }
+
+    .readMore {
+        color: #08846D;
+        text-decoration: underline;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .name-img {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 60%;
+        height: 19rem; 
+        padding: 0 0 0 2rem;
+
+        @media(max-width: 1600px){
+            justify-content: flex-start;
+        }
+
+        @media(max-width: 800px){
+            height: 14rem; 
+            padding: 0 0 0 1.2rem;
+        }
+
+        .name {
+            display: flex;
+            flex-direction: column;
+            width: 100;
+        }
+
+        p {
+            text-align: left;
+            width: 100%;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 8;
+            -webkit-box-orient: vertical;
+
+            @media(max-width: 1500px){
+                -webkit-line-clamp: 7;
+            }
+
+            @media(max-width: 600px){
+                -webkit-line-clamp: 6;
+            }
+        }
+
+        h4 {
+            width: 100%;
+            text-align: left;
+        }
     }
 `
 

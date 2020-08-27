@@ -115,7 +115,7 @@ function ArtistProfile(){
             {/* display all artist products to buy, specific to single artist, perhaps artist details like social media. Link to inquiry */}
         <div className="back">
         <Link to="/artists">
-        <ArrowBackIosIcon className="icon"/> Artist List
+        <ArrowBackIosIcon className="icon"/> Artists
         </Link>
         </div>
         <div className="content">

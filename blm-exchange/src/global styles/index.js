@@ -1221,10 +1221,13 @@ export const CarouselContainer = styled.div`
     }
 
     .mobileCarousel {
+        
+    @media(max-width: 550px){
         img {
             width: 90%;
             height: 100%;
         }
+    }
     }
 `
 

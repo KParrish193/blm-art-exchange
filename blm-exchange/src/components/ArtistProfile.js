@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useParams } from 'react-router'; 
 import { Link } from 'react-router-dom';
 
-import { Carousel } from 'react-bootstrap'
+import { Carousel, Media } from 'react-bootstrap'
 
 
 import InstagramIcon from '@material-ui/icons/Instagram';
@@ -13,6 +13,7 @@ import Inquiry from './Inquiry';
 
 import { TagButton, CarouselContainer, ArtistContentContainer, ArtistProfileContainer } from '../global styles'
 
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 
 // carousel styling
 const contentStyle = {
@@ -112,6 +113,12 @@ function ArtistProfile(){
     return(
         <ArtistProfileContainer>
             {/* display all artist products to buy, specific to single artist, perhaps artist details like social media. Link to inquiry */}
+        <div className="back">
+        <Link to="/artists">
+        <ArrowBackIosIcon className="icon"/> Artist List
+        </Link>
+        </div>
+        <div className="content">
         <CarouselContainer
             style={{
                 position: 'relative'
@@ -121,7 +128,7 @@ function ArtistProfile(){
             <Carousel>
                 {artists.printID.map((print) => {
                     return (
-                        <Carousel.Item>
+                        <Carousel.Item className="mobileCarousel">
                             <Link to={`/shop/print/${print.id}`}>
                             <img 
                                 src={`${print.image.formats.small.url}`}
@@ -162,6 +169,7 @@ function ArtistProfile(){
         <p>{artists.bio}</p>
     
         </ArtistContentContainer>
+        </div>
 
         {/* inquiry as modal */}
         {/* <Inquiry /> */}

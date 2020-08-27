@@ -1159,17 +1159,51 @@ export const PrintForm = styled.div`
 export const ArtistProfileContainer = styled.div`
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     height: 80vh;
-    padding: 2rem 3rem 2.5rem;
+    padding: 1rem 3rem 2.5rem;
+
+    .back {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 1rem;
+        padding-left: 3.5rem;
+
+        a {
+        color: #fff;
+        }
+
+        .icon{ 
+            font-size:.7rem;  
+        }
+
+        @media(max-width: 850px){
+            padding-left: 0;
+        }
+    }
+
+    .content {
+        display: flex;
+        flex-direction: row;
+        padding: 2rem 0 3rem;
+    
+        @media(max-width: 850px){
+            display:flex;
+            flex-direction: column;
+            height: 100%;
+        }
+    }
 
     @media(max-width: 850px){
         display:flex;
         flex-direction: column;
-        padding: 2.5rem 2rem 2.5rem;
+        padding: 0.5rem 2rem 2.5rem;
         height: 100%;
     }
+
 `
 
 export const CarouselContainer = styled.div`
@@ -1178,13 +1212,19 @@ export const CarouselContainer = styled.div`
     justify-content: center;
     width: 50%;
     min-width: 500px;
-    height: 100%;
+    height: 65vh;
     color: #fff;
 
     @media(max-width: 850px){
         min-width: 300px;
         width: 100%;
-        height: 80vh;
+    }
+
+    .mobileCarousel {
+        img {
+            width: 90%;
+            height: 100%;
+        }
     }
 `
 
@@ -1253,7 +1293,6 @@ export const ArtistContentContainer = styled.div`
             color: #fff;
             text-decoration: none;
         }
-
     }
 
     p {
@@ -1265,7 +1304,7 @@ export const ArtistContentContainer = styled.div`
     @media(max-width: 850px){
         width: 100%;
         height: 100%;
-        padding: 0 0 2rem 0;
+        padding: 1rem 0 2rem 0;
     }
 `
 

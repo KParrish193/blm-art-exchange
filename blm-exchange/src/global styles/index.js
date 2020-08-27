@@ -1168,10 +1168,8 @@ export const ArtistProfileContainer = styled.div`
         display:flex;
         flex-direction: column;
         padding: 2.5rem 2rem 2.5rem;
-        height: 60vh;
+        height: 100%;
     }
-
-    // need to fix style in mobile
 `
 
 export const CarouselContainer = styled.div`
@@ -1186,7 +1184,7 @@ export const CarouselContainer = styled.div`
     @media(max-width: 850px){
         min-width: 300px;
         width: 100%;
-        height: 40vh;
+        height: 80vh;
     }
 `
 
@@ -1266,7 +1264,8 @@ export const ArtistContentContainer = styled.div`
 
     @media(max-width: 850px){
         width: 100%;
-        padding: 2rem 0;
+        height: 100%;
+        padding: 0 0 2rem 0;
     }
 `
 

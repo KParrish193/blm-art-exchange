@@ -462,15 +462,15 @@ export const TeamNavContainer = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 1rem 0 2rem;
+    margin: 0.5rem 0 1rem;
     width: 100%;
     text-align: center;
 
     a {
         text-decoration: none;
         color: white;
-        font-size: 1.2rem;
-        width: 25%;
+        font-size: 0.8 rem;
+        width: 20%;
         padding-bottom: 0.5rem;
     }
 
@@ -1371,7 +1371,7 @@ export const Form = styled.form`
     }
 
     .error {
-        color: #990000;
+        color: #c70a0a;
     }
 
     span {

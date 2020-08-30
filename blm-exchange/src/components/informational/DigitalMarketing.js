@@ -7,6 +7,8 @@ import shirleen from '../../assets/team/TEAM_CIR-SB.png';
 import emily from '../../assets/team/TEAM_CIR-EY.png';
 import sydney from '../../assets/team/TEAM_CIR-SH.png';
 import zuriya from '../../assets/team/TEAM_SQ-ZH-18.png';
+import siena from '../../assets/team/TEAM_CIR-SS.png';
+import nikhil from '../../assets/team/TEAM_CIR-NK.png';
 
 function DigitalMarketing() {
     return(
@@ -56,14 +58,24 @@ function DigitalMarketing() {
                             <p>Zuriya Haider (she/her) is a data analyst working in the retail tech space currently based out of Raleigh, North Carolina. She has a background in statistics and analytics and is interested in the intersection of social justice, art and design, and behavioral analytics. Outside of working her 9-5, she spends her free time as a photographer and digital artist and is always looking for ways to expand her creativity.  Zuriya works on the Social Media team.</p>
                         </div>
                     </AboutUsTeamContainer>
-                    <AboutUsTeamContainer className="reverse">
+                    <AboutUsTeamContainer>
                         <div className="title">
                             <h4>Siena Scarbrough</h4>
                             <a href="https://www.instagram.com/sienascar/" target="blank" >@sienascar</a>
                         </div>
                         <div>
-                            {/* <AboutUsImg src={siena} alt="photo of siena"/> */}
+                            <AboutUsImg src={siena} alt="photo of siena"/>
                             <p>Siena Scarbrough (she/her) is a public relations professional with a special passion for UX and UI design. While finishing her UX design program through DesignLab, she is helping to design an accessible, enjoyable, informative website as well as supporting digital marketing efforts. Siena is currently located in Inglewood, CA where she can be found hiking, beach walking, and trying to fill her home with plants without killing them.</p>
+                        </div>
+                    </AboutUsTeamContainer>
+                    <AboutUsTeamContainer className="reverse">
+                        <div className="title">
+                            <h4>Nikhil Kanukuntla</h4>
+                            <a href="https://www.instagram.com/nikhil.k_/" target="blank" >@nikhil.k_</a>
+                        </div>
+                        <div>
+                            <AboutUsImg src={nikhil} alt="photo of nikhil"/>
+                            <p>Nikhil (he/him) is a digital marketing tech professional from London. Outside of work he enjoys playing classical guitar, chess and cycling. He works between the ArtxBLM social media and data analytics team and is passionate about effective altruism. </p>
                         </div>
                     </AboutUsTeamContainer>
                 </MeetUs>

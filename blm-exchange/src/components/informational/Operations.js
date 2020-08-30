@@ -5,6 +5,7 @@ import AboutNav from './AboutNav'
 
 import safiyyah from '../../assets/team/TEAM_CIR-SN.png';
 import swathi from '../../assets/team/TEAM_CIR-SKR.png';
+import natalie from '../../assets/team/TEAM_CIR-NJ.png';
 
 function Operations() {
     return(
@@ -31,6 +32,16 @@ function Operations() {
                         <div>
                             <AboutUsImg src={swathi} alt="photo of swathi"/>
                             <p>Swathi Krothapalli (she/her) is a technology/strategy consultant based out of Washington D.C. Since she was a child, Swathi had a passion for art whether it was through painting, printmaking, or visual journaling, she loves to explore different styles and methods of expressing her creativity. Swathi acts on the Social Media Team and the Process Operations team.</p>
+                        </div>
+                    </AboutUsTeamContainer>
+                    <AboutUsTeamContainer>
+                        <div className="title">
+                            <h4>Natalie Jamison</h4>
+                            <a href="https://www.instagram.com/@naaalie_jay" target="blank" >@naaalie_jay</a>
+                        </div>
+                        <div>
+                            <AboutUsImg src={natalie} alt="photo of natalie"/>
+                            <p>Natalie Jamison (she/her) is a Black and Choctaw woman living in Haudenosaunee Confederacy And Pamunkey land, aka Washington DC. She is a jack of all trades with a background in customer service, volunteer coordination, water resource management, and education. When not working, you can find her running DC Denim Hangs and making the denim community more inclusive. Natalie works on the ARTXBLM Operations team.</p>
                         </div>
                     </AboutUsTeamContainer>
                 </MeetUs>

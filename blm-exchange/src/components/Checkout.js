@@ -4,6 +4,8 @@ import StripeCheckout from 'react-stripe-checkout';
 
 import { } from 'react-hook-form';
 
+{ /* secret key - sk_test_51HF2vAF40cwvgCWze38IjgUiR2zEOy15sdsEjzoqkcTMzigv5D3FqDoHq7w90vm1pqCTppD1SkdcxyizAfDZAAl700oGIL7GOR */ }
+
 function Checkout(){
 
     const [product] = React.useState({
@@ -20,7 +22,7 @@ function Checkout(){
         <div>
             {/* checkout of cart */}
             <StripeCheckout 
-                    stripeKey="pk_test_51HBjg8JUF4DG9VOula9dBwMNcMHCTJTDJhou4WwxtJTOaBb1F3nvjNBHV6h3o1v9NVY6sDaswXeCimAzlRRV8DxP00GGsNcZ79"
+                    stripeKey="pk_test_51HF2vAF40cwvgCWzh3DJ6E6yfQMrIptkpRB3K7yFIwS6cxS7Kafdhd8jUJb5O03C3ItnPTEY7TbzOiEKDVd0TjOE00VJNqAysZ"
                     token={handleToken}
                     billingAddress
                     shippingAddress

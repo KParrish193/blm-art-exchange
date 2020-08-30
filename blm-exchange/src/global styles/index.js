@@ -1371,7 +1371,7 @@ export const Form = styled.form`
     }
 
     .error {
-        color: #990000;
+        color: #c70a0a;
     }
 
     span {

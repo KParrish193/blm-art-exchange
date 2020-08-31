@@ -52,7 +52,7 @@ function Development() {
                     </div>
                     <div>
                         <AboutUsImg src={xiaohan} alt="photo of xiaohan"/>
-                        <p></p>
+                        <p>Xiaohan Liu is a second-year graduate student at North Carolina State University. She studies computer science at school, and enjoys using her tech skills to contribute to our community, especially something related to racial/gender equality. She likes to explore different cultures through music and arts, for she believes that is one of the best ways to truly understand and get emotionally connected to other cultures.</p>
                     </div>
                 </AboutUsTeamContainer>
             </MeetUs>

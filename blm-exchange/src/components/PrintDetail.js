@@ -10,7 +10,7 @@ import { CartContext } from '../contexts/CartContext';
 
 import { PrimaryButton, TagButton, PrintForm, PrintDisplay, PrintContent, PrintContainer, PrintDetailContainer } from '../global styles'
 
-function PrintDetail(){
+function PrintDetail(props){
 
     const { products, addItem } = useContext(ProductContext)
     const { cart } = useContext(CartContext)
@@ -40,20 +40,6 @@ function PrintDetail(){
     const onSubmit = data => 
         console.log('onSubmit data', data);
         console.log('onSubmit errors', errors);
-
-    function addSubmit(data){ 
-        
-
-            // need item data to include the quantity and size (captured in data in onsubmit), as well as below object key value pairs
-        const printDataForCart = {
-        ...data,
-        'Artist Name': `${.firstName} ${.lastName}`,
-        'Print Title': `${printByID.title}`,
-        'Print ID': `${printByID.id}`
-        };
-        addItem(printDataForCart)
-
-    props.history.push(`/cart`)}
 
     return(
         <PrintDetailContainer >
@@ -92,6 +78,20 @@ function PrintDetail(){
                 {/* form for submitting print details to cart */}
             <PrintForm>
                 <form onSubmit={handleSubmit(onSubmit)}>
+                    
+                    {function addSubmit(data){ 
+                        // need item data to include the quantity and size (captured in data in onsubmit), as well as below object key value pairs
+                        const printDataForCart = {
+                        ...data,
+                        'Artist Name': `${Object.values(detail.artistID.firstName)} ${Object.values(detail.artistID.lastName)}`,
+                        'PrintTitle': `${detail.title}`,
+                        'PrintID': `${detail.id}`,
+                        'Price': `${price}`
+                        };
+                    
+                    addItem(printDataForCart)
+                props.history.push(`/cart`)}}
+                
                 <div>
                 <label>Size:</label>
                 <select 

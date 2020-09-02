@@ -12,8 +12,8 @@ import { PrimaryButton, TagButton, PrintForm, PrintDisplay, PrintContent, PrintC
 
 function PrintDetail(){
 
-    const { products } = useContext(ProductContext)
-    const { addItem } = useContext(CartContext)
+    const { products, addItem } = useContext(ProductContext)
+    const { cart } = useContext(CartContext)
     const { id } = useParams()
 
     // state for price
@@ -36,10 +36,24 @@ function PrintDetail(){
         console.log('artist by id', printByID)
 
     const { register, handleSubmit, errors } = useForm();
-    
-    const onSubmit = data => console.log(data);
-    console.log(errors);
-    // TODO edit handlesubmit to send size, price, title, printID to cart
+
+    const onSubmit = data => 
+        console.log('onSubmit data', data);
+        console.log('onSubmit errors', errors);
+
+    function addSubmit(data){ 
+        
+
+            // need item data to include the quantity and size (captured in data in onsubmit), as well as below object key value pairs
+        const printDataForCart = {
+        ...data,
+        'Artist Name': `${.firstName} ${.lastName}`,
+        'Print Title': `${printByID.title}`,
+        'Print ID': `${printByID.id}`
+        };
+        addItem(printDataForCart)
+
+    props.history.push(`/cart`)}
 
     return(
         <PrintDetailContainer >
@@ -86,13 +100,12 @@ function PrintDetail(){
                     ref={register({ required: true })}
                     defaultValue="select size"
                     style={{
-                        width: '35%',
+                        width: '50%',
                         backgroundColor: '#151515',
                         color: '#fff',
                         border: 'solid 1px #808080',
                         borderRadius: '5px',
-                        paddingLeft: '.2rem',
-                        letterSpacing: '.09rem'
+                        letterSpacing: '.09rem',
                     }}>
                     <option value='select size'>- Select Size -</option>
                     <option value='5x7'>5x7"</option>
@@ -112,7 +125,7 @@ function PrintDetail(){
                     name="Quantity" 
                     ref={register({required: true})}
                     style={{
-                        width: '20%',
+                        width: '40%',
                         backgroundColor: '#151515',
                         color: '#fff',
                         border: 'solid 1px #808080',
@@ -125,7 +138,7 @@ function PrintDetail(){
                 <label>Price: {price}</label>
                 </div>
 
-                <PrimaryButton onClick={addItem}>
+                <PrimaryButton onClick={console.log('click')}>
                     Add to Cart
                 </PrimaryButton>
                 </form>

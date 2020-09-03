@@ -16,10 +16,19 @@ function Cart(){
 		}, 0).toFixed(2);
     };
 
+    console.log('cart 19', cart)
+
+
     return(
         <div>
 
         <CartContainer>
+        
+        <Link to="/shop">
+            Return to Shop
+        </Link>
+
+
         <AlignLeft>
         <h3> Shopping Cart</h3>
         </AlignLeft>
@@ -34,9 +43,19 @@ function Cart(){
 
             <ProductContainer className="cart-container">
             {cart.map(item => (
-				console.log(item),
-                <div>
+				console.log('cart item', item),
+                <div style={{
+                    color:'#fff'
+                }}>
                     {/* item info */}
+                    <img src={item.imgURL} />
+                    <p>{item.printTitle}</p>
+                    <p>{item.artistName}</p>
+                    <p>{item.price}</p>
+                    <p>{item.quantity}</p>
+                    <p>{item.size}</p>
+                    <p>A THING</p>
+
                     <button onClick={() => removeItem(item)}>
                         <HighlightOffIcon />
                     </button>
@@ -47,6 +66,7 @@ function Cart(){
             <AlignRight>
                 <div className="total">
                     <p>Subtotal: ${getCartTotal()}</p>                   
+                    
                     <PrimaryButton>
                         <Link to="/checkout">
                             Checkout

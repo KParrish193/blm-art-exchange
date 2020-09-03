@@ -20,15 +20,15 @@ function PrintDetail(props){
     const [price, setPrice] = useState();
 
     const sizeToPrice = {
-        '5x7': '$15.00', 
-        '8x8': '$25.00', 
-        '8x10': '$25.00', 
-        '11x14': '$40.00'
+        '5x7': 15.00, 
+        '8x8': 25.00, 
+        '8x10': 25.00, 
+        '11x14': 40.00
     }
     // update price on change
     const selectChange = e => {
         e.preventDefault();
-        setPrice(sizeToPrice[e.target.value])
+        setPrice(sizeToPrice[e.target.value].toFixed(2))
     }
 
     // filter of products to narrow down product by id
@@ -40,6 +40,35 @@ function PrintDetail(props){
     const onSubmit = data => 
         console.log('onSubmit data', data);
         console.log('onSubmit errors', errors);
+
+    function addSubmit(data){ 
+            // need item data to include the quantity and size (captured in data in onsubmit), as well as below object key value pairs
+            const printDataForCart =
+            printByID.map((detail) => (
+            {
+            ...data,
+            'artistName': `${detail.artistID.firstName} ${detail.artistID.lastName}`,
+            'printTitle': `${detail.title}`,
+            'printID': `${detail.id}`,
+            'price': {price},
+            'imgURL': `${detail.image.formats.small.url}`
+            }
+            ))
+
+            console.log('click', printDataForCart)
+        // logic to check cart for same item, if exists in cart increment QTY  
+    //     if(printDataForCart.size === cart.size && printDataForCart.id === cart.id ) {
+    //         cart.quantity + 1
+    //     }
+    //     // if not in cart already, add it
+    //     else {
+            addItem(printDataForCart)
+    //     }
+    // props.history.push(`/cart`)
+    }
+
+
+
 
     return(
         <PrintDetailContainer >
@@ -78,20 +107,7 @@ function PrintDetail(props){
                 {/* form for submitting print details to cart */}
             <PrintForm>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    
-                    {function addSubmit(data){ 
-                        // need item data to include the quantity and size (captured in data in onsubmit), as well as below object key value pairs
-                        const printDataForCart = {
-                        ...data,
-                        'Artist Name': `${Object.values(detail.artistID.firstName)} ${Object.values(detail.artistID.lastName)}`,
-                        'PrintTitle': `${detail.title}`,
-                        'PrintID': `${detail.id}`,
-                        'Price': `${price}`
-                        };
-                    
-                    addItem(printDataForCart)
-                props.history.push(`/cart`)}}
-                
+                                    
                 <div>
                 <label>Size:</label>
                 <select 
@@ -135,10 +151,10 @@ function PrintDetail(props){
                 </div>
                 
                 <div className="price">
-                <label>Price: {price}</label>
+                <label>Price: ${price}</label>
                 </div>
 
-                <PrimaryButton onClick={console.log('click')}>
+                <PrimaryButton onClick={addSubmit}>
                     Add to Cart
                 </PrimaryButton>
                 </form>

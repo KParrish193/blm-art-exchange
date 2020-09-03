@@ -40,7 +40,6 @@ import Orders from "./components/customers/Orders";
 import TransitionModal from "./components/TransitionModal";
 
 // contexts
-import { ArtistContext } from "./contexts/ArtistContext";
 import { CartContext } from "./contexts/CartContext";
 import { ProductContext } from "./contexts/ProductContext";
 
@@ -67,13 +66,14 @@ function App() {
   // cart functions
   // add item to cart
   const addItem = (item) => {
-    // console.log(item);
-    setCart([...cart, item]);
+    setCart([...cart, item])
+    localStorage.setItem("item", item)
   };
 
   // remove item from cart
   const removeItem = (id) => {
-    setCart(cart.filter((item) => item.PrintID !== id));
+    setCart(cart.filter((item) => item.PrintID !== id))
+    localStorage.removeItem("item");
   };
 
   // edit item?

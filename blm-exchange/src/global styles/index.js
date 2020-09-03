@@ -457,6 +457,28 @@ export const AboutNavContainer = styled.div`
         transition: .16s all 0.025s;
     }
 `
+export const TeamNavContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem 0 1rem;
+    width: 100%;
+    text-align: center;
+
+    a {
+        text-decoration: none;
+        color: white;
+        font-size: 0.8 rem;
+        width: 20%;
+        padding-bottom: 0.5rem;
+    }
+
+    a:hover {
+        border-bottom: 2px solid #990000;
+        transition: .16s all 0.025s;
+    }
+`
 
 export const AboutUsContainer = styled.div`
     display: flex;
@@ -1349,7 +1371,7 @@ export const Form = styled.form`
     }
 
     .error {
-        color: #990000;
+        color: #c70a0a;
     }
 
     span {

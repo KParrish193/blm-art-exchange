@@ -11,33 +11,36 @@ import "./App.css";
 import { HomeContainer } from "./global styles/index";
 
 //components
-import Header from "./components/headers/Header";
-import MobileHeader from "./components/headers/MobileHeader";
-import Footer from "./components/footers/Footer";
+import Header from './components/headers/Header';
+import MobileHeader from './components/headers/MobileHeader';
+import Footer from './components/footers/Footer';
 
-import Landing from "./components/informational/Landing.js";
-import About from "./components/informational/About.js";
-import FAQ from "./components/informational/FAQ.js";
-import MeetUs from "./components/informational/MeetUs.js";
-import CodeOfConduct from "./components/informational/CodeOfConduct";
+import Landing from './components/informational/Landing.js';
+import About from './components/informational/About.js';
+import FAQ from './components/informational/FAQ.js';
+import Operations from './components/informational/Operations.js';
+import DigitalMarketing from './components/informational/DigitalMarketing.js';
+import Legal from './components/informational/Legal.js';
+import Development from './components/informational/Development.js';
+import CodeOfConduct from './components/informational/CodeOfConduct';
 
-import ArtistTerms from "./components/artistsPortal/ArtistTerms";
-import ArtistForm from "./components/artistsPortal/ArtistForm";
-import Login from "./components/artistsPortal/Login";
-import UploadForm from "./components/artistsPortal/UploadForm";
-import ArtistDashboard from "./components/artistsPortal/ArtistDashboard";
+import ArtistTerms from './components/artistsPortal/ArtistTerms';
+import ArtistForm from './components/artistsPortal/ArtistForm';
+import Login from './components/artistsPortal/Login';
+import UploadForm from './components/artistsPortal/UploadForm';
+import ArtistDashboard from './components/artistsPortal/ArtistDashboard';
 
-import ArtistList from "./components/ArtistList";
-import ArtistProfile from "./components/ArtistProfile";
-import Shop from "./components/Shop";
-import PrintDetail from "./components/PrintDetail";
-import Cart from "./components/Cart";
-import Checkout from "./components/Checkout";
+import ArtistList from './components/ArtistList';
+import ArtistProfile from './components/ArtistProfile';
+import Shop from './components/Shop';
+import PrintDetail from './components/PrintDetail';
+import Cart from './components/Cart';
+import Checkout from './components/Checkout';
 
-import CustTerms from "./components/customers/CustomerTerms";
-import CustLogin from "./components/customers/CustLogin";
-import Orders from "./components/customers/Orders";
-import TransitionModal from "./components/TransitionModal";
+import CustTerms from './components/customers/CustomerTerms';
+import CustLogin from './components/customers/CustLogin';
+import Orders from './components/customers/Orders';
+import TransitionModal from './components/TransitionModal';
 
 // contexts
 import { ArtistContext } from "./contexts/ArtistContext";
@@ -80,56 +83,60 @@ function App() {
 
   return (
     <ProductContext.Provider value={{ products, addItem }}>
-      <CartContext.Provider value={{ cart, removeItem }}>
-        <HomeContainer>
-          <div>
-            <Header />
-            <MobileHeader />
-          </div>
+    <CartContext.Provider value={{ cart, removeItem }}>
+    <HomeContainer>
+    
+      <div>
+      <Header />
+      <MobileHeader />
+      </div>
 
-          <div className="App">
-            <div>
-              <Switch>
-                {/* general */}
-                <Route path="/blm-art-exchange" component={Landing} />
-                <Route path="/about" component={About} />
-                <Route path="/FAQ" component={FAQ} />
-                <Route path="/meet-the-team" component={MeetUs} />
-                <Route path="/cocmodal" component={TransitionModal} />
-                <Route path="/coc" component={CodeOfConduct} />
+      <div className="App">
+      <div>
+        <Switch>
 
-                {/* shop */}
-                <Route exact path="/shop" component={Shop} />
-                <Route path="/shop/print/:id" component={PrintDetail} />
-                <Route exact path="/artists" component={ArtistList} />
-                <Route path="/artists/:id" component={ArtistProfile} />
-                <Route path="/cart" component={Cart} />
-                <Route path="/checkout" component={Checkout} />
+          {/* general */}
+          <Route path="/blm-art-exchange" component={ Landing } />
+          <Route path="/about" component={ About } />
+          <Route path="/FAQ" component={ FAQ } />
+          <Route path="/operations" component={ Operations } />
+          <Route path="/digitalmarketing" component={ DigitalMarketing } />
+          <Route path="/legal" component={ Legal } />
+          <Route path="/development" component={ Development } />
+          <Route path="/cocmodal" component={ TransitionModal } />
+          <Route path="/coc" component={ CodeOfConduct } />
 
-                {/* customer */}
-                <Route path="/customer/terms" component={CustTerms} />
-                <Route path="/customer/login" component={CustLogin} />
-                <Route path="/customer/:id" component={Orders} />
+          {/* shop */}
+          <Route exact path="/shop" component={ Shop } />
+          <Route path="/shop/print/:id" component={ PrintDetail } />
+          <Route exact path="/artists" component={ ArtistList } />
+          <Route path="/artists/:id" component={ ArtistProfile } />
+          <Route path="/cart" component={ Cart } />
+          <Route path="/checkout" component={ Checkout } />
+          
+          {/* customer */}
+          <Route path="/customer/terms" component={CustTerms} />
+          <Route path="/customer/login" component={CustLogin} />
+          <Route path="/customer/:id" component={Orders} />
 
-                {/* artist */}
-                <Route path="/artist/login" component={Login} />
-                <Route path="/artist/sign-up" component={ArtistForm} />
-                <Route path="/artist/terms" component={ArtistTerms} />
-                <PrivateRoute
-                  path="/artist/:id/dashboard"
-                  component={ArtistDashboard}
-                />
-                <PrivateRoute
-                  path="/artist/:id/upload"
-                  component={UploadForm}
-                />
-              </Switch>
-            </div>
-          </div>
 
-          <Footer />
-        </HomeContainer>
-      </CartContext.Provider>
+          {/* artist */}
+          <Route path="/artist/login" component={ Login } />
+          <Route path="/artist/sign-up" component={ ArtistForm } />
+          <Route path="/artist/terms" component={ArtistTerms} />
+          <PrivateRoute path ="/artist/:id/dashboard" component={ ArtistDashboard } />
+          <PrivateRoute path="/artist/:id/upload" component={ UploadForm } />
+
+        </Switch>
+      </div>
+    </div>
+
+    
+    <Footer/>
+
+    </HomeContainer>
+
+    </CartContext.Provider>
     </ProductContext.Provider>
   );
 }

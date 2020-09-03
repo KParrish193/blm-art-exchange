@@ -44,11 +44,6 @@ function PrintDetail(props) {
 
   const { register, handleSubmit, errors } = useForm();
 
-  const onSubmit = (data) => {
-    console.log("onSubmit data", data);
-    console.log("onSubmit errors", errors);
-  };
-
   return (
     <PrintDetailContainer>
       {printByID.map((detail, id) => (

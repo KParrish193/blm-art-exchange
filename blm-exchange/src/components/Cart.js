@@ -1,63 +1,85 @@
-import React, { useContext } from 'react';
+import React, { useContext } from "react";
 
-import { CartContext } from '../contexts/CartContext'
+import { CartContext } from "../contexts/CartContext";
 
-import HighlightOffIcon from '@material-ui/icons/HighlightOff';
+import HighlightOffIcon from "@material-ui/icons/HighlightOff";
 
-import { PrimaryButton, CartContainer, ProductContainer, AlignRight, AlignLeft, CartLabels } from '../global styles/index'
-import { Link }  from 'react-router-dom'
+import {
+  PrimaryButton,
+  CartContainer,
+  ProductContainer,
+  AlignRight,
+  AlignLeft,
+  CartLabels,
+} from "../global styles/index";
+import { Link } from "react-router-dom";
 
-function Cart(){
-    const {cart, removeItem} = useContext(CartContext);
+function Cart() {
+  const { cart, removeItem } = useContext(CartContext);
 
-    const getCartTotal = () => {
-		return cart.reduce((acc, value) => {
-			return acc + value.price;
-		}, 0).toFixed(2);
-    };
+  const getCartTotal = () => {
+    if (cart.length > 0) {
+      const mappedValues = cart.map((entry) => {
+        return {
+          price: entry.Price,
+          qty: entry.Quantity,
+        };
+      });
 
-    return(
-        <div>
+      const reduceValues = mappedValues.reduce((acc, value) => {
+        const convPrice = parseInt(value.price.slice(1), 10);
+        const itemQty = parseInt(value.qty, 10);
 
-        <CartContainer>
+        return acc + convPrice * itemQty;
+      }, 0);
+
+      return reduceValues.toFixed(2);
+    } else {
+      return "0.00";
+    }
+  };
+
+  return (
+    <div>
+      <CartContainer>
         <AlignLeft>
-        <h3> Shopping Cart</h3>
+          <h3> Shopping Cart</h3>
         </AlignLeft>
-            {/* cart */}
+        {/* cart */}
 
-            <CartLabels className="labelrow">
-                <p>Item</p>
-                <p>Size</p>
-                <p>Quantity</p>
-                <p>Price</p>
-            </CartLabels>
+        <CartLabels className="labelrow">
+          <p>Item</p>
+          <p>Size</p>
+          <p>Quantity</p>
+          <p>Price</p>
+        </CartLabels>
 
-            <ProductContainer className="cart-container">
-            {cart.map(item => (
-				console.log(item),
-                <div>
-                    {/* item info */}
-                    <button onClick={() => removeItem(item)}>
-                        <HighlightOffIcon />
-                    </button>
+        <ProductContainer className="cart-container">
+          {cart.map(
+            (item) => (
+              console.log(item),
+              (
+                <div key={item.PrintID}>
+                  {/* item info */}
+                  <button onClick={() => removeItem(item.PrintID)}>
+                    <HighlightOffIcon />
+                  </button>
                 </div>
-			))}
-            
-            </ProductContainer>
-            <AlignRight>
-                <div className="total">
-                    <p>Subtotal: ${getCartTotal()}</p>                   
-                    <PrimaryButton>
-                        <Link to="/checkout">
-                            Checkout
-                        </Link>
-                    </PrimaryButton>
-                </div>
-            </AlignRight>
-        </CartContainer>
-        </div>
-    )
-
+              )
+            )
+          )}
+        </ProductContainer>
+        <AlignRight>
+          <div className="total">
+            <p>Subtotal: ${getCartTotal()}</p>
+            <PrimaryButton>
+              <Link to="/checkout">Checkout</Link>
+            </PrimaryButton>
+          </div>
+        </AlignRight>
+      </CartContainer>
+    </div>
+  );
 }
 
-export default Cart
+export default Cart;

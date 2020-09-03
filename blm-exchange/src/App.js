@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { useParams} from 'react-router';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { useParams } from "react-router";
 
 //app routing
-import { Switch, Route } from 'react-router-dom';
-import PrivateRoute from './utils/PrivateRoute';
+import { Switch, Route } from "react-router-dom";
+import PrivateRoute from "./utils/PrivateRoute";
 
 //styles
-import './App.css';
-import { HomeContainer } from './global styles/index'
+import "./App.css";
+import { HomeContainer } from "./global styles/index";
 
 //components
 import Header from './components/headers/Header';
@@ -43,45 +43,45 @@ import Orders from './components/customers/Orders';
 import TransitionModal from './components/TransitionModal';
 
 // contexts
-import { ArtistContext } from './contexts/ArtistContext';
-import { CartContext } from './contexts/CartContext';
-import { ProductContext } from './contexts/ProductContext';
+import { ArtistContext } from "./contexts/ArtistContext";
+import { CartContext } from "./contexts/CartContext";
+import { ProductContext } from "./contexts/ProductContext";
 
 function App() {
-
   const [products, setProductsData] = useState([]);
   const [cart, setCart] = useState([]);
-  
+
+  console.log("APP: ", cart);
+
   const { id } = useParams();
 
-  useEffect(() => {  
-      axios
-      .get('https://artxblm-backend.herokuapp.com/prints')
-      .then(res => {
-          console.log('success', res);
-          setProductsData(res.data)
+  useEffect(() => {
+    axios
+      .get("https://artxblm-backend.herokuapp.com/prints")
+      .then((res) => {
+        // console.log('success', res);
+        setProductsData(res.data);
       })
-      .catch(err => console.log(err)); 
+      .catch((err) => console.log(err));
   }, [id]);
 
-  console.log('App.js, line 55', products)
+  // console.log("App.js, line 55", products);
 
   // cart functions
   // add item to cart
-  const addItem = item => {
-		console.log(item);
-		setCart([...cart, item])
-	};
+  const addItem = (item) => {
+    // console.log(item);
+    setCart([...cart, item]);
+  };
 
   // remove item from cart
-	const removeItem = id => {
-		setCart(...cart, cart.filter(item => item.id !== id));
-	};
+  const removeItem = (id) => {
+    setCart(cart.filter((item) => item.PrintID !== id));
+  };
 
   // edit item?
 
   return (
-
     <ProductContext.Provider value={{ products, addItem }}>
     <CartContext.Provider value={{ cart, removeItem }}>
     <HomeContainer>

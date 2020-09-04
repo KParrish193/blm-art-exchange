@@ -26,6 +26,7 @@ import ArtistForm from "./components/artistsPortal/ArtistForm";
 import Login from "./components/artistsPortal/Login";
 import UploadForm from "./components/artistsPortal/UploadForm";
 import ArtistDashboard from "./components/artistsPortal/ArtistDashboard";
+import ArtistThankYou from "./components/artistsPortal/ArtistThankYou";
 
 import ArtistList from "./components/ArtistList";
 import ArtistProfile from "./components/ArtistProfile";
@@ -33,6 +34,7 @@ import Shop from "./components/Shop";
 import PrintDetail from "./components/PrintDetail";
 import Cart from "./components/Cart";
 import Checkout from "./components/Checkout";
+import ThankYou from "./components/ThankYou";
 
 import CustTerms from "./components/customers/CustomerTerms";
 import CustLogin from "./components/customers/CustLogin";
@@ -105,6 +107,7 @@ function App() {
                 <Route path="/artists/:id" component={ArtistProfile} />
                 <Route path="/cart" component={Cart} />
                 <Route path="/checkout" component={Checkout} />
+                <Route path="/thank-you" component={ThankYou} />
 
                 {/* customer */}
                 <Route path="/customer/terms" component={CustTerms} />
@@ -115,6 +118,7 @@ function App() {
                 <Route path="/artist/login" component={Login} />
                 <Route path="/artist/sign-up" component={ArtistForm} />
                 <Route path="/artist/terms" component={ArtistTerms} />
+                <Route path="/artist/thank-you" component={ArtistThankYou} />
                 <PrivateRoute
                   path="/artist/:id/dashboard"
                   component={ArtistDashboard}

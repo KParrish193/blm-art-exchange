@@ -20,7 +20,6 @@ import {
 
 function PrintDetail(props) {
   const { products, addItem } = useContext(ProductContext);
-  const { cart } = useContext(CartContext);
   const { id } = useParams();
 
   // state for price
@@ -93,10 +92,11 @@ function PrintDetail(props) {
                   onSubmit={handleSubmit((data) => {
                     const printDataForCart = {
                       ...data,
-                      "Artist Name": `${detail.artistID.firstName} ${detail.artistID.lastName}`,
+                      ArtistName: `${detail.artistID.firstName} ${detail.artistID.lastName}`,
                       PrintTitle: `${detail.title}`,
                       PrintID: `${detail.id}`,
                       Price: `${price}`,
+                      URL: `${detail.image.formats.small.url}`
                     };
 
                     addItem(printDataForCart);
@@ -134,7 +134,7 @@ function PrintDetail(props) {
                       type="number"
                       placeholder="0"
                       name="Quantity"
-                      ref={register({ required: true })}
+                      ref={register({ required: true, min: 1 })}
                       style={{
                         width: "40%",
                         backgroundColor: "#151515",

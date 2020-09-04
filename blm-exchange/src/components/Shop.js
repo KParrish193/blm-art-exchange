@@ -5,7 +5,7 @@ import { ProductContext } from '../contexts/ProductContext';
 import { Link } from 'react-router-dom';
 import Filter from './Filter';
 
-import { PhotoGrid, ProductCard, ProductImg, ListPageContainer, ThumbnailContainer, DarkOverlay } from '../global styles/index';
+import { PhotoGrid, ProductCard, ProductImg, ListPageContainer, ThumbnailContainer } from '../global styles/index';
 
 function Shop(){
     const { products } = useContext(ProductContext)

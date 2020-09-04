@@ -1523,6 +1523,18 @@ export const CartLabels = styled.div`
     }
 `
 
+export const CartCard = styled.div`
+    border: orange solid 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    width: 100%;
+
+    img {
+        width: 10rem;
+    }
+`
+
 export const ProductContainer = styled.div`
     display: flex;
     flex-direction: column;

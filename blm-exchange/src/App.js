@@ -45,9 +45,18 @@ import { ProductContext } from "./contexts/ProductContext";
 
 function App() {
   const [products, setProductsData] = useState([]);
-  const [cart, setCart] = useState([]);
+  // const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(() => {
+    const localCart = localStorage.getItem("cart");
 
-  console.log("APP: ", cart);
+    if (localCart == null) {
+      return [];
+    } else {
+      return JSON.parse(localCart);
+    }
+  });
+
+  console.log("CART: ", cart);
 
   const { id } = useParams();
 
@@ -66,20 +75,75 @@ function App() {
   // cart functions
   // add item to cart
   const addItem = (item) => {
-    setCart([...cart, item])
-    localStorage.setItem("item", item)
+    const [existingItem] = cart.filter((entry) => {
+      if (entry.PrintID === item.PrintID && entry.Size === item.Size) {
+        return entry;
+      }
+    });
+
+    if (existingItem) {
+      const target = cart.indexOf(existingItem);
+      const prevQty = parseInt(cart[target].Quantity, 10);
+      const updatedQty = parseInt(item.Quantity, 10);
+
+      const updatedItem = {
+        ...cart[target],
+        Quantity: `${prevQty + updatedQty}`,
+      };
+
+      const newCart = cart.map((entry, i) => {
+        if (i === target) {
+          return updatedItem;
+        } else {
+          return entry;
+        }
+      });
+
+      setCart(newCart);
+    } else {
+      setCart([...cart, item]);
+    }
   };
 
   // remove item from cart
-  const removeItem = (id) => {
-    setCart(cart.filter((item) => item.PrintID !== id))
-    localStorage.removeItem("item");
+  const removeItem = (id, size) => {
+    setCart(
+      cart.filter((item) => {
+        if (item.PrintID !== id) {
+          return item;
+        } else {
+          if (item.Size !== size) {
+            return item;
+          }
+        }
+      })
+    );
+
+    const localCart = JSON.parse(localStorage.getItem("cart"));
+
+    localStorage.removeItem("cart");
+
+    const newCart = localCart.filter((item) => {
+      if (item.PrintID !== id) {
+        return item;
+      } else {
+        if (item.Size !== size) {
+          return item;
+        }
+      }
+    });
+
+    if (newCart.length > 0) {
+      localStorage.setItem("cart", JSON.stringify(newCart));
+    } else {
+      localStorage.removeItem("cart");
+    }
   };
 
   // edit item?
 
   return (
-    <ProductContext.Provider value={{ products, addItem }}>
+    <ProductContext.Provider value={{ products, addItem, cart }}>
       <CartContext.Provider value={{ cart, removeItem }}>
         <HomeContainer>
           <div>

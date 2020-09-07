@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useRef } from "react";
 
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
@@ -18,11 +18,14 @@ import {
 } from "../global styles";
 
 function PrintDetail(props) {
-  const { products, addItem } = useContext(ProductContext);
+  const { products, addItem, cart } = useContext(ProductContext);
   const { id } = useParams();
 
   // state for price
   const [price, setPrice] = useState();
+
+  const cartRef = useRef();
+  cartRef.current = cart;
 
   const sizeToPrice = {
     "5x7": "$15.00",
@@ -36,9 +39,18 @@ function PrintDetail(props) {
     setPrice(sizeToPrice[e.target.value]);
   };
 
+  const setToStorage = (currentCart) => {
+    if (currentCart === null) {
+      localStorage.setItem("cart", JSON.stringify(cartRef.current));
+    } else {
+      localStorage.removeItem("cart");
+      localStorage.setItem("cart", JSON.stringify(cartRef.current));
+    }
+  };
+
   // filter of products to narrow down product by id
-  const printByID = products.filter((print) => print.id === id);
-  console.log("artist by id", printByID);
+  const printByID = products.filter((print) => print.id == id);
+
 
   const { register, handleSubmit, errors } = useForm();
 
@@ -98,11 +110,15 @@ function PrintDetail(props) {
                       PrintTitle: `${detail.title}`,
                       PrintID: `${detail.id}`,
                       Price: `${price}`,
-                      URL: `${detail.image.formats.small.url}`
+                      URL: `${detail.image.formats.small.url}`,
                     };
 
                     addItem(printDataForCart);
-                    props.history.push("/shop");
+
+                    props.history.push("/cart");
+                    const localCart = localStorage.getItem("cart");
+                    setToStorage(localCart);
+
                   })}
                 >
                   <div>

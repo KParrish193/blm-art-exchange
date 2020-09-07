@@ -6,7 +6,7 @@ import logo from '../../assets/blmlogo.png'
 import { HeaderContainer, Nav, Logo } from '../../global styles/index'
 
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+// import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
 function Header() {
 

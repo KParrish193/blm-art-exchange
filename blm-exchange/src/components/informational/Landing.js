@@ -123,9 +123,9 @@ function Landing(){
                     <div>
                     <h5>Meet the first round of organizations we'll be donating to:</h5>
                     <a href="">
-                    <h4>National Bail Out Fund</h4>
+                    <h4>National Bail Out</h4>
                     </a>
-                    <h6>The National Bail Out fund is a Black-led and Black-centered collective of abolitionist organizers, lawyers and activists. They provide bail for people of color, who have been arrested and work to create fellowship and employment opportunities for the people they have bailed out. </h6>
+                    <h6> National Bail Out is a Black-led and Black-centered collective of abolitionist organizers, lawyers and activists. They provide bail for people of color, who have been arrested and work to create fellowship and employment opportunities for the people they have bailed out. </h6>
                     </div>
                     </CallToAction>
                 </Carousel.Item>

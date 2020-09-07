@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 
 import { CartContext } from "../contexts/CartContext";
 
@@ -79,6 +79,7 @@ function Cart() {
               )
             )
           )}
+
         </ProductContainer>
         <AlignRight>
           <div className="total">

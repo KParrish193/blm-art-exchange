@@ -145,6 +145,7 @@ function App() {
   // edit item?
 
   return (
+
     <ProductContext.Provider value={{ products, addItem, cart }}>
       <CartContext.Provider value={{ cart, removeItem }}>
         <HomeContainer>

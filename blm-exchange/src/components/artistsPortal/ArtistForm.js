@@ -187,9 +187,9 @@ function ArtistForm(props){
 
                     <div>
                         <label className="text">Description of Work 1: *</label>
-                        <input className="text" type="text" placeholder="Description of Work 1" name="description1" ref={register({ required: true, maxLength: 250})}/>
+                        <input className="text" type="text" placeholder="Description of Work 1" name="description1" ref={register({ required: true, maxLength: 140})}/>
                         {errors.description1 && errors.description1.type === "required" && <span className="error">Description is required.</span>}
-                        {errors.description1 && errors.description1.type === "maxLength" && <span className="error">Description must be shorter than 250 characters.</span>}
+                        {errors.description1 && errors.description1.type === "maxLength" && <span className="error">Description must be shorter than 140 characters.</span>}
                     </div>
 
                     <div className="row">
@@ -205,7 +205,8 @@ function ArtistForm(props){
 
                     <div>
                         <label className="text">Description of Work 2:</label>
-                        <input className="text" type="text" placeholder="Description of Work 2"/>
+                        <input className="text" type="text" placeholder="Description of Work 2" name="description2" ref={register({maxLength: 140})}/>
+                        {errors.description2 && errors.description2.type === "maxLength" && <span className="error">Description must be shorter than 140 characters.</span>}
                     </div>
 
                     <div className="row">
@@ -221,7 +222,8 @@ function ArtistForm(props){
 
                     <div>
                         <label className="text">Description of Work 3:</label>
-                        <input className="text" type="text" placeholder="Description of Work 3"/>
+                        <input className="text" type="text" placeholder="Description of Work 3" name="description3" ref={register({maxLength: 140})}/>
+                        {errors.description3 && errors.description3.type === "maxLength" && <span className="error">Description must be shorter than 140 characters.</span>}
                     </div>
 
                     <div className="row">
@@ -237,7 +239,8 @@ function ArtistForm(props){
 
                     <div>
                         <label className="text">Description of Work 4:</label>
-                        <input className="text" type="text" placeholder="Description of Work 4"/>
+                        <input className="text" type="text" placeholder="Description of Work 4" name="description4" ref={register({maxLength: 140})}/>
+                        {errors.description4 && errors.description4.type === "maxLength" && <span className="error">Description must be shorter than 140 characters.</span>}
                     </div>
 
                     <div className="row">
@@ -253,7 +256,8 @@ function ArtistForm(props){
 
                     <div>
                         <label className="text">Description of Work 5:</label>
-                        <input className="text" type="text" placeholder="Description of Work 5"/>
+                        <input className="text" type="text" placeholder="Description of Work 5" name="description5" ref={register({maxLength: 140})}/>
+                        {errors.description5 && errors.description5.type === "maxLength" && <span className="error">Description must be shorter than 140 characters.</span>}
                     </div>
 
                     <div>

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useRef } from "react";
 
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 
 import { ProductContext } from "../contexts/ProductContext";
-import { CartContext } from "../contexts/CartContext";
 
 import {
   PrimaryButton,
@@ -19,11 +18,14 @@ import {
 } from "../global styles";
 
 function PrintDetail(props) {
-  const { products, addItem } = useContext(ProductContext);
+  const { products, addItem, cart } = useContext(ProductContext);
   const { id } = useParams();
 
   // state for price
   const [price, setPrice] = useState();
+
+  const cartRef = useRef();
+  cartRef.current = cart;
 
   const sizeToPrice = {
     "5x7": "$15.00",
@@ -37,9 +39,18 @@ function PrintDetail(props) {
     setPrice(sizeToPrice[e.target.value]);
   };
 
+  const setToStorage = (currentCart) => {
+    if (currentCart === null) {
+      localStorage.setItem("cart", JSON.stringify(cartRef.current));
+    } else {
+      localStorage.removeItem("cart");
+      localStorage.setItem("cart", JSON.stringify(cartRef.current));
+    }
+  };
+
   // filter of products to narrow down product by id
   const printByID = products.filter((print) => print.id == id);
-  console.log("artist by id", printByID);
+
 
   const { register, handleSubmit, errors } = useForm();
 
@@ -49,17 +60,19 @@ function PrintDetail(props) {
         <PrintContainer key={id}>
           <PrintDisplay>
             <img src={detail.image.formats.small.url} />
-            <div>
+            <div style={{
+              display: 'none'
+            }}>
               <p>{detail.description}</p>
             </div>
 
             <div className="tags-container">
               <TagButton
                 style={{
-                  display:
-                    `${detail.artistID.blackArtist}` === true
-                      ? "block"
-                      : "none",
+                  display: 'none'
+                    // `${detail.artistID.blackArtist}` === true
+                    //   ? "block"
+                    //   : "none",
                 }}
               >
                 Black Artist
@@ -67,7 +80,8 @@ function PrintDetail(props) {
 
               <TagButton
                 style={{
-                  display: `${detail.medium}` === "null" ? "none" : "block",
+                  display: 'none'
+                  // display: `${detail.medium}` === "null" ? "none" : "block",
                 }}
               >
                 {detail.medium}
@@ -96,11 +110,15 @@ function PrintDetail(props) {
                       PrintTitle: `${detail.title}`,
                       PrintID: `${detail.id}`,
                       Price: `${price}`,
-                      URL: `${detail.image.formats.small.url}`
+                      URL: `${detail.image.formats.small.url}`,
                     };
 
                     addItem(printDataForCart);
+
                     props.history.push("/cart");
+                    const localCart = localStorage.getItem("cart");
+                    setToStorage(localCart);
+
                   })}
                 >
                   <div>
@@ -108,7 +126,7 @@ function PrintDetail(props) {
                     <select
                       onChange={selectChange}
                       name="Size"
-                      ref={register({ required: true })}
+                      ref={register({ required: true,  })}
                       defaultValue="select size"
                       style={{
                         width: "50%",
@@ -119,7 +137,7 @@ function PrintDetail(props) {
                         letterSpacing: ".09rem",
                       }}
                     >
-                      <option value="select size">- Select Size -</option>
+                      <option value="select size"></option>
                       <option value="5x7">5x7"</option>
                       <option value="8x8">8x8"</option>
                       <option value="8x10">8x10"</option>

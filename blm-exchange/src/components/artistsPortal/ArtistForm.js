@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import axios from 'axios';
 
 import { Link } from 'react-router-dom';
@@ -40,18 +40,21 @@ function validateForm() {
     }
 }
 
-function ArtistForm(){
+function ArtistForm(props){
     const { register, handleSubmit, errors } = useForm();
     
-    const onSubmit = data => console.log(data);
-    console.log(errors);
-
-
-    // axios
-    //     .post("https://artxblm-backend.herokuapp.com/")
-
+    const onSubmit = data => 
+        axios
+            .post("https://artxblm-backend.herokuapp.com/artist", data)
+            .then (response => {
+                console.log(response);
+                props.history.push('/artist/thank-you')
+            })
+            .catch(err => 
+                console.log(err.response)
+            )
     // edit onsubmit to post to artist endpoint
-    // direct to artist dashboard    
+
     return(
         <div>
             {/* artist sign-up form */}
@@ -166,6 +169,7 @@ function ArtistForm(){
                     </div>
 
                     { /* File upload */}
+                    {/* will need to likely nest a second form into the first form to submit to prints end point */}
                     <label className="text main">Upload your work here along with the respective titles and descriptions. You are required to upload at least one work.</label>
                     <div className="row">
                         <div className="column">

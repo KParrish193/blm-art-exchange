@@ -60,3 +60,7 @@ p, h6 {
 caption-side {
   caption-side: top;
 }
+
+.coc:hover{
+  cursor: pointer; 
+}

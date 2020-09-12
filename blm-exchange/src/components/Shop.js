@@ -17,11 +17,12 @@ function Shop(){
     const isSubset = (arr2, arr1)=>{
         return arr2.every(val => arr1.includes(val))
     }
+    
     return(
         <ListPageContainer>
             {/* display all available products to buy */}
             <h3>Shop</h3>
-            <Filter toggledTags={toggledTags} setToggledTags={setToggledTags}/>
+            <Filter toggledTags={toggledTags} onTagChange={setToggledTags}/>
 
             <div className="shop-container">
                 <PhotoGrid className="product-card-container">

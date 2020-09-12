@@ -1,7 +1,8 @@
-import React, { useCallback } from 'react';
-
+import React, { useCallback, useContext } from 'react';
+import { ProductContext } from '../contexts/ProductContext';
 import FilterListIcon from '@material-ui/icons/FilterList';
 import { DesktopFilterContainer, MobileFilter, MobileFilterContainer, TagButton } from '../global styles/index';
+import { useEffect } from 'react';
 
 const medium = [
     'Design & Illustration',
@@ -13,22 +14,27 @@ const medium = [
 
 var exchange = false;
 
-function Filter({toggledTags, setToggledTags}) {    
+function Filter({toggledTags, onTagChange}) {    
     const toggleTag = useCallback(e => {
         e.preventDefault()
+        e.persist()
         e.target.classList.toggle("toggled")
+        // if a tag is not selected, select it
         if (!toggledTags.includes(e.target.value)) {
-            setToggledTags([...toggledTags, e.target.value]);
+            onTagChange(toggledTags=>([...toggledTags, e.target.value]))
+            // toggledTags is never updated here for some reason, preventing the unselect flow
         } else {
-            const filter = toggledTags.filter((tag) => tag !== e.target.value);
-            setToggledTags(filter);
+            // if a tag has been selected, unselect it
+            console.log('ever true???')
+            const filter = toggledTags.filter((tag) => tag !== e.target.value)
+            onTagChange(filter)
         };
-      }, [setToggledTags])
-    
+      }, [onTagChange])
+      
     // console.log(toggledTags)
     // const { products } = useContext(ProductContext)
-    // products.forEach(product => {
-    //     console.log([product.artistID.medium])
+    // products.forEach((product, index) => {
+    //     console.log(index, product.artistID.blackArtist, [product.artistID.medium])
     // });
     
     // let blackArtist = products.filter(artist => artist.artistID.blackArtist === true);

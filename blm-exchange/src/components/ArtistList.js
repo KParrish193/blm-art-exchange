@@ -44,14 +44,12 @@ function ArtistList(){
 
 
     const sortedArtists = filteredArtists.sort(compare)
-    
-
 
 
     return(
         <ListPageContainer className="artist-full-page-container">
             <h3>Artists</h3>
-            <Filter toggledTags={toggledTags} setToggledTags={setToggledTags} />
+            <Filter toggledTags={toggledTags} onTagChange={setToggledTags} />
 
                 <PhotoGrid className="artist-card-container">
                     {/* map backend data of artists into cards */}

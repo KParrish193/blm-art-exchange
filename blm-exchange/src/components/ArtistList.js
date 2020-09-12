@@ -11,6 +11,11 @@ function ArtistList(){
 
     const [artists, setArtists] = useState([]);
     
+    const [toggledTags, setToggledTags] = useState([])
+    const isSubset = (arr2, arr1)=>{
+        return arr2.every(val => arr1.includes(val))
+    }
+    
     useEffect(() => {  
         axios
         .get('https://artxblm-backend.herokuapp.com/artists')
@@ -20,7 +25,6 @@ function ArtistList(){
         })
         .catch(err => console.log(err)); 
     }, []);
-    console.log('line 24', artists)
 
     const filteredArtists = artists.filter(artist => artist.printID.length > 0);
 
@@ -44,17 +48,18 @@ function ArtistList(){
 
 
 
- 
-
-
     return(
         <ListPageContainer className="artist-full-page-container">
             <h3>Artists</h3>
-            <Filter />
+            <Filter toggledTags={toggledTags} setToggledTags={setToggledTags} />
 
                 <PhotoGrid className="artist-card-container">
                     {/* map backend data of artists into cards */}
-                    {sortedArtists.map(artist => {
+                    {/* filter artists by single tag */}
+                    {sortedArtists.filter((artist)=>(!(toggledTags.includes('black artists') && !artist.blackArtist)
+                                                    && isSubset(toggledTags.filter((tag)=>tag!=='black artists'), 
+                                                                artist.medium.split(', '))))
+                                                    .map(artist => {
                             var _ = require('underscore')
                             var shuffledPrints = _.shuffle(artist.printID)
 

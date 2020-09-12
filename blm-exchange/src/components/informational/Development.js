@@ -48,7 +48,7 @@ function Development() {
                 <AboutUsTeamContainer className="reverse">
                     <div className="title">
                         <h4>Xiaohan Liu</h4>
-                        <a href="https://www.instagram.com//" target="blank" >@</a>
+                        {/* <a href="https://www.instagram.com//" target="blank" >@</a> */}
                     </div>
                     <div>
                         <AboutUsImg src={xiaohan} alt="photo of xiaohan"/>

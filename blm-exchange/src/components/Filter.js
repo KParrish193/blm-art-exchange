@@ -1,7 +1,6 @@
-import React, { useContext, useState } from 'react';
+import React, { useCallback } from 'react';
 
 import FilterListIcon from '@material-ui/icons/FilterList';
-import { ProductContext } from '../contexts/ProductContext';
 import { DesktopFilterContainer, MobileFilter, MobileFilterContainer, TagButton } from '../global styles/index';
 
 const medium = [
@@ -14,34 +13,26 @@ const medium = [
 
 var exchange = false;
 
-function Filter() {
-    const [toggledTags, setToggledTags] = useState([]);
-    
-    const toggleTag = (e) => {
-        e.preventDefault(); // prevent default refresh from button clicks
-        e.target.classList.toggle("toggled"); // toggle the 'toggled' class for styling when clicked
-
-        /* if our toggled tags array does NOT include the selected tag,
-                then we should add it to our toggled tags array */
+function Filter({toggledTags, setToggledTags}) {    
+    const toggleTag = useCallback(e => {
+        e.preventDefault()
+        e.target.classList.toggle("toggled")
         if (!toggledTags.includes(e.target.value)) {
             setToggledTags([...toggledTags, e.target.value]);
         } else {
-            /* otherwise we should filter it out, and update our toggled tags state 
-                    with the remaining toggled tags */
             const filter = toggledTags.filter((tag) => tag !== e.target.value);
             setToggledTags(filter);
         };
-    }
-
-    const { products } = useContext(ProductContext)
-    console.log('filter', products)
+      }, [setToggledTags])
     
+    // console.log(toggledTags)
+    // const { products } = useContext(ProductContext)
+    // products.forEach(product => {
+    //     console.log([product.artistID.medium])
+    // });
     
-    let blackArtist = products.filter(artist => artist.blackArtist === true);
-    console.log('black artist filter', blackArtist)
-
-
-    
+    // let blackArtist = products.filter(artist => artist.artistID.blackArtist === true);
+    // console.log('black artist filter', blackArtist)
     
     return(
     <div className="search">
@@ -60,19 +51,19 @@ function Filter() {
                 <TagButton onClick={toggleTag} value="Exchange" className="medium">
                     Exchange   
                 </TagButton>
-                <TagButton onClick={toggleTag} value="photography" className="medium">
+                <TagButton onClick={toggleTag} value="Photography" className="medium">
                     Photography   
                 </TagButton>
-                <TagButton onClick={toggleTag} value="digital art" className="medium">
+                <TagButton onClick={toggleTag} value="Digital Art" className="medium">
                     Digital Art 
                 </TagButton>
-                <TagButton onClick={toggleTag} value="painting & mixed" className="medium">
+                <TagButton onClick={toggleTag} value="Painting & Mixed Media" className="medium">
                     Painting & Mixed Media   
                 </TagButton>
-                <TagButton onClick={toggleTag} value="design and illustration" className="medium">
+                <TagButton onClick={toggleTag} value="Design & Illustration" className="medium">
                     Design & Illustration
                 </TagButton>
-                <TagButton onClick={toggleTag} value="drawing" className="medium">
+                <TagButton onClick={toggleTag} value="Drawing" className="medium">
                     Drawing
                 </TagButton>
                 </div>

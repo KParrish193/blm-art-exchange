@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 
 import { ProductContext } from '../contexts/ProductContext';
 
@@ -9,20 +9,27 @@ import { PhotoGrid, ProductCard, ProductImg, ListPageContainer, ThumbnailContain
 
 function Shop(){
     const { products } = useContext(ProductContext)
+    const [toggledTags, setToggledTags] = useState([])
     
     var _ = require("underscore");
     const shuffledProducts = _.shuffle(products)
 
+    const isSubset = (arr2, arr1)=>{
+        return arr2.every(val => arr1.includes(val))
+    }
     return(
         <ListPageContainer>
             {/* display all available products to buy */}
             <h3>Shop</h3>
-            <Filter/>
+            <Filter toggledTags={toggledTags} setToggledTags={setToggledTags}/>
 
             <div className="shop-container">
                 <PhotoGrid className="product-card-container">
-                    
-                    {shuffledProducts.map((product) => (
+                    {/* filter products by single tag */}
+                    {shuffledProducts.filter((product)=>(!(toggledTags.includes('black artists') && !product.artistID.blackArtist)
+                                                        && isSubset(toggledTags.filter((tag)=>tag!=='black artists'), 
+                                                                product.artistID.medium.split(', '))))
+                                                        .map((product) => (
                         <ProductCard className ="product-card" key={product.id}>
                             <Link to={`/shop/print/${product.id}`}>
                                 <div className="mobile-card">

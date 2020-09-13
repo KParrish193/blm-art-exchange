@@ -6,6 +6,7 @@ import AboutNav from './AboutNav'
 import safiyyah from '../../assets/team/TEAM_CIR-SN.png';
 import swathi from '../../assets/team/TEAM_CIR-SKR.png';
 import natalie from '../../assets/team/TEAM_CIR-NJ.png';
+// import anum from
 
 function Operations() {
     return(
@@ -44,13 +45,13 @@ function Operations() {
                             <p>Natalie Jamison (she/her) is a Black and Choctaw woman living in Haudenosaunee Confederacy And Pamunkey land, aka Washington DC. She is a jack of all trades with a background in customer service, volunteer coordination, water resource management, and education. When not working, you can find her running DC Denim Hangs and making the denim community more inclusive. Natalie works on the ARTXBLM Operations team.</p>
                         </div>
                     </AboutUsTeamContainer>
-                    <AboutUsTeamContainer>
+                    <AboutUsTeamContainer className="reverse">
                         <div className="title">
                             <h4>Anum Dossani</h4>
                             <a href="https://www.instagram.com/yoitsanum" target="blank" >@yoitsanum</a>
                         </div>
                         <div>
-                            <AboutUsImg src={natalie} alt="photo of natalie"/>
+                            {/* <AboutUsImg src={natalie} alt="photo of natalie"/> */}
                             <p>Anum Dossani (she/her) is a Pakistani-Tanzanian and is currently working as a tax accountant for a company located in NYC. She has a love and appreciation for artistic creativity and expression. In her free time she enjoys trying new foods, searching for the perfect cup of coffee and chasing sunsets. Anum assists with the accounting efforts for the ArtxBLM Operations team.</p>
                         </div>
                     </AboutUsTeamContainer>

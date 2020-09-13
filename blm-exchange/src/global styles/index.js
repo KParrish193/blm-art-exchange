@@ -644,9 +644,7 @@ export const FAQTextContainer = styled.div`
 
 // filter styling
 export const DesktopFilterContainer = styled.div`
-    @media(max-width: 500px){
-        display: none;
-    }
+    
 `
 
 export const DesktopFilter = styled.div`
@@ -654,7 +652,6 @@ export const DesktopFilter = styled.div`
 `
 
 export const MobileFilter = styled.div`
-    display: none;
 
     @media(max-width: 500px){
         display: flex;

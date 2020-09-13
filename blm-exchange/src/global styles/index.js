@@ -408,9 +408,8 @@ export const CodeOfConductContainer = styled.div`
         display: flex;
         flex-direction: column;
         padding: 15px 30px 30px 30px;
-    }
+    } 
 `
-
 export const CodeOfConductTextContent = styled.div`
     display: flex;
     text-align: justify;

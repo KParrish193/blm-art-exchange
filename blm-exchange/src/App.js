@@ -70,7 +70,9 @@ function App() {
       .get("https://artxblm-backend.herokuapp.com/prints")
       .then((res) => {
         // console.log('success', res);
-        setProductsData(res.data);
+        var _ = require("underscore");
+        const shuffledProducts = _.shuffle(res.data)
+        setProductsData(shuffledProducts);
       })
       .catch((err) => console.log(err));
   }, [id]);

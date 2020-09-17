@@ -11,8 +11,8 @@ function Shop(){
     const { products } = useContext(ProductContext)
     const [toggledTags, setToggledTags] = useState([])
     
-    var _ = require("underscore");
-    const shuffledProducts = _.shuffle(products)
+    // var _ = require("underscore");
+    // const shuffledProducts = _.shuffle(products)
 
     const isSubset = (arr2, arr1)=>{
         return arr2.every(val => arr1.includes(val))
@@ -27,7 +27,7 @@ function Shop(){
             <div className="shop-container">
                 <PhotoGrid className="product-card-container">
                     {/* filter products by single tag */}
-                    {shuffledProducts.filter((product)=>(!(toggledTags.includes('black artists') && !product.artistID.blackArtist)
+                    {products.filter((product)=>(!(toggledTags.includes('black artists') && !product.artistID.blackArtist)
                                                         && isSubset(toggledTags.filter((tag)=>tag!=='black artists'), 
                                                                 product.artistID.medium.split(', '))))
                                                         .map((product) => (

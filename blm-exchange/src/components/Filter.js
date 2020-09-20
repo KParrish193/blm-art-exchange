@@ -20,17 +20,20 @@ function Filter({toggledTags, onTagChange}) {
         e.persist()
         e.target.classList.toggle("toggled")
         // if a tag is not selected, select it
-        if (!toggledTags.includes(e.target.value)) {
+        if (!e.target.toggled){
+            e.target.toggled = true
+            e.target.style.color = "yellow"
             onTagChange(toggledTags=>([...toggledTags, e.target.value]))
-            // toggledTags is never updated here for some reason, preventing the unselect flow
-        } else {
-            // if a tag has been selected, unselect it
-            console.log('ever true???')
-            const filter = toggledTags.filter((tag) => tag !== e.target.value)
-            onTagChange(filter)
-        };
+        }
+        // else unselect
+        else{
+            onTagChange(toggledTags=>([...toggledTags.filter((tag) => tag !== e.target.value)]))
+            e.target.toggled = false
+            e.target.style.color = "white"
+        }
       }, [onTagChange])
       
+
     // console.log(toggledTags)
     // const { products } = useContext(ProductContext)
     // products.forEach((product, index) => {
@@ -49,27 +52,27 @@ function Filter({toggledTags, onTagChange}) {
             
             <MobileFilter>
                 <div>
-                <TagButton onClick={toggleTag} value="black artists">
+                <TagButton onClick={toggleTag} toggled = {false} value="black artists" style={{color:'white'}}>
                     Black Artists
                 </TagButton>
                 </div>
                 <div>
-                <TagButton onClick={toggleTag} value="Exchange" className="medium">
+                <TagButton onClick={toggleTag} toggled = {false} value="Exchange" style={{color:'white'}} className="medium">
                     Exchange   
                 </TagButton>
-                <TagButton onClick={toggleTag} value="Photography" className="medium">
+                <TagButton onClick={toggleTag} toggled = {false} value="Photography" style={{color:'white'}} className="medium">
                     Photography   
                 </TagButton>
-                <TagButton onClick={toggleTag} value="Digital Art" className="medium">
+                <TagButton onClick={toggleTag} toggled = {false} value="Digital Art" style={{color:'white'}} className="medium">
                     Digital Art 
                 </TagButton>
-                <TagButton onClick={toggleTag} value="Painting & Mixed Media" className="medium">
+                <TagButton onClick={toggleTag} toggled = {false} value="Painting & Mixed Media" style={{color:'white'}} className="medium">
                     Painting & Mixed Media   
                 </TagButton>
-                <TagButton onClick={toggleTag} value="Design & Illustration" className="medium">
+                <TagButton onClick={toggleTag} toggled = {false} value="Design & Illustration" style={{color:'white'}} className="medium">
                     Design & Illustration
                 </TagButton>
-                <TagButton onClick={toggleTag} value="Drawing" className="medium">
+                <TagButton onClick={toggleTag} toggled = {false} value="Drawing" style={{color:'white'}} className="medium">
                     Drawing
                 </TagButton>
                 </div>

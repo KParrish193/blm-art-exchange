@@ -35,6 +35,16 @@ function AboutNav(){
     }}>
         FAQ
     </NavLink>
+
+    <NavLink 
+        to="/coc"               
+        activeStyle={{
+        fontWeight: "bold",
+        color: "#fff",
+        borderBottom: "solid #800000 2px"
+    }}>
+        Code of Conduct
+    </NavLink>
 </AboutNavContainer>
 
 )}

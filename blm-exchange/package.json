@@ -20,6 +20,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "react-stripe-checkout": "^2.6.3",
+    "shopify-api-node": "^3.4.4",
     "styled-components": "^5.1.1",
     "underscore": "^1.10.2"
   },

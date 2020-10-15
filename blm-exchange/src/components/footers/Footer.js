@@ -31,6 +31,10 @@ function Footer() {
             <Nav className="footer-codeofconduct">
                 <Link to="/coc">Code of Conduct</Link>
             </Nav>
+
+            <Nav class="footer-codeofconduct">
+                <Link to="/artistguidelines">Artist Guidelines</Link>
+            </Nav>
         </FooterContainer>
     )
 }

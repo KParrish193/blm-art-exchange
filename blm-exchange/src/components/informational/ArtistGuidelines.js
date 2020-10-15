@@ -2,19 +2,14 @@ import React from 'react';
 
 import { } from 'react-hook-form';
 import { Link } from "react-router-dom";
-import { CodeOfConductContainer, CodeOfConductTextContent, EmailLink} from '../../global styles/index';
+import { CodeOfConductContainer, CodeOfConductTextContent} from '../../global styles/index';
 
 function ArtistGuidelines() {
     return(
         <CodeOfConductContainer>
             <CodeOfConductTextContent>
                 <div>
-                <h3><b>Code of Conduct: Our Values</b></h3>
-                    <h5>
-                        We expect all parties participating in ArtxBLM - including but not limited to leadership, 
-                        artists, and supporters - to uphold our core values as laid out below. We take these values 
-                        very seriously, as they guide the operations of ArtxBLM as a community.
-                    </h5>
+                <h3><b>Code of Conduct: Artist Guidelines</b></h3>
                     <hr style={{color: 'white', backgroundColor: 'white'}}/>
                     <h3>Key Terms</h3>
                     <ol style={{listStyleType: 'lower-latin'}}>
@@ -53,7 +48,7 @@ function ArtistGuidelines() {
                     <ol>
                         <br/>
                         <li>
-                            You will adhere to the nine key values of Reflexivity, Accountability, Transparency, Inclusivity & Accessibility, Community, Mindfulness, Longevity, Charity and Equity as outlined in our <Link to="/coc" style={{color: "#037963", fontWeight: "bold" }}>Code of Conduct</Link>.
+                            You will adhere to the nine key values of Reflexivity, Accountability, Transparency, Inclusivity & Accessibility, Community, Mindfulness, Longevity, Charity and Equity as outlined in our <Link to="/coc" style={{color: "#037963"}}>Code of Conduct</Link>.
                         </li>
                         <li>
                             ARTXBLM has the right to replicate and sell your Art on our website and by accepting these guidelines you grant ARTXBLM the express permission to do so. Your permission may be withdrawn at any time (see clause 14).  

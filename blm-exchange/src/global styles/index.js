@@ -1475,7 +1475,7 @@ export const CustomSwitch = styled.div`
 `
 
 export const EmailLink = styled.div`
-    display: inline-block;
+    display: inline-flex;
     a {
         color: #08846D;
     }

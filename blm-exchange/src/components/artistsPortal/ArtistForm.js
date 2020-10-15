@@ -369,8 +369,8 @@ function ArtistForm(props){
                                 and Organisers. We expect all parties  to consider accessibility & inclusivity regarding the art that is created and shared, the language 
                                 used, and interactions with one another.  We must carefully consider how our decisions include or exclude groups and work to combat any 
                                 inequities proactively. For example, we will work to include image descriptions on artworks, to provide translations to our ability, and 
-                                seek to highlight artists from underrepresented groups. Any concerns that ARTXBLM may be  inaccessible or exclusive can be directed to 
-                                <br/><EmailLink><a href="mailto:artxblmcollective@gmail.com">artxblmcollective@gmail.com</a></EmailLink>, and every concern will be taken 
+                                seek to highlight artists from underrepresented groups. Any concerns that ARTXBLM may be  inaccessible or exclusive can be directed
+                                to <EmailLink><a href={"mailto:" + "artxblmcollective@gmail.com"}>artxblmcollective@gmail.com</a></EmailLink>, and every concern will be taken 
                                 seriously by  the team, which will discuss issues and work to resolve them.<br/>
                                 <br/>
 

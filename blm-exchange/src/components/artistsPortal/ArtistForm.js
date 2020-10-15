@@ -99,7 +99,7 @@ function ArtistForm(props){
                         copyrighted material (cartoon characters, branded logos, etc.). Please also note that dimensions for prints will be 5x7", 8x10", 
                         and 11x14" so make sure that your artwork will be able to fit these dimensions. You may upload 1 - 5 works. * indicates a required field.</p>
                     
-                    <p className="instructions">Read the <Link to="/coc" style={{color: "#037963"}}>Code of Conduct</Link>.</p>
+                    <p className="instructions">Read the <Link to="/coc" style={{color: "#037963"}}>Code of Conduct</Link> and <Link to="/artistguidelines" style={{color: "#037963"}}>Artist Guidelines</Link>.</p>
 
                     <div className="row">
                         <div className="column">
@@ -293,8 +293,8 @@ function ArtistForm(props){
 
                     <div>
                         <label className="main">
-                            <input className="checkbox" type="checkbox" placeholder="CodeofConduct" name="coc" ref={register({ required: true })} /><span>Agree to <a className="coc" onClick={handleClickOpen('paper')} style={{color: "#037963", fontWeight: "bold" }}>Code of Conduct</a></span>
-                            {errors.coc && errors.coc.type === "required" && <span className="error">You must agree to the Code of Conduct.</span>}
+                            <input className="checkbox" type="checkbox" placeholder="CodeofConduct" name="coc" ref={register({ required: true })} /><span>Agree to <a className="coc" onClick={handleClickOpen('paper')} style={{color: "#037963", fontWeight: "bold" }}>Code of Conduct</a> and <a className="coc" onClick={handleClickOpen('paper')} style={{color: "#037963", fontWeight: "bold" }}>Artist Guidelines</a></span>
+                            {errors.coc && errors.coc.type === "required" && <span className="error">You must agree to the Code of Conduct and Artist Guidelines.</span>}
                         </label> 
                         
                         <Dialog
@@ -302,15 +302,13 @@ function ArtistForm(props){
                           onClose={handleClose}
                           scroll={scroll}
                           aria-labelledby="scroll-dialog-title"
-                          aria-describedby="scroll-dialog-description"
-                        >
+                          aria-describedby="scroll-dialog-description">
                           <DialogTitle id="scroll-dialog-title">Code of Conduct: Our Values</DialogTitle>
                           <DialogContent dividers={scroll === 'paper'}>
                             <DialogContentText
                               id="scroll-dialog-description"
                               ref={descriptionElementRef}
-                              tabIndex={-1}
-                            >
+                              tabIndex={-1}>
                                 <h5>
                                     We expect all parties participating in ArtxBLM - including but not limited to leadership, 
                                     artists, and supporters - to uphold our core values as laid out below. We take these values 

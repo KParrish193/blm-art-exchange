@@ -14,6 +14,28 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 
 import { CodeOfConductContainer, CodeOfConductTextContent, EmailLink } from '../../global styles/index';
 
+var link1; //Tracks if CoC has been clicked
+var link2; //Tracks if Artist Guidelines has been clicked
+
+document.getElementById("link1").addEventListener("click", linkOneTrue, true);   //Listen click of element with id "link1" 
+document.getElementById("link2").addEventListener("click", linkTwoTrue, true);   //Listen click of element with id "link2"
+
+function linkOneTrue() {
+    link1 = true; //Set the variable "link1" to true to save that it has been clicked
+    checkLinkState(); //Run "check_link_state" function to check if both links have been clicked
+}
+
+function linkTwoTrue() {
+    link2 = true; //Set the variable "link2" to true to save that it has been clicked
+    checkLinkState(); //Run "check_link_state" function to check if both links have been clicked
+}
+
+function checkLinkState() {
+    if ((link1 == true) && (link2 == true)) { // Check if both links have been clicked
+        alert("Both links have been clicked.")
+    }
+}
+
 function validateForm() {
     {/* Custom validation for medium checkbox group. */}
     var mediumCheckboxes = document.getElementsByName("medium");
@@ -293,11 +315,11 @@ function ArtistForm(props){
 
                     <div>
                         <label className="main">
-                            <input className="checkbox" type="checkbox" placeholder="CodeofConduct" name="coc" ref={register({ required: true })} /><span>Agree to <a className="coc" onClick={handleClickOpen('paper')} style={{color: "#037963", fontWeight: "bold" }}>Code of Conduct</a> and <a className="coc" onClick={handleClickOpen('paper')} style={{color: "#037963", fontWeight: "bold" }}>Artist Guidelines</a></span>
+                            <input className="checkbox" type="checkbox" placeholder="CodeofConduct" name="coc" ref={register({ required: true })} /><span>Agree to <a id="link1" className="coc" onClick={handleClickOpen('paper')} style={{color: "#037963", fontWeight: "bold" }}>Code of Conduct</a> and <a id="link2" className="guideline" onClick={handleClickOpen('paper')} style={{color: "#037963", fontWeight: "bold" }}>Artist Guidelines</a></span>
                             {errors.coc && errors.coc.type === "required" && <span className="error">You must agree to the Code of Conduct and Artist Guidelines.</span>}
                         </label> 
                         
-                        <Dialog
+                        <Dialog id="link1"
                           open={open}
                           onClose={handleClose}
                           scroll={scroll}
@@ -434,7 +456,7 @@ function ArtistForm(props){
                           </DialogActions>
                         </Dialog>
                         
-                        <Dialog
+                        <Dialog id="link2"
                           open={open}
                           onClose={handleClose}
                           scroll={scroll}

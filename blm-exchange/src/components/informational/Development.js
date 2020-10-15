@@ -48,11 +48,11 @@ function Development() {
                 <AboutUsTeamContainer className="reverse">
                     <div className="title">
                         <h4>Xiaohan Liu</h4>
-                        {/* <a href="https://www.instagram.com//" target="blank" >@</a> */}
+                        <a href="https://www.instagram.com/xiaohannliu/" target="blank" >@xiaohannliu</a>
                     </div>
                     <div>
                         <AboutUsImg src={xiaohan} alt="photo of xiaohan"/>
-                        <p>Xiaohan Liu is a second-year graduate student at North Carolina State University. She studies computer science at school, and enjoys using her tech skills to contribute to our community, especially something related to racial/gender equality. She likes to explore different cultures through music and arts, for she believes that is one of the best ways to truly understand and get emotionally connected to other cultures.</p>
+                        <p>Xiaohan Liu (she/her) is a second-year graduate student at North Carolina State University. She studies computer science at school, and enjoys using her tech skills to contribute to our community, especially something related to racial/gender equality. She likes to explore different cultures through music and arts, for she believes that is one of the best ways to truly understand and get emotionally connected to other cultures.</p>
                     </div>
                 </AboutUsTeamContainer>
             </MeetUs>

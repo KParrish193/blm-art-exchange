@@ -23,6 +23,7 @@ import DigitalMarketing from './components/informational/DigitalMarketing';
 import Legal from './components/informational/Legal';
 import Development from './components/informational/Development';
 import CodeOfConduct from "./components/informational/CodeOfConduct";
+import ArtistGuidelines from './components/informational/ArtistGuidelines';
 
 import ArtistTerms from "./components/artistsPortal/ArtistTerms";
 import ArtistForm from "./components/artistsPortal/ArtistForm";
@@ -172,6 +173,7 @@ function App() {
                 <Route path="/development" component={Development} />
                 <Route path="/cocmodal" component={TransitionModal} />
                 <Route path="/coc" component={CodeOfConduct} />
+                <Route path="/artistguidelines" component={ArtistGuidelines} />
 
                 {/* shop */}
                 <Route exact path="/shop" component={Shop} />

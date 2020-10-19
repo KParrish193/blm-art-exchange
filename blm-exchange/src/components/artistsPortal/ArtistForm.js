@@ -15,35 +15,6 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import { CodeOfConductContainer, CodeOfConductTextContent, EmailLink } from '../../global styles/index';
 
 
-// window.onload = function() {
-//     var link1 = document.getElementById("link1"); //Tracks if CoC has been clicked
-//     var link2 = document.getElementById("link2"); //Tracks if Artist Guidelines has been clicked
-//     var agree = document.getElementById("agreement"); 
-//     link1.addEventListener("click", linkOneTrue)  //Listen click of element with id "link1" 
-//     link2.addEventListener("click", linkTwoTrue);   //Listen click of element with id "link2"
-//     agree.disabled = true; //Checkbox at bottom of page is initially disabled
-//     linkOneTrue(link1);
-//     linkTwoTrue(link2); 
-// }
-
-function linkOneTrue(link1, link2, agree) {
-    console.log('true???')
-    link1 = true; //Set the variable "link1" to true to save that it has been clicked
-    checkLinkState(link1, link2, agree); //Run "check_link_state" function to check if both links have been clicked
-}
-
-function linkTwoTrue(link1, link2, agree) {
-    link2 = true; //Set the variable "link2" to true to save that it has been clicked
-    checkLinkState(link1, link2, agree); //Run "check_link_state" function to check if both links have been clicked
-}
-
-function checkLinkState(link1, link2, agree) {
-    if ((link1 == true) && (link2 == true)) { // Check if both links have been clicked
-        alert("Both links have been clicked.")
-        agree.enabled = true; //Should be able to click on checkbox at this point
-    }
-}
-
 function validateForm() {
     {/* Custom validation for medium checkbox group. */}
     var mediumCheckboxes = document.getElementsByName("medium");

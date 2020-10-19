@@ -14,35 +14,6 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 
 import { CodeOfConductContainer, CodeOfConductTextContent, EmailLink } from '../../global styles/index';
 
-
-// window.onload = function() {
-//     var link1 = document.getElementById("link1"); //Tracks if CoC has been clicked
-//     var link2 = document.getElementById("link2"); //Tracks if Artist Guidelines has been clicked
-//     var agree = document.getElementById("agreement"); 
-//     link1.addEventListener("click", linkOneTrue)  //Listen click of element with id "link1" 
-//     link2.addEventListener("click", linkTwoTrue);   //Listen click of element with id "link2"
-//     agree.disabled = true; //Checkbox at bottom of page is initially disabled
-//     linkOneTrue(link1);
-//     linkTwoTrue(link2); 
-// }
-
-function linkOneTrue(link1, link2, agree) {
-    link1 = true; //Set the variable "link1" to true to save that it has been clicked
-    checkLinkState(link1, link2, agree); //Run "check_link_state" function to check if both links have been clicked
-}
-
-function linkTwoTrue(link1, link2, agree) {
-    link2 = true; //Set the variable "link2" to true to save that it has been clicked
-    checkLinkState(link1, link2, agree); //Run "check_link_state" function to check if both links have been clicked
-}
-
-function checkLinkState(link1, link2, agree) {
-    if ((link1 == true) && (link2 == true)) { // Check if both links have been clicked
-        alert("Both links have been clicked.")
-        agree.enabled = true; //Should be able to click on checkbox at this point
-    }
-}
-
 function validateForm() {
     {/* Custom validation for medium checkbox group. */}
     var mediumCheckboxes = document.getElementsByName("medium");
@@ -76,6 +47,20 @@ function validateForm() {
         //Clear the error once at least one selection has been made
         document.getElementById('error-message-radio').innerHTML = null;
     }
+
+    {/* Custom validation for agreement button. */}
+    var link1 = document.getElementById("linkOne");
+    var link2 = document.getElementById("linkTwo");
+    var agree = document.getElementsByName("agree");
+    agree.disabled = true;
+
+    link1.addEventListener("click", true);
+    link2.addEventListener("click", true);
+
+    if ((link1 == true) && (link2 == true)) {
+        agree.disabled = false;
+    }
+    
 }
 
 function ArtistForm(props){
@@ -146,7 +131,7 @@ function ArtistForm(props){
                     <p className="instructions">
                         Join our team of artists and help make an impact! If you are interested in being a featured artist on the ArtxBLM website, 
                         please fill out this form. For any questions, reach out to artxblmcollective@gmail.com. We cannot accept artworks that have 
-                        copyrighted material (cartoon characters, branded logos, etc.). Please also note that dimensions for prints will be 5x7", 8x10", 
+                        copyrighted material (cartoon characters, branded logos, etc.). Please also note that dimensions for prints will be 5x7", 8x8", 8x10", 
                         and 11x14" so make sure that your artwork will be able to fit these dimensions. You may upload 1 - 5 works. * indicates a required field.</p>
                     
                     <p className="instructions">Read the <Link to="/coc" style={{color: "#037963"}}>Code of Conduct</Link> and <Link to="/artistguidelines" style={{color: "#037963"}}>Artist Guidelines</Link>.</p>
@@ -343,7 +328,9 @@ function ArtistForm(props){
 
                     <div>
                         <label className="main">
-                            <input id="agreement" className="checkbox" type="checkbox" placeholder="CodeofConduct" name="coc" ref={register({ required: true })} /><span>Agree to <a id="link1" className="coc" onClick={handleClickOpen('paper')} style={{color: "#037963", fontWeight: "bold" }}>Code of Conduct</a> and <a id="link2" className="guideline" onClick={handleClickOpen2('paper')} style={{color: "#037963", fontWeight: "bold" }}>Artist Guidelines</a></span>
+                            <input className="checkbox" type="checkbox" placeholder="CodeofConduct" name="agree" ref={register({ required: true, validate: validateForm })} /><span>Agree to 
+                            <a id="linkOne" className="coc" onClick={handleClickOpen('paper')} style={{color: "#037963", fontWeight: "bold" }}> Code of Conduct</a> and 
+                            <a id="linkTwo" className="guideline" onClick={handleClickOpen2('paper')} style={{color: "#037963", fontWeight: "bold" }}> Artist Guidelines</a></span>
                             {errors.coc && errors.coc.type === "required" && <span className="error">You must agree to the Code of Conduct and Artist Guidelines.</span>}
                         </label> 
                         
@@ -364,7 +351,7 @@ function ArtistForm(props){
                                     artists, and supporters - to uphold our core values as laid out below. We take these values 
                                     very seriously, as they guide the operations of ArtxBLM as a community.
                                 </h5>
-                                <hr style={{color: 'white', backgroundColor: 'white'}}/>
+                                <hr/>
                                 <h3>Key Terms</h3>
                                 <ol style={{listStyleType: 'lower-latin'}}>
                                     <li>
@@ -475,10 +462,10 @@ function ArtistForm(props){
                             </DialogContentText>
                           </DialogContent>
                           <DialogActions>
-                            <Button onClick={handleClose} color="primary">
-                              Cancel
+                            <Button style={{color: "#037963"}} onClick={handleClose} color="primary">
+                              CANCEL
                             </Button>
-                            <Button onClick={handleClose} color="primary">
+                            <Button style={{color: "#037963"}} onClick={handleClose} color="primary">
                               I AGREE
                             </Button>
                           </DialogActions>
@@ -496,7 +483,7 @@ function ArtistForm(props){
                               id="scroll-dialog-description"
                               ref={descriptionElementRef2}
                               tabIndex={-1}>
-                                <hr style={{color: 'white', backgroundColor: 'white'}}/>
+                                <hr/>
                                 <h3>Key Terms</h3>
                                 <ol style={{listStyleType: 'lower-latin'}}>
                                     <li>
@@ -579,10 +566,10 @@ function ArtistForm(props){
                             </DialogContentText>
                           </DialogContent>
                           <DialogActions>
-                            <Button onClick={handleClose2} color="primary">
-                              Cancel
+                            <Button style={{color: "#037963"}} onClick={handleClose2} color="primary">
+                              CANCEL
                             </Button>
-                            <Button onClick={handleClose2} color="primary">
+                            <Button style={{color: "#037963"}} onClick={handleClose2} color="primary">
                               I AGREE
                             </Button>
                           </DialogActions>

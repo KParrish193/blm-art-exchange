@@ -1374,6 +1374,11 @@ export const Form = styled.form`
         margin: 8px;
     }
 
+    .must-reads {
+        float: left;
+        margin-top: 5px;
+    }
+
     textarea {
         box-sizing: border-box;
         border-radius: 4px;

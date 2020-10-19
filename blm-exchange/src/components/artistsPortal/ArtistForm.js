@@ -15,16 +15,16 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import { CodeOfConductContainer, CodeOfConductTextContent, EmailLink } from '../../global styles/index';
 
 
-window.onload = function() {
-    var link1 = document.getElementById("link1"); //Tracks if CoC has been clicked
-    var link2 = document.getElementById("link2"); //Tracks if Artist Guidelines has been clicked
-    var agree = document.getElementById("agreement"); 
-    link1.addEventListener("click", linkOneTrue)  //Listen click of element with id "link1" 
-    link2.addEventListener("click", linkTwoTrue);   //Listen click of element with id "link2"
-    agree.disabled = true; //Checkbox at bottom of page is initially disabled
-    linkOneTrue(link1);
-    linkTwoTrue(link2); 
-}
+// window.onload = function() {
+//     var link1 = document.getElementById("link1"); //Tracks if CoC has been clicked
+//     var link2 = document.getElementById("link2"); //Tracks if Artist Guidelines has been clicked
+//     var agree = document.getElementById("agreement"); 
+//     link1.addEventListener("click", linkOneTrue)  //Listen click of element with id "link1" 
+//     link2.addEventListener("click", linkTwoTrue);   //Listen click of element with id "link2"
+//     agree.disabled = true; //Checkbox at bottom of page is initially disabled
+//     linkOneTrue(link1);
+//     linkTwoTrue(link2); 
+// }
 
 function linkOneTrue(link1, link2, agree) {
     link1 = true; //Set the variable "link1" to true to save that it has been clicked
@@ -82,7 +82,9 @@ function ArtistForm(props){
     const { register, handleSubmit, errors } = useForm();
 
     const [open, setOpen] = React.useState(false);
+    const [open2, setOpen2] = React.useState(false);
     const [scroll, setScroll] = React.useState('paper');
+    const [scroll2, setScroll2] = React.useState('paper');
 
     const handleClickOpen = (scrollType) => () => {
         setOpen(true);
@@ -93,10 +95,29 @@ function ArtistForm(props){
         setOpen(false);
     };
 
+    const handleClickOpen2 = (scrollType) => () => {
+        setOpen2(true);
+        setScroll2(scrollType);
+    };
+
+    const handleClose2 = () => {
+        setOpen2(false);
+    };
+
     const descriptionElementRef = React.useRef(null);
+    const descriptionElementRef2 = React.useRef(null);
     React.useEffect(() => {
         if (open) {
         const { current: descriptionElement } = descriptionElementRef;
+        if (descriptionElement !== null) {
+            descriptionElement.focus();
+        }
+        }
+    }, [open]);
+
+    React.useEffect(() => {
+        if (open2) {
+        const { current: descriptionElement } = descriptionElementRef2;
         if (descriptionElement !== null) {
             descriptionElement.focus();
         }
@@ -322,7 +343,7 @@ function ArtistForm(props){
 
                     <div>
                         <label className="main">
-                            <input id="agreement" className="checkbox" type="checkbox" placeholder="CodeofConduct" name="coc" ref={register({ required: true })} /><span>Agree to <a id="link1" className="coc" onClick={handleClickOpen('paper')} style={{color: "#037963", fontWeight: "bold" }}>Code of Conduct</a> and <a id="link2" className="guideline" onClick={handleClickOpen('paper')} style={{color: "#037963", fontWeight: "bold" }}>Artist Guidelines</a></span>
+                            <input id="agreement" className="checkbox" type="checkbox" placeholder="CodeofConduct" name="coc" ref={register({ required: true })} /><span>Agree to <a id="link1" className="coc" onClick={handleClickOpen('paper')} style={{color: "#037963", fontWeight: "bold" }}>Code of Conduct</a> and <a id="link2" className="guideline" onClick={handleClickOpen2('paper')} style={{color: "#037963", fontWeight: "bold" }}>Artist Guidelines</a></span>
                             {errors.coc && errors.coc.type === "required" && <span className="error">You must agree to the Code of Conduct and Artist Guidelines.</span>}
                         </label> 
                         
@@ -464,16 +485,16 @@ function ArtistForm(props){
                         </Dialog>
                         
                         <Dialog id="link2"
-                          open={open}
-                          onClose={handleClose}
-                          scroll={scroll}
+                          open={open2}
+                          onClose={handleClose2}
+                          scroll={scroll2}
                           aria-labelledby="scroll-dialog-title"
                           aria-describedby="scroll-dialog-description">
                           <DialogTitle id="scroll-dialog-title">Code of Conduct: Artist Guidelines</DialogTitle>
-                          <DialogContent dividers={scroll === 'paper'}>
+                          <DialogContent dividers={scroll2 === 'paper'}>
                             <DialogContentText
                               id="scroll-dialog-description"
-                              ref={descriptionElementRef}
+                              ref={descriptionElementRef2}
                               tabIndex={-1}>
                                 <hr style={{color: 'white', backgroundColor: 'white'}}/>
                                 <h3>Key Terms</h3>
@@ -558,10 +579,10 @@ function ArtistForm(props){
                             </DialogContentText>
                           </DialogContent>
                           <DialogActions>
-                            <Button onClick={handleClose} color="primary">
+                            <Button onClick={handleClose2} color="primary">
                               Cancel
                             </Button>
-                            <Button onClick={handleClose} color="primary">
+                            <Button onClick={handleClose2} color="primary">
                               I AGREE
                             </Button>
                           </DialogActions>

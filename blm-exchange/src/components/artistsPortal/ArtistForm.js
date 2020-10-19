@@ -27,6 +27,7 @@ import { CodeOfConductContainer, CodeOfConductTextContent, EmailLink } from '../
 // }
 
 function linkOneTrue(link1, link2, agree) {
+    console.log('true???')
     link1 = true; //Set the variable "link1" to true to save that it has been clicked
     checkLinkState(link1, link2, agree); //Run "check_link_state" function to check if both links have been clicked
 }
@@ -86,9 +87,17 @@ function ArtistForm(props){
     const [scroll, setScroll] = React.useState('paper');
     const [scroll2, setScroll2] = React.useState('paper');
 
+    const [disabled, setCheckbox] = React.useState(true);
+    const [agreed, setAgreed] = React.useState(false);
+    const [agreed2, setAgreed2] = React.useState(false);
+
     const handleClickOpen = (scrollType) => () => {
         setOpen(true);
         setScroll(scrollType);
+        setAgreed(true);
+        if (agreed2){
+            setCheckbox(false)
+        }
     };
 
     const handleClose = () => {
@@ -98,11 +107,16 @@ function ArtistForm(props){
     const handleClickOpen2 = (scrollType) => () => {
         setOpen2(true);
         setScroll2(scrollType);
+        setAgreed2(true);
+        if (agreed){
+            setCheckbox(false)
+        }
     };
 
     const handleClose2 = () => {
         setOpen2(false);
     };
+
 
     const descriptionElementRef = React.useRef(null);
     const descriptionElementRef2 = React.useRef(null);
@@ -343,9 +357,10 @@ function ArtistForm(props){
 
                     <div>
                         <label className="main">
-                            <input id="agreement" className="checkbox" type="checkbox" placeholder="CodeofConduct" name="coc" ref={register({ required: true })} /><span>Agree to <a id="link1" className="coc" onClick={handleClickOpen('paper')} style={{color: "#037963", fontWeight: "bold" }}>Code of Conduct</a> and <a id="link2" className="guideline" onClick={handleClickOpen2('paper')} style={{color: "#037963", fontWeight: "bold" }}>Artist Guidelines</a></span>
+                            <input id="agreement" className="checkbox" type="checkbox" disabled={disabled} placeholder="CodeofConduct" name="coc" ref={register({ required: true })} />
                             {errors.coc && errors.coc.type === "required" && <span className="error">You must agree to the Code of Conduct and Artist Guidelines.</span>}
                         </label> 
+                        <span className="must-reads">Agree to <a id="link1" className="coc" onClick={handleClickOpen('paper')} style={{color: "#037963", fontWeight: "bold" }}>Code of Conduct</a> and <a id="link2" className="guideline" onClick={handleClickOpen2('paper')} style={{color: "#037963", fontWeight: "bold" }}>Artist Guidelines</a></span>
                         
                         <Dialog id="link1"
                           open={open}
@@ -478,9 +493,6 @@ function ArtistForm(props){
                             <Button onClick={handleClose} color="primary">
                               Cancel
                             </Button>
-                            <Button onClick={handleClose} color="primary">
-                              I AGREE
-                            </Button>
                           </DialogActions>
                         </Dialog>
                         
@@ -581,9 +593,6 @@ function ArtistForm(props){
                           <DialogActions>
                             <Button onClick={handleClose2} color="primary">
                               Cancel
-                            </Button>
-                            <Button onClick={handleClose2} color="primary">
-                              I AGREE
                             </Button>
                           </DialogActions>
                         </Dialog>

@@ -35,6 +35,14 @@ function Footer() {
             <Nav class="footer-codeofconduct">
                 <Link to="/artistguidelines">Artist Guidelines</Link>
             </Nav>
+            
+            <Nav className="footer-codeofconduct">
+                <Link to="/buyersagreement">Buyer's Agreement</Link>
+            </Nav>
+
+            <Nav className="footer-codeofconduct">
+                <Link to="/privacypolicy">Privacy Policy</Link>
+            </Nav>
         </FooterContainer>
     )
 }

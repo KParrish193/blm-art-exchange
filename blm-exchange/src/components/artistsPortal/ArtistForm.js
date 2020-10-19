@@ -123,7 +123,6 @@ function ArtistForm(props){
 
     return(
         <div>
-            {/* artist sign-up form */}
             <Form onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-container">
                     <h3>Artist Registration</h3>
@@ -343,6 +342,7 @@ function ArtistForm(props){
                           <DialogContent dividers={scroll === 'paper'}>
                             <DialogContentText
                               id="scroll-dialog-description"
+                              style={{color:"black"}}
                               ref={descriptionElementRef}
                               tabIndex={-1}>
                                 <h5>
@@ -350,7 +350,7 @@ function ArtistForm(props){
                                     artists, and supporters - to uphold our core values as laid out below. We take these values 
                                     very seriously, as they guide the operations of ArtxBLM as a community.
                                 </h5>
-                                <hr style={{color: 'white', backgroundColor: 'white'}}/>
+                                <hr style={{color: 'black', backgroundColor: 'white'}}/>
                                 <h3>Key Terms</h3>
                                 <ol style={{listStyleType: 'lower-latin'}}>
                                     <li>
@@ -383,7 +383,7 @@ function ArtistForm(props){
                                         racial equality for Black people and campaigning against various forms of racism.
                                     </li>
                                 </ol>
-                                <hr style={{color: 'white', backgroundColor: 'white'}}/>
+                                <hr/>
                                 <b><i>Reflexivity. </i></b>We believe that knowledge is dynamic, that we can never be done learning, and it is our responsibility to both 
                                 ensure our decisions are founded in reliable information and to constantly be working to learn more. As We learn more, we are 
                                 more than willing to revise our decisions and update them to reflect current knowledge. Our operations are guided by this 
@@ -461,8 +461,8 @@ function ArtistForm(props){
                             </DialogContentText>
                           </DialogContent>
                           <DialogActions>
-                            <Button onClick={handleClose} color="primary">
-                              Cancel
+                            <Button onClick={handleClose} style={{ color:"#037963"}}>
+                              Close
                             </Button>
                           </DialogActions>
                         </Dialog>
@@ -477,9 +477,9 @@ function ArtistForm(props){
                           <DialogContent dividers={scroll2 === 'paper'}>
                             <DialogContentText
                               id="scroll-dialog-description"
+                              style={{color:"black"}}
                               ref={descriptionElementRef2}
                               tabIndex={-1}>
-                                <hr style={{color: 'white', backgroundColor: 'white'}}/>
                                 <h3>Key Terms</h3>
                                 <ol style={{listStyleType: 'lower-latin'}}>
                                     <li>
@@ -512,7 +512,7 @@ function ArtistForm(props){
                                         racial equality for Black people and campaigning against various forms of racism.
                                     </li>
                                 </ol>
-                                <hr style={{color: 'white', backgroundColor: 'white'}}/>
+                                <hr/>
                                 <b>As a participating Artist with ARTXBLM, you agree to the guidelines outlined below:</b>
                                 <ol>
                                     <br/>
@@ -562,8 +562,8 @@ function ArtistForm(props){
                             </DialogContentText>
                           </DialogContent>
                           <DialogActions>
-                            <Button onClick={handleClose2} color="primary">
-                              Cancel
+                            <Button onClick={handleClose2} style={{ color:"#037963"}}>
+                              Close
                             </Button>
                           </DialogActions>
                         </Dialog>

@@ -197,7 +197,8 @@ export const FooterContainer = styled.div`
     }
 
     .footer-codeofconduct{
-        width: 45%;
+        width: 90%;
+        position: relative;
         text-align: right;
         justify-content: center;
     }

@@ -24,6 +24,8 @@ import Legal from './components/informational/Legal';
 import Development from './components/informational/Development';
 import CodeOfConduct from "./components/informational/CodeOfConduct";
 import ArtistGuidelines from './components/informational/ArtistGuidelines';
+import BuyersAgreement from './components/informational/BuyersAgreement';
+import PrivacyPolicy from './components/informational/PrivacyPolicy';
 
 import ArtistTerms from "./components/artistsPortal/ArtistTerms";
 import ArtistForm from "./components/artistsPortal/ArtistForm";
@@ -174,6 +176,8 @@ function App() {
                 <Route path="/cocmodal" component={TransitionModal} />
                 <Route path="/coc" component={CodeOfConduct} />
                 <Route path="/artistguidelines" component={ArtistGuidelines} />
+                <Route path="/buyersagreement" component={BuyersAgreement} />
+                <Route path="/privacypolicy" component={PrivacyPolicy} />
 
                 {/* shop */}
                 <Route exact path="/shop" component={Shop} />

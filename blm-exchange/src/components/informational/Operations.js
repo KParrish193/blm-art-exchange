@@ -6,7 +6,7 @@ import AboutNav from './AboutNav'
 import safiyyah from '../../assets/team/TEAM_CIR-SN.png';
 import swathi from '../../assets/team/TEAM_CIR-SKR.png';
 import natalie from '../../assets/team/TEAM_CIR-NJ.png';
-// import anum from
+import anum from '../../assets/team/TEAM_CIR-AD.jpg';
 
 function Operations() {
     return(
@@ -51,7 +51,7 @@ function Operations() {
                             <a href="https://www.instagram.com/yoitsanum" target="blank" >@yoitsanum</a>
                         </div>
                         <div>
-                            {/* <AboutUsImg src={natalie} alt="photo of natalie"/> */}
+                            <AboutUsImg src={anum} alt="photo of anum"/>
                             <p>Anum Dossani (she/her) is a Pakistani-Tanzanian and is currently working as a tax accountant for a company located in NYC. She has a love and appreciation for artistic creativity and expression. In her free time she enjoys trying new foods, searching for the perfect cup of coffee and chasing sunsets. Anum assists with the accounting efforts for the ArtxBLM Operations team.</p>
                         </div>
                     </AboutUsTeamContainer>

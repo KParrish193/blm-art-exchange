@@ -6,6 +6,7 @@ import AboutNav from './AboutNav'
 import julide from '../../assets/team/TEAM_CIR-JB.png';
 import jasmin from '../../assets/team/TEAM_CIR-JH.png';
 import ashmita from '../../assets/team/TEAM_CIR-AG.png';
+// import shiela from ;
 
 function Legal() {
     return(
@@ -42,6 +43,16 @@ function Legal() {
                         <div>
                             <AboutUsImg src={ashmita} alt="photo of ashmita"/>
                             <p>Ashmita Gopalan (she/her) is a Research Analyst and Sales Coordinator based out of Morrisville, NC. Her background in global relations and innate interest in social justice, diversity and inclusion in the arts, and collaborative experiences lead her to be a part of the Legal Team for ArtxBLM. Outside of her day job, Ashmita can be found watching true crime documentaries, reading, and searching for the perfect scoop of ice cream.</p>
+                        </div>
+                    </AboutUsTeamContainer>
+                    <AboutUsTeamContainer>
+                        <div className="title">
+                            <h4>Shiela Cato</h4>
+                            <a href="https://www.instagram.com/justshiela19/" target="blank" >@justshiela19</a>
+                        </div>
+                        <div>
+                            {/* <AboutUsImg src={shiela} alt="photo of shiela"/> */}
+                            <p>Shiela Cato (she/her) is a Tanzanian-Guyanese flight attendant based out of New York, New York. Her background in global relations studies and being a student ambassador for the African American Cultural Center at her university drive her passion for social justice and appreciation for expression of protest in the form of art. In her free time she enjoys listening to true crime podcasts, participating in dance workshops, and working on her crochet and embroidery stitches. Shiela works in the ArtxBLM legal team.</p>
                         </div>
                     </AboutUsTeamContainer>
                 </MeetUs>

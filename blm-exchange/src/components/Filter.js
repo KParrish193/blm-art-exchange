@@ -3,11 +3,18 @@ import { ProductContext } from '../contexts/ProductContext';
 import FilterListIcon from '@material-ui/icons/FilterList';
 import { DesktopFilterContainer, MobileFilter, MobileFilterContainer, TagButton } from '../global styles/index';
 import { useEffect } from 'react';
-import Button from '@material-ui/core/Button';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
 
-function Filter({toggledTags, onTagChange}) {  
+const medium = [
+    'Design & Illustration',
+    'Digital Art',
+    'Drawing',
+    'Painting & Mixed Media', 
+    'Photography'
+];
+
+var exchange = false;
+
+function Filter({toggledTags, onTagChange}) {    
     const toggleTag = useCallback(e => {
         e.preventDefault()
         e.persist()
@@ -25,17 +32,8 @@ function Filter({toggledTags, onTagChange}) {
             e.target.style.background = "black"
         }
       }, [onTagChange])
+      
 
-    const [anchorEl, setAnchorEl] = React.useState(null);
-
-    const handleClick = (event) => {
-        setAnchorEl(event.currentTarget);
-    };
-
-    const handleClose = () => {
-        setAnchorEl(null);
-    };
-            
     // console.log(toggledTags)
     // const { products } = useContext(ProductContext)
     // products.forEach((product, index) => {
@@ -47,42 +45,12 @@ function Filter({toggledTags, onTagChange}) {
     
     return(
     <div className="search">
-        <DesktopFilterContainer>
-            <Button style={{color: "white"}} onClick={handleClick}>Filter <FilterListIcon/></Button>
-            <Menu id="simple-menu" anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={handleClose}>
-                <div>
-                    <MenuItem>
-                        <label for="one"><input type="checkbox" id="one" name="filter" onClick="this.checked=!this.checked;" onClick={toggleTag} toggled = {false} value="black artists" /> Black Artists</label>
-                    </MenuItem>
-                </div>
-                <div>
-                    <MenuItem>
-                        <label for="two"><input type="checkbox" id="two" name="filter" onClick="this.checked=!this.checked;" onClick={toggleTag} toggled = {false} value="Photography" className="medium" /> Photography</label>
-                    </MenuItem>
-                </div>
-                <div>
-                    <MenuItem>
-                        <label for="three"><input type="checkbox" id="three" name="filter" onClick={toggleTag} toggled = {false} value="Digital Art" className="medium"/> Digital Art</label>
-                    </MenuItem>
-                </div>
-                <div>
-                    <MenuItem>
-                        <label for="four"><input type="checkbox" id="four" name="filter" onClick={toggleTag} toggled = {false} value="Painting & Mixed Media" className="medium"/> Painting & Mixed Media</label>
-                    </MenuItem>
-                </div>
-                <div>
-                    <MenuItem>
-                        <label for="five"><input type="checkbox" id="five" name="filter" onClick={toggleTag} toggled = {false} value="Design & Illustration" className="medium"/> Design & Illustration</label>
-                    </MenuItem>
-                </div>
-                <div>
-                    <MenuItem>
-                        <label for="six"><input type="checkbox" id="six" name="filter" onClick={toggleTag} toggled = {false} value="Drawing" className="medium"/> Drawing</label>
-                    </MenuItem>
-                </div>
-            </Menu>
-        </DesktopFilterContainer>
-{/*             <MobileFilter>
+            <DesktopFilterContainer>
+                Filter (Desktop)
+                <FilterListIcon />
+            </DesktopFilterContainer>
+            
+            <MobileFilter>
                 <div>
                 <TagButton onClick={toggleTag} toggled = {false} value="black artists">
                     Black Artists
@@ -108,7 +76,7 @@ function Filter({toggledTags, onTagChange}) {
                     Drawing
                 </TagButton>
                 </div>
-            </MobileFilter> */}
+            </MobileFilter>
         </div>
     )
 }

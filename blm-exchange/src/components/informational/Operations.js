@@ -6,7 +6,7 @@ import AboutNav from './AboutNav'
 import safiyyah from '../../assets/team/TEAM_CIR-SN.png';
 import swathi from '../../assets/team/TEAM_CIR-SKR.png';
 import natalie from '../../assets/team/TEAM_CIR-NJ.png';
-import anum from '../../assets/team/TEAM_CIR-AD.jpg';
+import anum from '../../assets/team/TEAM_CIR-AD.png';
 
 function Operations() {
     return(

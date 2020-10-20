@@ -6,7 +6,6 @@ import { useEffect } from 'react';
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-import Checkbox from '@material-ui/core/Checkbox';
 
 function Filter({toggledTags, onTagChange}) {  
     const toggleTag = useCallback(e => {
@@ -36,19 +35,6 @@ function Filter({toggledTags, onTagChange}) {
     const handleClose = () => {
         setAnchorEl(null);
     };
-
-    const [state, setState] = React.useState({
-        black: false,
-        design: false,
-        digital: false,
-        drawing: false,
-        painting: false, 
-        photo: false,
-    });
-
-    const handleChange = (event) => {
-        setState({ ...state, [event.target.name]: event.target.checked });
-    };
             
     // console.log(toggledTags)
     // const { products } = useContext(ProductContext)
@@ -66,32 +52,32 @@ function Filter({toggledTags, onTagChange}) {
             <Menu id="simple-menu" anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={handleClose}>
                 <div>
                     <MenuItem>
-                        <label for="one"><Checkbox id="one" name="filter" onChange={handleChange} onClick={toggleTag} toggled = {false} value="black artists" /> Black Artists</label>
+                        <label for="one"><input type="checkbox" id="one" name="filter" onClick="this.checked=!this.checked;" onClick={toggleTag} toggled = {false} value="black artists" /> Black Artists</label>
                     </MenuItem>
                 </div>
                 <div>
                     <MenuItem>
-                        <label for="two"><Checkbox id="two" name="filter" onChange={handleChange} onClick={toggleTag} toggled = {false} value="Photography" className="medium" /> Photography</label>
+                        <label for="two"><input type="checkbox" id="two" name="filter" onClick="this.checked=!this.checked;" onClick={toggleTag} toggled = {false} value="Photography" className="medium" /> Photography</label>
                     </MenuItem>
                 </div>
                 <div>
                     <MenuItem>
-                        <label for="three"><Checkbox id="three" name="filter" onClick={toggleTag} toggled = {false} value="Digital Art" className="medium"/> Digital Art</label>
+                        <label for="three"><input type="checkbox" id="three" name="filter" onClick={toggleTag} toggled = {false} value="Digital Art" className="medium"/> Digital Art</label>
                     </MenuItem>
                 </div>
                 <div>
                     <MenuItem>
-                        <label for="four"><Checkbox id="four" name="filter" onClick={toggleTag} toggled = {false} value="Painting & Mixed Media" className="medium"/> Painting & Mixed Media</label>
+                        <label for="four"><input type="checkbox" id="four" name="filter" onClick={toggleTag} toggled = {false} value="Painting & Mixed Media" className="medium"/> Painting & Mixed Media</label>
                     </MenuItem>
                 </div>
                 <div>
                     <MenuItem>
-                        <label for="five"><Checkbox id="five" name="filter" onClick={toggleTag} toggled = {false} value="Design & Illustration" className="medium"/> Design & Illustration</label>
+                        <label for="five"><input type="checkbox" id="five" name="filter" onClick={toggleTag} toggled = {false} value="Design & Illustration" className="medium"/> Design & Illustration</label>
                     </MenuItem>
                 </div>
                 <div>
                     <MenuItem>
-                        <label for="six"><Checkbox id="six" name="filter" onClick={toggleTag} toggled = {false} value="Drawing" className="medium"/> Drawing</label>
+                        <label for="six"><input type="checkbox" id="six" name="filter" onClick={toggleTag} toggled = {false} value="Drawing" className="medium"/> Drawing</label>
                     </MenuItem>
                 </div>
             </Menu>

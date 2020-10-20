@@ -643,10 +643,10 @@ export const FAQTextContainer = styled.div`
 `
 
 // filter styling
-export const DesktopFilterContainer = styled.div`
-    
-`
 
+export const DesktopFilterContainer = styled.div`
+    float: right;
+`
 export const DesktopFilter = styled.div`
 
 `

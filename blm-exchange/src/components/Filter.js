@@ -46,8 +46,39 @@ function Filter({toggledTags, onTagChange}) {
     return(
     <div className="search">
             <DesktopFilterContainer>
-                Filter (Desktop)
-                <FilterListIcon />
+            <Accordion style={{position: 'static'}}>
+                    <AccordionSummary 
+                    expandIcon={<FilterListIcon style={{color: 'white', position: 'static'}} />}
+                    style={{backgroundColor: 'black', color: 'white', position: 'static'}}>   
+                    </AccordionSummary>
+                    <AccordionDetails style={{backgroundColor: 'black', color: 'white'}}>
+                    <div>
+                        <TagButton onClick={toggleTag} toggled = {false} value="black artists">
+                            Black Artists
+                        </TagButton>
+                    </div>
+                    <div>
+                        <TagButton onClick={toggleTag} toggled = {false} value="Exchange" className="medium">
+                            Exchange   
+                        </TagButton>
+                        <TagButton onClick={toggleTag} toggled = {false} value="Photography" className="medium">
+                            Photography   
+                        </TagButton>
+                        <TagButton onClick={toggleTag} toggled = {false} value="Digital Art" className="medium">
+                            Digital Art 
+                        </TagButton>
+                        <TagButton onClick={toggleTag} toggled = {false} value="Painting & Mixed Media" className="medium">
+                            Painting & Mixed Media   
+                        </TagButton>
+                        <TagButton onClick={toggleTag} toggled = {false} value="Design & Illustration" className="medium">
+                            Design & Illustration
+                        </TagButton>
+                        <TagButton onClick={toggleTag} toggled = {false} value="Drawing" className="medium">
+                            Drawing
+                        </TagButton>
+                    </div>
+                    </AccordionDetails>
+                </Accordion>
             </DesktopFilterContainer>
             
             <MobileFilter>

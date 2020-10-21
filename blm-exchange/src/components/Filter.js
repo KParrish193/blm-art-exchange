@@ -3,16 +3,10 @@ import { ProductContext } from '../contexts/ProductContext';
 import FilterListIcon from '@material-ui/icons/FilterList';
 import { DesktopFilterContainer, MobileFilter, MobileFilterContainer, TagButton } from '../global styles/index';
 import { useEffect } from 'react';
-
-const medium = [
-    'Design & Illustration',
-    'Digital Art',
-    'Drawing',
-    'Painting & Mixed Media', 
-    'Photography'
-];
-
-var exchange = false;
+import Accordion from '@material-ui/core/Accordion';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 function Filter({toggledTags, onTagChange}) {    
     const toggleTag = useCallback(e => {
@@ -46,37 +40,42 @@ function Filter({toggledTags, onTagChange}) {
     return(
     <div className="search">
             <DesktopFilterContainer>
-                Filter (Desktop)
-                <FilterListIcon />
+            <Accordion style={{position: 'static'}}>
+                    <AccordionSummary 
+                    expandIcon={<FilterListIcon style={{color: 'white', position: 'static'}} />}
+                    style={{backgroundColor: 'black', color: 'white', position: 'static'}}>   
+                    </AccordionSummary>
+                    <AccordionDetails style={{backgroundColor: 'black', color: 'white'}}>
+                        <MobileFilter>
+                            <div>
+                                <TagButton onClick={toggleTag} toggled = {false} value="black artists">
+                                    Black Artists
+                                </TagButton>
+                            </div>
+                            <div>
+                                <TagButton onClick={toggleTag} toggled = {false} value="Exchange" className="medium">
+                                    Exchange   
+                                </TagButton>
+                                <TagButton onClick={toggleTag} toggled = {false} value="Photography" className="medium">
+                                    Photography   
+                                </TagButton>
+                                <TagButton onClick={toggleTag} toggled = {false} value="Digital Art" className="medium">
+                                    Digital Art 
+                                </TagButton>
+                                <TagButton onClick={toggleTag} toggled = {false} value="Painting & Mixed Media" className="medium">
+                                    Painting & Mixed Media   
+                                </TagButton>
+                                <TagButton onClick={toggleTag} toggled = {false} value="Design & Illustration" className="medium">
+                                    Design & Illustration
+                                </TagButton>
+                                <TagButton onClick={toggleTag} toggled = {false} value="Drawing" className="medium">
+                                    Drawing
+                                </TagButton>
+                            </div>
+                        </MobileFilter>
+                    </AccordionDetails>
+                </Accordion>
             </DesktopFilterContainer>
-            
-            <MobileFilter>
-                <div>
-                <TagButton onClick={toggleTag} toggled = {false} value="black artists">
-                    Black Artists
-                </TagButton>
-                </div>
-                <div>
-                <TagButton onClick={toggleTag} toggled = {false} value="Exchange" className="medium">
-                    Exchange   
-                </TagButton>
-                <TagButton onClick={toggleTag} toggled = {false} value="Photography" className="medium">
-                    Photography   
-                </TagButton>
-                <TagButton onClick={toggleTag} toggled = {false} value="Digital Art" className="medium">
-                    Digital Art 
-                </TagButton>
-                <TagButton onClick={toggleTag} toggled = {false} value="Painting & Mixed Media" className="medium">
-                    Painting & Mixed Media   
-                </TagButton>
-                <TagButton onClick={toggleTag} toggled = {false} value="Design & Illustration" className="medium">
-                    Design & Illustration
-                </TagButton>
-                <TagButton onClick={toggleTag} toggled = {false} value="Drawing" className="medium">
-                    Drawing
-                </TagButton>
-                </div>
-            </MobileFilter>
         </div>
     )
 }
